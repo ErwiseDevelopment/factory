@@ -1,0 +1,39 @@
+{
+	"Name": "UcCopyWithoutConfirmation",
+	"Target": "",
+	"IsControlType": false,
+	"Template": "<script> function copiarTexto(Texto) {    const texto = Texto;    if (navigator.clipboard) {        // Usando a API Clipboard, se disponível       navigator.clipboard.writeText(texto).catch(err => console.error(\"Erro ao copiar:\", err));    } else {        // Fallback para navegadores mais antigos        const inputAuxiliar = document.createElement(\"textarea\");        inputAuxiliar.value = texto;        document.body.appendChild(inputAuxiliar);        inputAuxiliar.select();        document.execCommand(\"copy\");        document.body.removeChild(inputAuxiliar);      }}</script>", 
+	"Events": [
+	],
+	"Properties": [
+	],
+	"Methods": {
+		"Public": [
+			{
+				"Name": "Copy",
+				"Source": "      copiarTexto(Texto)  ",
+				"Return": "",
+				"Parameters": [
+					 {
+						"Name": "Texto",
+						"Type": "Texto"
+					} 
+				]
+			} 
+		],
+		"Private": [
+		]
+	},
+	"Scripts": {
+		"AfterShow": [
+		],
+		"BeforeShow": [
+		]
+	},
+	"Dependencies": [
+	],
+	"Imports": [
+	],
+	"Styles": [
+	]
+}

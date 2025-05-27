@@ -1,0 +1,40 @@
+{
+	"Name": "UCPropostaComprovante",
+	"Target": "",
+	"IsControlType": false,
+	"Template": "<script>	// Função para baixar o PDF	function downloadPDF() {        const element = document.getElementById(\'propostaContent\');        element.classList.add(\'pdf-mode\');        const opt = {          margin: [10, 10, 10, 10],          filename: \"proposta.pdf\",          image: {            type: \"jpeg\",            quality: 0.98          },          html2canvas: {            scale: 2          },          jsPDF: {            unit: \"mm\",            format: \"a4\",            orientation: \"portrait\"          },          pagebreak: {            mode: [\"avoid-all\", \"css\", \"legacy\"]          }        };        html2pdf().set(opt).from(element).save().then(() => {          element.classList.remove(\"pdf-mode\");        });      }</script>", 
+	"Events": [
+	],
+	"Properties": [
+	],
+	"Methods": {
+		"Public": [
+			{
+				"Name": "DownloadPDF",
+				"Source": "				 const element = document.getElementById(\'propostaContent\');        element.classList.add(\'pdf-mode\');        const opt = {          margin: [10, 10, 10, 10],          filename: \"proposta.pdf\",          image: {            type: \"jpeg\",            quality: 0.98          },          html2canvas: {            scale: 2          },          jsPDF: {            unit: \"mm\",            format: \"a4\",            orientation: \"portrait\"          },          pagebreak: {            mode: [\"avoid-all\", \"css\", \"legacy\"]          }        };        html2pdf().set(opt).from(element).save().then(() =&gt; {          element.classList.remove(\"pdf-mode\");        });			",
+				"Return": "",
+				"Parameters": [
+				]
+			} 
+		],
+		"Private": [
+		]
+	},
+	"Scripts": {
+		"AfterShow": [
+		],
+		"BeforeShow": [
+			{
+				"Name": "Header",
+				"Source": "		// Função para inserir um script no head		function inserirScript(url) {			var script = document.createElement(\'script\');			script.src = url;			script.type = \'text/javascript\';			document.head.appendChild(script);		};		// URLs dos scripts		var scriptPDF = \"https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js\";				inserirScript(scriptPDF);	",
+				"AngularLocation": ""
+			} 
+		]
+	},
+	"Dependencies": [
+	],
+	"Imports": [
+	],
+	"Styles": [
+	]
+}

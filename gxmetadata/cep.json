@@ -1,0 +1,4 @@
+{
+
+"GxObject":{"ObjectType":"BusinessComponent","Name":"CEP","idConnectivitySupport":"idInherit","Structure":{"Levels":[{"Name":"Cep","ParentLevel":"","LevelName":"CEP","Description":"CEP","Attributes":[{"Name":"CEPId","Caption":"CEPId","default":"0","IsKey":"true","ReadOnly":"false","AttributeType":"int","Description":"CEPId","Length":"8","Decimals":"0","Signed":"false","AllowDBNulls":"false","InternalName":"CEPId","InputPicture":"ZZZZZZZ9","Type":"xs:int"},{"Name":"CEP","Caption":"CEP","default":"","IsKey":"false","ReadOnly":"false","AttributeType":"svchar","Description":"CEP","Length":"8","Decimals":"0","Signed":"false","AllowDBNulls":"true","InternalName":"CEP","DescriptionAtt":"true","InputPicture":"","Type":"xs:string"}]}]},"Relations":{"ManyToOne":{"references":[]}}}
+}

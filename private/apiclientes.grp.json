@@ -1,0 +1,28 @@
+{
+"ObjectType":"ServiceGroup",
+"Name":"APIClientes",
+"BasePath":"api",
+"Mappings":
+[
+{
+"Verb":"POST",
+"Name":"customers__post",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_customers__post",
+"Implementation":"PrPOSTCliente",
+"PathRegexp":"customers",
+"Path":"customers"
+
+},
+{
+"Verb":"PUT",
+"Name":"customers__put",
+"Bodystyle":"Wrapped",
+"VariableAlias": [],
+"ServiceMethod":"gxep_customers__put",
+"Implementation":"PrPUTCliente",
+"PathRegexp":"customers",
+"Path":"customers"
+
+}]}

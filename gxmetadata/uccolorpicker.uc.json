@@ -1,0 +1,34 @@
+{
+	"Name": "UcColorpicker",
+	"Target": "",
+	"IsControlType": false,
+	"Template": "<script type=\"text/javascript\">	att = document.getElementById(\"{{GxControl}}\");	att.setAttribute(\"type\", \"color\");</script>", 
+	"Events": [
+	],
+	"Properties": [
+		{
+			"Id": "GxControl",
+			"Name": "GxControl",
+			"Type": "string",
+			"Default": ""
+		} 
+	],
+	"Methods": {
+		"Public": [
+		],
+		"Private": [
+		]
+	},
+	"Scripts": {
+		"AfterShow": [
+		],
+		"BeforeShow": [
+		]
+	},
+	"Dependencies": [
+	],
+	"Imports": [
+	],
+	"Styles": [
+	]
+}

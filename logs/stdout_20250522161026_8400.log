@@ -1,0 +1,56 @@
+warn: Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository[50]
+      Using an in-memory repository. Keys will not be persisted to storage.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[59]
+      Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+warn: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[16]
+      The WebRootPath was not found: E:\Kbs\Factory2\NETPostgreSQL002\web\wwwroot. Static files may be unavailable.
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[58]
+      Creating key {c436db39-50a1-4b2c-aec7-36baef1d6d7c} with creation date 2025-05-22 16:10:31Z, activation date 2025-05-22 16:10:31Z, and expiration date 2025-08-20 16:10:31Z.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {c436db39-50a1-4b2c-aec7-36baef1d6d7c} may be persisted to storage in unencrypted form.
+Hosting environment: Production
+Content root path: E:\Kbs\Factory2\NETPostgreSQL002\web
+Now listening on: http://127.0.0.1:35071
+Application started. Press Ctrl+C to shut down.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/login - - -
+warn: Microsoft.AspNetCore.Session.SessionMiddleware[7]
+      Error unprotecting the session cookie.
+      System.Security.Cryptography.CryptographicException: The key {9da941f3-62f0-41bd-9bba-ccac33a3486e} was not found in the key ring. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+         at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+fail: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.Exception: GXApplication exception
+       ---> Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.failed to connect to 192.168.18.2:5432
+         --- End of inner exception stack trace ---
+         at GeneXus.Http.GXHttpHandler.ProcessRequest(HttpContext httpContext)
+         at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+         at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+         at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+         at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+info: Microsoft.AspNetCore.Session.DistributedSession[3]
+      Session started; Key:3c17fe11-9866-dcdb-3978-27e7dbecf8e1, Id:b54ce008-170a-5244-79a3-87ee0149d2a6
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/login - 500 0 - 20841.6919ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/login - - -
+fail: Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddleware[1]
+      An unhandled exception has occurred while executing the request.
+      System.Exception: GXApplication exception
+       ---> Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.failed to connect to 192.168.18.2:5432
+         --- End of inner exception stack trace ---
+         at GeneXus.Http.GXHttpHandler.ProcessRequest(HttpContext httpContext)
+         at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+         at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+         at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+         at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+         at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/login - 500 0 - 15051.6598ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:35071/FACTORY2NETPOSTGRESQL/iisintegration - - 0
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:35071/FACTORY2NETPOSTGRESQL/iisintegration - 202 0 - 0.6125ms

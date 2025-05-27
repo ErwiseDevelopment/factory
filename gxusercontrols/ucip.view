@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+		var request = new XMLHttpRequest();
+		request.open('GET', 'https://api.ipify.org?format=json', false); // Terceiro argumento 'false' torna a requisição síncrona.
+		request.send();
+		if (request.status === 200) {
+		var data = JSON.parse(request.responseText);
+		document.getElementById('{{{gxTpr_CampoIP}}}{{{CampoIP}}}').value = data.ip;
+		} else {
+		console.error('Erro ao obter o endereço IP:', request.status);
+		document.getElementById('{{{gxTpr_CampoIP}}}{{{CampoIP}}}').value = 'Não foi possível obter o endereço IP.';
+		}
+</script>
+</body>
+</html>

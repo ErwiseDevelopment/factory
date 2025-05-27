@@ -1,0 +1,632 @@
+CREATE SEQUENCE RepresentanteId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Representante (RepresentanteId integer NOT NULL DEFAULT nextval('RepresentanteId'), RepresentanteNome VARCHAR(100) , RepresentanteRG VARCHAR(40) , RepresentanteOrgaoExpedidor VARCHAR(40) , RepresentanteRGUF VARCHAR(40) , RepresentanteCPF VARCHAR(40) , RepresentanteEstadoCivil VARCHAR(40) , RepresentanteNacionalidade VARCHAR(60) , RepresentanteProfissao integer , RepresentanteEmail VARCHAR(100) , RepresentanteCEP VARCHAR(14) , RepresentanteLogradouro VARCHAR(100) , RepresentanteBairro VARCHAR(100) , RepresentanteCidade VARCHAR(100) , RepresentanteMunicipio VARCHAR(40) , RepresentanteLogradouroNumero bigint , RepresentanteComplemento VARCHAR(100) , RepresentanteDDD smallint , RepresentanteNumero integer , RepresentanteTipo VARCHAR(40) , ClienteId integer , PRIMARY KEY(RepresentanteId));
+CREATE INDEX IREPRESENTANTE1 ON Representante (RepresentanteProfissao );
+CREATE INDEX IREPRESENTANTE2 ON Representante (RepresentanteMunicipio );
+CREATE INDEX IREPRESENTANTE3 ON Representante (ClienteId );
+
+CREATE SEQUENCE ChavePIXId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ChavePIX (ChavePIXId integer NOT NULL DEFAULT nextval('ChavePIXId'), ChavePIXTipo VARCHAR(40) , ChavePIXConteudo VARCHAR(100) , ChavePIXStatus BOOLEAN , ChavePIXPrincipal BOOLEAN , ContaBancariaId integer , ChavePIXCreatedAt timestamp without time zone , ChavePIXCreatedBy smallint , ChavePIXUpdatedAt timestamp without time zone , ChavePIXUpdatedBy smallint , PRIMARY KEY(ChavePIXId));
+CREATE INDEX ICHAVEPIX1 ON ChavePIX (ChavePIXCreatedBy );
+CREATE INDEX ICHAVEPIX2 ON ChavePIX (ChavePIXUpdatedBy );
+CREATE INDEX ICHAVEPIX3 ON ChavePIX (ContaBancariaId );
+
+CREATE SEQUENCE ContaBancariaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ContaBancaria (ContaBancariaId integer NOT NULL DEFAULT nextval('ContaBancariaId'), AgenciaId integer , ContaBancariaNumero bigint , ContaBancariaCarteira bigint , ContaBancariaCreatedAt timestamp without time zone , ContaBancariaCreatedBy smallint , ContaBancariaUpdatedAt timestamp without time zone , ContaBancariaUpdatedBy smallint , ContaBancariaStatus BOOLEAN , ContaBancariaRegistraBoletos BOOLEAN , ContaBancariaDigito smallint , PRIMARY KEY(ContaBancariaId));
+CREATE INDEX ICONTABANCARIA1 ON ContaBancaria (ContaBancariaCreatedBy );
+CREATE INDEX ICONTABANCARIA2 ON ContaBancaria (ContaBancariaUpdatedBy );
+CREATE INDEX ICONTABANCARIA3 ON ContaBancaria (AgenciaId );
+
+CREATE SEQUENCE AgenciaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Agencia (AgenciaId integer NOT NULL DEFAULT nextval('AgenciaId'), AgenciaNumero integer , AgenciaStatus BOOLEAN , AgenciaCreatedAt timestamp without time zone , AgenciaUpdatedAt timestamp without time zone , AgenciaCreatedBy smallint , AgenciaUpdatedBy smallint , AgenciaDigito integer , AgenciaBancoId integer , PRIMARY KEY(AgenciaId));
+CREATE INDEX IAGENCIA1 ON Agencia (AgenciaCreatedBy );
+CREATE INDEX IAGENCIA2 ON Agencia (AgenciaUpdatedBy );
+CREATE INDEX IAGENCIA3 ON Agencia (AgenciaBancoId );
+
+CREATE TABLE NotificacaoAgendadaProcessamentoItem (NotificacaoAgendadaProcessamentoId CHAR(36) NOT NULL , NotificacaoAgendadaProcessamentoItemId integer NOT NULL , NotificacaoAgendadaProcessamentoItemExecucao timestamp without time zone , NotificacaoAgendadaProcessamentoItemJson TEXT , NotificacaoAgendadaProcessamentoItemTipo VARCHAR(1) , NotificacaoAgendadaProcessamentoItemSituacao VARCHAR(1) , NotificacaoAgendadaProcessamentoItemRetorno VARCHAR(400) , PRIMARY KEY(NotificacaoAgendadaProcessamentoId, NotificacaoAgendadaProcessamentoItemId));
+
+CREATE TABLE NotificacaoAgendadaProcessamento (NotificacaoAgendadaProcessamentoId CHAR(36) NOT NULL , NotificacaoAgendadaProcessamentoInicio timestamp without time zone , NotificacaoAgendadaProcessamentoFim timestamp without time zone , NotificacaoAgendadaProcessamentoQtdExec integer , NotificacaoAgendadaProcessamentoQtdSucesso smallint , NotificacaoAgendadaProcessamentoQtdFalhas smallint , NotificacaoAgendadaProcessamentoSituacao VARCHAR(1) , NotificacaoAgendadaProcessamentoMensagemErro TEXT , PRIMARY KEY(NotificacaoAgendadaProcessamentoId));
+
+CREATE SEQUENCE NotificacaoAgendadaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE NotificacaoAgendada (NotificacaoAgendadaId integer NOT NULL DEFAULT nextval('NotificacaoAgendadaId'), NotificacaoAgendadaOrigem VARCHAR(1) NOT NULL , NotificacaoAgendadaDescricao VARCHAR(120) NOT NULL , NotificacaoAgendadaDias integer , NotificacaoAgendadaMomentoEnvio VARCHAR(1) , NotificacaoAgendadaTipo VARCHAR(1) , NotificacaoAgendadaLayoutId smallint , NotificacaoAgendadaStatus BOOLEAN , PRIMARY KEY(NotificacaoAgendadaId));
+CREATE INDEX INOTIFICACAOAGENDADA1 ON NotificacaoAgendada (NotificacaoAgendadaLayoutId );
+
+CREATE TABLE NotaFiscalParcelamento (NotaFiscalParcelamentoID CHAR(36) NOT NULL , NotaFiscalId CHAR(36) , NotaFiscalParcelamentoNumero VARCHAR(100) , NotaFiscalParcelamentoValor NUMERIC(17,2) , NotaFiscalParcelamentoVencimento date , NotaFiscalParcelamentoValorTaxaAdministrativa NUMERIC(17,2) , NotaFiscalParcelamentoValorTaxaAnual NUMERIC(17,2) , NotaFiscalParcelamentoLiquido NUMERIC(17,2) , PRIMARY KEY(NotaFiscalParcelamentoID));
+CREATE INDEX INOTAFISCALPARCELAMENTO1 ON NotaFiscalParcelamento (NotaFiscalId );
+
+CREATE SEQUENCE TaxasId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Taxas (TaxasId integer NOT NULL DEFAULT nextval('TaxasId'), TaxasPercentual NUMERIC(15,4) , TaxasValorMinimo NUMERIC(17,2) , TaxasCreatedAt timestamp without time zone , TaxasUpdatedAt timestamp without time zone , TaxasCreatedBy smallint , TaxasUpdatedBy smallint , TaxasPercentualAnual NUMERIC(15,4) , PRIMARY KEY(TaxasId));
+CREATE INDEX ITAXAS1 ON Taxas (TaxasUpdatedBy );
+CREATE INDEX ITAXAS2 ON Taxas (TaxasCreatedBy );
+
+CREATE SEQUENCE CreditoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Credito (CreditoId integer NOT NULL DEFAULT nextval('CreditoId'), ClienteId integer , CreditoValor NUMERIC(17,2) , CreditoVigencia date , CreditoCreatedAt timestamp without time zone , CreditoUpdatedAt timestamp without time zone , CreditoCreatedBy smallint , CreditoUpdatedBy smallint , PRIMARY KEY(CreditoId));
+CREATE INDEX ICREDITO1 ON Credito (ClienteId );
+CREATE INDEX ICREDITO2 ON Credito (CreditoCreatedBy );
+CREATE INDEX ICREDITO3 ON Credito (CreditoUpdatedBy );
+
+CREATE TABLE NotaFiscalItem (NotaFiscalItemId CHAR(36) NOT NULL , PropostaId integer , NotaFiscalId CHAR(36) , NotaFiscalItemCodigo VARCHAR(60) , NotaFiscalItemCFOP smallint , NotaFiscalItemDescricao VARCHAR(255) , NotaFiscalItemNCM VARCHAR(40) , NotaFiscalItemCodigoEAN VARCHAR(60) , NotaFiscalItemUnidadeComercial VARCHAR(40) , NotaFiscalItemQuantidade NUMERIC(17,6) , NotaFiscalItemValorUnitario NUMERIC(17,2) , NotaFiscalItemValorTotal NUMERIC(17,2) , NotaFiscalItemCodBarGTIN VARCHAR(100) , NotaFiscalItemUnidadeTributavel VARCHAR(40) , NotaFiscalItemValorUnTributavel NUMERIC(17,2) , NotaFiscalItemQtdTributavel NUMERIC(17,6) , NotaFiscalItemValorFrete NUMERIC(17,2) , NotaFiscalItemDesconto NUMERIC(17,2) , NotaFiscalItemIndicadorValorTotal VARCHAR(40) , NotaFiscalItemNumPedido VARCHAR(60) , NotaFiscalItemNumItem VARCHAR(60) , NotaFiscalItemVendido VARCHAR(40) , PRIMARY KEY(NotaFiscalItemId));
+CREATE INDEX INOTAFISCALITEM1 ON NotaFiscalItem (NotaFiscalId );
+CREATE INDEX INOTAFISCALITEM2 ON NotaFiscalItem (PropostaId );
+
+CREATE TABLE NotaFiscal (NotaFiscalId CHAR(36) NOT NULL , NotaFiscalUF smallint , NotaFiscalNatureza VARCHAR(255) , NotaFiscalMod VARCHAR(20) , NotaFiscalSerie VARCHAR(20) , NotaFiscalNumero VARCHAR(40) , NotaFiscalDataEmissao timestamp without time zone , NotaFiscalDataSaida timestamp without time zone , NotaFiscalTipo VARCHAR(40) , NotaFiscalMunicipio VARCHAR(40) , NotaFiscalTipoEmissao VARCHAR(40) , NotaFiscalAmbiente smallint , NotaFiscalFinalidades VARCHAR(40) , NotaFiscaEmitentelDocumento VARCHAR(14) , NotaFiscalEmitenteNome VARCHAR(60) , NotaFiscalEmitenteLogradouro VARCHAR(100) , NotaFiscalEmitenteLogNum VARCHAR(40) , NotaFiscalEmitenteComplemento VARCHAR(100) , NotaFiscalEmitenteBairro VARCHAR(100) , NotaFiscalEmitenteMunicipio VARCHAR(40) , NotaFiscalEmitenteUF VARCHAR(40) , NotaFiscalEmitenteCEP VARCHAR(40) , NotaFiscalEmitentePais VARCHAR(40) , NotaFiscalEmitenteTelefone VARCHAR(40) , NotaFiscalEmitenteIE VARCHAR(60) , NotaFiscalDestinatarioDocumento VARCHAR(14) , NotaFiscalDestinatarioNome VARCHAR(100) , NotaFiscalDestinatarioLogradouro VARCHAR(100) , NotaFiscalDestinatarioLogNum VARCHAR(40) , NotaFiscalDestinatarioComplemento VARCHAR(100) , NotaFiscalDestinatarioBairro VARCHAR(100) , NotaFiscalDestinatarioMunicipio VARCHAR(40) , NotaFiscalDestinatarioUF VARCHAR(40) , NotaFiscalDestinatarioCEP VARCHAR(40) , NotaFiscalDestinatarioPais VARCHAR(40) , NotaFiscalDestinatarioFone VARCHAR(40) , ClienteId integer , NotaFiscalDestinatarioClienteId integer , PRIMARY KEY(NotaFiscalId));
+CREATE INDEX INOTAFISCAL1 ON NotaFiscal (ClienteId );
+CREATE INDEX INOTAFISCAL2 ON NotaFiscal (NotaFiscalDestinatarioClienteId );
+
+CREATE SEQUENCE ReembolsoFlowLogId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ReembolsoFlowLog (ReembolsoFlowLogId integer NOT NULL DEFAULT nextval('ReembolsoFlowLogId'), LogWorkflowConvenioId integer , ReembolsoFlowLogDate timestamp without time zone , ReembolsoFlowLogUser smallint , ReembolsoLogId integer , ReembolsoFlowLogDataFinal timestamp without time zone , PRIMARY KEY(ReembolsoFlowLogId));
+CREATE INDEX IREEMBOLSOFLOWLOG1 ON ReembolsoFlowLog (ReembolsoFlowLogUser );
+CREATE INDEX IREEMBOLSOFLOWLOG2 ON ReembolsoFlowLog (ReembolsoLogId );
+CREATE INDEX IREEMBOLSOFLOWLOG3 ON ReembolsoFlowLog (LogWorkflowConvenioId );
+
+CREATE SEQUENCE WorkflowConvenioId MINVALUE 1 INCREMENT 1;
+CREATE TABLE WorkflowConvenio (WorkflowConvenioId integer NOT NULL DEFAULT nextval('WorkflowConvenioId'), WorkflowConvenioDesc VARCHAR(60) , WorkflowConvenioStatus BOOLEAN , WorkflowConvenioCreatedAt timestamp without time zone , WorkflowConvenioSLA smallint , PRIMARY KEY(WorkflowConvenioId));
+
+CREATE TABLE ReembolsoPassos (ReembolsoPassos smallint NOT NULL , ReembolsoPassosNome VARCHAR(60) , ReembolsoPassosStatus BOOLEAN , ReembolsoPassosSLALembrete smallint , PRIMARY KEY(ReembolsoPassos));
+
+CREATE SEQUENCE SerasaOcorrenciasId MINVALUE 1 INCREMENT 1;
+CREATE TABLE SerasaOcorrencias (SerasaOcorrenciasId integer NOT NULL DEFAULT nextval('SerasaOcorrenciasId'), SerasaId integer , SerasaOcorrenciasData date , SerasaOcorrenciasOrigem VARCHAR(40) , SerasaOcorrenciasModalidade VARCHAR(40) , SerasaOcorrenciasTipoMoeda VARCHAR(40) , SerasaOcorrenciasValor NUMERIC(17,2) , PRIMARY KEY(SerasaOcorrenciasId));
+CREATE INDEX ISERASAOCORRENCIAS1 ON SerasaOcorrencias (SerasaId );
+
+CREATE SEQUENCE SerasaEnderecosId MINVALUE 1 INCREMENT 1;
+CREATE TABLE SerasaEnderecos (SerasaEnderecosId integer NOT NULL DEFAULT nextval('SerasaEnderecosId'), SerasaId integer , SerasaEnderecosLogr VARCHAR(100) , SerasaEnderecosNum VARCHAR(40) , SerasaEnderecosCompl VARCHAR(50) , SerasaEnderecosBairro VARCHAR(100) , SerasaEnderecosCidade VARCHAR(40) , SerasaEnderecosEstado VARCHAR(40) , SerasaEnderecosCEP VARCHAR(40) , SerasaEnderecosTelDDD VARCHAR(40) , SerasaEnderecosTel VARCHAR(40) , PRIMARY KEY(SerasaEnderecosId));
+CREATE INDEX ISERASAENDERECOS1 ON SerasaEnderecos (SerasaId );
+
+CREATE SEQUENCE SerasaProtestosId MINVALUE 1 INCREMENT 1;
+CREATE TABLE SerasaProtestos (SerasaProtestosId integer NOT NULL DEFAULT nextval('SerasaProtestosId'), SerasaId integer , SerasaProtestosData date , SerasaProtestosValor NUMERIC(17,2) , SerasaProtestosCartorio VARCHAR(40) , SerasaProtestosCidade VARCHAR(40) , PRIMARY KEY(SerasaProtestosId));
+CREATE INDEX ISERASAPROTESTOS1 ON SerasaProtestos (SerasaId );
+
+CREATE SEQUENCE SerasaAcoesId MINVALUE 1 INCREMENT 1;
+CREATE TABLE SerasaAcoes (SerasaAcoesId integer NOT NULL DEFAULT nextval('SerasaAcoesId'), SerasaId integer , SerasaAcoesData date , SerasaAcoesNatureza VARCHAR(100) , SerasaAcoesValor NUMERIC(17,2) , SerasaAcoesDistribuidor VARCHAR(100) , SerasaAcoesVara VARCHAR(40) , SerasaAcoesCidade VARCHAR(40) , SerasaAcoesUF VARCHAR(40) , SerasaAcoesPrincipal VARCHAR(40) , SerasaAcoesTipoMoeda VARCHAR(40) , SerasaAcoesQtdOco smallint , PRIMARY KEY(SerasaAcoesId));
+CREATE INDEX ISERASAACOES1 ON SerasaAcoes (SerasaId );
+
+CREATE SEQUENCE SerasaChequesId MINVALUE 1 INCREMENT 1;
+CREATE TABLE SerasaCheques (SerasaChequesId integer NOT NULL DEFAULT nextval('SerasaChequesId'), SerasaId integer , SerasaChequesTotalCons NUMERIC(14,2) , SerasaChequesQtdSemFundo NUMERIC(14,2) , SerasaChequesUltOcorSus date , SerasaChequesValorSemFundo NUMERIC(17,2) , SerasaChequesTotalSust NUMERIC(14,2) , PRIMARY KEY(SerasaChequesId));
+CREATE INDEX ISERASACHEQUES1 ON SerasaCheques (SerasaId );
+
+CREATE SEQUENCE SerasaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Serasa (SerasaId integer NOT NULL DEFAULT nextval('SerasaId'), ClienteId integer , SerasaNumeroProposta VARCHAR(40) , SerasaPolitica NUMERIC(14,2) , SerasaCreatedAt timestamp without time zone , SerasaTipoVenda VARCHAR(40) , SerasaCodTipoVenda NUMERIC(14,2) , SerasaCodNivelRisco NUMERIC(14,2) , SerasaTipoRecomendacao VARCHAR(40) , SerasaRecomendacaoVenda VARCHAR(100) , SerasaCpfRegular BOOLEAN , SerasaRetricaoAtiva BOOLEAN , SerasaProtestoAtivo BOOLEAN , SerasaBaixoComprometimento BOOLEAN , SerasaValorLimiteRecomendado NUMERIC(17,2) , SerasaFaixaDeRendaEstimada NUMERIC(14,2) , SerasaMensagemRendaEstimada VARCHAR(250) , SerasaAnotacoesCompletas BOOLEAN , SerasaConsultasDetalhadas BOOLEAN , SerasaAnotacoesConsultaSPC BOOLEAN , SerasaParticipacaoSocietaria BOOLEAN , SerasaRendaEstimada BOOLEAN , SerasaHistoricoPagamentoPF BOOLEAN , SerasaRecomendaCompleto BOOLEAN , SerasaScore smallint , SerasaTaxa NUMERIC(14,2) , SerasaMensagemScore VARCHAR(250) , SerasaSituacaoCPF VARCHAR(40) , SerasaDataNascimento date , SerasaGenero VARCHAR(40) , SerasaNomeMae VARCHAR(60) , SerasaGrafia VARCHAR(60) , SerasaJSON TEXT , PRIMARY KEY(SerasaId));
+CREATE INDEX ISERASA1 ON Serasa (ClienteId );
+
+CREATE SEQUENCE WebServiceId MINVALUE 1 INCREMENT 1;
+CREATE TABLE WebService (WebServiceId integer NOT NULL DEFAULT nextval('WebServiceId'), WebServiceTipoDmWS VARCHAR(40) , WebServiceEndPoint VARCHAR(255) , WebServiceAuthTipo VARCHAR(40) , WebServiceUsuario VARCHAR(100) , WebServiceSenha VARCHAR(100) , PRIMARY KEY(WebServiceId));
+
+CREATE SEQUENCE ReembolsoParcelasId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ReembolsoParcelas (ReembolsoParcelasId integer NOT NULL DEFAULT nextval('ReembolsoParcelasId'), ReembolsoId integer , ReembolsoParcelasValor NUMERIC(17,2) , ReembolsoParcelasData date , ReembolsoParcelasObservacao VARCHAR(100) , ReembolsoParcelasCreatedAt timestamp without time zone , ReembolsoParcelasTaxaValor NUMERIC(17,2) , ReembolsoParcelasJurosValor NUMERIC(17,2) , ReembolsoParcelasDiasPJuros smallint , PRIMARY KEY(ReembolsoParcelasId));
+CREATE INDEX IREEMBOLSOPARCELAS1 ON ReembolsoParcelas (ReembolsoId );
+
+CREATE SEQUENCE ReembolsoAssinaturasId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ReembolsoAssinaturas (ReembolsoAssinaturasId integer NOT NULL DEFAULT nextval('ReembolsoAssinaturasId'), ReembolsoId integer , ReembolsoAssinaturasNome VARCHAR(100) , ReembolsoAssinaturasEmissao timestamp without time zone , PropostaContratoAssinaturaId integer , PRIMARY KEY(ReembolsoAssinaturasId));
+CREATE INDEX IREEMBOLSOASSINATURAS2 ON ReembolsoAssinaturas (ReembolsoId );
+CREATE INDEX IREEMBOLSOASSINATURAS1 ON ReembolsoAssinaturas (PropostaContratoAssinaturaId );
+
+CREATE SEQUENCE LogEmailId MINVALUE 1 INCREMENT 1;
+CREATE TABLE LogEmail (LogEmailId integer NOT NULL DEFAULT nextval('LogEmailId'), LogEmailCorpo TEXT , LogEmailSubject VARCHAR(100) , LogEmailDestinatario VARCHAR(255) , LogEmailCreatedAt timestamp without time zone , PRIMARY KEY(LogEmailId));
+
+CREATE SEQUENCE ClienteDocumentoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ClienteDocumento (ClienteDocumentoId integer NOT NULL DEFAULT nextval('ClienteDocumentoId'), ClienteId integer , DocumentosId integer , ClienteDocumentoBlob BYTEA , ClienteDocumentoNome VARCHAR(100) , ClienteDocumentoExtensao VARCHAR(100) , ClienteDocumentoCreatedAt timestamp without time zone , ClienteDocumentoCreatedBy smallint , ClienteDocumentoUpdatedAt timestamp without time zone , PRIMARY KEY(ClienteDocumentoId));
+CREATE INDEX ICLIENTEDOCUMENTO1 ON ClienteDocumento (DocumentosId );
+CREATE INDEX ICLIENTEDOCUMENTO2 ON ClienteDocumento (ClienteId );
+CREATE INDEX ICLIENTEDOCUMENTO3 ON ClienteDocumento (ClienteDocumentoCreatedBy );
+
+CREATE SEQUENCE PropostaContratoAssinaturaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE PropostaContratoAssinatura (PropostaContratoAssinaturaId integer NOT NULL DEFAULT nextval('PropostaContratoAssinaturaId'), PropostaId integer , PropostaContrato integer , PropostaAssinatura bigint , PropostaContratoAssinaturaTipo VARCHAR(60) , PRIMARY KEY(PropostaContratoAssinaturaId));
+CREATE INDEX IPROPOSTACONTRATOASSINATURA1 ON PropostaContratoAssinatura (PropostaId );
+CREATE INDEX IPROPOSTACONTRATOASSINATURA2 ON PropostaContratoAssinatura (PropostaContrato );
+CREATE INDEX IPROPOSTACONTRATOASSINATURA3 ON PropostaContratoAssinatura (PropostaAssinatura );
+
+CREATE SEQUENCE SecUserLogId MINVALUE 1 INCREMENT 1;
+CREATE TABLE SecUserLog (SecUserLogId integer NOT NULL DEFAULT nextval('SecUserLogId'), SecUserId smallint , SecUserLogDateTime timestamp without time zone , PRIMARY KEY(SecUserLogId));
+CREATE INDEX ISECUSERLOG1 ON SecUserLog (SecUserId );
+
+CREATE SEQUENCE AssinaturaParticipanteTokenId MINVALUE 1 INCREMENT 1;
+CREATE TABLE AssinaturaParticipanteToken (AssinaturaParticipanteTokenId integer NOT NULL DEFAULT nextval('AssinaturaParticipanteTokenId'), AssinaturaParticipanteId integer , AssinaturaParticipanteTokenExpire timestamp without time zone , AssinaturaParticipanteTokenUsed BOOLEAN , AssinaturaParticipanteTokenContent VARCHAR(40) , PRIMARY KEY(AssinaturaParticipanteTokenId));
+CREATE INDEX IASSINATURAPARTICIPANTETOKEN1 ON AssinaturaParticipanteToken (AssinaturaParticipanteId );
+
+CREATE SEQUENCE ClienteReponsavelId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ClienteReponsavel (ClienteReponsavelId integer NOT NULL DEFAULT nextval('ClienteReponsavelId'), ReponsavelClienteId integer , ClienteId integer , PRIMARY KEY(ClienteReponsavelId));
+CREATE INDEX ICLIENTEREPONSAVEL1 ON ClienteReponsavel (ClienteId );
+CREATE INDEX ICLIENTEREPONSAVEL2 ON ClienteReponsavel (ReponsavelClienteId );
+
+CREATE SEQUENCE ReembolsoDocumentoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ReembolsoDocumento (ReembolsoDocumentoId integer NOT NULL DEFAULT nextval('ReembolsoDocumentoId'), ReembolsoEtapaId integer , ReembolsoDocumentoNome VARCHAR(60) , ReembolsoDocumentoBlob BYTEA , ReembolsoDocumentoBlobExt VARCHAR(60) , ReembolsoDocumentoCreatedAt timestamp without time zone , DocumentosId integer , ReembolsoDocumentoStatus VARCHAR(40) , PRIMARY KEY(ReembolsoDocumentoId));
+CREATE INDEX IREEMBOLSODOCUMENTO1 ON ReembolsoDocumento (DocumentosId );
+CREATE INDEX IREEMBOLSODOCUMENTO2 ON ReembolsoDocumento (ReembolsoEtapaId );
+
+CREATE SEQUENCE EtapaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Etapa (EtapaId integer NOT NULL DEFAULT nextval('EtapaId'), EtapaDescricao VARCHAR(60) , EtapaCreatedAt timestamp without time zone NOT NULL , PRIMARY KEY(EtapaId));
+
+CREATE SEQUENCE ReembolsoEtapaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ReembolsoEtapa (ReembolsoEtapaId integer NOT NULL DEFAULT nextval('ReembolsoEtapaId'), ReembolsoId integer , ReembolsoEtapaCreatedAt timestamp without time zone , ReembolsoEtapaStatus VARCHAR(40) , PRIMARY KEY(ReembolsoEtapaId));
+CREATE INDEX IREEMBOLSOETAPA1 ON ReembolsoEtapa (ReembolsoId );
+
+CREATE SEQUENCE ReembolsoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Reembolso (ReembolsoId integer NOT NULL DEFAULT nextval('ReembolsoId'), ReembolsoPropostaId integer , ReembolsoProtocolo VARCHAR(40) , ReembolsoCreatedAt timestamp without time zone , ReembolsoDataAberturaConvenio date , ReembolsoCreatedBy smallint , WorkflowConvenioId integer , PRIMARY KEY(ReembolsoId));
+CREATE INDEX IREEMBOLSO1 ON Reembolso (ReembolsoPropostaId );
+CREATE INDEX IREEMBOLSO2 ON Reembolso (ReembolsoCreatedBy );
+CREATE INDEX IREEMBOLSO3 ON Reembolso (WorkflowConvenioId );
+
+CREATE SEQUENCE ConvenioCategoriaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ConvenioCategoria (ConvenioCategoriaId integer NOT NULL DEFAULT nextval('ConvenioCategoriaId'), ConvenioId integer , ConvenioCategoriaDescricao VARCHAR(70) , ConvenioCategoriaStatus BOOLEAN , PRIMARY KEY(ConvenioCategoriaId));
+CREATE INDEX ICONVENIOCATEGORIA1 ON ConvenioCategoria (ConvenioId );
+
+CREATE SEQUENCE ConfiguracaoNotificacoesId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ConfiguracaoNotificacoes (ConfiguracaoNotificacoesId integer NOT NULL DEFAULT nextval('ConfiguracaoNotificacoesId'), ConfiguracaoNotificacoesEmail VARCHAR(100) , PRIMARY KEY(ConfiguracaoNotificacoesId));
+
+CREATE SEQUENCE ConfiguracoesTestemunhasId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ConfiguracoesTestemunhas (ConfiguracoesTestemunhasId integer NOT NULL DEFAULT nextval('ConfiguracoesTestemunhasId'), ConfiguracoesTestemunhasNome VARCHAR(70) , ConfiguracoesTestemunhasDocumento VARCHAR(40) , ConfiguracoesTestemunhasEmail VARCHAR(100) , SecUserId smallint , PRIMARY KEY(ConfiguracoesTestemunhasId));
+CREATE INDEX ICONFIGURACOESTESTEMUNHAS1 ON ConfiguracoesTestemunhas (SecUserId );
+
+CREATE SEQUENCE EspecialidadeId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Especialidade (EspecialidadeId integer NOT NULL DEFAULT nextval('EspecialidadeId'), EspecialidadeNome VARCHAR(60) , EspecialidadeStatus BOOLEAN , EspecialidadeUpdatedAt timestamp without time zone , EspecialidadeCreatedAt timestamp without time zone , EspecialidadeCreatedBy smallint , PRIMARY KEY(EspecialidadeId));
+CREATE INDEX IESPECIALIDADE1 ON Especialidade (EspecialidadeCreatedBy );
+
+CREATE SEQUENCE ProfissaoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Profissao (ProfissaoId integer NOT NULL DEFAULT nextval('ProfissaoId'), ProfissaoNome VARCHAR(90) , PRIMARY KEY(ProfissaoId));
+
+CREATE SEQUENCE NacionalidadeId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Nacionalidade (NacionalidadeId integer NOT NULL DEFAULT nextval('NacionalidadeId'), NacionalidadeNome VARCHAR(100) , PRIMARY KEY(NacionalidadeId));
+
+CREATE SEQUENCE CategoriaTituloId MINVALUE 1 INCREMENT 1;
+CREATE TABLE CategoriaTitulo (CategoriaTituloId integer NOT NULL DEFAULT nextval('CategoriaTituloId'), CategoriaTituloNome VARCHAR(60) , CategoriaTituloDescricao VARCHAR(150) , CategoriaStatus BOOLEAN , PRIMARY KEY(CategoriaTituloId));
+
+CREATE SEQUENCE ContaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Conta (ContaId integer NOT NULL DEFAULT nextval('ContaId'), ContaSaldoAtual NUMERIC(17,2) , ContaNomeConta VARCHAR(60) , ContaDataUltimaAtualizacao timestamp without time zone , ContaStatus BOOLEAN , ContaProposta BOOLEAN , PRIMARY KEY(ContaId));
+
+CREATE SEQUENCE PropostaDocumentosId MINVALUE 1 INCREMENT 1;
+CREATE TABLE PropostaDocumentos (PropostaDocumentosId integer NOT NULL DEFAULT nextval('PropostaDocumentosId'), PropostaId integer , DocumentosId integer , PropostaDocumentosAnexo BYTEA , PropostaDocumentosAnexoName VARCHAR(128) , PropostaDocumentosAnexoFileType VARCHAR(40) , PropostaDocumentosStatus VARCHAR(40) , PropostaDocumentosAdm BOOLEAN , PRIMARY KEY(PropostaDocumentosId));
+CREATE INDEX IPROPOSTADOCUMENTOS1 ON PropostaDocumentos (DocumentosId );
+CREATE INDEX IPROPOSTADOCUMENTOS2 ON PropostaDocumentos (PropostaId );
+
+CREATE SEQUENCE ConvenioId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Convenio (ConvenioId integer NOT NULL DEFAULT nextval('ConvenioId'), ConvenioDescricao VARCHAR(40) , ConvenioStatus BOOLEAN NOT NULL , PRIMARY KEY(ConvenioId));
+
+CREATE SEQUENCE DocumentosId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Documentos (DocumentosId integer NOT NULL DEFAULT nextval('DocumentosId'), DocumentosDescricao VARCHAR(40) , DocumentosStatus BOOLEAN , DocumentoObrigatorio BOOLEAN , DocumentoObrigatorioReembolso BOOLEAN , PRIMARY KEY(DocumentosId));
+
+CREATE SEQUENCE BancoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Banco (BancoId integer NOT NULL DEFAULT nextval('BancoId'), BancoCodigo integer , BancoNome VARCHAR(150) , PRIMARY KEY(BancoId));
+CREATE UNIQUE INDEX UBANCOCODIGO ON Banco (BancoCodigo );
+
+CREATE SEQUENCE EmailQueueId MINVALUE 1 INCREMENT 1;
+CREATE TABLE EmailQueue (EmailQueueId integer NOT NULL DEFAULT nextval('EmailQueueId'), NotificationId integer , EmailQueueRecipient VARCHAR(100) , EmailQueueStatus VARCHAR(40) , EmailQueueSentAt timestamp without time zone , EmailQueueErrorMessage VARCHAR(255) , PRIMARY KEY(EmailQueueId));
+CREATE INDEX IEMAILQUEUE1 ON EmailQueue (NotificationId );
+
+CREATE SEQUENCE UserNotificationId MINVALUE 1 INCREMENT 1;
+CREATE TABLE UserNotification (UserNotificationId integer NOT NULL DEFAULT nextval('UserNotificationId'), NotificationId integer , UserNotificationUserId smallint , UserNotificationStatus VARCHAR(40) , UserNotificationSentAt timestamp without time zone , UserNotificationReadAt timestamp without time zone , PRIMARY KEY(UserNotificationId));
+CREATE INDEX IUSERNOTIFICATION1 ON UserNotification (NotificationId );
+CREATE INDEX IUSERNOTIFICATION2 ON UserNotification (UserNotificationUserId );
+
+CREATE SEQUENCE NotificationId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Notification (NotificationId integer NOT NULL DEFAULT nextval('NotificationId'), NotificationTitle VARCHAR(60) , NotificationMessage VARCHAR(106) , NotificationType VARCHAR(40) , NotificationCreatedAt timestamp without time zone , NotificationStatus VARCHAR(40) , SecUserId smallint , NotificationLink VARCHAR(1000) , PRIMARY KEY(NotificationId));
+CREATE INDEX INOTIFICATION1 ON Notification (SecUserId );
+
+CREATE SEQUENCE AprovadoresId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Aprovadores (AprovadoresId integer NOT NULL DEFAULT nextval('AprovadoresId'), SecUserId smallint , AprovadoresStatus BOOLEAN , PRIMARY KEY(AprovadoresId));
+CREATE UNIQUE INDEX APROVADORES_UNIQUE_SECUSERID ON Aprovadores (SecUserId );
+
+CREATE SEQUENCE ProcedimentosMedicosId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ProcedimentosMedicos (ProcedimentosMedicosId integer NOT NULL DEFAULT nextval('ProcedimentosMedicosId'), ProcedimentosMedicosNome VARCHAR(255) , ProcedimentosMedicosDescricao TEXT , ProcedimentosMedicosArea VARCHAR(255) , CID integer , ProcedimentosMedicosAtivo BOOLEAN NOT NULL , PRIMARY KEY(ProcedimentosMedicosId));
+
+CREATE SEQUENCE TagsId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Tags (TagsId integer NOT NULL DEFAULT nextval('TagsId'), TagsDescricao VARCHAR(108) , TagsConteudo VARCHAR(40) , PRIMARY KEY(TagsId));
+
+CREATE SEQUENCE FilaProcessamentoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE FilaProcessamento (FilaProcessamentoId integer NOT NULL DEFAULT nextval('FilaProcessamentoId'), FilaProcessamentoFuncao VARCHAR(100) , FilaProcessamentoParametros TEXT , FilaProcessamentoStatus VARCHAR(40) , FilaProcessamentoCriacao timestamp without time zone , FilaProcessamentoAtualizacao timestamp without time zone , PRIMARY KEY(FilaProcessamentoId));
+
+CREATE SEQUENCE AprovacaoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Aprovacao (AprovacaoId integer NOT NULL DEFAULT nextval('AprovacaoId'), PropostaId integer , AprovacaoEm timestamp without time zone , AprovacaoDecisao VARCHAR(255) , AprovacaoStatus VARCHAR(40) , AprovadoresId integer , PRIMARY KEY(AprovacaoId));
+CREATE INDEX IAPROVACAO1 ON Aprovacao (PropostaId );
+CREATE INDEX IAPROVACAO2 ON Aprovacao (AprovadoresId );
+
+CREATE SEQUENCE LimiteAprovacaoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE LimiteAprovacao (LimiteAprovacaoId integer NOT NULL DEFAULT nextval('LimiteAprovacaoId'), LimiteAprovacaoValorMinimo NUMERIC(17,2) , LimiteAprovacaoAprovacoes smallint , LimiteAprovacaoReprovacoesPermitidas smallint NOT NULL , PRIMARY KEY(LimiteAprovacaoId));
+
+CREATE SEQUENCE PropostaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Proposta (PropostaId integer NOT NULL DEFAULT nextval('PropostaId'), PropostaTitulo VARCHAR(150) , PropostaDescricao VARCHAR(150) , PropostaValor NUMERIC(17,2) , PropostaCreatedAt timestamp without time zone , PropostaCratedBy smallint , PropostaStatus VARCHAR(150) , ContratoId integer , PropostaQuantidadeAprovadores smallint , PropostaReprovacoesPermitidas smallint , ProcedimentosMedicosId integer , ConvenioVencimentoAno smallint , ConvenioVencimentoMes smallint , ConvenioCategoriaId integer , PropostaPacienteClienteId integer , PropostaTaxaAdministrativa NUMERIC(15,4) , PropostaSLA smallint , PropostaJurosMora NUMERIC(15,4) , PropostaDataCirurgia date , PropostaResponsavelId integer , PropostaClinicaId integer , PropostaComentarioAnalise VARCHAR(255) , PropostaProtocolo VARCHAR(40) , PropostaEmpresaClienteId integer , PropostaTipoProposta VARCHAR(40) , PropostaValorLiquido NUMERIC(17,2) , PRIMARY KEY(PropostaId));
+CREATE INDEX IPROPOSTA1 ON Proposta (ContratoId );
+CREATE INDEX IPROPOSTA2 ON Proposta (PropostaCratedBy );
+CREATE INDEX IPROPOSTA4 ON Proposta (ProcedimentosMedicosId );
+CREATE INDEX IPROPOSTA5 ON Proposta (ConvenioCategoriaId );
+CREATE INDEX IPROPOSTA6 ON Proposta (PropostaPacienteClienteId );
+CREATE INDEX IPROPOSTA3 ON Proposta (PropostaResponsavelId );
+CREATE INDEX IPROPOSTA7 ON Proposta (PropostaClinicaId );
+CREATE INDEX IPROPOSTA8 ON Proposta (PropostaEmpresaClienteId );
+
+CREATE SEQUENCE ConfiguracoesId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Configuracoes (ConfiguracoesId integer NOT NULL DEFAULT nextval('ConfiguracoesId'), ConfiguracoesImagemLogin BYTEA , ConfiguracoesImagemLoginNome VARCHAR(150) , ConfiguracoesImagemLoginExtencao VARCHAR(150) , ConfiguracoesImagemLoginNomeInteiro VARCHAR(150) , ConfiguracoesImagemLoginTamanho NUMERIC(17,2) , ConfiguracoesImagemLoginBackground VARCHAR(40) , ConfiguracoesImagemHeader BYTEA , ConfiguracoesImagemHeaderNome VARCHAR(150) , ConfiguracoesImagemHeaderExtencao VARCHAR(150) , ConfiguracoesImagemHeaderNomeInteiro VARCHAR(150) , ConfiguracoesImagemHeaderTamanho NUMERIC(17,2) , ConfiguracoesLayoutProposta smallint , ConfigLayoutPromissoriaClinicaEmprestimo smallint , ConfigLayoutPromissoriaClinicaTaxa smallint , ConfigLayoutPromissoriaPaciente smallint , ConfiguracoesArquivoPFX BYTEA , ConfiguracaoSenhaPFX VARCHAR(50) , ConfiguracoesCategoriaTitulo integer , ConfiguracoesSerasaAnotacoesCompletas BOOLEAN , ConfiguracoesSerasaConsultaDetalhada BOOLEAN , ConfiguracoesSerasaParticipacaoSocietaria BOOLEAN , ConfiguracoesSerasaRendaEstimada BOOLEAN , ConfiguracoesSerasaHistoricoPagamento BOOLEAN , ConfigLayoutContratoCompraTitulo smallint , PRIMARY KEY(ConfiguracoesId));
+CREATE INDEX ICONFIGURACOES1 ON Configuracoes (ConfiguracoesLayoutProposta );
+CREATE INDEX ICONFIGURACOES2 ON Configuracoes (ConfigLayoutPromissoriaClinicaEmprestimo );
+CREATE INDEX ICONFIGURACOES3 ON Configuracoes (ConfigLayoutPromissoriaClinicaTaxa );
+CREATE INDEX ICONFIGURACOES4 ON Configuracoes (ConfigLayoutPromissoriaPaciente );
+CREATE INDEX ICONFIGURACOES5 ON Configuracoes (ConfiguracoesCategoriaTitulo );
+CREATE INDEX ICONFIGURACOES6 ON Configuracoes (ConfigLayoutContratoCompraTitulo );
+
+CREATE SEQUENCE PreferenciasId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Preferencias (PreferenciasId integer NOT NULL DEFAULT nextval('PreferenciasId'), PreferenciasMulta NUMERIC(15,4) , PreferenciasJuros NUMERIC(15,4) , PRIMARY KEY(PreferenciasId));
+
+CREATE SEQUENCE TipoPagamentoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE TipoPagamento (TipoPagamentoId integer NOT NULL DEFAULT nextval('TipoPagamentoId'), TipoPagamentoNome VARCHAR(60) NOT NULL , PRIMARY KEY(TipoPagamentoId));
+
+CREATE SEQUENCE TituloMovimentoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE TituloMovimento (TituloMovimentoId integer NOT NULL DEFAULT nextval('TituloMovimentoId'), TipoPagamentoId integer , TituloId integer , TituloMovimentoValor NUMERIC(17,2) , TituloMovimentoTipo VARCHAR(40) , TituloMovimentoSoma BOOLEAN , TituloMovimentoDataCredito date , TituloMovimentoCreatedAt timestamp without time zone , TituloMovimentoUpdatedAt timestamp without time zone , TituloMovimentoOpe VARCHAR(40) , TituloMovimentoConta integer , PRIMARY KEY(TituloMovimentoId));
+CREATE INDEX ITITULOMOVIMENTO1 ON TituloMovimento (TituloId );
+CREATE INDEX ITITULOMOVIMENTO2 ON TituloMovimento (TipoPagamentoId );
+CREATE INDEX ITITULOMOVIMENTO3 ON TituloMovimento (TituloMovimentoConta );
+
+CREATE SEQUENCE TituloId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Titulo (TituloId integer NOT NULL DEFAULT nextval('TituloId'), TituloValor NUMERIC(17,2) , TituloDesconto NUMERIC(17,2) , TituloDeleted BOOLEAN , TituloVencimento date , TituloCompetenciaAno smallint , TituloCompetenciaMes smallint , TituloProrrogacao date , TituloCEP VARCHAR(14) , TituloLogradouro VARCHAR(150) , TituloNumeroEndereco VARCHAR(10) , TituloComplemento VARCHAR(150) , TituloBairro VARCHAR(150) , TituloMunicipio VARCHAR(150) , TituloTipo VARCHAR(40) , TituloArchived BOOLEAN , TituloPropostaId integer , ContaId integer , CategoriaTituloId integer , TituloJurosMora NUMERIC(15,4) , TituloCriacao timestamp without time zone , TituloPropostaTipo VARCHAR(40) , NotaFiscalParcelamentoID CHAR(36) , ContaBancariaId integer , TituloClienteId integer , PRIMARY KEY(TituloId));
+CREATE INDEX ITITULO2 ON Titulo (CategoriaTituloId );
+CREATE INDEX ITITULO3 ON Titulo (ContaId );
+CREATE INDEX ITITULO1 ON Titulo (TituloPropostaId );
+CREATE INDEX ITITULO4 ON Titulo (NotaFiscalParcelamentoID );
+CREATE INDEX ITITULO5 ON Titulo (ContaBancariaId );
+CREATE INDEX ITITULO6 ON Titulo (TituloClienteId );
+
+CREATE SEQUENCE AssinaturaParticipanteNotificacaoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE AssinaturaParticipanteNotificacao (AssinaturaParticipanteNotificacaoId integer NOT NULL DEFAULT nextval('AssinaturaParticipanteNotificacaoId'), AssinaturaParticipanteId integer , AssinaturaParticipanteNotificacaoData timestamp without time zone , AssinaturaParticipanteNotificacaoStatus VARCHAR(40) , PRIMARY KEY(AssinaturaParticipanteNotificacaoId));
+CREATE INDEX IASSINATURAPARTICIPANTENOTIFICACAO1 ON AssinaturaParticipanteNotificacao (AssinaturaParticipanteId );
+
+CREATE SEQUENCE EmpresaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Empresa (EmpresaId integer NOT NULL DEFAULT nextval('EmpresaId'), EmpresaNomeFantasia VARCHAR(150) , EmpresaRazaoSocial VARCHAR(150) , EmpresaCNPJ VARCHAR(14) , EmpresaSede BOOLEAN , EmpresaBancoId integer , EmpresaAgencia integer , EmpresaAgenciaDigito integer , EmpresaConta integer , EmpresaPix VARCHAR(70) , EmpresaPixTipo VARCHAR(40) , EmpresaEmail VARCHAR(100) , EmpresaRepresentanteCPF VARCHAR(14) , EmpresaRepresentanteNome VARCHAR(60) , EmpresaRepresentanteEmail VARCHAR(100) , EmpresaUtilizaRepresentanteAssinatura BOOLEAN , EmpresaLogradouro VARCHAR(100) , EmpresaLogradouroNumero bigint , EmpresaCEP VARCHAR(40) , EmpresaBairro VARCHAR(100) , EmpresaComplemento VARCHAR(100) , MunicipioCodigo VARCHAR(40) , EmpresaRepresentanteLogradouro VARCHAR(100) , EmpresaRepresentanteNumero bigint , EmpresaRepresentanteCEP VARCHAR(20) , EmpresaRepresentanteBairro VARCHAR(100) , EmpresaRepresentanteComplemento VARCHAR(100) , EmpresaRepresentanteMunicipio VARCHAR(40) , EmpresaRepresentanteNacionalidade VARCHAR(100) , EmpresaRepresentanteProfissao integer , EmpresaRepresentanteTelefone integer , EmpresaRepresentanteTelefoneDDD smallint , PRIMARY KEY(EmpresaId));
+CREATE INDEX IEMPRESA1 ON Empresa (EmpresaBancoId );
+CREATE INDEX IEMPRESA2 ON Empresa (EmpresaRepresentanteProfissao );
+CREATE INDEX IEMPRESA3 ON Empresa (MunicipioCodigo );
+CREATE INDEX IEMPRESA4 ON Empresa (EmpresaRepresentanteMunicipio );
+
+CREATE SEQUENCE AssinaturaParticipanteId MINVALUE 1 INCREMENT 1;
+CREATE TABLE AssinaturaParticipante (AssinaturaParticipanteId integer NOT NULL DEFAULT nextval('AssinaturaParticipanteId'), AssinaturaId bigint , ParticipanteId integer , AssinaturaParticipanteDataVisualizacao timestamp without time zone , AssinaturaParticipanteDataConclusao timestamp without time zone , AssinaturaParticipanteKey CHAR(36) , AssinaturaParticipanteTipo VARCHAR(40) , AssinaturaParticipanteStatus VARCHAR(40) , AssinaturaParticipanteRemoteAddres VARCHAR(40) , AssinaturaParticipanteGeolocalizacao VARCHAR(40) , AssinaturaParticipanteDispositivo VARCHAR(90) , AssinaturaParticipanteCPF VARCHAR(40) , AssinaturaParticipanteEmail VARCHAR(100) , AssinaturaParticipanteNascimento date , AssinaturaParticipanteLink VARCHAR(256) , ClienteId integer , PRIMARY KEY(AssinaturaParticipanteId));
+CREATE INDEX IASSINATURAPARTICIPANTE1 ON AssinaturaParticipante (ParticipanteId );
+CREATE INDEX IASSINATURAPARTICIPANTE2 ON AssinaturaParticipante (AssinaturaId );
+CREATE INDEX IASSINATURAPARTICIPANTE3 ON AssinaturaParticipante (ClienteId );
+
+CREATE SEQUENCE AssinaturaId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Assinatura (AssinaturaId bigint NOT NULL DEFAULT nextval('AssinaturaId'), AssinaturaStatus VARCHAR(40) , ContratoId integer , AssinaturaArquivoAssinado BYTEA , AssinaturaPublicKey CHAR(36) , AssinaturaArquivoAssinadoNome VARCHAR(150) , AssinaturaArquivoAssinadoExtensao VARCHAR(40) , ArquivoId integer , AssinaturaPaginaConsulta VARCHAR(150) , AssinaturaToken VARCHAR(512) , AssinaturaMes smallint , AssinaturaMesNome VARCHAR(40) , AssinaturaAno smallint , AssinaturaFinalizadoData timestamp without time zone , ArquivoAssinadoId integer , PRIMARY KEY(AssinaturaId));
+CREATE INDEX IASSINATURA1 ON Assinatura (ContratoId );
+CREATE INDEX IASSINATURA2 ON Assinatura (ArquivoId );
+CREATE INDEX IASSINATURA3 ON Assinatura (ArquivoAssinadoId );
+
+CREATE SEQUENCE ContratoParticipanteId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ContratoParticipante (ContratoParticipanteId integer NOT NULL DEFAULT nextval('ContratoParticipanteId'), ContratoId integer , ParticipanteId integer , PRIMARY KEY(ContratoParticipanteId));
+CREATE INDEX ICONTRATOPARTICIPANTE1 ON ContratoParticipante (ParticipanteId );
+CREATE INDEX ICONTRATOPARTICIPANTE2 ON ContratoParticipante (ContratoId );
+
+CREATE SEQUENCE ParticipanteId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Participante (ParticipanteId integer NOT NULL DEFAULT nextval('ParticipanteId'), ParticipanteDocumento VARCHAR(14) , ParticipanteEmail VARCHAR(100) , ParticipanteNome VARCHAR(150) , ParticipanteTipoPessoa VARCHAR(40) , ParticipanteRepresentanteNome VARCHAR(100) , ParticipanteRepresentanteEmail VARCHAR(100) , ParticipanteRepresentanteDocumento VARCHAR(14) , PRIMARY KEY(ParticipanteId));
+
+CREATE SEQUENCE ArquivoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Arquivo (ArquivoId integer NOT NULL DEFAULT nextval('ArquivoId'), ArquivoBlob BYTEA , ArquivoNome VARCHAR(150) , ArquivoExtensao VARCHAR(40) , PRIMARY KEY(ArquivoId));
+
+CREATE SEQUENCE ContratoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Contrato (ContratoId integer NOT NULL DEFAULT nextval('ContratoId'), ContratoNome VARCHAR(125) , ContratoCorpo TEXT , ContratoComVigencia BOOLEAN , ContratoDataInicial date , ContratoDataFinal date , ContratoTaxa NUMERIC(15,4) , ContratoSLA smallint , ContratoJurosMora NUMERIC(15,4) , ContratoIOFMinimo NUMERIC(15,4) , ContratoClienteId integer , ContratoSituacao VARCHAR(40) , ContratoBlob BYTEA , ContratoPropostaId integer , PRIMARY KEY(ContratoId));
+CREATE INDEX ICONTRATO1 ON Contrato (ContratoClienteId );
+CREATE INDEX ICONTRATO2 ON Contrato (ContratoPropostaId );
+
+CREATE SEQUENCE FinanciamentoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Financiamento (FinanciamentoId integer NOT NULL DEFAULT nextval('FinanciamentoId'), ClienteId integer , FinanciamentoValor NUMERIC(17,2) , IntermediadorClienteId integer , FinanciamentoStatus VARCHAR(40) , PRIMARY KEY(FinanciamentoId));
+CREATE INDEX IFINANCIAMENTO1 ON Financiamento (ClienteId );
+CREATE INDEX IFINANCIAMENTO2 ON Financiamento (IntermediadorClienteId );
+
+CREATE SEQUENCE TemporaryCodeId MINVALUE 1 INCREMENT 1;
+CREATE TABLE TemporaryCode (TemporaryCodeId integer NOT NULL DEFAULT nextval('TemporaryCodeId'), TemporaryCodeContent VARCHAR(150) , TemporaryCodeDateTime timestamp without time zone , TemporaryCodeEmail VARCHAR(100) , TemporaryCodeUsed BOOLEAN , PRIMARY KEY(TemporaryCodeId));
+
+CREATE SEQUENCE TipoClienteId MINVALUE 1 INCREMENT 1;
+CREATE TABLE TipoCliente (TipoClienteId smallint NOT NULL DEFAULT nextval('TipoClienteId'), TipoClienteDescricao VARCHAR(150) , TipoClienteTipoPessoa VARCHAR(40) , TipoClienteCreatedAt timestamp without time zone , TipoClienteUpdateAt timestamp without time zone , TipoClientePortal BOOLEAN , TipoClienteFinancia BOOLEAN , TipoClientePortalPjPf BOOLEAN , PRIMARY KEY(TipoClienteId));
+
+CREATE TABLE Municipio (MunicipioCodigo VARCHAR(40) NOT NULL , MunicipioNome VARCHAR(150) , MunicipioDDD VARCHAR(3) , MunicipioUF VARCHAR(10) , PRIMARY KEY(MunicipioCodigo));
+
+CREATE TABLE CEP (CEPId integer NOT NULL , CEP VARCHAR(8) , PRIMARY KEY(CEPId));
+
+CREATE SEQUENCE ClienteId MINVALUE 1 INCREMENT 1;
+CREATE TABLE Cliente (ClienteId integer NOT NULL DEFAULT nextval('ClienteId'), ClienteDocumento VARCHAR(20) , ClienteRazaoSocial VARCHAR(150) , ClienteNomeFantasia VARCHAR(150) , ClienteTipoPessoa VARCHAR(40) , ClienteStatus BOOLEAN , ClienteCreatedAt timestamp without time zone , ClienteUpdatedAt timestamp without time zone , ClienteLogUser smallint , TipoClienteId smallint , EnderecoTipo VARCHAR(40) , EnderecoCEP VARCHAR(8) , EnderecoLogradouro VARCHAR(150) , EnderecoBairro VARCHAR(150) , EnderecoCidade VARCHAR(150) , MunicipioCodigo VARCHAR(40) , EnderecoNumero VARCHAR(10) , EnderecoComplemento VARCHAR(150) , ContatoEmail VARCHAR(100) , ContatoDDD smallint , ContatoDDI smallint , ContatoNumero bigint , ContatoTelefoneNumero bigint , ContatoTelefoneDDD smallint , ContatoTelefoneDDI smallint , BancoId integer , ContaAgencia VARCHAR(60) , ContaNumero VARCHAR(60) , ClienteRG bigint , ResponsavelNome VARCHAR(90) , ResponsavelNacionalidade integer , ResponsavelEstadoCivil VARCHAR(40) , ResponsavelProfissao integer , ResponsavelCPF VARCHAR(14) , ResponsavelCEP VARCHAR(15) , ResponsavelLogradouro VARCHAR(100) , ResponsavelBairro VARCHAR(100) , ResponsavelCidade VARCHAR(100) , ResponsavelMunicipio VARCHAR(40) , ResponsavelLogradouroNumero integer , ResponsavelComplemento VARCHAR(100) , ResponsavelDDD smallint , ResponsavelNumero integer , ResponsavelEmail VARCHAR(100) , ClienteDataNascimento date , EspecialidadeId integer , ClienteConvenio integer , ClienteNacionalidade integer , ClienteProfissao integer , ClienteEstadoCivil VARCHAR(40) , ClienteDepositoTipo VARCHAR(40) , ClientePixTipo VARCHAR(40) , ClientePix VARCHAR(80) , ResponsavelRG bigint , ClienteSituacao CHAR(1) , ResponsavelCargo VARCHAR(40) , PRIMARY KEY(ClienteId));
+CREATE UNIQUE INDEX CLIENTEUNIQUEDOCUMENT ON Cliente (ClienteDocumento );
+CREATE INDEX ICLIENTE2 ON Cliente (TipoClienteId );
+CREATE INDEX ICLIENTE3 ON Cliente (MunicipioCodigo );
+CREATE INDEX ICLIENTE4 ON Cliente (BancoId );
+CREATE INDEX ICLIENTE5 ON Cliente (ResponsavelNacionalidade );
+CREATE INDEX ICLIENTE6 ON Cliente (ResponsavelProfissao );
+CREATE INDEX ICLIENTE7 ON Cliente (ResponsavelMunicipio );
+CREATE INDEX ICLIENTE8 ON Cliente (EspecialidadeId );
+CREATE INDEX ICLIENTE9 ON Cliente (ClienteNacionalidade );
+CREATE INDEX ICLIENTE10 ON Cliente (ClienteProfissao );
+CREATE INDEX ICLIENTE11 ON Cliente (ClienteConvenio );
+
+CREATE SEQUENCE SecUserTokenID MINVALUE 1 INCREMENT 1;
+CREATE TABLE SecUserToken (SecUserTokenID smallint NOT NULL DEFAULT nextval('SecUserTokenID'), SecUserTokenKey TEXT , SecUserTokenDateTime timestamp without time zone , SecUserId smallint , SecUserTokenUsed BOOLEAN , PRIMARY KEY(SecUserTokenID));
+CREATE INDEX ISECUSERUID1 ON SecUserToken (SecUserId );
+
+CREATE SEQUENCE ServidorSMTPId MINVALUE 1 INCREMENT 1;
+CREATE TABLE ServidorSMTP (ServidorSMTPId smallint NOT NULL DEFAULT nextval('ServidorSMTPId'), ServidorSMTPServer VARCHAR(40) , ServidorSMTPPorta VARCHAR(40) , ServidorSMTPEmail VARCHAR(100) , ServidorSMTPPass VARCHAR(90) , ServidorSMTPUsuario VARCHAR(90) , PRIMARY KEY(ServidorSMTPId));
+
+CREATE SEQUENCE LayoutContratoId MINVALUE 1 INCREMENT 1;
+CREATE TABLE LayoutContrato (LayoutContratoId smallint NOT NULL DEFAULT nextval('LayoutContratoId'), LayoutContratoDescricao VARCHAR(60) , LayoutContratoStatus BOOLEAN , LayoutContratoCorpo TEXT , LayoutContratoTipo VARCHAR(1) , LayoutContratoTag VARCHAR(40) , PRIMARY KEY(LayoutContratoId));
+
+CREATE SEQUENCE PersonID MINVALUE 1 INCREMENT 1;
+CREATE TABLE Person (PersonID integer NOT NULL DEFAULT nextval('PersonID'), PRIMARY KEY(PersonID));
+
+CREATE TABLE SecUserRole (SecUserId smallint NOT NULL , SecRoleId smallint NOT NULL , SecUserRoleActive BOOLEAN NOT NULL , PRIMARY KEY(SecUserId, SecRoleId));
+CREATE INDEX ISECUSERROLE1 ON SecUserRole (SecRoleId );
+
+CREATE SEQUENCE SecUserId MINVALUE 1 INCREMENT 1;
+CREATE TABLE SecUser (SecUserId smallint NOT NULL DEFAULT nextval('SecUserId'), SecUserName VARCHAR(100) , SecUserPassword VARCHAR(100) , SecUserFullName VARCHAR(150) , SecUserEmail VARCHAR(100) , SecUserCreatedAt timestamp without time zone , SecUserUpdateAt timestamp without time zone , SecUserUserMan smallint , SecUserStatus BOOLEAN , SecUserTeste TEXT , SecUserTemp BOOLEAN , SecUserClienteAcesso BOOLEAN , SecUserClienteId smallint , SecUserOwnerId integer , SecUserAnalista BOOLEAN , PRIMARY KEY(SecUserId));
+CREATE INDEX ISECUSER1 ON SecUser (SecUserUserMan );
+CREATE INDEX ISECUSER2 ON SecUser (SecUserClienteId );
+CREATE INDEX ISECUSER3 ON SecUser (SecUserOwnerId );
+
+CREATE SEQUENCE SecRoleId MINVALUE 1 INCREMENT 1;
+CREATE TABLE SecRole (SecRoleId smallint NOT NULL DEFAULT nextval('SecRoleId'), SecRoleName VARCHAR(40) NOT NULL , SecRoleDescription VARCHAR(120) NOT NULL , SecRoleActive BOOLEAN , PRIMARY KEY(SecRoleId));
+
+CREATE TABLE SecObjectFunctionalities (SecObjectName VARCHAR(120) NOT NULL , SecFunctionalityId bigint NOT NULL , PRIMARY KEY(SecObjectName, SecFunctionalityId));
+CREATE INDEX ISECOBJECTFUNCTIONALITIES1 ON SecObjectFunctionalities (SecFunctionalityId );
+
+CREATE TABLE SecObject (SecObjectName VARCHAR(120) NOT NULL , PRIMARY KEY(SecObjectName));
+
+CREATE TABLE SecFunctionalityRole (SecFunctionalityId bigint NOT NULL , SecRoleId smallint NOT NULL , SecFunctionalityRoleAtivo BOOLEAN NOT NULL , PRIMARY KEY(SecFunctionalityId, SecRoleId));
+CREATE INDEX ISECFUNCTIONALITYROL2 ON SecFunctionalityRole (SecRoleId );
+
+CREATE SEQUENCE SecFunctionalityId MINVALUE 1 INCREMENT 1;
+CREATE TABLE SecFunctionality (SecFunctionalityId bigint NOT NULL DEFAULT nextval('SecFunctionalityId'), SecFunctionalityKey VARCHAR(100) , SecFunctionalityDescription VARCHAR(100) , SecFunctionalityType smallint , SecParentFunctionalityId bigint , SecFunctionalityActive BOOLEAN , SecFunctionalityModule VARCHAR(100) , PRIMARY KEY(SecFunctionalityId));
+CREATE UNIQUE INDEX USECFUNCTIONALITY ON SecFunctionality (SecFunctionalityKey );
+CREATE INDEX ISECFUNCTIONALITY1 ON SecFunctionality (SecParentFunctionalityId );
+
+CREATE TABLE WWP_FormInstanceElement (WWPFormInstanceId integer NOT NULL , WWPFormElementId smallint NOT NULL , WWPFormInstanceElementId smallint NOT NULL , WWPFormInstanceElemChar TEXT , WWPFormInstanceElemDate date , WWPFormInstanceElemDateTime timestamp without time zone , WWPFormInstanceElemNumeric NUMERIC(17,5) , WWPFormInstanceElemBlob BYTEA , WWPFormInstanceElemBlobFileName VARCHAR(40) NOT NULL , WWPFormInstanceElemBlobFileType VARCHAR(40) NOT NULL , WWPFormInstanceElemBoolean BOOLEAN , PRIMARY KEY(WWPFormInstanceId, WWPFormElementId, WWPFormInstanceElementId));
+
+CREATE SEQUENCE WWPFormInstanceId MINVALUE 1 INCREMENT 1;
+CREATE TABLE WWP_FormInstance (WWPFormInstanceId integer NOT NULL DEFAULT nextval('WWPFormInstanceId'), WWPFormInstanceDate date NOT NULL , WWPFormId smallint NOT NULL , WWPFormVersionNumber smallint NOT NULL , WWPFormInstanceRecordKey TEXT , PRIMARY KEY(WWPFormInstanceId));
+CREATE INDEX IWWPFORMINSTANCE1 ON WWP_FormInstance (WWPFormId ,WWPFormVersionNumber );
+
+CREATE TABLE WWP_FormElement (WWPFormId smallint NOT NULL , WWPFormVersionNumber smallint NOT NULL , WWPFormElementId smallint NOT NULL , WWPFormElementTitle TEXT NOT NULL , WWPFormElementType smallint NOT NULL , WWPFormElementOrderIndex smallint NOT NULL , WWPFormElementDataType smallint NOT NULL , WWPFormElementParentId smallint , WWPFormElementMetadata TEXT NOT NULL , WWPFormElementCaption smallint NOT NULL , WWPFormElementReferenceId VARCHAR(100) NOT NULL , WWPFormElementExcludeFromExport BOOLEAN NOT NULL , PRIMARY KEY(WWPFormId, WWPFormVersionNumber, WWPFormElementId));
+CREATE INDEX IWWPFORMELEMENT1 ON WWP_FormElement (WWPFormId ,WWPFormVersionNumber ,WWPFormElementParentId );
+CREATE INDEX UWWPFORMELEMENTORDER ON WWP_FormElement (WWPFormElementOrderIndex DESC);
+CREATE INDEX UWWPFORMELEMENTREFERENCEID ON WWP_FormElement (WWPFormElementReferenceId );
+
+CREATE TABLE WWP_Form (WWPFormId smallint NOT NULL , WWPFormVersionNumber smallint NOT NULL , WWPFormReferenceName VARCHAR(100) NOT NULL , WWPFormTitle VARCHAR(100) NOT NULL , WWPFormDate timestamp without time zone NOT NULL , WWPFormIsWizard BOOLEAN NOT NULL , WWPFormResume smallint NOT NULL , WWPFormResumeMessage TEXT NOT NULL , WWPFormValidations TEXT NOT NULL , WWPFormInstantiated BOOLEAN NOT NULL , WWPFormType smallint NOT NULL , WWPFormSectionRefElements VARCHAR(400) NOT NULL , WWPFormIsForDynamicValidations BOOLEAN NOT NULL , PRIMARY KEY(WWPFormId, WWPFormVersionNumber));
+CREATE INDEX UWWP_FORMVERSIONNUMBER ON WWP_Form (WWPFormVersionNumber DESC);
+CREATE INDEX UWWP_FORMTITLE ON WWP_Form (WWPFormTitle );
+CREATE INDEX UWWP_FORMREFERENCEVERSION ON WWP_Form (WWPFormReferenceName ,WWPFormVersionNumber DESC);
+CREATE INDEX UWWP_FORMIDVERSION ON WWP_Form (WWPFormId ,WWPFormVersionNumber DESC);
+
+CREATE TABLE WWP_MailAttachments (WWPMailId bigint NOT NULL , WWPMailAttachmentName VARCHAR(40) NOT NULL , WWPMailAttachmentFile TEXT NOT NULL , PRIMARY KEY(WWPMailId, WWPMailAttachmentName));
+
+CREATE SEQUENCE WWPMailId MINVALUE 1 INCREMENT 1;
+CREATE TABLE WWP_Mail (WWPMailId bigint NOT NULL DEFAULT nextval('WWPMailId'), WWPMailSubject VARCHAR(80) NOT NULL , WWPMailBody TEXT NOT NULL , WWPMailTo TEXT , WWPMailCC TEXT , WWPMailBCC TEXT , WWPMailSenderAddress TEXT NOT NULL , WWPMailSenderName TEXT NOT NULL , WWPMailStatus smallint NOT NULL , WWPMailCreated timestamp without time zone NOT NULL , WWPMailScheduled timestamp without time zone NOT NULL , WWPMailProcessed timestamp without time zone , WWPMailDetail TEXT , WWPNotificationId bigint , PRIMARY KEY(WWPMailId));
+CREATE INDEX IWWP_MAIL1 ON WWP_Mail (WWPNotificationId );
+
+CREATE TABLE WWP_MailTemplate (WWPMailTemplateName VARCHAR(40) NOT NULL , WWPMailTemplateDescription VARCHAR(100) NOT NULL , WWPMailTemplateSubject VARCHAR(80) NOT NULL , WWPMailTemplateBody TEXT NOT NULL , WWPMailTemplateSenderAddress TEXT NOT NULL , WWPMailTemplateSenderName TEXT NOT NULL , PRIMARY KEY(WWPMailTemplateName));
+
+CREATE SEQUENCE WWPNotificationId MINVALUE 1 INCREMENT 1;
+CREATE TABLE WWP_Notification (WWPNotificationId bigint NOT NULL DEFAULT nextval('WWPNotificationId'), WWPNotificationDefinitionId bigint NOT NULL , WWPNotificationCreated timestamp without time zone NOT NULL , WWPNotificationIcon VARCHAR(100) NOT NULL , WWPNotificationTitle VARCHAR(200) NOT NULL , WWPNotificationShortDescription VARCHAR(200) NOT NULL , WWPNotificationLink VARCHAR(1000) NOT NULL , WWPNotificationIsRead BOOLEAN NOT NULL , WWPNotificationMetadata TEXT , WWPUserExtendedId CHAR(40) , PRIMARY KEY(WWPNotificationId));
+CREATE INDEX IWWP_NOTIFICATION2 ON WWP_Notification (WWPNotificationDefinitionId );
+CREATE INDEX WWP_NOTIFICATIONCREATEDDATE ON WWP_Notification (WWPNotificationCreated DESC);
+CREATE INDEX IWWP_NOTIFICATION1 ON WWP_Notification (WWPUserExtendedId );
+
+CREATE SEQUENCE WWPNotificationDefinitionId MINVALUE 1 INCREMENT 1;
+CREATE TABLE WWP_NotificationDefinition (WWPNotificationDefinitionId bigint NOT NULL DEFAULT nextval('WWPNotificationDefinitionId'), WWPNotificationDefinitionName VARCHAR(100) NOT NULL , WWPNotificationDefinitionAppliesTo smallint NOT NULL , WWPNotificationDefinitionAllowUserSubscription BOOLEAN NOT NULL , WWPNotificationDefinitionDescription VARCHAR(200) NOT NULL , WWPNotificationDefinitionIcon VARCHAR(40) NOT NULL , WWPNotificationDefinitionTitle VARCHAR(200) NOT NULL , WWPNotificationDefinitionShortDescription VARCHAR(200) NOT NULL , WWPNotificationDefinitionLongDescription VARCHAR(1000) NOT NULL , WWPNotificationDefinitionLink VARCHAR(1000) NOT NULL , WWPEntityId bigint NOT NULL , WWPNotificationDefinitionSecFuncionality VARCHAR(200) NOT NULL , PRIMARY KEY(WWPNotificationDefinitionId));
+CREATE INDEX IWWP_NOTIFICATIONDEFINITION1 ON WWP_NotificationDefinition (WWPEntityId );
+
+CREATE TABLE WWP_WebClient (WWPWebClientId CHAR(100) NOT NULL , WWPWebClientBrowserId smallint NOT NULL , WWPWebClientBrowserVersion TEXT NOT NULL , WWPWebClientFirstRegistered timestamp without time zone NOT NULL , WWPWebClientLastRegistered timestamp without time zone NOT NULL , WWPUserExtendedId CHAR(40) , PRIMARY KEY(WWPWebClientId));
+CREATE INDEX IWWP_WEBCLIENT1 ON WWP_WebClient (WWPUserExtendedId );
+
+CREATE SEQUENCE WWPWebNotificationId MINVALUE 1 INCREMENT 1;
+CREATE TABLE WWP_WebNotification (WWPWebNotificationId bigint NOT NULL DEFAULT nextval('WWPWebNotificationId'), WWPWebNotificationTitle VARCHAR(40) NOT NULL , WWPNotificationId bigint , WWPWebNotificationText VARCHAR(120) NOT NULL , WWPWebNotificationIcon VARCHAR(255) NOT NULL , WWPWebNotificationClientId TEXT NOT NULL , WWPWebNotificationStatus smallint NOT NULL , WWPWebNotificationCreated timestamp without time zone NOT NULL , WWPWebNotificationScheduled timestamp without time zone NOT NULL , WWPWebNotificationProcessed timestamp without time zone NOT NULL , WWPWebNotificationRead timestamp without time zone , WWPWebNotificationDetail TEXT , WWPWebNotificationReceived BOOLEAN , PRIMARY KEY(WWPWebNotificationId));
+CREATE INDEX IWWP_WEBNOTIFICATION1 ON WWP_WebNotification (WWPNotificationId );
+
+CREATE SEQUENCE WWPSMSId MINVALUE 1 INCREMENT 1;
+CREATE TABLE WWP_SMS (WWPSMSId bigint NOT NULL DEFAULT nextval('WWPSMSId'), WWPSMSMessage TEXT NOT NULL , WWPSMSSenderNumber TEXT NOT NULL , WWPSMSRecipientNumbers TEXT NOT NULL , WWPSMSStatus smallint NOT NULL , WWPSMSCreated timestamp without time zone NOT NULL , WWPSMSScheduled timestamp without time zone NOT NULL , WWPSMSProcessed timestamp without time zone , WWPSMSDetail TEXT , WWPNotificationId bigint , PRIMARY KEY(WWPSMSId));
+CREATE INDEX IWWP_SMS1 ON WWP_SMS (WWPNotificationId );
+
+CREATE SEQUENCE WWPSubscriptionId MINVALUE 1 INCREMENT 1;
+CREATE TABLE WWP_Subscription (WWPSubscriptionId bigint NOT NULL DEFAULT nextval('WWPSubscriptionId'), WWPNotificationDefinitionId bigint NOT NULL , WWPSubscriptionEntityRecordId VARCHAR(2000) NOT NULL , WWPSubscriptionEntityRecordDescription VARCHAR(200) NOT NULL , WWPSubscriptionRoleId CHAR(40) , WWPSubscriptionSubscribed BOOLEAN NOT NULL , WWPUserExtendedId CHAR(40) , PRIMARY KEY(WWPSubscriptionId));
+CREATE INDEX IWWP_SUBSCRIPTION2 ON WWP_Subscription (WWPNotificationDefinitionId );
+CREATE INDEX IWWP_SUBSCRIPTION1 ON WWP_Subscription (WWPUserExtendedId );
+
+CREATE SEQUENCE WWPEntityId MINVALUE 1 INCREMENT 1;
+CREATE TABLE WWP_Entity (WWPEntityId bigint NOT NULL DEFAULT nextval('WWPEntityId'), WWPEntityName VARCHAR(100) NOT NULL , PRIMARY KEY(WWPEntityId));
+
+CREATE TABLE WWP_Parameter (WWPParameterKey VARCHAR(300) NOT NULL , WWPParameterCategory VARCHAR(200) NOT NULL , WWPParameterDescription VARCHAR(200) NOT NULL , WWPParameterValue TEXT NOT NULL , WWPParameterDisableDelete BOOLEAN NOT NULL , PRIMARY KEY(WWPParameterKey));
+
+CREATE TABLE WWP_UserExtended (WWPUserExtendedId CHAR(40) NOT NULL , WWPUserExtendedPhoto BYTEA NOT NULL , WWPUserExtendedPhoto_GXI VARCHAR(2048) , WWPUserExtendedName VARCHAR(100) NOT NULL , WWPUserExtendedFullName VARCHAR(100) NOT NULL , WWPUserExtendedPhone CHAR(20) NOT NULL , WWPUserExtendedEmail VARCHAR(100) NOT NULL , WWPUserExtendedEmaiNotif BOOLEAN NOT NULL , WWPUserExtendedSMSNotif BOOLEAN NOT NULL , WWPUserExtendedMobileNotif BOOLEAN NOT NULL , WWPUserExtendedDesktopNotif BOOLEAN NOT NULL , WWPUserExtendedDeleted BOOLEAN NOT NULL , WWPUserExtendedDeletedIn timestamp without time zone , PRIMARY KEY(WWPUserExtendedId));
+
+ALTER TABLE WWP_Subscription ADD CONSTRAINT IWWP_SUBSCRIPTION2 FOREIGN KEY (WWPNotificationDefinitionId) REFERENCES WWP_NotificationDefinition (WWPNotificationDefinitionId);
+ALTER TABLE WWP_Subscription ADD CONSTRAINT IWWP_SUBSCRIPTION1 FOREIGN KEY (WWPUserExtendedId) REFERENCES WWP_UserExtended (WWPUserExtendedId);
+
+ALTER TABLE WWP_SMS ADD CONSTRAINT IWWP_SMS1 FOREIGN KEY (WWPNotificationId) REFERENCES WWP_Notification (WWPNotificationId);
+
+ALTER TABLE WWP_WebNotification ADD CONSTRAINT IWWP_WEBNOTIFICATION1 FOREIGN KEY (WWPNotificationId) REFERENCES WWP_Notification (WWPNotificationId);
+
+ALTER TABLE WWP_WebClient ADD CONSTRAINT IWWP_WEBCLIENT1 FOREIGN KEY (WWPUserExtendedId) REFERENCES WWP_UserExtended (WWPUserExtendedId);
+
+ALTER TABLE WWP_NotificationDefinition ADD CONSTRAINT IWWP_NOTIFICATIONDEFINITION1 FOREIGN KEY (WWPEntityId) REFERENCES WWP_Entity (WWPEntityId);
+
+ALTER TABLE WWP_Notification ADD CONSTRAINT IWWP_NOTIFICATION2 FOREIGN KEY (WWPNotificationDefinitionId) REFERENCES WWP_NotificationDefinition (WWPNotificationDefinitionId);
+ALTER TABLE WWP_Notification ADD CONSTRAINT IWWP_NOTIFICATION1 FOREIGN KEY (WWPUserExtendedId) REFERENCES WWP_UserExtended (WWPUserExtendedId);
+
+ALTER TABLE WWP_Mail ADD CONSTRAINT IWWP_MAIL1 FOREIGN KEY (WWPNotificationId) REFERENCES WWP_Notification (WWPNotificationId);
+
+ALTER TABLE WWP_MailAttachments ADD CONSTRAINT IWWP_MAILATTACHMENTS1 FOREIGN KEY (WWPMailId) REFERENCES WWP_Mail (WWPMailId);
+
+ALTER TABLE WWP_FormElement ADD CONSTRAINT IWWPFORMELEMENT1 FOREIGN KEY (WWPFormId, WWPFormVersionNumber, WWPFormElementParentId) REFERENCES WWP_FormElement (WWPFormId, WWPFormVersionNumber, WWPFormElementId);
+
+ALTER TABLE WWP_FormInstance ADD CONSTRAINT IWWPFORMINSTANCE1 FOREIGN KEY (WWPFormId, WWPFormVersionNumber) REFERENCES WWP_Form (WWPFormId, WWPFormVersionNumber);
+
+ALTER TABLE WWP_FormInstanceElement ADD CONSTRAINT IWWPFORMINSTANCEELEMENT1 FOREIGN KEY (WWPFormInstanceId) REFERENCES WWP_FormInstance (WWPFormInstanceId);
+
+ALTER TABLE SecFunctionality ADD CONSTRAINT ISECFUNCTIONALITY1 FOREIGN KEY (SecParentFunctionalityId) REFERENCES SecFunctionality (SecFunctionalityId);
+
+ALTER TABLE SecFunctionalityRole ADD CONSTRAINT ISECFUNCTIONALITYROL1 FOREIGN KEY (SecFunctionalityId) REFERENCES SecFunctionality (SecFunctionalityId);
+ALTER TABLE SecFunctionalityRole ADD CONSTRAINT ISECFUNCTIONALITYROL2 FOREIGN KEY (SecRoleId) REFERENCES SecRole (SecRoleId);
+
+ALTER TABLE SecObjectFunctionalities ADD CONSTRAINT ISECOBJECTFUNCTIONALITIES2 FOREIGN KEY (SecObjectName) REFERENCES SecObject (SecObjectName);
+ALTER TABLE SecObjectFunctionalities ADD CONSTRAINT ISECOBJECTFUNCTIONALITIES1 FOREIGN KEY (SecFunctionalityId) REFERENCES SecFunctionality (SecFunctionalityId);
+
+ALTER TABLE SecUser ADD CONSTRAINT ISECUSER3 FOREIGN KEY (SecUserOwnerId) REFERENCES Cliente (ClienteId);
+ALTER TABLE SecUser ADD CONSTRAINT ISECUSER2 FOREIGN KEY (SecUserClienteId) REFERENCES SecUser (SecUserId);
+ALTER TABLE SecUser ADD CONSTRAINT ISECUSER1 FOREIGN KEY (SecUserUserMan) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE SecUserRole ADD CONSTRAINT ISECUSERROLE2 FOREIGN KEY (SecUserId) REFERENCES SecUser (SecUserId);
+ALTER TABLE SecUserRole ADD CONSTRAINT ISECUSERROLE1 FOREIGN KEY (SecRoleId) REFERENCES SecRole (SecRoleId);
+
+ALTER TABLE SecUserToken ADD CONSTRAINT ISECUSERUID1 FOREIGN KEY (SecUserId) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE Cliente ADD CONSTRAINT ICLIENTE2 FOREIGN KEY (TipoClienteId) REFERENCES TipoCliente (TipoClienteId);
+ALTER TABLE Cliente ADD CONSTRAINT ICLIENTE7 FOREIGN KEY (ResponsavelMunicipio) REFERENCES Municipio (MunicipioCodigo);
+ALTER TABLE Cliente ADD CONSTRAINT ICLIENTE3 FOREIGN KEY (MunicipioCodigo) REFERENCES Municipio (MunicipioCodigo);
+ALTER TABLE Cliente ADD CONSTRAINT ICLIENTE4 FOREIGN KEY (BancoId) REFERENCES Banco (BancoId);
+ALTER TABLE Cliente ADD CONSTRAINT ICLIENTE8 FOREIGN KEY (EspecialidadeId) REFERENCES Especialidade (EspecialidadeId);
+ALTER TABLE Cliente ADD CONSTRAINT ICLIENTE9 FOREIGN KEY (ClienteNacionalidade) REFERENCES Nacionalidade (NacionalidadeId);
+ALTER TABLE Cliente ADD CONSTRAINT ICLIENTE5 FOREIGN KEY (ResponsavelNacionalidade) REFERENCES Nacionalidade (NacionalidadeId);
+ALTER TABLE Cliente ADD CONSTRAINT ICLIENTE10 FOREIGN KEY (ClienteProfissao) REFERENCES Profissao (ProfissaoId);
+ALTER TABLE Cliente ADD CONSTRAINT ICLIENTE6 FOREIGN KEY (ResponsavelProfissao) REFERENCES Profissao (ProfissaoId);
+ALTER TABLE Cliente ADD CONSTRAINT ICLIENTE11 FOREIGN KEY (ClienteConvenio) REFERENCES Convenio (ConvenioId);
+
+ALTER TABLE Financiamento ADD CONSTRAINT IFINANCIAMENTO2 FOREIGN KEY (IntermediadorClienteId) REFERENCES Cliente (ClienteId);
+ALTER TABLE Financiamento ADD CONSTRAINT IFINANCIAMENTO1 FOREIGN KEY (ClienteId) REFERENCES Cliente (ClienteId);
+
+ALTER TABLE Contrato ADD CONSTRAINT ICONTRATO1 FOREIGN KEY (ContratoClienteId) REFERENCES Cliente (ClienteId);
+ALTER TABLE Contrato ADD CONSTRAINT ICONTRATO2 FOREIGN KEY (ContratoPropostaId) REFERENCES Proposta (PropostaId);
+
+ALTER TABLE ContratoParticipante ADD CONSTRAINT ICONTRATOPARTICIPANTE2 FOREIGN KEY (ContratoId) REFERENCES Contrato (ContratoId);
+ALTER TABLE ContratoParticipante ADD CONSTRAINT ICONTRATOPARTICIPANTE1 FOREIGN KEY (ParticipanteId) REFERENCES Participante (ParticipanteId);
+
+ALTER TABLE Assinatura ADD CONSTRAINT IASSINATURA1 FOREIGN KEY (ContratoId) REFERENCES Contrato (ContratoId);
+ALTER TABLE Assinatura ADD CONSTRAINT IASSINATURA3 FOREIGN KEY (ArquivoAssinadoId) REFERENCES Arquivo (ArquivoId);
+ALTER TABLE Assinatura ADD CONSTRAINT IASSINATURA2 FOREIGN KEY (ArquivoId) REFERENCES Arquivo (ArquivoId);
+
+ALTER TABLE AssinaturaParticipante ADD CONSTRAINT IASSINATURAPARTICIPANTE2 FOREIGN KEY (AssinaturaId) REFERENCES Assinatura (AssinaturaId);
+ALTER TABLE AssinaturaParticipante ADD CONSTRAINT IASSINATURAPARTICIPANTE1 FOREIGN KEY (ParticipanteId) REFERENCES Participante (ParticipanteId);
+ALTER TABLE AssinaturaParticipante ADD CONSTRAINT IASSINATURAPARTICIPANTE3 FOREIGN KEY (ClienteId) REFERENCES Cliente (ClienteId);
+
+ALTER TABLE Empresa ADD CONSTRAINT IEMPRESA4 FOREIGN KEY (EmpresaRepresentanteMunicipio) REFERENCES Municipio (MunicipioCodigo);
+ALTER TABLE Empresa ADD CONSTRAINT IEMPRESA3 FOREIGN KEY (MunicipioCodigo) REFERENCES Municipio (MunicipioCodigo);
+ALTER TABLE Empresa ADD CONSTRAINT IEMPRESA1 FOREIGN KEY (EmpresaBancoId) REFERENCES Banco (BancoId);
+ALTER TABLE Empresa ADD CONSTRAINT IEMPRESA2 FOREIGN KEY (EmpresaRepresentanteProfissao) REFERENCES Profissao (ProfissaoId);
+
+ALTER TABLE AssinaturaParticipanteNotificacao ADD CONSTRAINT IASSINATURAPARTICIPANTENOTIFICACAO1 FOREIGN KEY (AssinaturaParticipanteId) REFERENCES AssinaturaParticipante (AssinaturaParticipanteId);
+
+ALTER TABLE Titulo ADD CONSTRAINT ITITULO3 FOREIGN KEY (ContaId) REFERENCES Conta (ContaId);
+ALTER TABLE Titulo ADD CONSTRAINT ITITULO2 FOREIGN KEY (CategoriaTituloId) REFERENCES CategoriaTitulo (CategoriaTituloId);
+ALTER TABLE Titulo ADD CONSTRAINT ITITULO4 FOREIGN KEY (NotaFiscalParcelamentoID) REFERENCES NotaFiscalParcelamento (NotaFiscalParcelamentoID);
+ALTER TABLE Titulo ADD CONSTRAINT ITITULO5 FOREIGN KEY (ContaBancariaId) REFERENCES ContaBancaria (ContaBancariaId);
+ALTER TABLE Titulo ADD CONSTRAINT ITITULO1 FOREIGN KEY (TituloPropostaId) REFERENCES Proposta (PropostaId);
+ALTER TABLE Titulo ADD CONSTRAINT ITITULO6 FOREIGN KEY (TituloClienteId) REFERENCES Cliente (ClienteId);
+
+ALTER TABLE TituloMovimento ADD CONSTRAINT ITITULOMOVIMENTO2 FOREIGN KEY (TipoPagamentoId) REFERENCES TipoPagamento (TipoPagamentoId);
+ALTER TABLE TituloMovimento ADD CONSTRAINT ITITULOMOVIMENTO1 FOREIGN KEY (TituloId) REFERENCES Titulo (TituloId);
+ALTER TABLE TituloMovimento ADD CONSTRAINT ITITULOMOVIMENTO3 FOREIGN KEY (TituloMovimentoConta) REFERENCES Conta (ContaId);
+
+ALTER TABLE Configuracoes ADD CONSTRAINT ICONFIGURACOES6 FOREIGN KEY (ConfigLayoutContratoCompraTitulo) REFERENCES LayoutContrato (LayoutContratoId);
+ALTER TABLE Configuracoes ADD CONSTRAINT ICONFIGURACOES4 FOREIGN KEY (ConfigLayoutPromissoriaPaciente) REFERENCES LayoutContrato (LayoutContratoId);
+ALTER TABLE Configuracoes ADD CONSTRAINT ICONFIGURACOES3 FOREIGN KEY (ConfigLayoutPromissoriaClinicaTaxa) REFERENCES LayoutContrato (LayoutContratoId);
+ALTER TABLE Configuracoes ADD CONSTRAINT ICONFIGURACOES2 FOREIGN KEY (ConfigLayoutPromissoriaClinicaEmprestimo) REFERENCES LayoutContrato (LayoutContratoId);
+ALTER TABLE Configuracoes ADD CONSTRAINT ICONFIGURACOES1 FOREIGN KEY (ConfiguracoesLayoutProposta) REFERENCES LayoutContrato (LayoutContratoId);
+ALTER TABLE Configuracoes ADD CONSTRAINT ICONFIGURACOES5 FOREIGN KEY (ConfiguracoesCategoriaTitulo) REFERENCES CategoriaTitulo (CategoriaTituloId);
+
+ALTER TABLE Proposta ADD CONSTRAINT IPROPOSTA1 FOREIGN KEY (ContratoId) REFERENCES Contrato (ContratoId);
+ALTER TABLE Proposta ADD CONSTRAINT IPROPOSTA4 FOREIGN KEY (ProcedimentosMedicosId) REFERENCES ProcedimentosMedicos (ProcedimentosMedicosId);
+ALTER TABLE Proposta ADD CONSTRAINT IPROPOSTA5 FOREIGN KEY (ConvenioCategoriaId) REFERENCES ConvenioCategoria (ConvenioCategoriaId);
+ALTER TABLE Proposta ADD CONSTRAINT IPROPOSTA2 FOREIGN KEY (PropostaCratedBy) REFERENCES SecUser (SecUserId);
+ALTER TABLE Proposta ADD CONSTRAINT IPROPOSTA8 FOREIGN KEY (PropostaEmpresaClienteId) REFERENCES Cliente (ClienteId);
+ALTER TABLE Proposta ADD CONSTRAINT IPROPOSTA7 FOREIGN KEY (PropostaClinicaId) REFERENCES Cliente (ClienteId);
+ALTER TABLE Proposta ADD CONSTRAINT IPROPOSTA3 FOREIGN KEY (PropostaResponsavelId) REFERENCES Cliente (ClienteId);
+ALTER TABLE Proposta ADD CONSTRAINT IPROPOSTA6 FOREIGN KEY (PropostaPacienteClienteId) REFERENCES Cliente (ClienteId);
+
+ALTER TABLE Aprovacao ADD CONSTRAINT IAPROVACAO1 FOREIGN KEY (PropostaId) REFERENCES Proposta (PropostaId);
+ALTER TABLE Aprovacao ADD CONSTRAINT IAPROVACAO2 FOREIGN KEY (AprovadoresId) REFERENCES Aprovadores (AprovadoresId);
+
+ALTER TABLE Aprovadores ADD CONSTRAINT IAPROVADORES1 FOREIGN KEY (SecUserId) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE Notification ADD CONSTRAINT INOTIFICATION1 FOREIGN KEY (SecUserId) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE UserNotification ADD CONSTRAINT IUSERNOTIFICATION1 FOREIGN KEY (NotificationId) REFERENCES Notification (NotificationId);
+ALTER TABLE UserNotification ADD CONSTRAINT IUSERNOTIFICATION2 FOREIGN KEY (UserNotificationUserId) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE EmailQueue ADD CONSTRAINT IEMAILQUEUE1 FOREIGN KEY (NotificationId) REFERENCES Notification (NotificationId);
+
+ALTER TABLE PropostaDocumentos ADD CONSTRAINT IPROPOSTADOCUMENTOS2 FOREIGN KEY (PropostaId) REFERENCES Proposta (PropostaId);
+ALTER TABLE PropostaDocumentos ADD CONSTRAINT IPROPOSTADOCUMENTOS1 FOREIGN KEY (DocumentosId) REFERENCES Documentos (DocumentosId);
+
+ALTER TABLE Especialidade ADD CONSTRAINT IESPECIALIDADE1 FOREIGN KEY (EspecialidadeCreatedBy) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE ConfiguracoesTestemunhas ADD CONSTRAINT ICONFIGURACOESTESTEMUNHAS1 FOREIGN KEY (SecUserId) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE ConvenioCategoria ADD CONSTRAINT ICONVENIOCATEGORIA1 FOREIGN KEY (ConvenioId) REFERENCES Convenio (ConvenioId);
+
+ALTER TABLE Reembolso ADD CONSTRAINT IREEMBOLSO3 FOREIGN KEY (WorkflowConvenioId) REFERENCES WorkflowConvenio (WorkflowConvenioId);
+ALTER TABLE Reembolso ADD CONSTRAINT IREEMBOLSO1 FOREIGN KEY (ReembolsoPropostaId) REFERENCES Proposta (PropostaId);
+ALTER TABLE Reembolso ADD CONSTRAINT IREEMBOLSO2 FOREIGN KEY (ReembolsoCreatedBy) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE ReembolsoEtapa ADD CONSTRAINT IREEMBOLSOETAPA1 FOREIGN KEY (ReembolsoId) REFERENCES Reembolso (ReembolsoId);
+
+ALTER TABLE ReembolsoDocumento ADD CONSTRAINT IREEMBOLSODOCUMENTO2 FOREIGN KEY (ReembolsoEtapaId) REFERENCES ReembolsoEtapa (ReembolsoEtapaId);
+ALTER TABLE ReembolsoDocumento ADD CONSTRAINT IREEMBOLSODOCUMENTO1 FOREIGN KEY (DocumentosId) REFERENCES Documentos (DocumentosId);
+
+ALTER TABLE ClienteReponsavel ADD CONSTRAINT ICLIENTEREPONSAVEL2 FOREIGN KEY (ReponsavelClienteId) REFERENCES Cliente (ClienteId);
+ALTER TABLE ClienteReponsavel ADD CONSTRAINT ICLIENTEREPONSAVEL1 FOREIGN KEY (ClienteId) REFERENCES Cliente (ClienteId);
+
+ALTER TABLE AssinaturaParticipanteToken ADD CONSTRAINT IASSINATURAPARTICIPANTETOKEN1 FOREIGN KEY (AssinaturaParticipanteId) REFERENCES AssinaturaParticipante (AssinaturaParticipanteId);
+
+ALTER TABLE SecUserLog ADD CONSTRAINT ISECUSERLOG1 FOREIGN KEY (SecUserId) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE PropostaContratoAssinatura ADD CONSTRAINT IPROPOSTACONTRATOASSINATURA1 FOREIGN KEY (PropostaId) REFERENCES Proposta (PropostaId);
+ALTER TABLE PropostaContratoAssinatura ADD CONSTRAINT IPROPOSTACONTRATOASSINATURA2 FOREIGN KEY (PropostaContrato) REFERENCES Contrato (ContratoId);
+ALTER TABLE PropostaContratoAssinatura ADD CONSTRAINT IPROPOSTACONTRATOASSINATURA3 FOREIGN KEY (PropostaAssinatura) REFERENCES Assinatura (AssinaturaId);
+
+ALTER TABLE ClienteDocumento ADD CONSTRAINT ICLIENTEDOCUMENTO2 FOREIGN KEY (ClienteId) REFERENCES Cliente (ClienteId);
+ALTER TABLE ClienteDocumento ADD CONSTRAINT ICLIENTEDOCUMENTO1 FOREIGN KEY (DocumentosId) REFERENCES Documentos (DocumentosId);
+ALTER TABLE ClienteDocumento ADD CONSTRAINT ICLIENTEDOCUMENTO3 FOREIGN KEY (ClienteDocumentoCreatedBy) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE ReembolsoAssinaturas ADD CONSTRAINT IREEMBOLSOASSINATURAS2 FOREIGN KEY (ReembolsoId) REFERENCES Reembolso (ReembolsoId);
+ALTER TABLE ReembolsoAssinaturas ADD CONSTRAINT IREEMBOLSOASSINATURAS1 FOREIGN KEY (PropostaContratoAssinaturaId) REFERENCES PropostaContratoAssinatura (PropostaContratoAssinaturaId);
+
+ALTER TABLE ReembolsoParcelas ADD CONSTRAINT IREEMBOLSOPARCELAS1 FOREIGN KEY (ReembolsoId) REFERENCES Reembolso (ReembolsoId);
+
+ALTER TABLE Serasa ADD CONSTRAINT ISERASA1 FOREIGN KEY (ClienteId) REFERENCES Cliente (ClienteId);
+
+ALTER TABLE SerasaCheques ADD CONSTRAINT ISERASACHEQUES1 FOREIGN KEY (SerasaId) REFERENCES Serasa (SerasaId);
+
+ALTER TABLE SerasaAcoes ADD CONSTRAINT ISERASAACOES1 FOREIGN KEY (SerasaId) REFERENCES Serasa (SerasaId);
+
+ALTER TABLE SerasaProtestos ADD CONSTRAINT ISERASAPROTESTOS1 FOREIGN KEY (SerasaId) REFERENCES Serasa (SerasaId);
+
+ALTER TABLE SerasaEnderecos ADD CONSTRAINT ISERASAENDERECOS1 FOREIGN KEY (SerasaId) REFERENCES Serasa (SerasaId);
+
+ALTER TABLE SerasaOcorrencias ADD CONSTRAINT ISERASAOCORRENCIAS1 FOREIGN KEY (SerasaId) REFERENCES Serasa (SerasaId);
+
+ALTER TABLE ReembolsoFlowLog ADD CONSTRAINT IREEMBOLSOFLOWLOG3 FOREIGN KEY (LogWorkflowConvenioId) REFERENCES WorkflowConvenio (WorkflowConvenioId);
+ALTER TABLE ReembolsoFlowLog ADD CONSTRAINT IREEMBOLSOFLOWLOG1 FOREIGN KEY (ReembolsoFlowLogUser) REFERENCES SecUser (SecUserId);
+ALTER TABLE ReembolsoFlowLog ADD CONSTRAINT IREEMBOLSOFLOWLOG2 FOREIGN KEY (ReembolsoLogId) REFERENCES Reembolso (ReembolsoId);
+
+ALTER TABLE NotaFiscal ADD CONSTRAINT INOTAFISCAL2 FOREIGN KEY (NotaFiscalDestinatarioClienteId) REFERENCES Cliente (ClienteId);
+ALTER TABLE NotaFiscal ADD CONSTRAINT INOTAFISCAL1 FOREIGN KEY (ClienteId) REFERENCES Cliente (ClienteId);
+
+ALTER TABLE NotaFiscalItem ADD CONSTRAINT INOTAFISCALITEM2 FOREIGN KEY (PropostaId) REFERENCES Proposta (PropostaId);
+ALTER TABLE NotaFiscalItem ADD CONSTRAINT INOTAFISCALITEM1 FOREIGN KEY (NotaFiscalId) REFERENCES NotaFiscal (NotaFiscalId);
+
+ALTER TABLE Credito ADD CONSTRAINT ICREDITO1 FOREIGN KEY (ClienteId) REFERENCES Cliente (ClienteId);
+ALTER TABLE Credito ADD CONSTRAINT ICREDITO3 FOREIGN KEY (CreditoUpdatedBy) REFERENCES SecUser (SecUserId);
+ALTER TABLE Credito ADD CONSTRAINT ICREDITO2 FOREIGN KEY (CreditoCreatedBy) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE Taxas ADD CONSTRAINT ITAXAS1 FOREIGN KEY (TaxasUpdatedBy) REFERENCES SecUser (SecUserId);
+ALTER TABLE Taxas ADD CONSTRAINT ITAXAS2 FOREIGN KEY (TaxasCreatedBy) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE NotaFiscalParcelamento ADD CONSTRAINT INOTAFISCALPARCELAMENTO1 FOREIGN KEY (NotaFiscalId) REFERENCES NotaFiscal (NotaFiscalId);
+
+ALTER TABLE NotificacaoAgendada ADD CONSTRAINT INOTIFICACAOAGENDADA1 FOREIGN KEY (NotificacaoAgendadaLayoutId) REFERENCES LayoutContrato (LayoutContratoId);
+
+ALTER TABLE NotificacaoAgendadaProcessamentoItem ADD CONSTRAINT INOTIFICACAOAGENDADAPROCESSAMENTOITEM1 FOREIGN KEY (NotificacaoAgendadaProcessamentoId) REFERENCES NotificacaoAgendadaProcessamento (NotificacaoAgendadaProcessamentoId);
+
+ALTER TABLE Agencia ADD CONSTRAINT IAGENCIA2 FOREIGN KEY (AgenciaUpdatedBy) REFERENCES SecUser (SecUserId);
+ALTER TABLE Agencia ADD CONSTRAINT IAGENCIA1 FOREIGN KEY (AgenciaCreatedBy) REFERENCES SecUser (SecUserId);
+ALTER TABLE Agencia ADD CONSTRAINT IAGENCIA3 FOREIGN KEY (AgenciaBancoId) REFERENCES Banco (BancoId);
+
+ALTER TABLE ContaBancaria ADD CONSTRAINT ICONTABANCARIA3 FOREIGN KEY (AgenciaId) REFERENCES Agencia (AgenciaId);
+ALTER TABLE ContaBancaria ADD CONSTRAINT ICONTABANCARIA2 FOREIGN KEY (ContaBancariaUpdatedBy) REFERENCES SecUser (SecUserId);
+ALTER TABLE ContaBancaria ADD CONSTRAINT ICONTABANCARIA1 FOREIGN KEY (ContaBancariaCreatedBy) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE ChavePIX ADD CONSTRAINT ICHAVEPIX3 FOREIGN KEY (ContaBancariaId) REFERENCES ContaBancaria (ContaBancariaId);
+ALTER TABLE ChavePIX ADD CONSTRAINT ICHAVEPIX2 FOREIGN KEY (ChavePIXUpdatedBy) REFERENCES SecUser (SecUserId);
+ALTER TABLE ChavePIX ADD CONSTRAINT ICHAVEPIX1 FOREIGN KEY (ChavePIXCreatedBy) REFERENCES SecUser (SecUserId);
+
+ALTER TABLE Representante ADD CONSTRAINT IREPRESENTANTE3 FOREIGN KEY (ClienteId) REFERENCES Cliente (ClienteId);
+ALTER TABLE Representante ADD CONSTRAINT IREPRESENTANTE1 FOREIGN KEY (RepresentanteProfissao) REFERENCES Profissao (ProfissaoId);
+ALTER TABLE Representante ADD CONSTRAINT IREPRESENTANTE2 FOREIGN KEY (RepresentanteMunicipio) REFERENCES Municipio (MunicipioCodigo);
+

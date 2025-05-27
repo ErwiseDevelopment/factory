@@ -1,0 +1,33 @@
+@layer WorkWithPlusDS{
+[gx-data-background-color="Dark"]
+{
+	--colors_basecolorforecolor : #08A086;
+	--colors_gray01 : #202c31;
+	--colors_gray02 : #222E34;
+	--colors_gray03 : #151718;
+	--colors_gray04 : #1C1F25;
+	--colors_gray05 : #252d31;
+	--colors_gray06 : #465259;
+	--colors_gray07 : #848586;
+	--colors_gray08 : #D2D4D7;
+	--colors_gxqv-color-01 : #345a8c;
+	--colors_gxqv-color-02 : #dcf6f4;
+	--colors_gxqv-color-03 : #f8af96;
+	--colors_gxqv-color-04 : #fde2b6;
+	--colors_gxqv-color-05 : #da553b;
+	--colors_gxqv-color-06 : #96e4dc;
+	--colors_gxqv-color-07 : #c490af;
+	--colors_gxqv-color-08 : #d8777b;
+	--colors_gxqv-color-09 : #b9b7c8;
+	--colors_gxqv-color-10 : #2eb7de;
+	--colors_backgroundcolor : #121214;
+	--colors_databackgroundcolor : #1A1A1E;
+	--colors_backgroundsecondarycolor : #1A1A1E;
+	--colors_gridforecolor : #08A086;
+	--colors_gridactioniconcolor : #08A086;
+	--colors_headerforecolor : #08A086;
+	--colors_horizontalmenu_submenuforecolor : #08A086;
+	--colors_horizontalbackgroundcolor_forecolor : White;
+
+}
+}

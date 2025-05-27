@@ -1,0 +1,21 @@
+<script>
+ function copiarTexto(Texto) {
+    const texto = Texto;
+
+    if (navigator.clipboard) {
+        // Usando a API Clipboard, se disponível
+        navigator.clipboard.writeText(texto)
+            .then(() => alert("Texto copiado com sucesso!"))
+            .catch(err => alert("Erro ao copiar: " + err));
+    } else {
+        // Fallback para navegadores mais antigos
+        const inputAuxiliar = document.createElement("textarea");
+        inputAuxiliar.value = texto;
+        document.body.appendChild(inputAuxiliar);
+        inputAuxiliar.select();
+        document.execCommand("copy");
+        document.body.removeChild(inputAuxiliar);
+        alert("Texto copiado!");
+    }
+}
+</script>

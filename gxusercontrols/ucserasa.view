@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Informações do Cliente</title>
+  <!-- Meta tags para desabilitar o cache -->
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+
+  <style>
+    /* Estilos globais */
+    * { box-sizing: border-box; }
+    .container {
+      max-width: 80%;
+      margin: 20px auto;
+      padding: 0 20px;
+    }
+    h1 {
+      color: #08A086;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    /* Botões */
+    .pdf-button, .consulta-button {
+      display: inline-block;
+      margin: 20px 10px;
+      padding: 10px 20px;
+      background-color: #08A086;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .pdf-button:hover, .consulta-button:hover {
+      background-color: #077564;
+    }
+    /* Cartões */
+    .card {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 30px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      border: 1px solid #e0e0e0;
+    }
+    .score-container, .risco-container {
+      width: 100%;
+      padding: 20px;
+      background: #fff;
+      border-radius: 8px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+    }
+    .score-header h2, .risco-header h2 {
+      margin: 0;
+      font-size: 16px;
+      color: #333;
+    }
+    .score-value, .risco-value {
+      display: block;
+      font-size: 56px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+    .score-label, .risco-label {
+      font-size: 14px;
+      background-color: #e6f7e6;
+      color: #008000;
+      padding: 5px 10px;
+      border-radius: 12px;
+      margin-top: 5px;
+      display: inline-block;
+    }
+    .score-bar, .risco-bar {
+      position: relative;
+      height: 10px;
+      background: #e0e0e0;
+      border-radius: 5px;
+      margin: 20px 0 10px;
+      overflow: hidden;
+    }
+    .score-progress, .risco-progress {
+      height: 100%;
+      background: #008000;
+      border-radius: 5px 0 0 5px;
+      transition: width 0.3s ease;
+    }
+    .score-scale, .risco-scale {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #666;
+      margin-top: 5px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    .info-item {
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    .info-item h3 {
+      margin-top: 0;
+      color: #08A086;
+      font-size: 1em;
+    }
+    .info-item h3 i { margin-right: 8px; }
+    .boolean-list {
+      list-style: none;
+      padding: 0;
+    }
+    .boolean-list li {
+      background-color: #f9f9f9;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+    }
+    .boolean-list li.true i { color: #08A086; }
+    .boolean-list li.false i { color: #d9534f; }
+    .boolean-list li i { margin-right: 10px; }
+    .chart-container {
+      width: 100%;
+      height: 300px;
+    }
+    @media (max-width: 767px) {
+      .chart-container { height: 250px; }
+    }
+    .pdf-mode * {
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    .pdf-mode .container {
+      border: 1px solid #ccc !important;
+      background: #fff !important;
+    }
+  </style>
+
+  <!-- Bibliotecas Externas -->
+  <!-- Google Charts -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- html2canvas e jsPDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Informações do Cliente</h1>
+
+    <!-- Cartão: Serasa Score e Nível de Risco -->
+    <div class="card">
+      <div class="info-grid">
+        <!-- Serasa Score -->
+        <div class="score-container">
+          <div class="score-header">
+            <h2><i class="fas fa-chart-line"></i> Serasa Score</h2>
+            <span class="score-value" id="score-value">0</span>
+            <span class="score-label" id="score-label">...</span>
+          </div>
+          <div class="score-bar">
+            <div class="score-progress" id="score-progress"></div>
+          </div>
+          <div class="score-scale">
+            <span>0</span>
+            <span>250</span>
+            <span>500</span>
+            <span>750</span>
+            <span>1000</span>
+          </div>
+        </div>
+        <!-- Nível de Risco -->
+        <div class="risco-container">
+          <div class="risco-header">
+            <h2><i class="fas fa-exclamation-triangle"></i> Nível de Risco</h2>
+            <span class="risco-value" id="risco-value">0</span>
+            <span class="risco-label" id="risco-label">...</span>
+          </div>
+          <div class="risco-bar">
+            <div class="risco-progress" id="risco-progress"></div>
+          </div>
+          <div class="risco-scale">
+            <span>0</span>
+            <span>3</span>
+            <span>5</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cartão: Informações Gerais -->
+    <div class="card">
+      <h2><i class="fas fa-info-circle"></i> Informações Gerais</h2>
+      <div class="info-grid">
+        <div class="info-item">
+          <h3><i class="fas fa-user"></i> Nome</h3>
+          <p id="nome"></p>
+        </div>
+        <div class="info-item">
+          <h3><i class="fas fa-id-card"></i> CPF</h3>
+          <p id="cpf"></p>
+        </div>
+        <div class="info-item">
+          <h3><i class="fas fa-file-alt"></i> Número da Proposta</h3>
+          <p id="numero-proposta"></p>
+        </div>
+        <div class="info-item">
+          <h3><i class="fas fa-shopping-cart"></i> Tipo de Venda</h3>
+          <p id="tipo-venda"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cartão: Análises Financeiras -->
+    <div class="card">
+      <h2><i class="fas fa-chart-bar"></i> Análises Financeiras</h2>
+      <div class="chart-container" id="column_chart"></div>
+    </div>
+
+    <!-- Cartão: Proporção de Dívidas Vencidas -->
+    <div class="card" id="card-pie">
+      <h2><i class="fas fa-pie-chart"></i> Proporção de Dívidas Vencidas</h2>
+      <div class="chart-container" id="pie_chart"></div>
+    </div>
+
+    <!-- Cartão: Histórico de Dívidas Vencidas -->
+    <div class="card" id="card-line">
+      <h2><i class="fas fa-history"></i> Histórico de Dívidas Vencidas</h2>
+      <div class="chart-container" id="line_chart"></div>
+    </div>
+
+    <!-- Cartão: Critérios Analisados -->
+    <div class="card">
+      <h2><i class="fas fa-check-circle"></i> Critérios Analisados</h2>
+      <ul class="boolean-list" id="criterios-list"></ul>
+    </div>
+
+    <!-- Cartão: Informações Adicionais -->
+    <div class="card">
+      <h2><i class="fas fa-info-circle"></i> Informações Adicionais</h2>
+      <ul class="boolean-list" id="informacoes-adicionais-list"></ul>
+    </div>
+
+    <!-- Cartão: Endereço Pessoal -->
+    <div class="card">
+      <h2><i class="fas fa-map-marker-alt"></i> Endereço Pessoal</h2>
+      <p id="endereco"></p>
+    </div>
+
+    <!-- Botões: Gerar PDF e Nova Consulta -->
+    <button class="pdf-button" onclick="generatePDF()">Gerar PDF</button>
+    <button class="consulta-button" onclick="simulateNewQuery()">Nova Consulta</button>
+  </div>
+
+  <script>
+    // Carrega o Google Charts
+    google.charts.load('current', { packages: ['corechart'] });
+    google.charts.setOnLoadCallback(() => {
+      console.log("Google Charts carregado.");
+      drawGoogleCharts();
+    });
+
+    // Variável global "data"
+    // Se você estiver usando um template para injetar os dados, essa variável será definida; caso contrário, usamos dados fictícios
+    var data = {{{gxTpr_Data}}}{{{Data}}};
+    if (!data || Object.keys(data).length === 0) {
+      console.warn("Variável 'data' não definida. Usando dados fictícios iniciais para teste.");
+      data = {
+        nome: "João Silva",
+        cpf: "123.456.789-00",
+        numeroProposta: "0001",
+        tipoVenda: "Crédito",
+        valorOperacao: 10000,
+        valorLimiteRecomendado: 15000,
+        dividasVencidas: { valorTotalDividasVencidas: 2000 },
+        criteriosAnalisados: {
+          criterioUm: true,
+          criterioDois: false,
+          criterioTres: true
+        },
+        informacoesAdicionais: {
+          adicionalUm: true,
+          adicionalDois: false
+        },
+        enderecoPessoal: {
+          endereço: "Rua ABC",
+          numeroCasa: "123",
+          complemento: "Apto 45",
+          bairro: "Centro",
+          cidade: "São Paulo",
+          estado: "SP",
+          cep: "01000-000",
+          telefone: "(11) 98765-4321"
+        },
+        score: { serasaScore: 600 },
+        codNivelRisco: 3
+      };
+    }
+
+    /* === FUNÇÕES DE RESET E ATUALIZAÇÃO DA INTERFACE === */
+
+    // Limpa os conteúdos dos elementos para receber novos dados
+    function resetInterface() {
+      console.log("Resetando interface...");
+      document.getElementById('nome').innerText = "";
+      document.getElementById('cpf').innerText = "";
+      document.getElementById('numero-proposta').innerText = "";
+      document.getElementById('tipo-venda').innerText = "";
+      document.getElementById('criterios-list').innerHTML = "";
+      document.getElementById('informacoes-adicionais-list').innerHTML = "";
+      document.getElementById('endereco').innerHTML = "";
+      
+      document.getElementById('score-value').innerText = "0";
+      document.getElementById('score-label').innerText = "...";
+      document.getElementById('score-progress').style.width = "0%";
+      document.getElementById('risco-value').innerText = "0";
+      document.getElementById('risco-label').innerText = "...";
+      document.getElementById('risco-progress').style.width = "0%";
+      
+      // Limpa os containers dos gráficos
+      document.getElementById('column_chart').innerHTML = "";
+      document.getElementById('pie_chart').innerHTML = "";
+      document.getElementById('line_chart').innerHTML = "";
+    }
+
+    // Preenche os elementos com os dados atuais
+    function populateInfo() {
+      console.log("Populando interface com os dados...");
+      document.getElementById('nome').innerText = data.nome;
+      document.getElementById('cpf').innerText = data.cpf;
+      document.getElementById('numero-proposta').innerText = data.numeroProposta;
+      document.getElementById('tipo-venda').innerText = data.tipoVenda;
+      
+      // Critérios Analisados
+      var criteriosList = document.getElementById('criterios-list');
+      for (var key in data.criteriosAnalisados) {
+        var value = data.criteriosAnalisados[key];
+        var label = key.replace(/([A-Z])/g, ' $1').trim();
+        label = toTitleCase(label);
+        var li = document.createElement('li');
+        li.className = value; // "true" ou "false"
+        li.innerHTML = `<i class="fas ${value ? 'fa-check-circle' : 'fa-times-circle'}"></i>${label}`;
+        criteriosList.appendChild(li);
+      }
+      
+      // Informações Adicionais
+      var infoAdicionaisList = document.getElementById('informacoes-adicionais-list');
+      for (var key in data.informacoesAdicionais) {
+        var value = data.informacoesAdicionais[key];
+        var label = key.replace(/([A-Z])/g, ' $1').trim();
+        label = toTitleCase(label);
+        var li = document.createElement('li');
+        li.className = value;
+        li.innerHTML = `<i class="fas ${value ? 'fa-check-circle' : 'fa-times-circle'}"></i>${label}`;
+        infoAdicionaisList.appendChild(li);
+      }
+      
+      // Endereço Pessoal
+      var endereco = data.enderecoPessoal || {};
+      document.getElementById('endereco').innerHTML = `
+        ${endereco.endereço || ''}, ${endereco.numeroCasa || ''} ${endereco.complemento || ''}<br>
+        ${endereco.bairro || ''}, ${endereco.cidade || ''} - ${endereco.estado || ''}<br>
+        CEP: ${endereco.cep || ''}<br>
+        Telefone: ${endereco.telefone || ''}
+      `;
+      
+      // Exibe ou oculta os cards de dívidas conforme o valor
+      var pieCard = document.getElementById('card-pie');
+      var lineCard = document.getElementById('card-line');
+      var valorDividas = data.dividasVencidas?.valorTotalDividasVencidas || 0;
+      if (valorDividas === 0) {
+        pieCard.style.display = 'none';
+        lineCard.style.display = 'none';
+      } else {
+        pieCard.style.display = '';
+        lineCard.style.display = '';
+      }
+      
+      // Atualiza o Score e o Nível de Risco
+      updateScore();
+      updateRisco();
+    }
+
+    // Atualiza o Serasa Score
+    function updateScore() {
+      const score = data.score.serasaScore;
+      document.getElementById('score-value').innerText = score;
+      document.getElementById('score-progress').style.width = `${(score / 1000) * 100}%`;
+      
+      const scoreLabel = document.getElementById('score-label');
+      if (score >= 751) {
+        scoreLabel.innerText = "Excelente";
+        document.getElementById('score-progress').style.backgroundColor = "#008000";
+      } else if (score >= 501) {
+        scoreLabel.innerText = "Bom";
+        document.getElementById('score-progress').style.backgroundColor = "#008000";
+      } else if (score >= 251) {
+        scoreLabel.innerText = "Moderado";
+        document.getElementById('score-progress').style.backgroundColor = "#f0ad4e";
+      } else {
+        scoreLabel.innerText = "Ruim";
+        document.getElementById('score-progress').style.backgroundColor = "#d9534f";
+      }
+    }
+
+    // Atualiza o Nível de Risco
+    function updateRisco() {
+      const risco = data.codNivelRisco;
+      document.getElementById('risco-value').innerText = risco;
+      document.getElementById('risco-progress').style.width = `${(risco / 5) * 100}%`;
+      
+      const riscoLabel = document.getElementById('risco-label');
+      if (risco <= 2) {
+        riscoLabel.innerText = "Baixo";
+        document.getElementById('risco-progress').style.backgroundColor = "#008000";
+      } else if (risco < 4) {
+        riscoLabel.innerText = "Médio";
+        document.getElementById('risco-progress').style.backgroundColor = "#f0ad4e";
+      } else {
+        riscoLabel.innerText = "Alto";
+        document.getElementById('risco-progress').style.backgroundColor = "#d9534f";
+      }
+    }
+
+    // Desenha os gráficos usando o Google Charts
+    function drawGoogleCharts() {
+      drawColumnChart();
+      drawPieChart();
+      drawLineChart();
+    }
+
+    // Gráfico de Colunas
+    function drawColumnChart() {
+      var dataArray = [
+        ['Tipo', 'Valor', { role: 'style' }, { role: 'annotation' }],
+        ['Valor da Operação', data.valorOperacao, '#08A086', 'R$ ' + data.valorOperacao.toLocaleString('pt-BR')],
+        ['Limite Recomendado', data.valorLimiteRecomendado, '#f0ad4e', 'R$ ' + data.valorLimiteRecomendado.toLocaleString('pt-BR')]
+      ];
+      var dataTable = google.visualization.arrayToDataTable(dataArray);
+      var options = {
+        legend: { position: 'none' },
+        height: 300,
+        chartArea: { width: '70%', height: '70%' },
+        annotations: { alwaysOutside: true, textStyle: { fontSize: 14, color: '#555' } },
+        vAxis: { format: 'currency', minValue: 0 }
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById('column_chart'));
+      chart.draw(dataTable, options);
+    }
+
+    // Gráfico de Pizza
+    function drawPieChart() {
+      var valorDividas = data.dividasVencidas?.valorTotalDividasVencidas || 0;
+      var valorRestante = data.valorLimiteRecomendado - valorDividas;
+      var dataArray = [
+        ['Tipo', 'Valor'],
+        ['Dívidas Vencidas', valorDividas],
+        ['Valor Restante', valorRestante > 0 ? valorRestante : 0]
+      ];
+      var dataTable = google.visualization.arrayToDataTable(dataArray);
+      var options = {
+        pieHole: 0.4,
+        height: 300,
+        chartArea: { width: '90%', height: '90%' },
+        legend: { position: 'bottom' },
+        pieSliceText: 'value'
+      };
+      var chart = new google.visualization.PieChart(document.getElementById('pie_chart'));
+      chart.draw(dataTable, options);
+    }
+
+    // Gráfico de Linhas
+    function drawLineChart() {
+      var dataArray = [['Data', 'Dívidas Vencidas']];
+      // Gera valores aleatórios para os últimos 6 meses (exemplo)
+      for (var i = 5; i >= 0; i--) {
+        var date = new Date();
+        date.setMonth(date.getMonth() - i);
+        var valor = Math.floor(Math.random() * 2000);
+        dataArray.push([date, valor]);
+      }
+      var dataTable = google.visualization.arrayToDataTable(dataArray);
+      var options = {
+        height: 300,
+        hAxis: { title: 'Data', format: 'MMM/yyyy', gridlines: { count: 6 } },
+        vAxis: { title: 'Valor (R$)', format: 'currency', minValue: 0 },
+        chartArea: { width: '80%', height: '70%' },
+        legend: { position: 'none' },
+        colors: ['#08A086']
+      };
+      var chart = new google.visualization.LineChart(document.getElementById('line_chart'));
+      chart.draw(dataTable, options);
+    }
+
+    // Converte uma string para Title Case
+    function toTitleCase(str) {
+      return str.replace(/\b\w/g, function(l) { return l.toUpperCase(); });
+    }
+
+    // Gera o PDF da interface
+    async function generatePDF() {
+      const { jsPDF } = window.jspdf;
+      const container = document.querySelector('.container');
+      container.classList.add('pdf-mode');
+      const canvas = await html2canvas(container, { scale: 2 });
+      const imgData = canvas.toDataURL('image/png');
+      const pdf = new jsPDF('p', 'pt', 'a4');
+      const pdfWidth = pdf.internal.pageSize.getWidth();
+      const pdfHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = canvas.width;
+      const imgHeight = canvas.height;
+      const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+      const finalWidth = imgWidth * ratio;
+      const finalHeight = imgHeight * ratio;
+      const x = (pdfWidth - finalWidth) / 2;
+      const y = (pdfHeight - finalHeight) / 2;
+      pdf.addImage(imgData, 'PNG', x, y, finalWidth, finalHeight);
+      pdf.save('informacoes_cliente.pdf');
+      container.classList.remove('pdf-mode');
+    }
+
+    /* === FUNÇÃO PARA SIMULAR UMA NOVA CONSULTA === */
+    function simulateNewQuery() {
+      console.log("Simulando nova consulta...");
+      // Gera novos dados aleatórios para simulação
+      data = {
+        nome: "João Silva " + Math.floor(Math.random() * 100),
+        cpf: "123.456.789-00",
+        numeroProposta: "000" + Math.floor(Math.random() * 100),
+        tipoVenda: "Crédito",
+        valorOperacao: Math.floor(Math.random() * 20000),
+        valorLimiteRecomendado: Math.floor(Math.random() * 25000),
+        dividasVencidas: { valorTotalDividasVencidas: Math.floor(Math.random() * 5000) },
+        criteriosAnalisados: {
+          criterioUm: Math.random() > 0.5,
+          criterioDois: Math.random() > 0.5,
+          criterioTres: Math.random() > 0.5
+        },
+        informacoesAdicionais: {
+          adicionalUm: Math.random() > 0.5,
+          adicionalDois: Math.random() > 0.5
+        },
+        enderecoPessoal: {
+          endereço: "Rua " + Math.floor(Math.random() * 100),
+          numeroCasa: Math.floor(Math.random() * 1000).toString(),
+          complemento: "Apto " + Math.floor(Math.random() * 100),
+          bairro: "Centro",
+          cidade: "São Paulo",
+          estado: "SP",
+          cep: "01000-000",
+          telefone: "(11) " + Math.floor(Math.random() * 100000000).toString()
+        },
+        score: { serasaScore: Math.floor(Math.random() * 1000) },
+        codNivelRisco: Math.floor(Math.random() * 6)
+      };
+
+      // Primeiro, reseta a interface
+      resetInterface();
+      // Após um breve atraso para garantir que o DOM atualize, popula os novos dados e redesenha os gráficos
+      setTimeout(() => {
+        populateInfo();
+        drawGoogleCharts();
+      }, 100);
+    }
+
+    // Inicializa a interface assim que o DOM estiver carregado
+    document.addEventListener('DOMContentLoaded', function() {
+      populateInfo();
+    });
+  </script>
+</body>
+</html>

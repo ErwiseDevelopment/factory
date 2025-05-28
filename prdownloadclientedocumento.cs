@@ -81,7 +81,6 @@ namespace GeneXus.Programs {
             n603ClienteDocumentoExtensao = P00BU2_n603ClienteDocumentoExtensao[0];
             A601ClienteDocumentoBlob = P00BU2_A601ClienteDocumentoBlob[0];
             n601ClienteDocumentoBlob = P00BU2_n601ClienteDocumentoBlob[0];
-            new debug(context ).execute(  StringUtil.Format( "ClienteDocumentoNome %1", A602ClienteDocumentoNome, "", "", "", "", "", "", "", "")) ;
             new prdownloadblob(context ).execute(  A601ClienteDocumentoBlob,  A602ClienteDocumentoNome,  A603ClienteDocumentoExtensao, out  AV9Arquivo) ;
             /* Exiting from a For First loop. */
             if (true) break;

@@ -3406,17 +3406,17 @@ namespace GeneXus.Programs {
          {
             cmbavGridactiongroup1.addItem("3", StringUtil.Format( "%1;%2", "Usuário", "fas fa-user-shield", "", "", "", "", "", "", ""), 0);
          }
-         if ( A207TipoClientePortal )
-         {
-            cmbavGridactiongroup1.addItem("4", StringUtil.Format( "%1;%2", "Contratos", "fas fa-file-contract", "", "", "", "", "", "", ""), 0);
-         }
-         if ( A207TipoClientePortal )
-         {
-            cmbavGridactiongroup1.addItem("5", StringUtil.Format( "%1;%2", "Documentos", "far fa-folder-open", "", "", "", "", "", "", ""), 0);
-         }
          if ( ( StringUtil.StrCmp(A172ClienteTipoPessoa, "JURIDICA") == 0 ) && A207TipoClientePortal )
          {
-            cmbavGridactiongroup1.addItem("6", StringUtil.Format( "%1;%2", "Responsável", "fas fa-user-large", "", "", "", "", "", "", ""), 0);
+            cmbavGridactiongroup1.addItem("4", StringUtil.Format( "%1;%2", "Responsável", "fas fa-user-large", "", "", "", "", "", "", ""), 0);
+         }
+         if ( A207TipoClientePortal )
+         {
+            cmbavGridactiongroup1.addItem("5", StringUtil.Format( "%1;%2", "Contratos", "fas fa-file-contract", "", "", "", "", "", "", ""), 0);
+         }
+         if ( A207TipoClientePortal )
+         {
+            cmbavGridactiongroup1.addItem("6", StringUtil.Format( "%1;%2", "Documentos", "far fa-folder-open", "", "", "", "", "", "", ""), 0);
          }
          cmbavGridactiongroup1.addItem("7", StringUtil.Format( "%1;%2", "Crédito", "fas fa-hand-holding-dollar", "", "", "", "", "", "", ""), 0);
          if ( StringUtil.StrCmp(StringUtil.Trim( StringUtil.BoolToStr( A174ClienteStatus)), "true") == 0 )
@@ -3843,7 +3843,7 @@ namespace GeneXus.Programs {
          }
          else if ( AV114GridActionGroup1 == 4 )
          {
-            /* Execute user subroutine: 'DO CONTRATO' */
+            /* Execute user subroutine: 'DO RESPONSAVEL' */
             S272 ();
             if ( returnInSub )
             {
@@ -3853,7 +3853,7 @@ namespace GeneXus.Programs {
          }
          else if ( AV114GridActionGroup1 == 5 )
          {
-            /* Execute user subroutine: 'DO ARQUIVOS' */
+            /* Execute user subroutine: 'DO CONTRATO' */
             S282 ();
             if ( returnInSub )
             {
@@ -3863,7 +3863,7 @@ namespace GeneXus.Programs {
          }
          else if ( AV114GridActionGroup1 == 6 )
          {
-            /* Execute user subroutine: 'DO RESPONSAVEL' */
+            /* Execute user subroutine: 'DO ARQUIVOS' */
             S292 ();
             if ( returnInSub )
             {
@@ -4378,6 +4378,20 @@ namespace GeneXus.Programs {
 
       protected void S272( )
       {
+         /* 'DO RESPONSAVEL' Routine */
+         returnInSub = false;
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( context.GetCookie( "GX_SESSION_ID"))) )
+         {
+            gxcookieaux = context.SetCookie( "GX_SESSION_ID", Encrypt64( Crypto.GetEncryptionKey( ), Crypto.GetServerKey( )), "", (DateTime)(DateTime.MinValue), "", (short)(context.GetHttpSecure( )));
+         }
+         GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
+         GXEncryptionTmp = "wpresponsavel"+UrlEncode(StringUtil.RTrim("INS")) + "," + UrlEncode(StringUtil.LTrimStr(A168ClienteId,9,0));
+         CallWebObject(formatLink("wpresponsavel") + "?" + UriEncrypt64( GXEncryptionTmp+Crypto.CheckSum( GXEncryptionTmp, 6), GXKey));
+         context.wjLocDisableFrm = 1;
+      }
+
+      protected void S282( )
+      {
          /* 'DO CONTRATO' Routine */
          returnInSub = false;
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.GetCookie( "GX_SESSION_ID"))) )
@@ -4390,7 +4404,7 @@ namespace GeneXus.Programs {
          context.wjLocDisableFrm = 1;
       }
 
-      protected void S282( )
+      protected void S292( )
       {
          /* 'DO ARQUIVOS' Routine */
          returnInSub = false;
@@ -4401,20 +4415,6 @@ namespace GeneXus.Programs {
          GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
          GXEncryptionTmp = "clientedocumentoww"+UrlEncode(StringUtil.LTrimStr(A168ClienteId,9,0));
          CallWebObject(formatLink("clientedocumentoww") + "?" + UriEncrypt64( GXEncryptionTmp+Crypto.CheckSum( GXEncryptionTmp, 6), GXKey));
-         context.wjLocDisableFrm = 1;
-      }
-
-      protected void S292( )
-      {
-         /* 'DO RESPONSAVEL' Routine */
-         returnInSub = false;
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( context.GetCookie( "GX_SESSION_ID"))) )
-         {
-            gxcookieaux = context.SetCookie( "GX_SESSION_ID", Encrypt64( Crypto.GetEncryptionKey( ), Crypto.GetServerKey( )), "", (DateTime)(DateTime.MinValue), "", (short)(context.GetHttpSecure( )));
-         }
-         GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
-         GXEncryptionTmp = "wpresponsavel"+UrlEncode(StringUtil.RTrim("INS")) + "," + UrlEncode(StringUtil.LTrimStr(A168ClienteId,9,0));
-         CallWebObject(formatLink("wpresponsavel") + "?" + UriEncrypt64( GXEncryptionTmp+Crypto.CheckSum( GXEncryptionTmp, 6), GXKey));
          context.wjLocDisableFrm = 1;
       }
 
@@ -5508,7 +5508,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918545894", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202552895855", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -5525,7 +5525,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 133260), false, true);
-         context.AddJavascriptSource("clienteww.js", "?202551918545895", false, true);
+         context.AddJavascriptSource("clienteww.js", "?202552895855", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Panel/BootstrapPanelRender.js", "", false, true);

@@ -1178,7 +1178,6 @@ namespace GeneXus.Programs {
             }
             AV39GXV1 = (int)(AV39GXV1+1);
          }
-         new debug(context ).execute(  StringUtil.Format( "&Array_SdNotaFiscal %1", AV18Array_SdNotaFiscal.ToJSonString(false), "", "", "", "", "", "", "", "")) ;
          AV22Array_SdProdutoNotaFiscal = new GXBaseCollection<SdtSdProdutoNotaFiscal>( context, "SdProdutoNotaFiscal", "Factory2");
          AV26id = 1;
          AV41GXV3 = 1;
@@ -1568,7 +1567,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918434211", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289145467", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1585,7 +1584,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("wcimpnotafiscalimportarxml.js", "?202551918434213", false, true);
+         context.AddJavascriptSource("wcimpnotafiscalimportarxml.js", "?20255289145470", false, true);
          context.AddJavascriptSource("FileUpload/fileupload.min.js", "", false, true);
          context.AddJavascriptSource("UserControls/WWP_IconButtonRender.js", "", false, true);
          context.AddJavascriptSource("UserControls/WWP_IconButtonRender.js", "", false, true);

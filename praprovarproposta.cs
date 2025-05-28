@@ -79,14 +79,13 @@ namespace GeneXus.Programs {
          new GeneXus.Programs.wwpbaseobjects.loadwwpcontext(context ).execute( out  GXt_SdtWWPContext1) ;
          AV19WWPContext = GXt_SdtWWPContext1;
          AV9Aprovacao = new SdtAprovacao(context);
-         new debug(context ).execute(  StringUtil.Format( "&WWPContext.UserId %1", StringUtil.LTrimStr( (decimal)(AV19WWPContext.gxTpr_Userid), 4, 0), "", "", "", "", "", "", "", "")) ;
-         new debug(context ).execute(  StringUtil.Format( "&PropostaId %1", StringUtil.LTrimStr( (decimal)(AV17PropostaId), 9, 0), "", "", "", "", "", "", "", "")) ;
          AV9Aprovacao.gxTpr_Aprovadoresid = AV19WWPContext.gxTpr_Aprovadorid;
          AV9Aprovacao.gxTpr_Propostaid = AV17PropostaId;
          AV9Aprovacao.gxTpr_Aprovacaoem = DateTimeUtil.ServerNow( context, pr_default);
          AV9Aprovacao.gxTpr_Aprovacaodecisao = AV11Comentario;
          AV9Aprovacao.gxTpr_Aprovacaostatus = "APROVADO";
          AV9Aprovacao.Save();
+         new debug(context ).execute(  StringUtil.Format( "&WWPContext %1", AV19WWPContext.ToJSonString(false, true), "", "", "", "", "", "", "", "")) ;
          if ( AV9Aprovacao.Success() )
          {
             context.CommitDataStores("praprovarproposta",pr_default);
@@ -96,7 +95,6 @@ namespace GeneXus.Programs {
             context.RollbackDataStores("praprovarproposta",pr_default);
             AV18SdErro.gxTpr_Status = 401;
             AV18SdErro.gxTpr_Msg = ((GeneXus.Utils.SdtMessages_Message)AV9Aprovacao.GetMessages().Item(1)).gxTpr_Description;
-            new debug(context ).execute(  StringUtil.Format( "&SdErro %1", AV9Aprovacao.GetMessages().ToJSonString(false), "", "", "", "", "", "", "", "")) ;
             cleanup();
             if (true) return;
          }
@@ -129,7 +127,6 @@ namespace GeneXus.Programs {
             A343PropostaAprovacoesRestantes_F = (short)(A330PropostaQuantidadeAprovadores-A341PropostaAprovacoes_F);
             AV16PropostaAprovacoesRestantes_F = A343PropostaAprovacoesRestantes_F;
             AV10ClienteId = A504PropostaPacienteClienteId;
-            new debug(context ).execute(  StringUtil.Format( "&PropostaAprovacoesRestantes_F %1", StringUtil.LTrimStr( (decimal)(AV16PropostaAprovacoesRestantes_F), 4, 0), "", "", "", "", "", "", "", "")) ;
             AV26ClienteRazaoSocial = A505PropostaPacienteClienteRazaoSocial;
             AV27ClienteDocumento = A540PropostaPacienteClienteDocumento;
             AV28ContatoEmail = A541PropostaPacienteContatoEmail;
@@ -177,7 +174,6 @@ namespace GeneXus.Programs {
             }
             pr_default.close(2);
          }
-         new debug(context ).execute(  StringUtil.Format( "&PropostaAprovacoesRestantes_F %1", StringUtil.LTrimStr( (decimal)(AV16PropostaAprovacoesRestantes_F), 4, 0), "", "", "", "", "", "", "", "")) ;
          if ( (0==AV16PropostaAprovacoesRestantes_F) )
          {
             AV33Proposta.Load(AV17PropostaId);
@@ -187,7 +183,6 @@ namespace GeneXus.Programs {
             {
                context.CommitDataStores("praprovarproposta",pr_default);
             }
-            new debug(context ).execute(  StringUtil.Format( "&SdErro %1", AV33Proposta.GetMessages().ToJSonString(false), "", "", "", "", "", "", "", "")) ;
          }
          cleanup();
       }
@@ -367,7 +362,7 @@ namespace GeneXus.Programs {
           new ParDef("AV10ClienteId",GXType.Int32,9,0)
           };
           def= new CursorDef[] {
-              new CursorDef("P009T3", "SELECT T1.PropostaId, T1.PropostaPacienteClienteId AS PropostaPacienteClienteId, T3.ClienteRazaoSocial AS PropostaPacienteClienteRazaoSocial, T3.ClienteDocumento AS PropostaPacienteClienteDocumento, T3.ContatoEmail AS PropostaPacienteContatoEmail, COALESCE( T2.PropostaAprovacoes_F, 0) AS PropostaAprovacoes_F, T1.PropostaQuantidadeAprovadores FROM ((Proposta T1 LEFT JOIN LATERAL (SELECT COUNT(*) AS PropostaAprovacoes_F, PropostaId FROM Aprovacao WHERE (T1.PropostaId = PropostaId) AND (AprovacaoStatus = ( 'APROVADO')) GROUP BY PropostaId ) T2 ON T2.PropostaId = T1.PropostaId) LEFT JOIN Cliente T3 ON T3.ClienteId = T1.PropostaPacienteClienteId) WHERE T1.PropostaId = :AV17PropostaId ORDER BY T1.PropostaId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP009T3,1, GxCacheFrequency.OFF ,true,true )
+              new CursorDef("P009T3", "SELECT T1.PropostaId, T1.PropostaPacienteClienteId AS PropostaPacienteClienteId, T3.ClienteRazaoSocial AS PropostaPacienteClienteRazaoSocial, T3.ClienteDocumento AS PropostaPacienteClienteDocumento, T3.ContatoEmail AS PropostaPacienteContatoEmail, COALESCE( T2.PropostaAprovacoes_F, 0) AS PropostaAprovacoes_F, T1.PropostaQuantidadeAprovadores FROM ((Proposta T1 LEFT JOIN LATERAL (SELECT COUNT(*) AS PropostaAprovacoes_F, PropostaId FROM Aprovacao WHERE (T1.PropostaId = PropostaId) AND (AprovacaoStatus = ( 'APROVADO')) GROUP BY PropostaId ) T2 ON T2.PropostaId = T1.PropostaId) LEFT JOIN Cliente T3 ON T3.ClienteId = T1.PropostaPacienteClienteId) WHERE T1.PropostaId = :AV17PropostaId ORDER BY T1.PropostaId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP009T3,1, GxCacheFrequency.OFF ,false,true )
              ,new CursorDef("P009T4", "SELECT ClienteId, ReponsavelClienteId, ClienteReponsavelId FROM ClienteReponsavel WHERE ClienteId = :AV10ClienteId ORDER BY ClienteReponsavelId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP009T4,100, GxCacheFrequency.OFF ,false,false )
              ,new CursorDef("P009T5", "SELECT ClienteId, ClienteRazaoSocial, ClienteDocumento, ContatoEmail FROM Cliente WHERE ClienteId = :AV10ClienteId ORDER BY ClienteId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP009T5,1, GxCacheFrequency.OFF ,false,true )
           };

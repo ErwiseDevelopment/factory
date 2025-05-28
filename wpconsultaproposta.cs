@@ -2317,7 +2317,6 @@ namespace GeneXus.Programs {
       {
          /* Adicionaranexo_Click Routine */
          returnInSub = false;
-         new debug(context ).execute(  StringUtil.Format( "&&PropostaDocumentosId %1", StringUtil.LTrimStr( (decimal)(AV54PropostaDocumentosId), 9, 0), "", "", "", "", "", "", "", "")) ;
          AV53PropostaDocumentos = new SdtPropostaDocumentos(context);
          AV53PropostaDocumentos.Load(AV54PropostaDocumentosId);
          AV50GUID = Guid.NewGuid( );
@@ -2427,7 +2426,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918561583", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289153118", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2444,7 +2443,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 133260), false, true);
-         context.AddJavascriptSource("wpconsultaproposta.js", "?202551918561583", false, true);
+         context.AddJavascriptSource("wpconsultaproposta.js", "?20255289153118", false, true);
          context.AddJavascriptSource("shared/HistoryManager/HistoryManager.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/rsh/json2005.js", "", false, true);
          context.AddJavascriptSource("shared/HistoryManager/rsh/rsh.js", "", false, true);

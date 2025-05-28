@@ -88,7 +88,6 @@ namespace GeneXus.Programs {
             {
                AV12SdSerasaAuth.FromJSonString(AV11Response, null);
             }
-            new debug(context ).execute(  StringUtil.Format( "&SdSerasaAuth %1", AV12SdSerasaAuth.ToJSonString(false, true), "", "", "", "", "", "", "", "")) ;
             pr_default.readNext(0);
          }
          pr_default.close(0);

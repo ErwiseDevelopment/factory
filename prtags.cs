@@ -65,7 +65,6 @@ namespace GeneXus.Programs {
       {
          /* GeneXus formulas */
          /* Output device settings */
-         new debug(context ).execute(  StringUtil.Format( "&SdtListaTags %1", AV9SdtListaTags.ToJSonString(false, true), "", "", "", "", "", "", "", "")) ;
          GXt_char1 = AV8HTML;
          new initcap(context ).execute(  AV9SdtListaTags.gxTpr_Clienterazaosocial, out  GXt_char1) ;
          AV8HTML = StringUtil.StringReplace( AV8HTML, "{{NomeCompleto}}", GXt_char1);

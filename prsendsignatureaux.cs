@@ -98,31 +98,24 @@ namespace GeneXus.Programs {
          /* GeneXus formulas */
          /* Output device settings */
          new prnewarquivo(context ).execute(  AV8ArquivoBlob,  AV9ContratoNome, out  AV14ArquivoId, out  AV10SdErro) ;
-         new debug(context ).execute(  "2") ;
          if ( AV10SdErro.gxTpr_Status != 200 )
          {
             cleanup();
             if (true) return;
          }
-         new debug(context ).execute(  "6") ;
          new prnewcontrato(context ).execute(  AV9ContratoNome, out  AV15ContratoId,  0, out  AV10SdErro) ;
          if ( AV10SdErro.gxTpr_Status != 200 )
          {
             cleanup();
             if (true) return;
          }
-         new debug(context ).execute(  "12") ;
-         new debug(context ).execute(  "17") ;
          new prnewassinatura(context ).execute(  AV15ContratoId,  AV14ArquivoId, out  AV16AssinaturaId, out  AV10SdErro) ;
-         new debug(context ).execute(  "19") ;
          if ( AV10SdErro.gxTpr_Status != 200 )
          {
             cleanup();
             if (true) return;
          }
-         new debug(context ).execute(  "23") ;
          new prnewassinaturaparticipantes(context ).execute(  AV16AssinaturaId,  AV17Array_SdParticipantes, out  AV10SdErro) ;
-         new debug(context ).execute(  "25") ;
          AV21PropostaContratoAssinatura = new SdtPropostaContratoAssinatura(context);
          AV21PropostaContratoAssinatura.gxTpr_Propostaassinatura = AV16AssinaturaId;
          AV21PropostaContratoAssinatura.gxTpr_Propostacontrato = AV15ContratoId;
@@ -130,7 +123,6 @@ namespace GeneXus.Programs {
          AV21PropostaContratoAssinatura.gxTpr_Propostacontratoassinaturatipo = AV22PropostaContratoAssinaturaTipo;
          AV21PropostaContratoAssinatura.Save();
          AV24PropostaContratoAssinaturaId = AV21PropostaContratoAssinatura.gxTpr_Propostacontratoassinaturaid;
-         new debug(context ).execute(  StringUtil.Format( "&PropostaContratoAssinaturaId %1", StringUtil.LTrimStr( (decimal)(AV24PropostaContratoAssinaturaId), 9, 0), "", "", "", "", "", "", "", "")) ;
          if ( AV10SdErro.gxTpr_Status != 200 )
          {
             cleanup();
@@ -141,8 +133,6 @@ namespace GeneXus.Programs {
             context.CommitDataStores("prsendsignatureaux",pr_default);
          }
          AV19BaseUrl = AV18HTTPREQUEST.BaseURL;
-         new debug(context ).execute(  StringUtil.Format( "&BaseUrl %1", AV19BaseUrl, "", "", "", "", "", "", "", "")) ;
-         new debug(context ).execute(  "34") ;
          new prsendemailsignature(context).executeSubmit(  AV16AssinaturaId,  AV19BaseUrl) ;
          cleanup();
       }

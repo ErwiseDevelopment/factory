@@ -2386,7 +2386,6 @@ namespace GeneXus.Programs {
          AV58Proposta.gxTpr_Conveniovencimentoano = AV11WizardData.gxTpr_Proposta.gxTpr_Conveniovencimentoano;
          AV58Proposta.gxTpr_Conveniovencimentomes = AV11WizardData.gxTpr_Proposta.gxTpr_Conveniovencimentomes;
          AV58Proposta.gxTpr_Propostaquantidadeaprovadores = AV57PropostaQuantidadeAprovadores;
-         new debug(context ).execute(  StringUtil.Format( "&WwpContext.UserId %1, ", AV56WwpContext.ToJSonString(false, true), "", "", "", "", "", "", "", "")) ;
          AV58Proposta.gxTpr_Propostacratedby = AV56WwpContext.gxTpr_Userid;
          AV58Proposta.gxTpr_Propostaclinicaid = AV56WwpContext.gxTpr_Ownerid;
          new getclinicatax(context ).execute(  AV56WwpContext.gxTpr_Secuserclienteid, out  AV59ContratoTaxa, out  AV60ContratoSLA, out  AV61ContratoJurosMora, out  AV62ContratoIOFMinimo) ;
@@ -3095,7 +3094,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202552321395588", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2025528915060", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -3111,7 +3110,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("wpnovapropostaresumo.js", "?202552321395589", false, true);
+         context.AddJavascriptSource("wpnovapropostaresumo.js", "?2025528915061", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);

@@ -82,7 +82,6 @@ namespace GeneXus.Programs {
                AV12LevelDVelop_Menu.Clear();
                new pfuncmenu(context ).execute(  AV10DVelop_MenuItem.gxTpr_Subitems, ref  AV12LevelDVelop_Menu) ;
                AV10DVelop_MenuItem.gxTpr_Subitems.FromJSonString(AV12LevelDVelop_Menu.ToJSonString(false), null);
-               new debug(context ).execute(  AV10DVelop_MenuItem.gxTpr_Subitems.ToJSonString(false)) ;
             }
             if ( AV11IsAuthorized )
             {

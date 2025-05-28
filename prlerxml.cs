@@ -76,9 +76,6 @@ namespace GeneXus.Programs {
             AV12NodeType = AV10XMLReader.NodeType;
             AV11NodeName = AV10XMLReader.Name;
             AV13NodeValue = AV10XMLReader.Value;
-            new debug(context ).execute(  StringUtil.Format( "&NodeType %1", StringUtil.LTrimStr( (decimal)(AV12NodeType), 4, 0), "", "", "", "", "", "", "", "")) ;
-            new debug(context ).execute(  StringUtil.Format( "&NodeName %1", AV11NodeName, "", "", "", "", "", "", "", "")) ;
-            new debug(context ).execute(  StringUtil.Format( "&NodeValue %1", AV13NodeValue, "", "", "", "", "", "", "", "")) ;
             if ( AV10XMLReader.AttributeCount > 0 )
             {
                AV16i = 1;
@@ -704,7 +701,6 @@ namespace GeneXus.Programs {
          }
          else if ( ( StringUtil.StrCmp(AV11NodeName, "dup") == 0 ) && ( AV12NodeType == 2 ) )
          {
-            new debug(context ).execute(  StringUtil.Format( "&SdNotaFiscalCobrancaDup %1", AV25SdNotaFiscalCobrancaDup.ToJSonString(false, true), "", "", "", "", "", "", "", "")) ;
             AV8SdNotaFiscal.gxTpr_Nfe.gxTpr_Infnfe.gxTpr_Cobr.gxTpr_Dup.Add(AV25SdNotaFiscalCobrancaDup, 0);
          }
          else if ( ( StringUtil.StrCmp(AV11NodeName, "dup") == 0 ) && ( AV12NodeType == 1 ) )

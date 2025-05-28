@@ -90,7 +90,6 @@ namespace GeneXus.Programs {
       {
          /* GeneXus formulas */
          /* Output device settings */
-         new debug(context ).execute(  StringUtil.Format( "&ClienteId %1", StringUtil.LTrimStr( (decimal)(AV8ClienteId), 9, 0), "", "", "", "", "", "", "", "")) ;
          /* Using cursor P00BT2 */
          pr_default.execute(0, new Object[] {AV8ClienteId});
          while ( (pr_default.getStatus(0) != 101) )

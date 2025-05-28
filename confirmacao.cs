@@ -705,11 +705,9 @@ namespace GeneXus.Programs {
          AssignAttri("", false, "AV22Parametro", AV22Parametro);
          GxWebStd.gx_hidden_field( context, "gxhash_vPARAMETRO", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( AV22Parametro, "")), context));
          AV24AuxParametro = Decrypt64( AV22Parametro, AV23Chave);
-         new debug(context ).execute(  StringUtil.Format( "&AuxParametro %1", AV24AuxParametro, "", "", "", "", "", "", "", "")) ;
          AV5AssinaturaParticipanteId = (int)(Math.Round(NumberUtil.Val( AV24AuxParametro, "."), 18, MidpointRounding.ToEven));
          AssignAttri("", false, "AV5AssinaturaParticipanteId", StringUtil.LTrimStr( (decimal)(AV5AssinaturaParticipanteId), 9, 0));
          GxWebStd.gx_hidden_field( context, "gxhash_vASSINATURAPARTICIPANTEID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV5AssinaturaParticipanteId), "ZZZZZZZZ9"), context));
-         new debug(context ).execute(  StringUtil.Format( "&AssinaturaParticipanteId %1", StringUtil.LTrimStr( (decimal)(AV5AssinaturaParticipanteId), 9, 0), "", "", "", "", "", "", "", "")) ;
       }
 
       public void GXEnter( )
@@ -876,7 +874,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255191857560", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289151764", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -892,7 +890,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("confirmacao.js", "?20255191857560", false, true);
+         context.AddJavascriptSource("confirmacao.js", "?20255289151764", false, true);
          /* End function include_jscripts */
       }
 

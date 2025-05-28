@@ -1062,7 +1062,6 @@ namespace GeneXus.Programs {
          pr_default.close(10);
          AV39SdComprovante.gxTpr_Propostacategoriaconvenio = AV41ConvenioCategoriaDescricao;
          AV39SdComprovante.gxTpr_Propostavencimentocarteirinha = StringUtil.Format( "%1/%2", StringUtil.PadL( StringUtil.Trim( StringUtil.Str( (decimal)(AV11WizardData.gxTpr_Proposta.gxTpr_Conveniovencimentomes), 4, 0)), 2, "0"), StringUtil.Trim( StringUtil.Str( (decimal)(AV11WizardData.gxTpr_Proposta.gxTpr_Conveniovencimentoano), 4, 0)), "", "", "", "", "", "", "");
-         new debug(context ).execute(  StringUtil.Format( "&SdComprovante %1", AV39SdComprovante.ToJSonString(false, true), "", "", "", "", "", "", "", "")) ;
          new prhtmlcomprovante(context ).execute(  AV39SdComprovante, out  AV35HTML) ;
          lblTxtcomprovante_Caption = AV35HTML;
          AssignProp(sPrefix, false, lblTxtcomprovante_Internalname, "Caption", lblTxtcomprovante_Caption, true);
@@ -1337,7 +1336,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918462235", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2025528915795", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1353,7 +1352,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("wpnovapropostaproposta_criada.js", "?202551918462236", false, true);
+         context.AddJavascriptSource("wpnovapropostaproposta_criada.js", "?2025528915796", false, true);
          context.AddJavascriptSource("UserControls/UCPropostaComprovanteRender.js", "", false, true);
          /* End function include_jscripts */
       }

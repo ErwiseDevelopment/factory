@@ -3023,10 +3023,8 @@ namespace GeneXus.Programs {
                AV64SecFunctionalityRole.gxTpr_Secroleid = AV65SecRoleId;
                AV64SecFunctionalityRole.gxTpr_Secfunctionalityroleativo = true;
                AV64SecFunctionalityRole.Save();
-               new debug(context ).execute(  StringUtil.Format( " 373  %1, %2, ", StringUtil.LTrimStr( (decimal)(AV65SecRoleId), 4, 0), StringUtil.LTrimStr( (decimal)(AV56SelectedRow.gxTpr_Secfunctionalityid), 10, 0), "", "", "", "", "", "", "")) ;
                if ( AV64SecFunctionalityRole.Success() )
                {
-                  new debug(context ).execute(  StringUtil.Format( "375 %1, %2", StringUtil.LTrimStr( (decimal)(AV65SecRoleId), 4, 0), StringUtil.LTrimStr( (decimal)(AV56SelectedRow.gxTpr_Secfunctionalityid), 10, 0), "", "", "", "", "", "", "")) ;
                   context.CommitDataStores("wpaddfunc",pr_default);
                   GX_msglist.addItem(new GeneXus.Programs.wwpbaseobjects.dvmessagegetbasicnotificationmsg(context).executeUdp(  "Sucesso!",  "Dados gravados com sucesso!",  "success",  "",  "true",  ""));
                   context.setWebReturnParms(new Object[] {});
@@ -4025,7 +4023,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918582753", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289155194", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -4041,7 +4039,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("wpaddfunc.js", "?202551918582754", false, true);
+         context.AddJavascriptSource("wpaddfunc.js", "?20255289155194", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Panel/BootstrapPanelRender.js", "", false, true);

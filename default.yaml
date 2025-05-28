@@ -1,7 +1,7 @@
 openapi: 3.0.0
 info:
   title: "Factory2"
-  version: "20250526200927"
+  version: "20250528132827"
 servers:
   - url: http://localhost/Factory2NETPostgreSQL/rest
 paths:

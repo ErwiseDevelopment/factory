@@ -154,21 +154,21 @@ namespace GeneXus.Programs {
          AV12OrderedBy = (short)(Math.Round(NumberUtil.Val( GetPar( "OrderedBy"), "."), 18, MidpointRounding.ToEven));
          AV13OrderedDsc = StringUtil.StrToBool( GetPar( "OrderedDsc"));
          AV26PropostaId = (int)(Math.Round(NumberUtil.Val( GetPar( "PropostaId"), "."), 18, MidpointRounding.ToEven));
-         AV27TFSecUserName = GetPar( "TFSecUserName");
-         AV28TFSecUserName_Sel = GetPar( "TFSecUserName_Sel");
+         AV29TFSecUserFullName = GetPar( "TFSecUserFullName");
+         AV30TFSecUserFullName_Sel = GetPar( "TFSecUserFullName_Sel");
          AV15TFAprovacaoEm = context.localUtil.ParseDTimeParm( GetPar( "TFAprovacaoEm"));
          AV16TFAprovacaoEm_To = context.localUtil.ParseDTimeParm( GetPar( "TFAprovacaoEm_To"));
          AV20TFAprovacaoDecisao = GetPar( "TFAprovacaoDecisao");
          AV21TFAprovacaoDecisao_Sel = GetPar( "TFAprovacaoDecisao_Sel");
          ajax_req_read_hidden_sdt(GetNextPar( ), AV23TFAprovacaoStatus_Sels);
-         AV37Pgmname = GetPar( "Pgmname");
+         AV39Pgmname = GetPar( "Pgmname");
          setAjaxCallMode();
          if ( ! IsValidAjaxCall( true) )
          {
             GxWebError = 1;
             return  ;
          }
-         gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV27TFSecUserName, AV28TFSecUserName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV37Pgmname) ;
+         gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV29TFSecUserFullName, AV30TFSecUserFullName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV39Pgmname) ;
          AddString( context.getJSONResponse( )) ;
          /* End function gxgrGrid_refresh_invoke */
       }
@@ -317,8 +317,8 @@ namespace GeneXus.Programs {
       {
          GxWebStd.gx_hidden_field( context, "vPROPOSTAID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV26PropostaId), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "gxhash_vPROPOSTAID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV26PropostaId), "ZZZZZZZZ9"), context));
-         GxWebStd.gx_hidden_field( context, "vPGMNAME", StringUtil.RTrim( AV37Pgmname));
-         GxWebStd.gx_hidden_field( context, "gxhash_vPGMNAME", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( AV37Pgmname, "")), context));
+         GxWebStd.gx_hidden_field( context, "vPGMNAME", StringUtil.RTrim( AV39Pgmname));
+         GxWebStd.gx_hidden_field( context, "gxhash_vPGMNAME", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( AV39Pgmname, "")), context));
          GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
       }
 
@@ -342,8 +342,8 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "vDDO_APROVACAOEMAUXDATETO", context.localUtil.DToC( AV18DDO_AprovacaoEmAuxDateTo, 0, "/"));
          GxWebStd.gx_hidden_field( context, "vPROPOSTAID", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV26PropostaId), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, "gxhash_vPROPOSTAID", GetSecureSignedToken( "", context.localUtil.Format( (decimal)(AV26PropostaId), "ZZZZZZZZ9"), context));
-         GxWebStd.gx_hidden_field( context, "vTFSECUSERNAME", AV27TFSecUserName);
-         GxWebStd.gx_hidden_field( context, "vTFSECUSERNAME_SEL", AV28TFSecUserName_Sel);
+         GxWebStd.gx_hidden_field( context, "vTFSECUSERFULLNAME", AV29TFSecUserFullName);
+         GxWebStd.gx_hidden_field( context, "vTFSECUSERFULLNAME_SEL", AV30TFSecUserFullName_Sel);
          GxWebStd.gx_hidden_field( context, "vTFAPROVACAOEM", context.localUtil.TToC( AV15TFAprovacaoEm, 10, 8, 0, 0, "/", ":", " "));
          GxWebStd.gx_hidden_field( context, "vTFAPROVACAOEM_TO", context.localUtil.TToC( AV16TFAprovacaoEm_To, 10, 8, 0, 0, "/", ":", " "));
          GxWebStd.gx_hidden_field( context, "vTFAPROVACAODECISAO", AV20TFAprovacaoDecisao);
@@ -356,8 +356,8 @@ namespace GeneXus.Programs {
          {
             context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vTFAPROVACAOSTATUS_SELS", AV23TFAprovacaoStatus_Sels);
          }
-         GxWebStd.gx_hidden_field( context, "vPGMNAME", StringUtil.RTrim( AV37Pgmname));
-         GxWebStd.gx_hidden_field( context, "gxhash_vPGMNAME", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( AV37Pgmname, "")), context));
+         GxWebStd.gx_hidden_field( context, "vPGMNAME", StringUtil.RTrim( AV39Pgmname));
+         GxWebStd.gx_hidden_field( context, "gxhash_vPGMNAME", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( AV39Pgmname, "")), context));
          GxWebStd.gx_hidden_field( context, "vORDEREDBY", StringUtil.LTrim( StringUtil.NToC( (decimal)(AV12OrderedBy), 4, 0, ",", "")));
          GxWebStd.gx_boolean_hidden_field( context, "vORDEREDDSC", AV13OrderedDsc);
          GxWebStd.gx_hidden_field( context, "SECUSERID", StringUtil.LTrim( StringUtil.NToC( (decimal)(A133SecUserId), 4, 0, ",", "")));
@@ -564,8 +564,8 @@ namespace GeneXus.Programs {
             /* Div Control */
             GxWebStd.gx_div_start( context, divDdo_aprovacaoemauxdates_Internalname, 1, 0, "px", 0, "px", "Invisible", "start", "top", "", "", "div");
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 26,'',false,'" + sGXsfl_12_idx + "',0)\"";
-            GxWebStd.gx_single_line_edit( context, edtavDdo_aprovacaoemauxdatetext_Internalname, AV19DDO_AprovacaoEmAuxDateText, StringUtil.RTrim( context.localUtil.Format( AV19DDO_AprovacaoEmAuxDateText, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,26);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavDdo_aprovacaoemauxdatetext_Jsonclick, 0, "Attribute", "", "", "", "", 1, 1, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "", "start", true, "", "HLP_AprovacaoWW.htm");
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 27,'',false,'" + sGXsfl_12_idx + "',0)\"";
+            GxWebStd.gx_single_line_edit( context, edtavDdo_aprovacaoemauxdatetext_Internalname, AV19DDO_AprovacaoEmAuxDateText, StringUtil.RTrim( context.localUtil.Format( AV19DDO_AprovacaoEmAuxDateText, "")), TempTags+" onchange=\""+""+";gx.evt.onchange(this, event)\" "+" onblur=\""+""+";gx.evt.onblur(this,27);\"", "'"+""+"'"+",false,"+"'"+""+"'", "", "", "", "", edtavDdo_aprovacaoemauxdatetext_Jsonclick, 0, "Attribute", "", "", "", "", 1, 1, 0, "text", "", 40, "chr", 1, "row", 40, 0, 0, 0, 0, -1, -1, true, "", "start", true, "", "HLP_AprovacaoWW.htm");
             /* User Defined Control */
             ucTfaprovacaoem_rangepicker.SetProperty("Start Date", AV17DDO_AprovacaoEmAuxDate);
             ucTfaprovacaoem_rangepicker.SetProperty("End Date", AV18DDO_AprovacaoEmAuxDateTo);
@@ -683,14 +683,14 @@ namespace GeneXus.Programs {
                            else if ( StringUtil.StrCmp(sEvt, "GRIDPAGING") == 0 )
                            {
                               context.wbHandled = 1;
-                              AV29Aprovacaowwds_1_propostaid = AV26PropostaId;
-                              AV30Aprovacaowwds_2_tfsecusername = AV27TFSecUserName;
-                              AV31Aprovacaowwds_3_tfsecusername_sel = AV28TFSecUserName_Sel;
-                              AV32Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
-                              AV33Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
-                              AV34Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
-                              AV35Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
-                              AV36Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
+                              AV31Aprovacaowwds_1_propostaid = AV26PropostaId;
+                              AV32Aprovacaowwds_2_tfsecuserfullname = AV29TFSecUserFullName;
+                              AV33Aprovacaowwds_3_tfsecuserfullname_sel = AV30TFSecUserFullName_Sel;
+                              AV34Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
+                              AV35Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
+                              AV36Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
+                              AV37Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
+                              AV38Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
                               sEvt = cgiGet( "GRIDPAGING");
                               if ( StringUtil.StrCmp(sEvt, "FIRST") == 0 )
                               {
@@ -725,6 +725,8 @@ namespace GeneXus.Programs {
                               n375AprovadoresId = false;
                               A323PropostaId = (int)(Math.Round(context.localUtil.CToN( cgiGet( edtPropostaId_Internalname), ",", "."), 18, MidpointRounding.ToEven));
                               n323PropostaId = false;
+                              A143SecUserFullName = StringUtil.Upper( cgiGet( edtSecUserFullName_Internalname));
+                              n143SecUserFullName = false;
                               A141SecUserName = StringUtil.Upper( cgiGet( edtSecUserName_Internalname));
                               n141SecUserName = false;
                               A337AprovacaoEm = context.localUtil.CToT( cgiGet( edtAprovacaoEm_Internalname), 0);
@@ -921,14 +923,14 @@ namespace GeneXus.Programs {
                                        short AV12OrderedBy ,
                                        bool AV13OrderedDsc ,
                                        int AV26PropostaId ,
-                                       string AV27TFSecUserName ,
-                                       string AV28TFSecUserName_Sel ,
+                                       string AV29TFSecUserFullName ,
+                                       string AV30TFSecUserFullName_Sel ,
                                        DateTime AV15TFAprovacaoEm ,
                                        DateTime AV16TFAprovacaoEm_To ,
                                        string AV20TFAprovacaoDecisao ,
                                        string AV21TFAprovacaoDecisao_Sel ,
                                        GxSimpleCollection<string> AV23TFAprovacaoStatus_Sels ,
-                                       string AV37Pgmname )
+                                       string AV39Pgmname )
       {
          initialize_formulas( ) ;
          GxWebStd.set_html_headers( context, 0, "", "");
@@ -970,7 +972,7 @@ namespace GeneXus.Programs {
       protected void initialize_formulas( )
       {
          /* GeneXus formulas. */
-         AV37Pgmname = "AprovacaoWW";
+         AV39Pgmname = "AprovacaoWW";
       }
 
       protected void RF612( )
@@ -1007,30 +1009,30 @@ namespace GeneXus.Programs {
             GXPagingTo2 = ((subGrid_Rows==0) ? 10000 : subGrid_fnc_Recordsperpage( )+1);
             pr_default.dynParam(0, new Object[]{ new Object[]{
                                                  A340AprovacaoStatus ,
-                                                 AV36Aprovacaowwds_8_tfaprovacaostatus_sels ,
-                                                 AV31Aprovacaowwds_3_tfsecusername_sel ,
-                                                 AV30Aprovacaowwds_2_tfsecusername ,
-                                                 AV32Aprovacaowwds_4_tfaprovacaoem ,
-                                                 AV33Aprovacaowwds_5_tfaprovacaoem_to ,
-                                                 AV35Aprovacaowwds_7_tfaprovacaodecisao_sel ,
-                                                 AV34Aprovacaowwds_6_tfaprovacaodecisao ,
-                                                 AV36Aprovacaowwds_8_tfaprovacaostatus_sels.Count ,
-                                                 A141SecUserName ,
+                                                 AV38Aprovacaowwds_8_tfaprovacaostatus_sels ,
+                                                 AV33Aprovacaowwds_3_tfsecuserfullname_sel ,
+                                                 AV32Aprovacaowwds_2_tfsecuserfullname ,
+                                                 AV34Aprovacaowwds_4_tfaprovacaoem ,
+                                                 AV35Aprovacaowwds_5_tfaprovacaoem_to ,
+                                                 AV37Aprovacaowwds_7_tfaprovacaodecisao_sel ,
+                                                 AV36Aprovacaowwds_6_tfaprovacaodecisao ,
+                                                 AV38Aprovacaowwds_8_tfaprovacaostatus_sels.Count ,
+                                                 A143SecUserFullName ,
                                                  A337AprovacaoEm ,
                                                  A338AprovacaoDecisao ,
                                                  AV12OrderedBy ,
                                                  AV13OrderedDsc ,
                                                  A323PropostaId ,
-                                                 AV29Aprovacaowwds_1_propostaid } ,
+                                                 AV31Aprovacaowwds_1_propostaid } ,
                                                  new int[]{
                                                  TypeConstants.BOOLEAN, TypeConstants.DATE, TypeConstants.DATE, TypeConstants.INT, TypeConstants.BOOLEAN, TypeConstants.DATE, TypeConstants.BOOLEAN, TypeConstants.BOOLEAN, TypeConstants.SHORT, TypeConstants.BOOLEAN,
                                                  TypeConstants.INT, TypeConstants.BOOLEAN, TypeConstants.INT
                                                  }
             });
-            lV30Aprovacaowwds_2_tfsecusername = StringUtil.Concat( StringUtil.RTrim( AV30Aprovacaowwds_2_tfsecusername), "%", "");
-            lV34Aprovacaowwds_6_tfaprovacaodecisao = StringUtil.Concat( StringUtil.RTrim( AV34Aprovacaowwds_6_tfaprovacaodecisao), "%", "");
+            lV32Aprovacaowwds_2_tfsecuserfullname = StringUtil.Concat( StringUtil.RTrim( AV32Aprovacaowwds_2_tfsecuserfullname), "%", "");
+            lV36Aprovacaowwds_6_tfaprovacaodecisao = StringUtil.Concat( StringUtil.RTrim( AV36Aprovacaowwds_6_tfaprovacaodecisao), "%", "");
             /* Using cursor H00612 */
-            pr_default.execute(0, new Object[] {AV29Aprovacaowwds_1_propostaid, lV30Aprovacaowwds_2_tfsecusername, AV31Aprovacaowwds_3_tfsecusername_sel, AV32Aprovacaowwds_4_tfaprovacaoem, AV33Aprovacaowwds_5_tfaprovacaoem_to, lV34Aprovacaowwds_6_tfaprovacaodecisao, AV35Aprovacaowwds_7_tfaprovacaodecisao_sel, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
+            pr_default.execute(0, new Object[] {AV31Aprovacaowwds_1_propostaid, lV32Aprovacaowwds_2_tfsecuserfullname, AV33Aprovacaowwds_3_tfsecuserfullname_sel, AV34Aprovacaowwds_4_tfaprovacaoem, AV35Aprovacaowwds_5_tfaprovacaoem_to, lV36Aprovacaowwds_6_tfaprovacaodecisao, AV37Aprovacaowwds_7_tfaprovacaodecisao_sel, GXPagingFrom2, GXPagingTo2, GXPagingTo2});
             nGXsfl_12_idx = 1;
             sGXsfl_12_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_12_idx), 4, 0), 4, "0");
             SubsflControlProps_122( ) ;
@@ -1048,6 +1050,8 @@ namespace GeneXus.Programs {
                n337AprovacaoEm = H00612_n337AprovacaoEm[0];
                A141SecUserName = H00612_A141SecUserName[0];
                n141SecUserName = H00612_n141SecUserName[0];
+               A143SecUserFullName = H00612_A143SecUserFullName[0];
+               n143SecUserFullName = H00612_n143SecUserFullName[0];
                A323PropostaId = H00612_A323PropostaId[0];
                n323PropostaId = H00612_n323PropostaId[0];
                A375AprovadoresId = H00612_A375AprovadoresId[0];
@@ -1059,6 +1063,8 @@ namespace GeneXus.Programs {
                n141SecUserName = H00612_n141SecUserName[0];
                A133SecUserId = H00612_A133SecUserId[0];
                n133SecUserId = H00612_n133SecUserId[0];
+               A143SecUserFullName = H00612_A143SecUserFullName[0];
+               n143SecUserFullName = H00612_n143SecUserFullName[0];
                /* Execute user event: Grid.Load */
                E14612 ();
                pr_default.readNext(0);
@@ -1074,8 +1080,8 @@ namespace GeneXus.Programs {
 
       protected void send_integrity_lvl_hashes612( )
       {
-         GxWebStd.gx_hidden_field( context, "vPGMNAME", StringUtil.RTrim( AV37Pgmname));
-         GxWebStd.gx_hidden_field( context, "gxhash_vPGMNAME", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( AV37Pgmname, "")), context));
+         GxWebStd.gx_hidden_field( context, "vPGMNAME", StringUtil.RTrim( AV39Pgmname));
+         GxWebStd.gx_hidden_field( context, "gxhash_vPGMNAME", GetSecureSignedToken( "", StringUtil.RTrim( context.localUtil.Format( AV39Pgmname, "")), context));
       }
 
       protected int subGrid_fnc_Pagecount( )
@@ -1090,40 +1096,40 @@ namespace GeneXus.Programs {
 
       protected int subGrid_fnc_Recordcount( )
       {
-         AV29Aprovacaowwds_1_propostaid = AV26PropostaId;
-         AV30Aprovacaowwds_2_tfsecusername = AV27TFSecUserName;
-         AV31Aprovacaowwds_3_tfsecusername_sel = AV28TFSecUserName_Sel;
-         AV32Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
-         AV33Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
-         AV34Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
-         AV35Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
-         AV36Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
+         AV31Aprovacaowwds_1_propostaid = AV26PropostaId;
+         AV32Aprovacaowwds_2_tfsecuserfullname = AV29TFSecUserFullName;
+         AV33Aprovacaowwds_3_tfsecuserfullname_sel = AV30TFSecUserFullName_Sel;
+         AV34Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
+         AV35Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
+         AV36Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
+         AV37Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
+         AV38Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
          pr_default.dynParam(1, new Object[]{ new Object[]{
                                               A340AprovacaoStatus ,
-                                              AV36Aprovacaowwds_8_tfaprovacaostatus_sels ,
-                                              AV31Aprovacaowwds_3_tfsecusername_sel ,
-                                              AV30Aprovacaowwds_2_tfsecusername ,
-                                              AV32Aprovacaowwds_4_tfaprovacaoem ,
-                                              AV33Aprovacaowwds_5_tfaprovacaoem_to ,
-                                              AV35Aprovacaowwds_7_tfaprovacaodecisao_sel ,
-                                              AV34Aprovacaowwds_6_tfaprovacaodecisao ,
-                                              AV36Aprovacaowwds_8_tfaprovacaostatus_sels.Count ,
-                                              A141SecUserName ,
+                                              AV38Aprovacaowwds_8_tfaprovacaostatus_sels ,
+                                              AV33Aprovacaowwds_3_tfsecuserfullname_sel ,
+                                              AV32Aprovacaowwds_2_tfsecuserfullname ,
+                                              AV34Aprovacaowwds_4_tfaprovacaoem ,
+                                              AV35Aprovacaowwds_5_tfaprovacaoem_to ,
+                                              AV37Aprovacaowwds_7_tfaprovacaodecisao_sel ,
+                                              AV36Aprovacaowwds_6_tfaprovacaodecisao ,
+                                              AV38Aprovacaowwds_8_tfaprovacaostatus_sels.Count ,
+                                              A143SecUserFullName ,
                                               A337AprovacaoEm ,
                                               A338AprovacaoDecisao ,
                                               AV12OrderedBy ,
                                               AV13OrderedDsc ,
                                               A323PropostaId ,
-                                              AV29Aprovacaowwds_1_propostaid } ,
+                                              AV31Aprovacaowwds_1_propostaid } ,
                                               new int[]{
                                               TypeConstants.BOOLEAN, TypeConstants.DATE, TypeConstants.DATE, TypeConstants.INT, TypeConstants.BOOLEAN, TypeConstants.DATE, TypeConstants.BOOLEAN, TypeConstants.BOOLEAN, TypeConstants.SHORT, TypeConstants.BOOLEAN,
                                               TypeConstants.INT, TypeConstants.BOOLEAN, TypeConstants.INT
                                               }
          });
-         lV30Aprovacaowwds_2_tfsecusername = StringUtil.Concat( StringUtil.RTrim( AV30Aprovacaowwds_2_tfsecusername), "%", "");
-         lV34Aprovacaowwds_6_tfaprovacaodecisao = StringUtil.Concat( StringUtil.RTrim( AV34Aprovacaowwds_6_tfaprovacaodecisao), "%", "");
+         lV32Aprovacaowwds_2_tfsecuserfullname = StringUtil.Concat( StringUtil.RTrim( AV32Aprovacaowwds_2_tfsecuserfullname), "%", "");
+         lV36Aprovacaowwds_6_tfaprovacaodecisao = StringUtil.Concat( StringUtil.RTrim( AV36Aprovacaowwds_6_tfaprovacaodecisao), "%", "");
          /* Using cursor H00613 */
-         pr_default.execute(1, new Object[] {AV29Aprovacaowwds_1_propostaid, lV30Aprovacaowwds_2_tfsecusername, AV31Aprovacaowwds_3_tfsecusername_sel, AV32Aprovacaowwds_4_tfaprovacaoem, AV33Aprovacaowwds_5_tfaprovacaoem_to, lV34Aprovacaowwds_6_tfaprovacaodecisao, AV35Aprovacaowwds_7_tfaprovacaodecisao_sel});
+         pr_default.execute(1, new Object[] {AV31Aprovacaowwds_1_propostaid, lV32Aprovacaowwds_2_tfsecuserfullname, AV33Aprovacaowwds_3_tfsecuserfullname_sel, AV34Aprovacaowwds_4_tfaprovacaoem, AV35Aprovacaowwds_5_tfaprovacaoem_to, lV36Aprovacaowwds_6_tfaprovacaodecisao, AV37Aprovacaowwds_7_tfaprovacaodecisao_sel});
          GRID_nRecordCount = H00613_AGRID_nRecordCount[0];
          pr_default.close(1);
          return (int)(GRID_nRecordCount) ;
@@ -1148,19 +1154,19 @@ namespace GeneXus.Programs {
 
       protected short subgrid_firstpage( )
       {
-         AV29Aprovacaowwds_1_propostaid = AV26PropostaId;
-         AV30Aprovacaowwds_2_tfsecusername = AV27TFSecUserName;
-         AV31Aprovacaowwds_3_tfsecusername_sel = AV28TFSecUserName_Sel;
-         AV32Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
-         AV33Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
-         AV34Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
-         AV35Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
-         AV36Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
+         AV31Aprovacaowwds_1_propostaid = AV26PropostaId;
+         AV32Aprovacaowwds_2_tfsecuserfullname = AV29TFSecUserFullName;
+         AV33Aprovacaowwds_3_tfsecuserfullname_sel = AV30TFSecUserFullName_Sel;
+         AV34Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
+         AV35Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
+         AV36Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
+         AV37Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
+         AV38Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
          GRID_nFirstRecordOnPage = 0;
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV27TFSecUserName, AV28TFSecUserName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV37Pgmname) ;
+            gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV29TFSecUserFullName, AV30TFSecUserFullName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV39Pgmname) ;
          }
          send_integrity_footer_hashes( ) ;
          return 0 ;
@@ -1168,14 +1174,14 @@ namespace GeneXus.Programs {
 
       protected short subgrid_nextpage( )
       {
-         AV29Aprovacaowwds_1_propostaid = AV26PropostaId;
-         AV30Aprovacaowwds_2_tfsecusername = AV27TFSecUserName;
-         AV31Aprovacaowwds_3_tfsecusername_sel = AV28TFSecUserName_Sel;
-         AV32Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
-         AV33Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
-         AV34Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
-         AV35Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
-         AV36Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
+         AV31Aprovacaowwds_1_propostaid = AV26PropostaId;
+         AV32Aprovacaowwds_2_tfsecuserfullname = AV29TFSecUserFullName;
+         AV33Aprovacaowwds_3_tfsecuserfullname_sel = AV30TFSecUserFullName_Sel;
+         AV34Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
+         AV35Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
+         AV36Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
+         AV37Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
+         AV38Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
          GRID_nRecordCount = subGrid_fnc_Recordcount( );
          if ( ( GRID_nRecordCount >= subGrid_fnc_Recordsperpage( ) ) && ( GRID_nEOF == 0 ) )
          {
@@ -1189,7 +1195,7 @@ namespace GeneXus.Programs {
          GridContainer.AddObjectProperty("GRID_nFirstRecordOnPage", GRID_nFirstRecordOnPage);
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV27TFSecUserName, AV28TFSecUserName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV37Pgmname) ;
+            gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV29TFSecUserFullName, AV30TFSecUserFullName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV39Pgmname) ;
          }
          send_integrity_footer_hashes( ) ;
          return (short)(((GRID_nEOF==0) ? 0 : 2)) ;
@@ -1197,14 +1203,14 @@ namespace GeneXus.Programs {
 
       protected short subgrid_previouspage( )
       {
-         AV29Aprovacaowwds_1_propostaid = AV26PropostaId;
-         AV30Aprovacaowwds_2_tfsecusername = AV27TFSecUserName;
-         AV31Aprovacaowwds_3_tfsecusername_sel = AV28TFSecUserName_Sel;
-         AV32Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
-         AV33Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
-         AV34Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
-         AV35Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
-         AV36Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
+         AV31Aprovacaowwds_1_propostaid = AV26PropostaId;
+         AV32Aprovacaowwds_2_tfsecuserfullname = AV29TFSecUserFullName;
+         AV33Aprovacaowwds_3_tfsecuserfullname_sel = AV30TFSecUserFullName_Sel;
+         AV34Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
+         AV35Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
+         AV36Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
+         AV37Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
+         AV38Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
          if ( GRID_nFirstRecordOnPage >= subGrid_fnc_Recordsperpage( ) )
          {
             GRID_nFirstRecordOnPage = (long)(GRID_nFirstRecordOnPage-subGrid_fnc_Recordsperpage( ));
@@ -1216,7 +1222,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV27TFSecUserName, AV28TFSecUserName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV37Pgmname) ;
+            gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV29TFSecUserFullName, AV30TFSecUserFullName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV39Pgmname) ;
          }
          send_integrity_footer_hashes( ) ;
          return 0 ;
@@ -1224,14 +1230,14 @@ namespace GeneXus.Programs {
 
       protected short subgrid_lastpage( )
       {
-         AV29Aprovacaowwds_1_propostaid = AV26PropostaId;
-         AV30Aprovacaowwds_2_tfsecusername = AV27TFSecUserName;
-         AV31Aprovacaowwds_3_tfsecusername_sel = AV28TFSecUserName_Sel;
-         AV32Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
-         AV33Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
-         AV34Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
-         AV35Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
-         AV36Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
+         AV31Aprovacaowwds_1_propostaid = AV26PropostaId;
+         AV32Aprovacaowwds_2_tfsecuserfullname = AV29TFSecUserFullName;
+         AV33Aprovacaowwds_3_tfsecuserfullname_sel = AV30TFSecUserFullName_Sel;
+         AV34Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
+         AV35Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
+         AV36Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
+         AV37Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
+         AV38Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
          GRID_nRecordCount = subGrid_fnc_Recordcount( );
          if ( GRID_nRecordCount > subGrid_fnc_Recordsperpage( ) )
          {
@@ -1251,7 +1257,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV27TFSecUserName, AV28TFSecUserName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV37Pgmname) ;
+            gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV29TFSecUserFullName, AV30TFSecUserFullName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV39Pgmname) ;
          }
          send_integrity_footer_hashes( ) ;
          return 0 ;
@@ -1259,14 +1265,14 @@ namespace GeneXus.Programs {
 
       protected int subgrid_gotopage( int nPageNo )
       {
-         AV29Aprovacaowwds_1_propostaid = AV26PropostaId;
-         AV30Aprovacaowwds_2_tfsecusername = AV27TFSecUserName;
-         AV31Aprovacaowwds_3_tfsecusername_sel = AV28TFSecUserName_Sel;
-         AV32Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
-         AV33Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
-         AV34Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
-         AV35Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
-         AV36Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
+         AV31Aprovacaowwds_1_propostaid = AV26PropostaId;
+         AV32Aprovacaowwds_2_tfsecuserfullname = AV29TFSecUserFullName;
+         AV33Aprovacaowwds_3_tfsecuserfullname_sel = AV30TFSecUserFullName_Sel;
+         AV34Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
+         AV35Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
+         AV36Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
+         AV37Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
+         AV38Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
          if ( nPageNo > 0 )
          {
             GRID_nFirstRecordOnPage = (long)(subGrid_fnc_Recordsperpage( )*(nPageNo-1));
@@ -1278,7 +1284,7 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "GRID_nFirstRecordOnPage", StringUtil.LTrim( StringUtil.NToC( (decimal)(GRID_nFirstRecordOnPage), 15, 0, ".", "")));
          if ( isFullAjaxMode( ) )
          {
-            gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV27TFSecUserName, AV28TFSecUserName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV37Pgmname) ;
+            gxgrGrid_refresh( subGrid_Rows, AV12OrderedBy, AV13OrderedDsc, AV26PropostaId, AV29TFSecUserFullName, AV30TFSecUserFullName_Sel, AV15TFAprovacaoEm, AV16TFAprovacaoEm_To, AV20TFAprovacaoDecisao, AV21TFAprovacaoDecisao_Sel, AV23TFAprovacaoStatus_Sels, AV39Pgmname) ;
          }
          send_integrity_footer_hashes( ) ;
          return (int)(0) ;
@@ -1286,10 +1292,11 @@ namespace GeneXus.Programs {
 
       protected void before_start_formulas( )
       {
-         AV37Pgmname = "AprovacaoWW";
+         AV39Pgmname = "AprovacaoWW";
          edtAprovacaoId_Enabled = 0;
          edtAprovadoresId_Enabled = 0;
          edtPropostaId_Enabled = 0;
+         edtSecUserFullName_Enabled = 0;
          edtSecUserName_Enabled = 0;
          edtAprovacaoEm_Enabled = 0;
          edtAprovacaoDecisao_Enabled = 0;
@@ -1443,14 +1450,14 @@ namespace GeneXus.Programs {
          }
          cmbAprovacaoStatus_Columnheaderclass = "WWColumn";
          AssignProp("", false, cmbAprovacaoStatus_Internalname, "Columnheaderclass", cmbAprovacaoStatus_Columnheaderclass, !bGXsfl_12_Refreshing);
-         AV29Aprovacaowwds_1_propostaid = AV26PropostaId;
-         AV30Aprovacaowwds_2_tfsecusername = AV27TFSecUserName;
-         AV31Aprovacaowwds_3_tfsecusername_sel = AV28TFSecUserName_Sel;
-         AV32Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
-         AV33Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
-         AV34Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
-         AV35Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
-         AV36Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
+         AV31Aprovacaowwds_1_propostaid = AV26PropostaId;
+         AV32Aprovacaowwds_2_tfsecuserfullname = AV29TFSecUserFullName;
+         AV33Aprovacaowwds_3_tfsecuserfullname_sel = AV30TFSecUserFullName_Sel;
+         AV34Aprovacaowwds_4_tfaprovacaoem = AV15TFAprovacaoEm;
+         AV35Aprovacaowwds_5_tfaprovacaoem_to = AV16TFAprovacaoEm_To;
+         AV36Aprovacaowwds_6_tfaprovacaodecisao = AV20TFAprovacaoDecisao;
+         AV37Aprovacaowwds_7_tfaprovacaodecisao_sel = AV21TFAprovacaoDecisao_Sel;
+         AV38Aprovacaowwds_8_tfaprovacaostatus_sels = AV23TFAprovacaoStatus_Sels;
          /*  Sending Event outputs  */
       }
 
@@ -1475,12 +1482,12 @@ namespace GeneXus.Programs {
          }
          else if ( StringUtil.StrCmp(Ddo_grid_Activeeventkey, "<#Filter#>") == 0 )
          {
-            if ( StringUtil.StrCmp(Ddo_grid_Selectedcolumn, "SecUserName") == 0 )
+            if ( StringUtil.StrCmp(Ddo_grid_Selectedcolumn, "SecUserFullName") == 0 )
             {
-               AV27TFSecUserName = Ddo_grid_Filteredtext_get;
-               AssignAttri("", false, "AV27TFSecUserName", AV27TFSecUserName);
-               AV28TFSecUserName_Sel = Ddo_grid_Selectedvalue_get;
-               AssignAttri("", false, "AV28TFSecUserName_Sel", AV28TFSecUserName_Sel);
+               AV29TFSecUserFullName = Ddo_grid_Filteredtext_get;
+               AssignAttri("", false, "AV29TFSecUserFullName", AV29TFSecUserFullName);
+               AV30TFSecUserFullName_Sel = Ddo_grid_Selectedvalue_get;
+               AssignAttri("", false, "AV30TFSecUserFullName_Sel", AV30TFSecUserFullName_Sel);
             }
             else if ( StringUtil.StrCmp(Ddo_grid_Selectedcolumn, "AprovacaoEm") == 0 )
             {
@@ -1522,8 +1529,8 @@ namespace GeneXus.Programs {
             gxcookieaux = context.SetCookie( "GX_SESSION_ID", Encrypt64( Crypto.GetEncryptionKey( ), Crypto.GetServerKey( )), "", (DateTime)(DateTime.MinValue), "", (short)(context.GetHttpSecure( )));
          }
          GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
-         GXEncryptionTmp = "secuser"+UrlEncode(StringUtil.RTrim("DSP")) + "," + UrlEncode(StringUtil.LTrimStr(A133SecUserId,4,0));
-         edtSecUserName_Link = formatLink("secuser") + "?" + UriEncrypt64( GXEncryptionTmp+Crypto.CheckSum( GXEncryptionTmp, 6), GXKey);
+         GXEncryptionTmp = "secusercliente"+UrlEncode(StringUtil.RTrim("DSP")) + "," + UrlEncode(StringUtil.LTrimStr(A133SecUserId,4,0));
+         edtSecUserFullName_Link = formatLink("secusercliente") + "?" + UriEncrypt64( GXEncryptionTmp+Crypto.CheckSum( GXEncryptionTmp, 6), GXKey);
          if ( StringUtil.StrCmp(A340AprovacaoStatus, "APROVADO") == 0 )
          {
             cmbAprovacaoStatus_Columnclass = "WWColumn WWColumnTag WWColumnTagSuccess WWColumnTagSuccessSingleCell";
@@ -1562,13 +1569,13 @@ namespace GeneXus.Programs {
       {
          /* 'LOADGRIDSTATE' Routine */
          returnInSub = false;
-         if ( StringUtil.StrCmp(AV14Session.Get(AV37Pgmname+"GridState"), "") == 0 )
+         if ( StringUtil.StrCmp(AV14Session.Get(AV39Pgmname+"GridState"), "") == 0 )
          {
-            AV10GridState.FromXml(new GeneXus.Programs.wwpbaseobjects.loadgridstate(context).executeUdp(  AV37Pgmname+"GridState"), null, "", "");
+            AV10GridState.FromXml(new GeneXus.Programs.wwpbaseobjects.loadgridstate(context).executeUdp(  AV39Pgmname+"GridState"), null, "", "");
          }
          else
          {
-            AV10GridState.FromXml(AV14Session.Get(AV37Pgmname+"GridState"), null, "", "");
+            AV10GridState.FromXml(AV14Session.Get(AV39Pgmname+"GridState"), null, "", "");
          }
          AV12OrderedBy = AV10GridState.gxTpr_Orderedby;
          AssignAttri("", false, "AV12OrderedBy", StringUtil.LTrimStr( (decimal)(AV12OrderedBy), 4, 0));
@@ -1581,19 +1588,19 @@ namespace GeneXus.Programs {
             returnInSub = true;
             if (true) return;
          }
-         AV38GXV1 = 1;
-         while ( AV38GXV1 <= AV10GridState.gxTpr_Filtervalues.Count )
+         AV40GXV1 = 1;
+         while ( AV40GXV1 <= AV10GridState.gxTpr_Filtervalues.Count )
          {
-            AV11GridStateFilterValue = ((GeneXus.Programs.wwpbaseobjects.SdtWWPGridState_FilterValue)AV10GridState.gxTpr_Filtervalues.Item(AV38GXV1));
-            if ( StringUtil.StrCmp(AV11GridStateFilterValue.gxTpr_Name, "TFSECUSERNAME") == 0 )
+            AV11GridStateFilterValue = ((GeneXus.Programs.wwpbaseobjects.SdtWWPGridState_FilterValue)AV10GridState.gxTpr_Filtervalues.Item(AV40GXV1));
+            if ( StringUtil.StrCmp(AV11GridStateFilterValue.gxTpr_Name, "TFSECUSERFULLNAME") == 0 )
             {
-               AV27TFSecUserName = AV11GridStateFilterValue.gxTpr_Value;
-               AssignAttri("", false, "AV27TFSecUserName", AV27TFSecUserName);
+               AV29TFSecUserFullName = AV11GridStateFilterValue.gxTpr_Value;
+               AssignAttri("", false, "AV29TFSecUserFullName", AV29TFSecUserFullName);
             }
-            else if ( StringUtil.StrCmp(AV11GridStateFilterValue.gxTpr_Name, "TFSECUSERNAME_SEL") == 0 )
+            else if ( StringUtil.StrCmp(AV11GridStateFilterValue.gxTpr_Name, "TFSECUSERFULLNAME_SEL") == 0 )
             {
-               AV28TFSecUserName_Sel = AV11GridStateFilterValue.gxTpr_Value;
-               AssignAttri("", false, "AV28TFSecUserName_Sel", AV28TFSecUserName_Sel);
+               AV30TFSecUserFullName_Sel = AV11GridStateFilterValue.gxTpr_Value;
+               AssignAttri("", false, "AV30TFSecUserFullName_Sel", AV30TFSecUserFullName_Sel);
             }
             else if ( StringUtil.StrCmp(AV11GridStateFilterValue.gxTpr_Name, "TFAPROVACAOEM") == 0 )
             {
@@ -1622,10 +1629,10 @@ namespace GeneXus.Programs {
                AssignAttri("", false, "AV22TFAprovacaoStatus_SelsJson", AV22TFAprovacaoStatus_SelsJson);
                AV23TFAprovacaoStatus_Sels.FromJSonString(AV22TFAprovacaoStatus_SelsJson, null);
             }
-            AV38GXV1 = (int)(AV38GXV1+1);
+            AV40GXV1 = (int)(AV40GXV1+1);
          }
          GXt_char2 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV28TFSecUserName_Sel)),  AV28TFSecUserName_Sel, out  GXt_char2) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV30TFSecUserFullName_Sel)),  AV30TFSecUserFullName_Sel, out  GXt_char2) ;
          GXt_char3 = "";
          new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV21TFAprovacaoDecisao_Sel)),  AV21TFAprovacaoDecisao_Sel, out  GXt_char3) ;
          GXt_char4 = "";
@@ -1633,7 +1640,7 @@ namespace GeneXus.Programs {
          Ddo_grid_Selectedvalue_set = GXt_char2+"||"+GXt_char3+"|"+GXt_char4;
          ucDdo_grid.SendProperty(context, "", false, Ddo_grid_Internalname, "SelectedValue_set", Ddo_grid_Selectedvalue_set);
          GXt_char4 = "";
-         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV27TFSecUserName)),  AV27TFSecUserName, out  GXt_char4) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV29TFSecUserFullName)),  AV29TFSecUserFullName, out  GXt_char4) ;
          GXt_char3 = "";
          new GeneXus.Programs.wwpbaseobjects.wwp_getfilterval(context ).execute(  String.IsNullOrEmpty(StringUtil.RTrim( AV20TFAprovacaoDecisao)),  AV20TFAprovacaoDecisao, out  GXt_char3) ;
          Ddo_grid_Filteredtext_set = GXt_char4+"|"+((DateTime.MinValue==AV15TFAprovacaoEm) ? "" : context.localUtil.DToC( AV17DDO_AprovacaoEmAuxDate, 4, "/"))+"|"+GXt_char3+"|";
@@ -1652,11 +1659,11 @@ namespace GeneXus.Programs {
       {
          /* 'SAVEGRIDSTATE' Routine */
          returnInSub = false;
-         AV10GridState.FromXml(AV14Session.Get(AV37Pgmname+"GridState"), null, "", "");
+         AV10GridState.FromXml(AV14Session.Get(AV39Pgmname+"GridState"), null, "", "");
          AV10GridState.gxTpr_Orderedby = AV12OrderedBy;
          AV10GridState.gxTpr_Ordereddsc = AV13OrderedDsc;
          AV10GridState.gxTpr_Filtervalues.Clear();
-         new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV10GridState,  "TFSECUSERNAME",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV27TFSecUserName)),  0,  AV27TFSecUserName,  AV27TFSecUserName,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV28TFSecUserName_Sel)),  AV28TFSecUserName_Sel,  AV28TFSecUserName_Sel) ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV10GridState,  "TFSECUSERFULLNAME",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV29TFSecUserFullName)),  0,  AV29TFSecUserFullName,  AV29TFSecUserFullName,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV30TFSecUserFullName_Sel)),  AV30TFSecUserFullName_Sel,  AV30TFSecUserFullName_Sel) ;
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalue(context ).execute( ref  AV10GridState,  "TFAPROVACAOEM",  "",  !((DateTime.MinValue==AV15TFAprovacaoEm)&&(DateTime.MinValue==AV16TFAprovacaoEm_To)),  0,  StringUtil.Trim( context.localUtil.TToC( AV15TFAprovacaoEm, 10, 8, 0, 3, "/", ":", " ")),  ((DateTime.MinValue==AV15TFAprovacaoEm) ? "" : StringUtil.Trim( context.localUtil.Format( AV15TFAprovacaoEm, "99/99/9999 99:99:99"))),  true,  StringUtil.Trim( context.localUtil.TToC( AV16TFAprovacaoEm_To, 10, 8, 0, 3, "/", ":", " ")),  ((DateTime.MinValue==AV16TFAprovacaoEm_To) ? "" : StringUtil.Trim( context.localUtil.Format( AV16TFAprovacaoEm_To, "99/99/9999 99:99:99")))) ;
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV10GridState,  "TFAPROVACAODECISAO",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV20TFAprovacaoDecisao)),  0,  AV20TFAprovacaoDecisao,  AV20TFAprovacaoDecisao,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV21TFAprovacaoDecisao_Sel)),  AV21TFAprovacaoDecisao_Sel,  AV21TFAprovacaoDecisao_Sel) ;
          AV25AuxText = ((AV23TFAprovacaoStatus_Sels.Count==1) ? "["+((string)AV23TFAprovacaoStatus_Sels.Item(1))+"]" : "Vários valores");
@@ -1670,7 +1677,7 @@ namespace GeneXus.Programs {
          }
          AV10GridState.gxTpr_Pagesize = StringUtil.Str( (decimal)(subGrid_Rows), 10, 0);
          AV10GridState.gxTpr_Currentpage = (short)(subGrid_fnc_Currentpage( ));
-         new GeneXus.Programs.wwpbaseobjects.savegridstate(context ).execute(  AV37Pgmname+"GridState",  AV10GridState.ToXml(false, true, "", "")) ;
+         new GeneXus.Programs.wwpbaseobjects.savegridstate(context ).execute(  AV39Pgmname+"GridState",  AV10GridState.ToXml(false, true, "", "")) ;
       }
 
       protected void S112( )
@@ -1678,7 +1685,7 @@ namespace GeneXus.Programs {
          /* 'PREPARETRANSACTION' Routine */
          returnInSub = false;
          AV8TrnContext = new GeneXus.Programs.wwpbaseobjects.SdtWWPTransactionContext(context);
-         AV8TrnContext.gxTpr_Callerobject = AV37Pgmname;
+         AV8TrnContext.gxTpr_Callerobject = AV39Pgmname;
          AV8TrnContext.gxTpr_Callerondelete = true;
          AV8TrnContext.gxTpr_Callerurl = AV7HTTPRequest.ScriptName+"?"+AV7HTTPRequest.QueryString;
          AV8TrnContext.gxTpr_Transactionname = "Aprovacao";
@@ -1733,7 +1740,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255261791219", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202552810262815", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1749,7 +1756,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("aprovacaoww.js", "?20255261791219", false, true);
+         context.AddJavascriptSource("aprovacaoww.js", "?202552810262815", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -1769,6 +1776,7 @@ namespace GeneXus.Programs {
          edtAprovacaoId_Internalname = "APROVACAOID_"+sGXsfl_12_idx;
          edtAprovadoresId_Internalname = "APROVADORESID_"+sGXsfl_12_idx;
          edtPropostaId_Internalname = "PROPOSTAID_"+sGXsfl_12_idx;
+         edtSecUserFullName_Internalname = "SECUSERFULLNAME_"+sGXsfl_12_idx;
          edtSecUserName_Internalname = "SECUSERNAME_"+sGXsfl_12_idx;
          edtAprovacaoEm_Internalname = "APROVACAOEM_"+sGXsfl_12_idx;
          edtAprovacaoDecisao_Internalname = "APROVACAODECISAO_"+sGXsfl_12_idx;
@@ -1780,6 +1788,7 @@ namespace GeneXus.Programs {
          edtAprovacaoId_Internalname = "APROVACAOID_"+sGXsfl_12_fel_idx;
          edtAprovadoresId_Internalname = "APROVADORESID_"+sGXsfl_12_fel_idx;
          edtPropostaId_Internalname = "PROPOSTAID_"+sGXsfl_12_fel_idx;
+         edtSecUserFullName_Internalname = "SECUSERFULLNAME_"+sGXsfl_12_fel_idx;
          edtSecUserName_Internalname = "SECUSERNAME_"+sGXsfl_12_fel_idx;
          edtAprovacaoEm_Internalname = "APROVACAOEM_"+sGXsfl_12_fel_idx;
          edtAprovacaoDecisao_Internalname = "APROVACAODECISAO_"+sGXsfl_12_fel_idx;
@@ -1881,7 +1890,15 @@ namespace GeneXus.Programs {
             }
             /* Single line edit */
             ROClassString = "Attribute";
-            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtSecUserName_Internalname,(string)A141SecUserName,StringUtil.RTrim( context.localUtil.Format( A141SecUserName, "@!")),(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)edtSecUserName_Link,(string)"",(string)"",(string)"",(string)edtSecUserName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn hidden-xs",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)100,(short)0,(short)0,(short)12,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
+            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtSecUserFullName_Internalname,(string)A143SecUserFullName,StringUtil.RTrim( context.localUtil.Format( A143SecUserFullName, "@!")),(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)edtSecUserFullName_Link,(string)"",(string)"",(string)"",(string)edtSecUserFullName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn",(string)"",(short)-1,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)150,(short)0,(short)0,(short)12,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
+            /* Subfile cell */
+            if ( GridContainer.GetWrapped() == 1 )
+            {
+               context.WriteHtmlText( "<td valign=\"middle\" align=\""+"start"+"\""+" style=\""+"display:none;"+"\">") ;
+            }
+            /* Single line edit */
+            ROClassString = "Attribute";
+            GridRow.AddColumnProperties("edit", 1, isAjaxCallMode( ), new Object[] {(string)edtSecUserName_Internalname,(string)A141SecUserName,StringUtil.RTrim( context.localUtil.Format( A141SecUserName, "@!")),(string)"",(string)"'"+""+"'"+",false,"+"'"+""+"'",(string)"",(string)"",(string)"",(string)"",(string)edtSecUserName_Jsonclick,(short)0,(string)"Attribute",(string)"",(string)ROClassString,(string)"WWColumn hidden-xs",(string)"",(short)0,(short)0,(short)0,(string)"text",(string)"",(short)0,(string)"px",(short)17,(string)"px",(short)100,(short)0,(short)0,(short)12,(short)0,(short)-1,(short)-1,(bool)true,(string)"",(string)"start",(bool)true,(string)""});
             /* Subfile cell */
             if ( GridContainer.GetWrapped() == 1 )
             {
@@ -1991,6 +2008,9 @@ namespace GeneXus.Programs {
             context.SendWebValue( "Id") ;
             context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
+            context.SendWebValue( "Nome") ;
+            context.WriteHtmlTextNl( "</th>") ;
+            context.WriteHtmlText( "<th align=\""+"start"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+"display:none;"+""+"\" "+">") ;
             context.SendWebValue( "Aprovador") ;
             context.WriteHtmlTextNl( "</th>") ;
             context.WriteHtmlText( "<th align=\""+"end"+"\" "+" nowrap=\"nowrap\" "+" class=\""+"Attribute"+"\" "+" style=\""+""+""+"\" "+">") ;
@@ -2035,8 +2055,11 @@ namespace GeneXus.Programs {
             GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( StringUtil.LTrim( StringUtil.NToC( (decimal)(A323PropostaId), 9, 0, ".", ""))));
             GridContainer.AddColumnProperties(GridColumn);
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
+            GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( A143SecUserFullName));
+            GridColumn.AddObjectProperty("Link", StringUtil.RTrim( edtSecUserFullName_Link));
+            GridContainer.AddColumnProperties(GridColumn);
+            GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( A141SecUserName));
-            GridColumn.AddObjectProperty("Link", StringUtil.RTrim( edtSecUserName_Link));
             GridContainer.AddColumnProperties(GridColumn);
             GridColumn = GXWebColumn.GetNew(isAjaxCallMode( ));
             GridColumn.AddObjectProperty("Value", GXUtil.ValueEncode( context.localUtil.TToC( A337AprovacaoEm, 10, 8, 0, 3, "/", ":", " ")));
@@ -2064,6 +2087,7 @@ namespace GeneXus.Programs {
          edtAprovacaoId_Internalname = "APROVACAOID";
          edtAprovadoresId_Internalname = "APROVADORESID";
          edtPropostaId_Internalname = "PROPOSTAID";
+         edtSecUserFullName_Internalname = "SECUSERFULLNAME";
          edtSecUserName_Internalname = "SECUSERNAME";
          edtAprovacaoEm_Internalname = "APROVACAOEM";
          edtAprovacaoDecisao_Internalname = "APROVACAODECISAO";
@@ -2096,7 +2120,8 @@ namespace GeneXus.Programs {
          edtAprovacaoDecisao_Jsonclick = "";
          edtAprovacaoEm_Jsonclick = "";
          edtSecUserName_Jsonclick = "";
-         edtSecUserName_Link = "";
+         edtSecUserFullName_Jsonclick = "";
+         edtSecUserFullName_Link = "";
          edtPropostaId_Jsonclick = "";
          edtAprovadoresId_Jsonclick = "";
          edtAprovacaoId_Jsonclick = "";
@@ -2107,6 +2132,7 @@ namespace GeneXus.Programs {
          edtAprovacaoDecisao_Enabled = 0;
          edtAprovacaoEm_Enabled = 0;
          edtSecUserName_Enabled = 0;
+         edtSecUserFullName_Enabled = 0;
          edtPropostaId_Enabled = 0;
          edtAprovadoresId_Enabled = 0;
          edtAprovacaoId_Enabled = 0;
@@ -2123,7 +2149,7 @@ namespace GeneXus.Programs {
          Ddo_grid_Includefilter = "T|T|T|";
          Ddo_grid_Includesortasc = "T";
          Ddo_grid_Columnssortvalues = "1|2|3|4";
-         Ddo_grid_Columnids = "3:SecUserName|4:AprovacaoEm|5:AprovacaoDecisao|6:AprovacaoStatus";
+         Ddo_grid_Columnids = "3:SecUserFullName|5:AprovacaoEm|6:AprovacaoDecisao|7:AprovacaoStatus";
          Ddo_grid_Gridinternalname = "";
          Form.Headerrawhtml = "";
          Form.Background = "";
@@ -2145,19 +2171,19 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","""{"handler":"Refresh","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"AV27TFSecUserName","fld":"vTFSECUSERNAME","pic":"@!","type":"svchar"},{"av":"AV28TFSecUserName_Sel","fld":"vTFSECUSERNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV37Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"}]""");
+         setEventMetadata("REFRESH","""{"handler":"Refresh","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"AV29TFSecUserFullName","fld":"vTFSECUSERFULLNAME","pic":"@!","type":"svchar"},{"av":"AV30TFSecUserFullName_Sel","fld":"vTFSECUSERFULLNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV39Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"}]""");
          setEventMetadata("REFRESH",""","oparms":[{"av":"cmbAprovacaoStatus"}]}""");
-         setEventMetadata("DDO_GRID.ONOPTIONCLICKED","""{"handler":"E11612","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV27TFSecUserName","fld":"vTFSECUSERNAME","pic":"@!","type":"svchar"},{"av":"AV28TFSecUserName_Sel","fld":"vTFSECUSERNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV37Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"Ddo_grid_Activeeventkey","ctrl":"DDO_GRID","prop":"ActiveEventKey"},{"av":"Ddo_grid_Selectedvalue_get","ctrl":"DDO_GRID","prop":"SelectedValue_get"},{"av":"Ddo_grid_Selectedcolumn","ctrl":"DDO_GRID","prop":"SelectedColumn"},{"av":"Ddo_grid_Filteredtext_get","ctrl":"DDO_GRID","prop":"FilteredText_get"},{"av":"Ddo_grid_Filteredtextto_get","ctrl":"DDO_GRID","prop":"FilteredTextTo_get"}]""");
-         setEventMetadata("DDO_GRID.ONOPTIONCLICKED",""","oparms":[{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"AV27TFSecUserName","fld":"vTFSECUSERNAME","pic":"@!","type":"svchar"},{"av":"AV28TFSecUserName_Sel","fld":"vTFSECUSERNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV22TFAprovacaoStatus_SelsJson","fld":"vTFAPROVACAOSTATUS_SELSJSON","type":"vchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"Ddo_grid_Sortedstatus","ctrl":"DDO_GRID","prop":"SortedStatus"}]}""");
+         setEventMetadata("DDO_GRID.ONOPTIONCLICKED","""{"handler":"E11612","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV29TFSecUserFullName","fld":"vTFSECUSERFULLNAME","pic":"@!","type":"svchar"},{"av":"AV30TFSecUserFullName_Sel","fld":"vTFSECUSERFULLNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV39Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"Ddo_grid_Activeeventkey","ctrl":"DDO_GRID","prop":"ActiveEventKey"},{"av":"Ddo_grid_Selectedvalue_get","ctrl":"DDO_GRID","prop":"SelectedValue_get"},{"av":"Ddo_grid_Selectedcolumn","ctrl":"DDO_GRID","prop":"SelectedColumn"},{"av":"Ddo_grid_Filteredtext_get","ctrl":"DDO_GRID","prop":"FilteredText_get"},{"av":"Ddo_grid_Filteredtextto_get","ctrl":"DDO_GRID","prop":"FilteredTextTo_get"}]""");
+         setEventMetadata("DDO_GRID.ONOPTIONCLICKED",""","oparms":[{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"AV29TFSecUserFullName","fld":"vTFSECUSERFULLNAME","pic":"@!","type":"svchar"},{"av":"AV30TFSecUserFullName_Sel","fld":"vTFSECUSERFULLNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV22TFAprovacaoStatus_SelsJson","fld":"vTFAPROVACAOSTATUS_SELSJSON","type":"vchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"Ddo_grid_Sortedstatus","ctrl":"DDO_GRID","prop":"SortedStatus"}]}""");
          setEventMetadata("GRID.LOAD","""{"handler":"E14612","iparms":[{"av":"A133SecUserId","fld":"SECUSERID","pic":"ZZZ9","type":"int"},{"av":"cmbAprovacaoStatus"},{"av":"A340AprovacaoStatus","fld":"APROVACAOSTATUS","type":"svchar"}]""");
-         setEventMetadata("GRID.LOAD",""","oparms":[{"av":"edtSecUserName_Link","ctrl":"SECUSERNAME","prop":"Link"},{"av":"cmbAprovacaoStatus"}]}""");
-         setEventMetadata("GRID_FIRSTPAGE","""{"handler":"subgrid_firstpage","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV27TFSecUserName","fld":"vTFSECUSERNAME","pic":"@!","type":"svchar"},{"av":"AV28TFSecUserName_Sel","fld":"vTFSECUSERNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV37Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"}]""");
+         setEventMetadata("GRID.LOAD",""","oparms":[{"av":"edtSecUserFullName_Link","ctrl":"SECUSERFULLNAME","prop":"Link"},{"av":"cmbAprovacaoStatus"}]}""");
+         setEventMetadata("GRID_FIRSTPAGE","""{"handler":"subgrid_firstpage","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV29TFSecUserFullName","fld":"vTFSECUSERFULLNAME","pic":"@!","type":"svchar"},{"av":"AV30TFSecUserFullName_Sel","fld":"vTFSECUSERFULLNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV39Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"}]""");
          setEventMetadata("GRID_FIRSTPAGE",""","oparms":[{"av":"cmbAprovacaoStatus"}]}""");
-         setEventMetadata("GRID_PREVPAGE","""{"handler":"subgrid_previouspage","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV27TFSecUserName","fld":"vTFSECUSERNAME","pic":"@!","type":"svchar"},{"av":"AV28TFSecUserName_Sel","fld":"vTFSECUSERNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV37Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"}]""");
+         setEventMetadata("GRID_PREVPAGE","""{"handler":"subgrid_previouspage","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV29TFSecUserFullName","fld":"vTFSECUSERFULLNAME","pic":"@!","type":"svchar"},{"av":"AV30TFSecUserFullName_Sel","fld":"vTFSECUSERFULLNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV39Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"}]""");
          setEventMetadata("GRID_PREVPAGE",""","oparms":[{"av":"cmbAprovacaoStatus"}]}""");
-         setEventMetadata("GRID_NEXTPAGE","""{"handler":"subgrid_nextpage","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV27TFSecUserName","fld":"vTFSECUSERNAME","pic":"@!","type":"svchar"},{"av":"AV28TFSecUserName_Sel","fld":"vTFSECUSERNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV37Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"}]""");
+         setEventMetadata("GRID_NEXTPAGE","""{"handler":"subgrid_nextpage","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV29TFSecUserFullName","fld":"vTFSECUSERFULLNAME","pic":"@!","type":"svchar"},{"av":"AV30TFSecUserFullName_Sel","fld":"vTFSECUSERFULLNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV39Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"}]""");
          setEventMetadata("GRID_NEXTPAGE",""","oparms":[{"av":"cmbAprovacaoStatus"}]}""");
-         setEventMetadata("GRID_LASTPAGE","""{"handler":"subgrid_lastpage","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV27TFSecUserName","fld":"vTFSECUSERNAME","pic":"@!","type":"svchar"},{"av":"AV28TFSecUserName_Sel","fld":"vTFSECUSERNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV37Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"}]""");
+         setEventMetadata("GRID_LASTPAGE","""{"handler":"subgrid_lastpage","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"AV26PropostaId","fld":"vPROPOSTAID","pic":"ZZZZZZZZ9","hsh":true,"type":"int"},{"av":"AV29TFSecUserFullName","fld":"vTFSECUSERFULLNAME","pic":"@!","type":"svchar"},{"av":"AV30TFSecUserFullName_Sel","fld":"vTFSECUSERFULLNAME_SEL","pic":"@!","type":"svchar"},{"av":"AV15TFAprovacaoEm","fld":"vTFAPROVACAOEM","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV16TFAprovacaoEm_To","fld":"vTFAPROVACAOEM_TO","pic":"99/99/9999 99:99:99","type":"dtime"},{"av":"AV20TFAprovacaoDecisao","fld":"vTFAPROVACAODECISAO","type":"svchar"},{"av":"AV21TFAprovacaoDecisao_Sel","fld":"vTFAPROVACAODECISAO_SEL","type":"svchar"},{"av":"AV23TFAprovacaoStatus_Sels","fld":"vTFAPROVACAOSTATUS_SELS","type":""},{"av":"AV39Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"AV12OrderedBy","fld":"vORDEREDBY","pic":"ZZZ9","type":"int"},{"av":"AV13OrderedDsc","fld":"vORDEREDDSC","type":"boolean"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"}]""");
          setEventMetadata("GRID_LASTPAGE",""","oparms":[{"av":"cmbAprovacaoStatus"}]}""");
          setEventMetadata("VALID_APROVADORESID","""{"handler":"Valid_Aprovadoresid","iparms":[]}""");
          setEventMetadata("VALID_PROPOSTAID","""{"handler":"Valid_Propostaid","iparms":[]}""");
@@ -2183,14 +2209,14 @@ namespace GeneXus.Programs {
          Ddo_grid_Filteredtextto_get = "";
          gxfirstwebparm = "";
          gxfirstwebparm_bkp = "";
-         AV27TFSecUserName = "";
-         AV28TFSecUserName_Sel = "";
+         AV29TFSecUserFullName = "";
+         AV30TFSecUserFullName_Sel = "";
          AV15TFAprovacaoEm = (DateTime)(DateTime.MinValue);
          AV16TFAprovacaoEm_To = (DateTime)(DateTime.MinValue);
          AV20TFAprovacaoDecisao = "";
          AV21TFAprovacaoDecisao_Sel = "";
          AV23TFAprovacaoStatus_Sels = new GxSimpleCollection<string>();
-         AV37Pgmname = "";
+         AV39Pgmname = "";
          sDynURL = "";
          FormProcess = "";
          bodyStyle = "";
@@ -2221,20 +2247,21 @@ namespace GeneXus.Programs {
          EvtGridId = "";
          EvtRowId = "";
          sEvtType = "";
-         AV30Aprovacaowwds_2_tfsecusername = "";
-         AV31Aprovacaowwds_3_tfsecusername_sel = "";
-         AV32Aprovacaowwds_4_tfaprovacaoem = (DateTime)(DateTime.MinValue);
-         AV33Aprovacaowwds_5_tfaprovacaoem_to = (DateTime)(DateTime.MinValue);
-         AV34Aprovacaowwds_6_tfaprovacaodecisao = "";
-         AV35Aprovacaowwds_7_tfaprovacaodecisao_sel = "";
-         AV36Aprovacaowwds_8_tfaprovacaostatus_sels = new GxSimpleCollection<string>();
+         AV32Aprovacaowwds_2_tfsecuserfullname = "";
+         AV33Aprovacaowwds_3_tfsecuserfullname_sel = "";
+         AV34Aprovacaowwds_4_tfaprovacaoem = (DateTime)(DateTime.MinValue);
+         AV35Aprovacaowwds_5_tfaprovacaoem_to = (DateTime)(DateTime.MinValue);
+         AV36Aprovacaowwds_6_tfaprovacaodecisao = "";
+         AV37Aprovacaowwds_7_tfaprovacaodecisao_sel = "";
+         AV38Aprovacaowwds_8_tfaprovacaostatus_sels = new GxSimpleCollection<string>();
+         A143SecUserFullName = "";
          A141SecUserName = "";
          A337AprovacaoEm = (DateTime)(DateTime.MinValue);
          A338AprovacaoDecisao = "";
          A340AprovacaoStatus = "";
          GXDecQS = "";
-         lV30Aprovacaowwds_2_tfsecusername = "";
-         lV34Aprovacaowwds_6_tfaprovacaodecisao = "";
+         lV32Aprovacaowwds_2_tfsecuserfullname = "";
+         lV36Aprovacaowwds_6_tfaprovacaodecisao = "";
          H00612_A328PropostaCratedBy = new short[1] ;
          H00612_n328PropostaCratedBy = new bool[] {false} ;
          H00612_A133SecUserId = new short[1] ;
@@ -2247,6 +2274,8 @@ namespace GeneXus.Programs {
          H00612_n337AprovacaoEm = new bool[] {false} ;
          H00612_A141SecUserName = new string[] {""} ;
          H00612_n141SecUserName = new bool[] {false} ;
+         H00612_A143SecUserFullName = new string[] {""} ;
+         H00612_n143SecUserFullName = new bool[] {false} ;
          H00612_A323PropostaId = new int[1] ;
          H00612_n323PropostaId = new bool[] {false} ;
          H00612_A375AprovadoresId = new int[1] ;
@@ -2277,16 +2306,16 @@ namespace GeneXus.Programs {
             new Object[][] {
                 new Object[] {
                H00612_A328PropostaCratedBy, H00612_n328PropostaCratedBy, H00612_A133SecUserId, H00612_n133SecUserId, H00612_A340AprovacaoStatus, H00612_n340AprovacaoStatus, H00612_A338AprovacaoDecisao, H00612_n338AprovacaoDecisao, H00612_A337AprovacaoEm, H00612_n337AprovacaoEm,
-               H00612_A141SecUserName, H00612_n141SecUserName, H00612_A323PropostaId, H00612_n323PropostaId, H00612_A375AprovadoresId, H00612_n375AprovadoresId, H00612_A336AprovacaoId
+               H00612_A141SecUserName, H00612_n141SecUserName, H00612_A143SecUserFullName, H00612_n143SecUserFullName, H00612_A323PropostaId, H00612_n323PropostaId, H00612_A375AprovadoresId, H00612_n375AprovadoresId, H00612_A336AprovacaoId
                }
                , new Object[] {
                H00613_AGRID_nRecordCount
                }
             }
          );
-         AV37Pgmname = "AprovacaoWW";
+         AV39Pgmname = "AprovacaoWW";
          /* GeneXus formulas. */
-         AV37Pgmname = "AprovacaoWW";
+         AV39Pgmname = "AprovacaoWW";
       }
 
       private short GRID_nEOF ;
@@ -2314,21 +2343,22 @@ namespace GeneXus.Programs {
       private int subGrid_Rows ;
       private int nRC_GXsfl_12 ;
       private int nGXsfl_12_idx=1 ;
-      private int AV29Aprovacaowwds_1_propostaid ;
+      private int AV31Aprovacaowwds_1_propostaid ;
       private int A336AprovacaoId ;
       private int A375AprovadoresId ;
       private int A323PropostaId ;
       private int subGrid_Islastpage ;
       private int GXPagingFrom2 ;
       private int GXPagingTo2 ;
-      private int AV36Aprovacaowwds_8_tfaprovacaostatus_sels_Count ;
+      private int AV38Aprovacaowwds_8_tfaprovacaostatus_sels_Count ;
       private int edtAprovacaoId_Enabled ;
       private int edtAprovadoresId_Enabled ;
       private int edtPropostaId_Enabled ;
+      private int edtSecUserFullName_Enabled ;
       private int edtSecUserName_Enabled ;
       private int edtAprovacaoEm_Enabled ;
       private int edtAprovacaoDecisao_Enabled ;
-      private int AV38GXV1 ;
+      private int AV40GXV1 ;
       private int idxLst ;
       private int subGrid_Backcolor ;
       private int subGrid_Allbackcolor ;
@@ -2347,7 +2377,7 @@ namespace GeneXus.Programs {
       private string gxfirstwebparm ;
       private string gxfirstwebparm_bkp ;
       private string sGXsfl_12_idx="0001" ;
-      private string AV37Pgmname ;
+      private string AV39Pgmname ;
       private string sDynURL ;
       private string FormProcess ;
       private string bodyStyle ;
@@ -2394,13 +2424,14 @@ namespace GeneXus.Programs {
       private string edtAprovacaoId_Internalname ;
       private string edtAprovadoresId_Internalname ;
       private string edtPropostaId_Internalname ;
+      private string edtSecUserFullName_Internalname ;
       private string edtSecUserName_Internalname ;
       private string edtAprovacaoEm_Internalname ;
       private string edtAprovacaoDecisao_Internalname ;
       private string cmbAprovacaoStatus_Internalname ;
       private string GXDecQS ;
       private string cmbAprovacaoStatus_Columnheaderclass ;
-      private string edtSecUserName_Link ;
+      private string edtSecUserFullName_Link ;
       private string cmbAprovacaoStatus_Columnclass ;
       private string GXt_char2 ;
       private string GXt_char4 ;
@@ -2412,6 +2443,7 @@ namespace GeneXus.Programs {
       private string edtAprovacaoId_Jsonclick ;
       private string edtAprovadoresId_Jsonclick ;
       private string edtPropostaId_Jsonclick ;
+      private string edtSecUserFullName_Jsonclick ;
       private string edtSecUserName_Jsonclick ;
       private string edtAprovacaoEm_Jsonclick ;
       private string edtAprovacaoDecisao_Jsonclick ;
@@ -2420,8 +2452,8 @@ namespace GeneXus.Programs {
       private string subGrid_Header ;
       private DateTime AV15TFAprovacaoEm ;
       private DateTime AV16TFAprovacaoEm_To ;
-      private DateTime AV32Aprovacaowwds_4_tfaprovacaoem ;
-      private DateTime AV33Aprovacaowwds_5_tfaprovacaoem_to ;
+      private DateTime AV34Aprovacaowwds_4_tfaprovacaoem ;
+      private DateTime AV35Aprovacaowwds_5_tfaprovacaoem_to ;
       private DateTime A337AprovacaoEm ;
       private DateTime AV17DDO_AprovacaoEmAuxDate ;
       private DateTime AV18DDO_AprovacaoEmAuxDateTo ;
@@ -2434,6 +2466,7 @@ namespace GeneXus.Programs {
       private bool wbErr ;
       private bool n375AprovadoresId ;
       private bool n323PropostaId ;
+      private bool n143SecUserFullName ;
       private bool n141SecUserName ;
       private bool n337AprovacaoEm ;
       private bool n338AprovacaoDecisao ;
@@ -2445,20 +2478,21 @@ namespace GeneXus.Programs {
       private bool returnInSub ;
       private bool gx_refresh_fired ;
       private string AV22TFAprovacaoStatus_SelsJson ;
-      private string AV27TFSecUserName ;
-      private string AV28TFSecUserName_Sel ;
+      private string AV29TFSecUserFullName ;
+      private string AV30TFSecUserFullName_Sel ;
       private string AV20TFAprovacaoDecisao ;
       private string AV21TFAprovacaoDecisao_Sel ;
       private string AV19DDO_AprovacaoEmAuxDateText ;
-      private string AV30Aprovacaowwds_2_tfsecusername ;
-      private string AV31Aprovacaowwds_3_tfsecusername_sel ;
-      private string AV34Aprovacaowwds_6_tfaprovacaodecisao ;
-      private string AV35Aprovacaowwds_7_tfaprovacaodecisao_sel ;
+      private string AV32Aprovacaowwds_2_tfsecuserfullname ;
+      private string AV33Aprovacaowwds_3_tfsecuserfullname_sel ;
+      private string AV36Aprovacaowwds_6_tfaprovacaodecisao ;
+      private string AV37Aprovacaowwds_7_tfaprovacaodecisao_sel ;
+      private string A143SecUserFullName ;
       private string A141SecUserName ;
       private string A338AprovacaoDecisao ;
       private string A340AprovacaoStatus ;
-      private string lV30Aprovacaowwds_2_tfsecusername ;
-      private string lV34Aprovacaowwds_6_tfaprovacaodecisao ;
+      private string lV32Aprovacaowwds_2_tfsecuserfullname ;
+      private string lV36Aprovacaowwds_6_tfaprovacaodecisao ;
       private string AV25AuxText ;
       private IGxSession AV14Session ;
       private GXWebGrid GridContainer ;
@@ -2473,7 +2507,7 @@ namespace GeneXus.Programs {
       private GXCombobox cmbAprovacaoStatus ;
       private GxSimpleCollection<string> AV23TFAprovacaoStatus_Sels ;
       private GeneXus.Programs.wwpbaseobjects.SdtDVB_SDTDropDownOptionsTitleSettingsIcons AV24DDO_TitleSettingsIcons ;
-      private GxSimpleCollection<string> AV36Aprovacaowwds_8_tfaprovacaostatus_sels ;
+      private GxSimpleCollection<string> AV38Aprovacaowwds_8_tfaprovacaostatus_sels ;
       private IDataStoreProvider pr_default ;
       private short[] H00612_A328PropostaCratedBy ;
       private bool[] H00612_n328PropostaCratedBy ;
@@ -2487,6 +2521,8 @@ namespace GeneXus.Programs {
       private bool[] H00612_n337AprovacaoEm ;
       private string[] H00612_A141SecUserName ;
       private bool[] H00612_n141SecUserName ;
+      private string[] H00612_A143SecUserFullName ;
+      private bool[] H00612_n143SecUserFullName ;
       private int[] H00612_A323PropostaId ;
       private bool[] H00612_n323PropostaId ;
       private int[] H00612_A375AprovadoresId ;
@@ -2507,21 +2543,21 @@ namespace GeneXus.Programs {
    {
       protected Object[] conditional_H00612( IGxContext context ,
                                              string A340AprovacaoStatus ,
-                                             GxSimpleCollection<string> AV36Aprovacaowwds_8_tfaprovacaostatus_sels ,
-                                             string AV31Aprovacaowwds_3_tfsecusername_sel ,
-                                             string AV30Aprovacaowwds_2_tfsecusername ,
-                                             DateTime AV32Aprovacaowwds_4_tfaprovacaoem ,
-                                             DateTime AV33Aprovacaowwds_5_tfaprovacaoem_to ,
-                                             string AV35Aprovacaowwds_7_tfaprovacaodecisao_sel ,
-                                             string AV34Aprovacaowwds_6_tfaprovacaodecisao ,
-                                             int AV36Aprovacaowwds_8_tfaprovacaostatus_sels_Count ,
-                                             string A141SecUserName ,
+                                             GxSimpleCollection<string> AV38Aprovacaowwds_8_tfaprovacaostatus_sels ,
+                                             string AV33Aprovacaowwds_3_tfsecuserfullname_sel ,
+                                             string AV32Aprovacaowwds_2_tfsecuserfullname ,
+                                             DateTime AV34Aprovacaowwds_4_tfaprovacaoem ,
+                                             DateTime AV35Aprovacaowwds_5_tfaprovacaoem_to ,
+                                             string AV37Aprovacaowwds_7_tfaprovacaodecisao_sel ,
+                                             string AV36Aprovacaowwds_6_tfaprovacaodecisao ,
+                                             int AV38Aprovacaowwds_8_tfaprovacaostatus_sels_Count ,
+                                             string A143SecUserFullName ,
                                              DateTime A337AprovacaoEm ,
                                              string A338AprovacaoDecisao ,
                                              short AV12OrderedBy ,
                                              bool AV13OrderedDsc ,
                                              int A323PropostaId ,
-                                             int AV29Aprovacaowwds_1_propostaid )
+                                             int AV31Aprovacaowwds_1_propostaid )
       {
          System.Text.StringBuilder sWhereString = new System.Text.StringBuilder();
          string scmdbuf;
@@ -2530,77 +2566,77 @@ namespace GeneXus.Programs {
          string sSelectString;
          string sFromString;
          string sOrderString;
-         sSelectString = " T2.PropostaCratedBy AS PropostaCratedBy, T4.SecUserId, T1.AprovacaoStatus, T1.AprovacaoDecisao, T1.AprovacaoEm, T3.SecUserName, T1.PropostaId, T1.AprovadoresId, T1.AprovacaoId";
-         sFromString = " FROM (((Aprovacao T1 LEFT JOIN Proposta T2 ON T2.PropostaId = T1.PropostaId) LEFT JOIN SecUser T3 ON T3.SecUserId = T2.PropostaCratedBy) LEFT JOIN Aprovadores T4 ON T4.AprovadoresId = T1.AprovadoresId)";
+         sSelectString = " T2.PropostaCratedBy AS PropostaCratedBy, T4.SecUserId, T1.AprovacaoStatus, T1.AprovacaoDecisao, T1.AprovacaoEm, T3.SecUserName, T5.SecUserFullName, T1.PropostaId, T1.AprovadoresId, T1.AprovacaoId";
+         sFromString = " FROM ((((Aprovacao T1 LEFT JOIN Proposta T2 ON T2.PropostaId = T1.PropostaId) LEFT JOIN SecUser T3 ON T3.SecUserId = T2.PropostaCratedBy) LEFT JOIN Aprovadores T4 ON T4.AprovadoresId = T1.AprovadoresId) LEFT JOIN SecUser T5 ON T5.SecUserId = T4.SecUserId)";
          sOrderString = "";
-         AddWhere(sWhereString, "(T1.PropostaId = :AV29Aprovacaowwds_1_propostaid)");
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV31Aprovacaowwds_3_tfsecusername_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV30Aprovacaowwds_2_tfsecusername)) ) )
+         AddWhere(sWhereString, "(T1.PropostaId = :AV31Aprovacaowwds_1_propostaid)");
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV33Aprovacaowwds_3_tfsecuserfullname_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV32Aprovacaowwds_2_tfsecuserfullname)) ) )
          {
-            AddWhere(sWhereString, "(T3.SecUserName like :lV30Aprovacaowwds_2_tfsecusername)");
+            AddWhere(sWhereString, "(T5.SecUserFullName like :lV32Aprovacaowwds_2_tfsecuserfullname)");
          }
          else
          {
             GXv_int5[1] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV31Aprovacaowwds_3_tfsecusername_sel)) && ! ( StringUtil.StrCmp(AV31Aprovacaowwds_3_tfsecusername_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV33Aprovacaowwds_3_tfsecuserfullname_sel)) && ! ( StringUtil.StrCmp(AV33Aprovacaowwds_3_tfsecuserfullname_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T3.SecUserName = ( :AV31Aprovacaowwds_3_tfsecusername_sel))");
+            AddWhere(sWhereString, "(T5.SecUserFullName = ( :AV33Aprovacaowwds_3_tfsecuserfullname_sel))");
          }
          else
          {
             GXv_int5[2] = 1;
          }
-         if ( StringUtil.StrCmp(AV31Aprovacaowwds_3_tfsecusername_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV33Aprovacaowwds_3_tfsecuserfullname_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "(T3.SecUserName IS NULL or (char_length(trim(trailing ' ' from T3.SecUserName))=0))");
+            AddWhere(sWhereString, "((char_length(trim(trailing ' ' from T5.SecUserFullName))=0))");
          }
-         if ( ! (DateTime.MinValue==AV32Aprovacaowwds_4_tfaprovacaoem) )
+         if ( ! (DateTime.MinValue==AV34Aprovacaowwds_4_tfaprovacaoem) )
          {
-            AddWhere(sWhereString, "(T1.AprovacaoEm >= :AV32Aprovacaowwds_4_tfaprovacaoem)");
+            AddWhere(sWhereString, "(T1.AprovacaoEm >= :AV34Aprovacaowwds_4_tfaprovacaoem)");
          }
          else
          {
             GXv_int5[3] = 1;
          }
-         if ( ! (DateTime.MinValue==AV33Aprovacaowwds_5_tfaprovacaoem_to) )
+         if ( ! (DateTime.MinValue==AV35Aprovacaowwds_5_tfaprovacaoem_to) )
          {
-            AddWhere(sWhereString, "(T1.AprovacaoEm <= :AV33Aprovacaowwds_5_tfaprovacaoem_to)");
+            AddWhere(sWhereString, "(T1.AprovacaoEm <= :AV35Aprovacaowwds_5_tfaprovacaoem_to)");
          }
          else
          {
             GXv_int5[4] = 1;
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV35Aprovacaowwds_7_tfaprovacaodecisao_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV34Aprovacaowwds_6_tfaprovacaodecisao)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV37Aprovacaowwds_7_tfaprovacaodecisao_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV36Aprovacaowwds_6_tfaprovacaodecisao)) ) )
          {
-            AddWhere(sWhereString, "(T1.AprovacaoDecisao like :lV34Aprovacaowwds_6_tfaprovacaodecisao)");
+            AddWhere(sWhereString, "(T1.AprovacaoDecisao like :lV36Aprovacaowwds_6_tfaprovacaodecisao)");
          }
          else
          {
             GXv_int5[5] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV35Aprovacaowwds_7_tfaprovacaodecisao_sel)) && ! ( StringUtil.StrCmp(AV35Aprovacaowwds_7_tfaprovacaodecisao_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV37Aprovacaowwds_7_tfaprovacaodecisao_sel)) && ! ( StringUtil.StrCmp(AV37Aprovacaowwds_7_tfaprovacaodecisao_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.AprovacaoDecisao = ( :AV35Aprovacaowwds_7_tfaprovacaodecisao_sel))");
+            AddWhere(sWhereString, "(T1.AprovacaoDecisao = ( :AV37Aprovacaowwds_7_tfaprovacaodecisao_sel))");
          }
          else
          {
             GXv_int5[6] = 1;
          }
-         if ( StringUtil.StrCmp(AV35Aprovacaowwds_7_tfaprovacaodecisao_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV37Aprovacaowwds_7_tfaprovacaodecisao_sel, "<#Empty#>") == 0 )
          {
             AddWhere(sWhereString, "(T1.AprovacaoDecisao IS NULL or (char_length(trim(trailing ' ' from T1.AprovacaoDecisao))=0))");
          }
-         if ( AV36Aprovacaowwds_8_tfaprovacaostatus_sels_Count > 0 )
+         if ( AV38Aprovacaowwds_8_tfaprovacaostatus_sels_Count > 0 )
          {
-            AddWhere(sWhereString, "("+new GxDbmsUtils( new GxPostgreSql()).ValueList(AV36Aprovacaowwds_8_tfaprovacaostatus_sels, "T1.AprovacaoStatus IN (", ")")+")");
+            AddWhere(sWhereString, "("+new GxDbmsUtils( new GxPostgreSql()).ValueList(AV38Aprovacaowwds_8_tfaprovacaostatus_sels, "T1.AprovacaoStatus IN (", ")")+")");
          }
          if ( ( AV12OrderedBy == 1 ) && ! AV13OrderedDsc )
          {
-            sOrderString += " ORDER BY T1.PropostaId, T3.SecUserName, T1.AprovacaoId";
+            sOrderString += " ORDER BY T1.PropostaId, T5.SecUserFullName, T1.AprovacaoId";
          }
          else if ( ( AV12OrderedBy == 1 ) && ( AV13OrderedDsc ) )
          {
-            sOrderString += " ORDER BY T1.PropostaId DESC, T3.SecUserName DESC, T1.AprovacaoId";
+            sOrderString += " ORDER BY T1.PropostaId DESC, T5.SecUserFullName DESC, T1.AprovacaoId";
          }
          else if ( ( AV12OrderedBy == 2 ) && ! AV13OrderedDsc )
          {
@@ -2638,87 +2674,87 @@ namespace GeneXus.Programs {
 
       protected Object[] conditional_H00613( IGxContext context ,
                                              string A340AprovacaoStatus ,
-                                             GxSimpleCollection<string> AV36Aprovacaowwds_8_tfaprovacaostatus_sels ,
-                                             string AV31Aprovacaowwds_3_tfsecusername_sel ,
-                                             string AV30Aprovacaowwds_2_tfsecusername ,
-                                             DateTime AV32Aprovacaowwds_4_tfaprovacaoem ,
-                                             DateTime AV33Aprovacaowwds_5_tfaprovacaoem_to ,
-                                             string AV35Aprovacaowwds_7_tfaprovacaodecisao_sel ,
-                                             string AV34Aprovacaowwds_6_tfaprovacaodecisao ,
-                                             int AV36Aprovacaowwds_8_tfaprovacaostatus_sels_Count ,
-                                             string A141SecUserName ,
+                                             GxSimpleCollection<string> AV38Aprovacaowwds_8_tfaprovacaostatus_sels ,
+                                             string AV33Aprovacaowwds_3_tfsecuserfullname_sel ,
+                                             string AV32Aprovacaowwds_2_tfsecuserfullname ,
+                                             DateTime AV34Aprovacaowwds_4_tfaprovacaoem ,
+                                             DateTime AV35Aprovacaowwds_5_tfaprovacaoem_to ,
+                                             string AV37Aprovacaowwds_7_tfaprovacaodecisao_sel ,
+                                             string AV36Aprovacaowwds_6_tfaprovacaodecisao ,
+                                             int AV38Aprovacaowwds_8_tfaprovacaostatus_sels_Count ,
+                                             string A143SecUserFullName ,
                                              DateTime A337AprovacaoEm ,
                                              string A338AprovacaoDecisao ,
                                              short AV12OrderedBy ,
                                              bool AV13OrderedDsc ,
                                              int A323PropostaId ,
-                                             int AV29Aprovacaowwds_1_propostaid )
+                                             int AV31Aprovacaowwds_1_propostaid )
       {
          System.Text.StringBuilder sWhereString = new System.Text.StringBuilder();
          string scmdbuf;
          short[] GXv_int7 = new short[7];
          Object[] GXv_Object8 = new Object[2];
-         scmdbuf = "SELECT COUNT(*) FROM (((Aprovacao T1 LEFT JOIN Proposta T2 ON T2.PropostaId = T1.PropostaId) LEFT JOIN SecUser T3 ON T3.SecUserId = T2.PropostaCratedBy) LEFT JOIN Aprovadores T4 ON T4.AprovadoresId = T1.AprovadoresId)";
-         AddWhere(sWhereString, "(T1.PropostaId = :AV29Aprovacaowwds_1_propostaid)");
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV31Aprovacaowwds_3_tfsecusername_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV30Aprovacaowwds_2_tfsecusername)) ) )
+         scmdbuf = "SELECT COUNT(*) FROM ((((Aprovacao T1 LEFT JOIN Proposta T2 ON T2.PropostaId = T1.PropostaId) LEFT JOIN SecUser T3 ON T3.SecUserId = T2.PropostaCratedBy) LEFT JOIN Aprovadores T4 ON T4.AprovadoresId = T1.AprovadoresId) LEFT JOIN SecUser T5 ON T5.SecUserId = T4.SecUserId)";
+         AddWhere(sWhereString, "(T1.PropostaId = :AV31Aprovacaowwds_1_propostaid)");
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV33Aprovacaowwds_3_tfsecuserfullname_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV32Aprovacaowwds_2_tfsecuserfullname)) ) )
          {
-            AddWhere(sWhereString, "(T3.SecUserName like :lV30Aprovacaowwds_2_tfsecusername)");
+            AddWhere(sWhereString, "(T5.SecUserFullName like :lV32Aprovacaowwds_2_tfsecuserfullname)");
          }
          else
          {
             GXv_int7[1] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV31Aprovacaowwds_3_tfsecusername_sel)) && ! ( StringUtil.StrCmp(AV31Aprovacaowwds_3_tfsecusername_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV33Aprovacaowwds_3_tfsecuserfullname_sel)) && ! ( StringUtil.StrCmp(AV33Aprovacaowwds_3_tfsecuserfullname_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T3.SecUserName = ( :AV31Aprovacaowwds_3_tfsecusername_sel))");
+            AddWhere(sWhereString, "(T5.SecUserFullName = ( :AV33Aprovacaowwds_3_tfsecuserfullname_sel))");
          }
          else
          {
             GXv_int7[2] = 1;
          }
-         if ( StringUtil.StrCmp(AV31Aprovacaowwds_3_tfsecusername_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV33Aprovacaowwds_3_tfsecuserfullname_sel, "<#Empty#>") == 0 )
          {
-            AddWhere(sWhereString, "(T3.SecUserName IS NULL or (char_length(trim(trailing ' ' from T3.SecUserName))=0))");
+            AddWhere(sWhereString, "((char_length(trim(trailing ' ' from T5.SecUserFullName))=0))");
          }
-         if ( ! (DateTime.MinValue==AV32Aprovacaowwds_4_tfaprovacaoem) )
+         if ( ! (DateTime.MinValue==AV34Aprovacaowwds_4_tfaprovacaoem) )
          {
-            AddWhere(sWhereString, "(T1.AprovacaoEm >= :AV32Aprovacaowwds_4_tfaprovacaoem)");
+            AddWhere(sWhereString, "(T1.AprovacaoEm >= :AV34Aprovacaowwds_4_tfaprovacaoem)");
          }
          else
          {
             GXv_int7[3] = 1;
          }
-         if ( ! (DateTime.MinValue==AV33Aprovacaowwds_5_tfaprovacaoem_to) )
+         if ( ! (DateTime.MinValue==AV35Aprovacaowwds_5_tfaprovacaoem_to) )
          {
-            AddWhere(sWhereString, "(T1.AprovacaoEm <= :AV33Aprovacaowwds_5_tfaprovacaoem_to)");
+            AddWhere(sWhereString, "(T1.AprovacaoEm <= :AV35Aprovacaowwds_5_tfaprovacaoem_to)");
          }
          else
          {
             GXv_int7[4] = 1;
          }
-         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV35Aprovacaowwds_7_tfaprovacaodecisao_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV34Aprovacaowwds_6_tfaprovacaodecisao)) ) )
+         if ( String.IsNullOrEmpty(StringUtil.RTrim( AV37Aprovacaowwds_7_tfaprovacaodecisao_sel)) && ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV36Aprovacaowwds_6_tfaprovacaodecisao)) ) )
          {
-            AddWhere(sWhereString, "(T1.AprovacaoDecisao like :lV34Aprovacaowwds_6_tfaprovacaodecisao)");
+            AddWhere(sWhereString, "(T1.AprovacaoDecisao like :lV36Aprovacaowwds_6_tfaprovacaodecisao)");
          }
          else
          {
             GXv_int7[5] = 1;
          }
-         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV35Aprovacaowwds_7_tfaprovacaodecisao_sel)) && ! ( StringUtil.StrCmp(AV35Aprovacaowwds_7_tfaprovacaodecisao_sel, "<#Empty#>") == 0 ) )
+         if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV37Aprovacaowwds_7_tfaprovacaodecisao_sel)) && ! ( StringUtil.StrCmp(AV37Aprovacaowwds_7_tfaprovacaodecisao_sel, "<#Empty#>") == 0 ) )
          {
-            AddWhere(sWhereString, "(T1.AprovacaoDecisao = ( :AV35Aprovacaowwds_7_tfaprovacaodecisao_sel))");
+            AddWhere(sWhereString, "(T1.AprovacaoDecisao = ( :AV37Aprovacaowwds_7_tfaprovacaodecisao_sel))");
          }
          else
          {
             GXv_int7[6] = 1;
          }
-         if ( StringUtil.StrCmp(AV35Aprovacaowwds_7_tfaprovacaodecisao_sel, "<#Empty#>") == 0 )
+         if ( StringUtil.StrCmp(AV37Aprovacaowwds_7_tfaprovacaodecisao_sel, "<#Empty#>") == 0 )
          {
             AddWhere(sWhereString, "(T1.AprovacaoDecisao IS NULL or (char_length(trim(trailing ' ' from T1.AprovacaoDecisao))=0))");
          }
-         if ( AV36Aprovacaowwds_8_tfaprovacaostatus_sels_Count > 0 )
+         if ( AV38Aprovacaowwds_8_tfaprovacaostatus_sels_Count > 0 )
          {
-            AddWhere(sWhereString, "("+new GxDbmsUtils( new GxPostgreSql()).ValueList(AV36Aprovacaowwds_8_tfaprovacaostatus_sels, "T1.AprovacaoStatus IN (", ")")+")");
+            AddWhere(sWhereString, "("+new GxDbmsUtils( new GxPostgreSql()).ValueList(AV38Aprovacaowwds_8_tfaprovacaostatus_sels, "T1.AprovacaoStatus IN (", ")")+")");
          }
          scmdbuf += sWhereString;
          if ( ( AV12OrderedBy == 1 ) && ! AV13OrderedDsc )
@@ -2792,26 +2828,26 @@ namespace GeneXus.Programs {
        {
           Object[] prmH00612;
           prmH00612 = new Object[] {
-          new ParDef("AV29Aprovacaowwds_1_propostaid",GXType.Int32,9,0) ,
-          new ParDef("lV30Aprovacaowwds_2_tfsecusername",GXType.VarChar,100,0) ,
-          new ParDef("AV31Aprovacaowwds_3_tfsecusername_sel",GXType.VarChar,100,0) ,
-          new ParDef("AV32Aprovacaowwds_4_tfaprovacaoem",GXType.DateTime,10,8) ,
-          new ParDef("AV33Aprovacaowwds_5_tfaprovacaoem_to",GXType.DateTime,10,8) ,
-          new ParDef("lV34Aprovacaowwds_6_tfaprovacaodecisao",GXType.VarChar,255,0) ,
-          new ParDef("AV35Aprovacaowwds_7_tfaprovacaodecisao_sel",GXType.VarChar,255,0) ,
+          new ParDef("AV31Aprovacaowwds_1_propostaid",GXType.Int32,9,0) ,
+          new ParDef("lV32Aprovacaowwds_2_tfsecuserfullname",GXType.VarChar,150,0) ,
+          new ParDef("AV33Aprovacaowwds_3_tfsecuserfullname_sel",GXType.VarChar,150,0) ,
+          new ParDef("AV34Aprovacaowwds_4_tfaprovacaoem",GXType.DateTime,10,8) ,
+          new ParDef("AV35Aprovacaowwds_5_tfaprovacaoem_to",GXType.DateTime,10,8) ,
+          new ParDef("lV36Aprovacaowwds_6_tfaprovacaodecisao",GXType.VarChar,255,0) ,
+          new ParDef("AV37Aprovacaowwds_7_tfaprovacaodecisao_sel",GXType.VarChar,255,0) ,
           new ParDef("GXPagingFrom2",GXType.Int32,9,0) ,
           new ParDef("GXPagingTo2",GXType.Int32,9,0) ,
           new ParDef("GXPagingTo2",GXType.Int32,9,0)
           };
           Object[] prmH00613;
           prmH00613 = new Object[] {
-          new ParDef("AV29Aprovacaowwds_1_propostaid",GXType.Int32,9,0) ,
-          new ParDef("lV30Aprovacaowwds_2_tfsecusername",GXType.VarChar,100,0) ,
-          new ParDef("AV31Aprovacaowwds_3_tfsecusername_sel",GXType.VarChar,100,0) ,
-          new ParDef("AV32Aprovacaowwds_4_tfaprovacaoem",GXType.DateTime,10,8) ,
-          new ParDef("AV33Aprovacaowwds_5_tfaprovacaoem_to",GXType.DateTime,10,8) ,
-          new ParDef("lV34Aprovacaowwds_6_tfaprovacaodecisao",GXType.VarChar,255,0) ,
-          new ParDef("AV35Aprovacaowwds_7_tfaprovacaodecisao_sel",GXType.VarChar,255,0)
+          new ParDef("AV31Aprovacaowwds_1_propostaid",GXType.Int32,9,0) ,
+          new ParDef("lV32Aprovacaowwds_2_tfsecuserfullname",GXType.VarChar,150,0) ,
+          new ParDef("AV33Aprovacaowwds_3_tfsecuserfullname_sel",GXType.VarChar,150,0) ,
+          new ParDef("AV34Aprovacaowwds_4_tfaprovacaoem",GXType.DateTime,10,8) ,
+          new ParDef("AV35Aprovacaowwds_5_tfaprovacaoem_to",GXType.DateTime,10,8) ,
+          new ParDef("lV36Aprovacaowwds_6_tfaprovacaodecisao",GXType.VarChar,255,0) ,
+          new ParDef("AV37Aprovacaowwds_7_tfaprovacaodecisao_sel",GXType.VarChar,255,0)
           };
           def= new CursorDef[] {
               new CursorDef("H00612", "scmdbuf",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmH00612,11, GxCacheFrequency.OFF ,true,false )
@@ -2839,11 +2875,13 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[9])[0] = rslt.wasNull(5);
                 ((string[]) buf[10])[0] = rslt.getVarchar(6);
                 ((bool[]) buf[11])[0] = rslt.wasNull(6);
-                ((int[]) buf[12])[0] = rslt.getInt(7);
+                ((string[]) buf[12])[0] = rslt.getVarchar(7);
                 ((bool[]) buf[13])[0] = rslt.wasNull(7);
                 ((int[]) buf[14])[0] = rslt.getInt(8);
                 ((bool[]) buf[15])[0] = rslt.wasNull(8);
                 ((int[]) buf[16])[0] = rslt.getInt(9);
+                ((bool[]) buf[17])[0] = rslt.wasNull(9);
+                ((int[]) buf[18])[0] = rslt.getInt(10);
                 return;
              case 1 :
                 ((long[]) buf[0])[0] = rslt.getLong(1);

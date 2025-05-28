@@ -87,15 +87,11 @@ namespace GeneXus.Programs {
                AV12ItemParcelasNota = ((SdtSdNotaFiscal_NFe_infNFe_cobr_dupItem)AV8SdNotaFiscal.gxTpr_Nfe.gxTpr_Infnfe.gxTpr_Cobr.gxTpr_Dup.Item(AV29GXV2));
                AV16DataVencimento = context.localUtil.YMDToD( (int)(Math.Round(NumberUtil.Val( StringUtil.Substring( AV12ItemParcelasNota.gxTpr_Dvenc, 1, 4), "."), 18, MidpointRounding.ToEven)), (int)(Math.Round(NumberUtil.Val( StringUtil.Substring( AV12ItemParcelasNota.gxTpr_Dvenc, 6, 2), "."), 18, MidpointRounding.ToEven)), (int)(Math.Round(NumberUtil.Val( StringUtil.Substring( AV12ItemParcelasNota.gxTpr_Dvenc, 9, 2), "."), 18, MidpointRounding.ToEven)));
                AV20Dias = (short)(DateTimeUtil.DDiff(AV16DataVencimento,Gx_date));
-               new debug(context ).execute(  StringUtil.Format( "&DataVencimento %1", context.localUtil.DToC( AV16DataVencimento, 0, "-"), "", "", "", "", "", "", "", "")) ;
-               new debug(context ).execute(  StringUtil.Format( "&Dias %1", StringUtil.LTrimStr( (decimal)(AV20Dias), 4, 0), "", "", "", "", "", "", "", "")) ;
-               new debug(context ).execute(  StringUtil.Format( "&Taxaanual %1", StringUtil.LTrimStr( AV15TaxaAnual, 16, 4), "", "", "", "", "", "", "", "")) ;
                AV23TaxaDiaria = (decimal)(AV15TaxaAnual/ (decimal)(365));
                AV25Valor = NumberUtil.Val( AV12ItemParcelasNota.gxTpr_Vdup, ".");
                AV27TaxaParcela = (decimal)((AV23TaxaDiaria*AV20Dias));
                AV24TaxaValor = (decimal)(AV25Valor*(AV27TaxaParcela/ (decimal)(100)));
                AV26TaxaAdminValor = (decimal)(AV25Valor*(AV14Taxa/ (decimal)(100)));
-               new debug(context ).execute(  StringUtil.Format( "&TaxaDiaria %1,&Valor %2,&TaxaValor %3", StringUtil.LTrimStr( AV23TaxaDiaria, 16, 4), StringUtil.LTrimStr( AV25Valor, 18, 2), StringUtil.LTrimStr( AV24TaxaValor, 18, 2), "", "", "", "", "", "")) ;
                AV11SdParcelaCalculadaTaxa = new SdtSdParcelaCalculadaTaxa(context);
                AV11SdParcelaCalculadaTaxa.gxTpr_Parcela = AV12ItemParcelasNota.gxTpr_Ndup;
                AV11SdParcelaCalculadaTaxa.gxTpr_Vencimento = AV16DataVencimento;

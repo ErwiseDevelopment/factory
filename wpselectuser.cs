@@ -3446,7 +3446,6 @@ namespace GeneXus.Programs {
       {
          /* Selecionar_Click Routine */
          returnInSub = false;
-         new debug(context ).execute(  StringUtil.Format( "Role %1", StringUtil.LTrimStr( (decimal)(AV51SecRoleId), 4, 0), "", "", "", "", "", "", "", "")) ;
          AV6SecUserRole.Load(A133SecUserId, AV51SecRoleId);
          AV6SecUserRole.gxTpr_Secuserroleactive = true;
          AV6SecUserRole.Save();
@@ -3708,7 +3707,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255191858792", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289153351", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -3724,7 +3723,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("wpselectuser.js", "?20255191858793", false, true);
+         context.AddJavascriptSource("wpselectuser.js", "?20255289153355", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Panel/BootstrapPanelRender.js", "", false, true);

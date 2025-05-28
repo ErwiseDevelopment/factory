@@ -2735,7 +2735,6 @@ namespace GeneXus.Programs {
       {
          /* Start Routine */
          returnInSub = false;
-         new debug(context ).execute(  "21") ;
          this.executeUsercontrolMethod(sPrefix, false, "TFASSINATURAPARTICIPANTEDATACONCLUSAO_RANGEPICKERContainer", "Attach", "", new Object[] {(string)edtavDdo_assinaturaparticipantedataconclusaoauxdatetext_Internalname});
          this.executeUsercontrolMethod(sPrefix, false, "TFASSINATURAPARTICIPANTEDATAVISUALIZACAO_RANGEPICKERContainer", "Attach", "", new Object[] {(string)edtavDdo_assinaturaparticipantedatavisualizacaoauxdatetext_Internalname});
          subGrid_Rows = 10;
@@ -3928,7 +3927,7 @@ namespace GeneXus.Programs {
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV10GridState,  "TFPARTICIPANTEEMAIL",  "Email",  !String.IsNullOrEmpty(StringUtil.RTrim( AV40TFParticipanteEmail)),  0,  AV40TFParticipanteEmail,  AV40TFParticipanteEmail,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV41TFParticipanteEmail_Sel)),  AV41TFParticipanteEmail_Sel,  AV41TFParticipanteEmail_Sel) ;
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalueandsel(context ).execute( ref  AV10GridState,  "TFPARTICIPANTEDOCUMENTO",  "Documento",  !String.IsNullOrEmpty(StringUtil.RTrim( AV42TFParticipanteDocumento)),  0,  AV42TFParticipanteDocumento,  AV42TFParticipanteDocumento,  false,  "",  "",  !String.IsNullOrEmpty(StringUtil.RTrim( AV43TFParticipanteDocumento_Sel)),  AV43TFParticipanteDocumento_Sel,  AV43TFParticipanteDocumento_Sel) ;
          AV62AuxText = ((AV65TFAssinaturaParticipanteTipo_Sels.Count==1) ? "["+((string)AV65TFAssinaturaParticipanteTipo_Sels.Item(1))+"]" : "Vários valores");
-         new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalue(context ).execute( ref  AV10GridState,  "TFASSINATURAPARTICIPANTETIPO_SEL",  "Tipo do participante",  !(AV65TFAssinaturaParticipanteTipo_Sels.Count==0),  0,  AV65TFAssinaturaParticipanteTipo_Sels.ToJSonString(false),  ((StringUtil.StrCmp(AV62AuxText, "")==0) ? "" : StringUtil.StringReplace( StringUtil.StringReplace( StringUtil.StringReplace( StringUtil.StringReplace( AV62AuxText, "[Contratado]", "Contratado"), "[Contratante]", "Contratante"), "[Testemunha]", "Testemunha"), "[Sacado]", "Sacado")),  false,  "",  "") ;
+         new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalue(context ).execute( ref  AV10GridState,  "TFASSINATURAPARTICIPANTETIPO_SEL",  "Tipo do participante",  !(AV65TFAssinaturaParticipanteTipo_Sels.Count==0),  0,  AV65TFAssinaturaParticipanteTipo_Sels.ToJSonString(false),  ((StringUtil.StrCmp(AV62AuxText, "")==0) ? "" : StringUtil.StringReplace( StringUtil.StringReplace( StringUtil.StringReplace( StringUtil.StringReplace( AV62AuxText, "[Contratado]", "Contratada"), "[Contratante]", "Contratante"), "[Testemunha]", "Testemunha"), "[Sacado]", "Sacado")),  false,  "",  "") ;
          AV62AuxText = ((AV45TFAssinaturaParticipanteStatus_Sels.Count==1) ? "["+((string)AV45TFAssinaturaParticipanteStatus_Sels.Item(1))+"]" : "Vários valores");
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalue(context ).execute( ref  AV10GridState,  "TFASSINATURAPARTICIPANTESTATUS_SEL",  "Status",  !(AV45TFAssinaturaParticipanteStatus_Sels.Count==0),  0,  AV45TFAssinaturaParticipanteStatus_Sels.ToJSonString(false),  ((StringUtil.StrCmp(AV62AuxText, "")==0) ? "" : StringUtil.StringReplace( StringUtil.StringReplace( StringUtil.StringReplace( AV62AuxText, "[Pendente]", "Pendente"), "[Assinado]", "Assinado"), "[Recusado]", "Recusado")),  false,  "",  "") ;
          new GeneXus.Programs.wwpbaseobjects.wwp_gridstateaddfiltervalue(context ).execute( ref  AV10GridState,  "TFASSINATURAPARTICIPANTEDATAVISUALIZACAO",  "Visualizado",  !((DateTime.MinValue==AV46TFAssinaturaParticipanteDataVisualizacao)&&(DateTime.MinValue==AV47TFAssinaturaParticipanteDataVisualizacao_To)),  0,  StringUtil.Trim( context.localUtil.TToC( AV46TFAssinaturaParticipanteDataVisualizacao, 10, 8, 0, 3, "/", ":", " ")),  ((DateTime.MinValue==AV46TFAssinaturaParticipanteDataVisualizacao) ? "" : StringUtil.Trim( context.localUtil.Format( AV46TFAssinaturaParticipanteDataVisualizacao, "99/99/9999 99:99:99"))),  true,  StringUtil.Trim( context.localUtil.TToC( AV47TFAssinaturaParticipanteDataVisualizacao_To, 10, 8, 0, 3, "/", ":", " ")),  ((DateTime.MinValue==AV47TFAssinaturaParticipanteDataVisualizacao_To) ? "" : StringUtil.Trim( context.localUtil.Format( AV47TFAssinaturaParticipanteDataVisualizacao_To, "99/99/9999 99:99:99")))) ;
@@ -4430,7 +4429,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2025522166721", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2025528915355", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -4446,7 +4445,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("wclistaassinantes.js", "?2025522166721", false, true);
+         context.AddJavascriptSource("wclistaassinantes.js", "?2025528915355", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Panel/BootstrapPanelRender.js", "", false, true);
@@ -5103,7 +5102,7 @@ namespace GeneXus.Programs {
          edtavFilterfulltext_Enabled = 1;
          Grid_empowerer_Hastitlesettings = Convert.ToBoolean( -1);
          Ddo_grid_Datalistproc = "WcListaAssinantesGetFilterData";
-         Ddo_grid_Datalistfixedvalues = "|||Contratado:Contratado,Contratante:Contratante,Testemunha:Testemunha,Sacado:Sacado|Pendente:Pendente,Assinado:Assinado,Recusado:Recusado||";
+         Ddo_grid_Datalistfixedvalues = "|||Contratado:Contratada,Contratante:Contratante,Testemunha:Testemunha,Sacado:Sacado|Pendente:Pendente,Assinado:Assinado,Recusado:Recusado||";
          Ddo_grid_Allowmultipleselection = "|||T|T||";
          Ddo_grid_Datalisttype = "Dynamic|Dynamic|Dynamic|FixedValues|FixedValues||";
          Ddo_grid_Includedatalist = "T|T|T|T|T||";
@@ -5916,7 +5915,7 @@ namespace GeneXus.Programs {
          AddWhere(sWhereString, "(T1.AssinaturaId = :AV67Wclistaassinantesds_1_assinaturaid)");
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV68Wclistaassinantesds_2_filterfulltext)) )
          {
-            AddWhere(sWhereString, "(( T2.ParticipanteNome like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( T2.ParticipanteEmail like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( T2.ParticipanteDocumento like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( 'contratado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Contratado')) or ( 'contratante' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Contratante')) or ( 'testemunha' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Testemunha')) or ( 'sacado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Sacado')) or ( 'pendente' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Pendente')) or ( 'assinado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Assinado')) or ( 'recusado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Recusado')))");
+            AddWhere(sWhereString, "(( T2.ParticipanteNome like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( T2.ParticipanteEmail like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( T2.ParticipanteDocumento like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( 'contratada' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Contratado')) or ( 'contratante' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Contratante')) or ( 'testemunha' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Testemunha')) or ( 'sacado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Sacado')) or ( 'pendente' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Pendente')) or ( 'assinado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Assinado')) or ( 'recusado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Recusado')))");
          }
          else
          {
@@ -6219,7 +6218,7 @@ namespace GeneXus.Programs {
          AddWhere(sWhereString, "(T1.AssinaturaId = :AV67Wclistaassinantesds_1_assinaturaid)");
          if ( ! String.IsNullOrEmpty(StringUtil.RTrim( AV68Wclistaassinantesds_2_filterfulltext)) )
          {
-            AddWhere(sWhereString, "(( T2.ParticipanteNome like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( T2.ParticipanteEmail like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( T2.ParticipanteDocumento like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( 'contratado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Contratado')) or ( 'contratante' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Contratante')) or ( 'testemunha' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Testemunha')) or ( 'sacado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Sacado')) or ( 'pendente' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Pendente')) or ( 'assinado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Assinado')) or ( 'recusado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Recusado')))");
+            AddWhere(sWhereString, "(( T2.ParticipanteNome like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( T2.ParticipanteEmail like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( T2.ParticipanteDocumento like '%' || :lV68Wclistaassinantesds_2_filterfulltext) or ( 'contratada' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Contratado')) or ( 'contratante' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Contratante')) or ( 'testemunha' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Testemunha')) or ( 'sacado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteTipo = ( 'Sacado')) or ( 'pendente' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Pendente')) or ( 'assinado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Assinado')) or ( 'recusado' like '%' || LOWER(:lV68Wclistaassinantesds_2_filterfulltext) and T1.AssinaturaParticipanteStatus = ( 'Recusado')))");
          }
          else
          {

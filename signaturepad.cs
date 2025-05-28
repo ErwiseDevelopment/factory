@@ -684,7 +684,6 @@ namespace GeneXus.Programs {
          AV16hash = "SHA256";
          AV17path = "C:\\Temp\\pdf.pdf";
          AV18signature = AV19AsymmetricSigner.dosignfile(AV20PrivateKey, AV16hash, AV17path);
-         new debug(context ).execute(  StringUtil.Format( "&signature %1", AV18signature, "", "", "", "", "", "", "", "")) ;
          AV21File.Source = "C\\Temp\\pdf2.pdf";
          AV21File.FromBase64(AV18signature);
          AV21File.Create();
@@ -740,7 +739,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255191855443", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289151094", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -756,7 +755,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("signaturepad.js", "?20255191855443", false, true);
+         context.AddJavascriptSource("signaturepad.js", "?20255289151094", false, true);
          /* End function include_jscripts */
       }
 

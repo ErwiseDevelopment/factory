@@ -720,7 +720,6 @@ namespace GeneXus.Programs {
          AV11Chave = GXt_char1;
          AV12AssinaturaToken = AV9checksum;
          AssignAttri("", false, "AV12AssinaturaToken", AV12AssinaturaToken);
-         new debug(context ).execute(  StringUtil.Format( "&AssinaturaToken %1", AV12AssinaturaToken, "", "", "", "", "", "", "", "")) ;
          /* Using cursor H00592 */
          pr_default.execute(0, new Object[] {AV12AssinaturaToken});
          while ( (pr_default.getStatus(0) != 101) )
@@ -824,7 +823,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918553686", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289151030", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -840,7 +839,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("consultacontratodigital.js", "?202551918553686", false, true);
+         context.AddJavascriptSource("consultacontratodigital.js", "?20255289151030", false, true);
          /* End function include_jscripts */
       }
 

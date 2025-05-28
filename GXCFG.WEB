@@ -14,7 +14,7 @@
       <add  key="Connection-Default-Port" value="5432"/>
       <add  key="Connection-Default-LockTimeout" value="0"/>
       <add  key="Connection-Default-LockRetryCount" value="10"/>
-      <add  key="Connection-Default-Datasource" value="FRf1o55PDUo7wggzXEF7EYHz5dGzrmljEH4FfGkOBGs="/>
+      <add  key="Connection-Default-Datasource" value="dTO/ZJUd0uF/f+3rk1Z5reLKCSPjDSGiiM7YzBGAoOS="/>
       <add  key="Connection-Default-User" value="owdsaMJ9JaF8TTk/uC3aHS=="/>
       <add  key="Connection-Default-Password" value="owdsaMJ9JaF8TTk/uC3aHS=="/>
       <add  key="Connection-Default-DB" value="cqla2"/>
@@ -24,7 +24,7 @@
       <add  key="DateFormat" value="DMY"/>
       <add  key="YearLimit" value="1940"/>
       <add  key="TimeAmPmFormat" value="24"/>
-      <add  key="VER_STAMP" value="20250514.015828"/>
+      <add  key="VER_STAMP" value="20250528.132428"/>
       <add  key="CS_BLOB_PATH" value="PublicTempStorage"/>
       <add  key="TMPMEDIA_DIR" value="PublicTempStorage"/>
       <add  key="PRINT_LAYOUT_METADATA_DIR" value="LayoutMetadata"/>
@@ -59,7 +59,7 @@
       <add  key="wcf:serviceHostingEnvironment:useClassicReadEntityBodyMode" value="true"/>
       <add  key="HTTP_PROTOCOL" value="Unsecure"/>
       <add  key="SAMESITE_COOKIE" value="Lax"/>
-      <add  key="CACHE_INVALIDATION_TOKEN" value="20255262159056"/>
+      <add  key="CACHE_INVALIDATION_TOKEN" value="20255281105184"/>
       <add  key="CORS_ALLOW_ORIGIN" value=""/>
       <add  key="SERVICE_AS_CONTROLLER" value="0"/>
       <add  key="LOG_OUTPUT" value="RollingFile"/>

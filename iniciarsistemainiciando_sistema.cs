@@ -325,8 +325,6 @@ namespace GeneXus.Programs {
       {
          GxWebStd.gx_boolean_hidden_field( context, sPrefix+"vHASVALIDATIONERRORS", AV10HasValidationErrors);
          GxWebStd.gx_hidden_field( context, sPrefix+"gxhash_vHASVALIDATIONERRORS", GetSecureSignedToken( sPrefix, AV10HasValidationErrors, context));
-         GxWebStd.gx_hidden_field( context, sPrefix+"vVALOR", StringUtil.LTrim( StringUtil.NToC( AV13Valor, 18, 2, ",", "")));
-         GxWebStd.gx_hidden_field( context, sPrefix+"gxhash_vVALOR", GetSecureSignedToken( sPrefix, context.localUtil.Format( AV13Valor, "ZZZ,ZZZ,ZZZ,ZZ9.99"), context));
          GXKey = Decrypt64( context.GetCookie( "GX_SESSION_ID"), Crypto.GetServerKey( ));
       }
 
@@ -341,8 +339,6 @@ namespace GeneXus.Programs {
          GxWebStd.gx_boolean_hidden_field( context, sPrefix+"vHASVALIDATIONERRORS", AV10HasValidationErrors);
          GxWebStd.gx_hidden_field( context, sPrefix+"gxhash_vHASVALIDATIONERRORS", GetSecureSignedToken( sPrefix, AV10HasValidationErrors, context));
          GxWebStd.gx_hidden_field( context, sPrefix+"vWEBSESSIONKEY", AV6WebSessionKey);
-         GxWebStd.gx_hidden_field( context, sPrefix+"vVALOR", StringUtil.LTrim( StringUtil.NToC( AV13Valor, 18, 2, ",", "")));
-         GxWebStd.gx_hidden_field( context, sPrefix+"gxhash_vVALOR", GetSecureSignedToken( sPrefix, context.localUtil.Format( AV13Valor, "ZZZ,ZZZ,ZZZ,ZZ9.99"), context));
          GxWebStd.gx_hidden_field( context, sPrefix+"BANCOID", StringUtil.LTrim( StringUtil.NToC( (decimal)(A402BancoId), 9, 0, ",", "")));
          GxWebStd.gx_hidden_field( context, sPrefix+"vPREVIOUSSTEP", AV8PreviousStep);
          GxWebStd.gx_boolean_hidden_field( context, sPrefix+"vGOINGBACK", AV7GoingBack);
@@ -808,8 +804,6 @@ namespace GeneXus.Programs {
       {
          GxWebStd.gx_boolean_hidden_field( context, sPrefix+"vHASVALIDATIONERRORS", AV10HasValidationErrors);
          GxWebStd.gx_hidden_field( context, sPrefix+"gxhash_vHASVALIDATIONERRORS", GetSecureSignedToken( sPrefix, AV10HasValidationErrors, context));
-         GxWebStd.gx_hidden_field( context, sPrefix+"vVALOR", StringUtil.LTrim( StringUtil.NToC( AV13Valor, 18, 2, ",", "")));
-         GxWebStd.gx_hidden_field( context, sPrefix+"gxhash_vVALOR", GetSecureSignedToken( sPrefix, context.localUtil.Format( AV13Valor, "ZZZ,ZZZ,ZZZ,ZZ9.99"), context));
       }
 
       protected void before_start_formulas( )
@@ -995,7 +989,6 @@ namespace GeneXus.Programs {
       {
          /* Timer_Tick Routine */
          returnInSub = false;
-         new debug(context ).execute(  StringUtil.Format( "&Valor %1", StringUtil.LTrimStr( AV13Valor, 18, 2), "", "", "", "", "", "", "", "")) ;
          /* Using cursor H007J2 */
          pr_default.execute(0);
          while ( (pr_default.getStatus(0) != 101) )
@@ -1274,7 +1267,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918375232", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289141538", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1290,7 +1283,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("iniciarsistemainiciando_sistema.js", "?202551918375233", false, true);
+         context.AddJavascriptSource("iniciarsistemainiciando_sistema.js", "?20255289141538", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Chronometer/ChronometerRender.js", "", false, true);
          /* End function include_jscripts */
@@ -1342,9 +1335,9 @@ namespace GeneXus.Programs {
 
       public override void InitializeDynEvents( )
       {
-         setEventMetadata("REFRESH","""{"handler":"Refresh","iparms":[{"av":"AV10HasValidationErrors","fld":"vHASVALIDATIONERRORS","hsh":true,"type":"boolean"},{"av":"AV13Valor","fld":"vVALOR","pic":"ZZZ,ZZZ,ZZZ,ZZ9.99","hsh":true,"type":"decimal"}]}""");
+         setEventMetadata("REFRESH","""{"handler":"Refresh","iparms":[{"av":"AV10HasValidationErrors","fld":"vHASVALIDATIONERRORS","hsh":true,"type":"boolean"}]}""");
          setEventMetadata("ENTER","""{"handler":"E137J2","iparms":[{"av":"AV10HasValidationErrors","fld":"vHASVALIDATIONERRORS","hsh":true,"type":"boolean"},{"av":"AV6WebSessionKey","fld":"vWEBSESSIONKEY","type":"svchar"}]}""");
-         setEventMetadata("TIMER.TICK","""{"handler":"E117J2","iparms":[{"av":"AV13Valor","fld":"vVALOR","pic":"ZZZ,ZZZ,ZZZ,ZZ9.99","hsh":true,"type":"decimal"},{"av":"A402BancoId","fld":"BANCOID","pic":"ZZZZZZZZ9","type":"int"}]}""");
+         setEventMetadata("TIMER.TICK","""{"handler":"E117J2","iparms":[{"av":"A402BancoId","fld":"BANCOID","pic":"ZZZZZZZZ9","type":"int"}]}""");
          return  ;
       }
 
@@ -1413,7 +1406,6 @@ namespace GeneXus.Programs {
       private int A402BancoId ;
       private int Timer_Tickinterval ;
       private int idxLst ;
-      private decimal AV13Valor ;
       private string gxfirstwebparm ;
       private string gxfirstwebparm_bkp ;
       private string sPrefix ;

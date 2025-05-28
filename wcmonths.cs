@@ -683,23 +683,6 @@ namespace GeneXus.Programs {
                                  }
                               }
                            }
-                           else if ( StringUtil.StrCmp(sEvt, "MAINLAYOUT.CLICK") == 0 )
-                           {
-                              if ( ( StringUtil.Len( sPrefix) != 0 ) && ( nDoneStart == 0 ) )
-                              {
-                                 STRUP4Z0( ) ;
-                              }
-                              if ( ! context.WillRedirect( ) && ( context.nUserReturn != 1 ) )
-                              {
-                                 context.wbHandled = 1;
-                                 if ( ! wbErr )
-                                 {
-                                    dynload_actions( ) ;
-                                    /* Execute user event: Mainlayout.Click */
-                                    E124Z2 ();
-                                 }
-                              }
-                           }
                            else if ( StringUtil.StrCmp(sEvt, "LSCR") == 0 )
                            {
                               if ( ( StringUtil.Len( sPrefix) != 0 ) && ( nDoneStart == 0 ) )
@@ -746,7 +729,7 @@ namespace GeneXus.Programs {
                         {
                            sEvtType = StringUtil.Right( sEvt, 4);
                            sEvt = StringUtil.Left( sEvt, (short)(StringUtil.Len( sEvt)-4));
-                           if ( ( StringUtil.StrCmp(StringUtil.Left( sEvt, 5), "START") == 0 ) || ( StringUtil.StrCmp(StringUtil.Left( sEvt, 7), "REFRESH") == 0 ) || ( StringUtil.StrCmp(StringUtil.Left( sEvt, 9), "GRID.LOAD") == 0 ) || ( StringUtil.StrCmp(StringUtil.Left( sEvt, 16), "MAINLAYOUT.CLICK") == 0 ) || ( StringUtil.StrCmp(StringUtil.Left( sEvt, 5), "ENTER") == 0 ) || ( StringUtil.StrCmp(StringUtil.Left( sEvt, 6), "CANCEL") == 0 ) )
+                           if ( ( StringUtil.StrCmp(StringUtil.Left( sEvt, 5), "START") == 0 ) || ( StringUtil.StrCmp(StringUtil.Left( sEvt, 7), "REFRESH") == 0 ) || ( StringUtil.StrCmp(StringUtil.Left( sEvt, 9), "GRID.LOAD") == 0 ) || ( StringUtil.StrCmp(StringUtil.Left( sEvt, 5), "ENTER") == 0 ) || ( StringUtil.StrCmp(StringUtil.Left( sEvt, 6), "CANCEL") == 0 ) )
                            {
                               if ( ( StringUtil.Len( sPrefix) != 0 ) && ( nDoneStart == 0 ) )
                               {
@@ -770,7 +753,7 @@ namespace GeneXus.Programs {
                                        {
                                           dynload_actions( ) ;
                                           /* Execute user event: Start */
-                                          E134Z2 ();
+                                          E124Z2 ();
                                        }
                                     }
                                  }
@@ -783,7 +766,7 @@ namespace GeneXus.Programs {
                                        {
                                           dynload_actions( ) ;
                                           /* Execute user event: Refresh */
-                                          E144Z2 ();
+                                          E134Z2 ();
                                        }
                                     }
                                  }
@@ -796,20 +779,7 @@ namespace GeneXus.Programs {
                                        {
                                           dynload_actions( ) ;
                                           /* Execute user event: Grid.Load */
-                                          E154Z2 ();
-                                       }
-                                    }
-                                 }
-                                 else if ( StringUtil.StrCmp(sEvt, "MAINLAYOUT.CLICK") == 0 )
-                                 {
-                                    if ( ! context.WillRedirect( ) && ( context.nUserReturn != 1 ) )
-                                    {
-                                       context.wbHandled = 1;
-                                       if ( ! wbErr )
-                                       {
-                                          dynload_actions( ) ;
-                                          /* Execute user event: Mainlayout.Click */
-                                          E124Z2 ();
+                                          E144Z2 ();
                                        }
                                     }
                                  }
@@ -1042,7 +1012,7 @@ namespace GeneXus.Programs {
          }
          wbStart = 12;
          /* Execute user event: Refresh */
-         E144Z2 ();
+         E134Z2 ();
          nGXsfl_12_idx = 1;
          sGXsfl_12_idx = StringUtil.PadL( StringUtil.LTrimStr( (decimal)(nGXsfl_12_idx), 4, 0), 4, "0");
          SubsflControlProps_122( ) ;
@@ -1069,7 +1039,7 @@ namespace GeneXus.Programs {
          {
             SubsflControlProps_122( ) ;
             /* Execute user event: Grid.Load */
-            E154Z2 ();
+            E144Z2 ();
             wbEnd = 12;
             WB4Z0( ) ;
          }
@@ -1199,7 +1169,7 @@ namespace GeneXus.Programs {
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
          /* Execute user event: Start */
-         E134Z2 ();
+         E124Z2 ();
          context.wbGlbDoneStart = 1;
          nDoneStart = 1;
          /* After Start, stand alone formulas. */
@@ -1233,11 +1203,11 @@ namespace GeneXus.Programs {
       protected void GXStart( )
       {
          /* Execute user event: Start */
-         E134Z2 ();
+         E124Z2 ();
          if (returnInSub) return;
       }
 
-      protected void E134Z2( )
+      protected void E124Z2( )
       {
          /* Start Routine */
          returnInSub = false;
@@ -1252,7 +1222,7 @@ namespace GeneXus.Programs {
          if (returnInSub) return;
       }
 
-      protected void E144Z2( )
+      protected void E134Z2( )
       {
          if ( gx_refresh_fired )
          {
@@ -1270,7 +1240,7 @@ namespace GeneXus.Programs {
          /*  Sending Event outputs  */
       }
 
-      private void E154Z2( )
+      private void E144Z2( )
       {
          /* Grid_Load Routine */
          returnInSub = false;
@@ -1337,14 +1307,6 @@ namespace GeneXus.Programs {
          AV10GridState.gxTpr_Pagesize = StringUtil.Str( (decimal)(subGrid_Rows), 10, 0);
          AV10GridState.gxTpr_Currentpage = (short)(subGrid_fnc_Currentpage( ));
          new GeneXus.Programs.wwpbaseobjects.savegridstate(context ).execute(  AV19Pgmname+"GridState",  AV10GridState.ToXml(false, true, "", "")) ;
-      }
-
-      protected void E124Z2( )
-      {
-         /* Mainlayout_Click Routine */
-         returnInSub = false;
-         new debug(context ).execute(  StringUtil.Format( "&Date %1", context.localUtil.DToC( AV14Date, 0, "-"), "", "", "", "", "", "", "", "")) ;
-         this.executeExternalObjectMethod(sPrefix, false, "GlobalEvents", "FinanceiroRefresh_Competencia", new Object[] {DateTimeUtil.Year( AV14Date),DateTimeUtil.Month( AV14Date)}, true);
       }
 
       protected void E114Z2( )
@@ -1579,7 +1541,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918375957", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289143275", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1597,7 +1559,7 @@ namespace GeneXus.Programs {
       {
          if ( nGXWrapped != 1 )
          {
-            context.AddJavascriptSource("wcmonths.js", "?202551918375957", false, true);
+            context.AddJavascriptSource("wcmonths.js", "?20255289143276", false, true);
          }
          /* End function include_jscripts */
       }
@@ -1856,9 +1818,8 @@ namespace GeneXus.Programs {
       {
          setEventMetadata("REFRESH","""{"handler":"Refresh","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"edtavDate_Visible","ctrl":"vDATE","prop":"Visible"},{"av":"AV15MesAtual","fld":"vMESATUAL","pic":"ZZZ9","type":"int"},{"av":"AV17InAno","fld":"vINANO","pic":"ZZZ9","type":"int"},{"av":"AV14Date","fld":"vDATE","type":"date"},{"av":"sPrefix","type":"char"},{"av":"AV13Ano","fld":"vANO","pic":"ZZZ9","type":"int"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"},{"av":"AV19Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"}]""");
          setEventMetadata("REFRESH",""","oparms":[{"av":"AV14Date","fld":"vDATE","type":"date"}]}""");
-         setEventMetadata("GRID.LOAD","""{"handler":"E154Z2","iparms":[{"av":"AV15MesAtual","fld":"vMESATUAL","pic":"ZZZ9","type":"int"},{"av":"AV17InAno","fld":"vINANO","pic":"ZZZ9","type":"int"},{"av":"AV14Date","fld":"vDATE","type":"date"}]""");
+         setEventMetadata("GRID.LOAD","""{"handler":"E144Z2","iparms":[{"av":"AV15MesAtual","fld":"vMESATUAL","pic":"ZZZ9","type":"int"},{"av":"AV17InAno","fld":"vINANO","pic":"ZZZ9","type":"int"},{"av":"AV14Date","fld":"vDATE","type":"date"}]""");
          setEventMetadata("GRID.LOAD",""","oparms":[{"av":"lblTextblock1_Caption","ctrl":"TEXTBLOCK1","prop":"Caption"},{"av":"AV14Date","fld":"vDATE","type":"date"}]}""");
-         setEventMetadata("MAINLAYOUT.CLICK","""{"handler":"E124Z2","iparms":[{"av":"AV14Date","fld":"vDATE","type":"date"}]}""");
          setEventMetadata("GLOBALEVENTS.WCMONTHS_REFRESH","""{"handler":"E114Z2","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"},{"av":"AV13Ano","fld":"vANO","pic":"ZZZ9","type":"int"},{"av":"AV19Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"edtavDate_Visible","ctrl":"vDATE","prop":"Visible"},{"av":"AV15MesAtual","fld":"vMESATUAL","pic":"ZZZ9","type":"int"},{"av":"AV17InAno","fld":"vINANO","pic":"ZZZ9","type":"int"},{"av":"AV14Date","fld":"vDATE","type":"date"},{"av":"sPrefix","type":"char"}]""");
          setEventMetadata("GLOBALEVENTS.WCMONTHS_REFRESH",""","oparms":[{"av":"AV14Date","fld":"vDATE","type":"date"}]}""");
          setEventMetadata("GRID_FIRSTPAGE","""{"handler":"subgrid_firstpage","iparms":[{"av":"GRID_nFirstRecordOnPage","type":"int"},{"av":"GRID_nEOF","type":"int"},{"av":"edtavDate_Visible","ctrl":"vDATE","prop":"Visible"},{"av":"AV15MesAtual","fld":"vMESATUAL","pic":"ZZZ9","type":"int"},{"av":"AV17InAno","fld":"vINANO","pic":"ZZZ9","type":"int"},{"av":"AV14Date","fld":"vDATE","type":"date"},{"av":"sPrefix","type":"char"},{"av":"AV13Ano","fld":"vANO","pic":"ZZZ9","type":"int"},{"av":"AV19Pgmname","fld":"vPGMNAME","hsh":true,"type":"char"},{"av":"subGrid_Rows","ctrl":"GRID","prop":"Rows"}]""");

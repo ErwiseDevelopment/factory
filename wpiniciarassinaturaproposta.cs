@@ -1775,7 +1775,6 @@ namespace GeneXus.Programs {
             AV19GUID = Guid.NewGuid( );
             AV21PdfPath = "./PublicTempStorage/" + AV19GUID.ToString() + ".pdf";
             AV22PdfFile.Source = AV21PdfPath;
-            new debug(context ).execute(  StringUtil.Format( "&File.GetAbsoluteName() %1,&PdfFile.GetAbsoluteName() %2", AV20File.GetAbsoluteName(), AV22PdfFile.GetAbsoluteName(), "", "", "", "", "", "", "")) ;
             new prcriarpdffromhtml(context ).execute(  AV20File.GetAbsoluteName(),  AV22PdfFile.GetAbsoluteName(), out  AV50ErroMsg) ;
             if ( StringUtil.StrCmp(AV50ErroMsg, "PDF gerado com sucesso!") == 0 )
             {
@@ -1816,7 +1815,6 @@ namespace GeneXus.Programs {
                   }
                   else
                   {
-                     new debug(context ).execute(  StringUtil.Format( "&PropostaContratoAssinaturaId %1", StringUtil.LTrimStr( (decimal)(AV46PropostaContratoAssinaturaId), 9, 0), "", "", "", "", "", "", "", "")) ;
                      AV47ReembolsoAssinaturas = new SdtReembolsoAssinaturas(context);
                      AV47ReembolsoAssinaturas.gxTpr_Reembolsoid = AV48ReembolsoId;
                      AV47ReembolsoAssinaturas.gxTpr_Propostacontratoassinaturaid = AV46PropostaContratoAssinaturaId;
@@ -2030,7 +2028,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255221663588", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289152082", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -2046,7 +2044,7 @@ namespace GeneXus.Programs {
       protected void include_jscripts( )
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
-         context.AddJavascriptSource("wpiniciarassinaturaproposta.js", "?20255221663588", false, true);
+         context.AddJavascriptSource("wpiniciarassinaturaproposta.js", "?20255289152083", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);

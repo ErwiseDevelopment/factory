@@ -1500,7 +1500,6 @@ namespace GeneXus.Programs {
       {
          /* Start Routine */
          returnInSub = false;
-         new debug(context ).execute(  StringUtil.Format( "&ReembolsoLogId %1", StringUtil.LTrimStr( (decimal)(AV23ReembolsoLogId), 9, 0), "", "", "", "", "", "", "", "")) ;
          this.executeUsercontrolMethod(sPrefix, false, "TFREEMBOLSOFLOWLOGDATE_RANGEPICKERContainer", "Attach", "", new Object[] {(string)edtavDdo_reembolsoflowlogdateauxdatetext_Internalname});
          subGrid_Rows = 10;
          GxWebStd.gx_hidden_field( context, sPrefix+"GRID_Rows", StringUtil.LTrim( StringUtil.NToC( (decimal)(subGrid_Rows), 6, 0, ".", "")));
@@ -1944,7 +1943,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918505676", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?2025528914293", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1960,7 +1959,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("reembolsoflowlogww.js", "?202551918505676", false, true);
+         context.AddJavascriptSource("reembolsoflowlogww.js", "?2025528914293", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);

@@ -107,6 +107,7 @@ namespace GeneXus.Programs {
                   ZM1C51( 7) ;
                   ZM1C51( 8) ;
                   ZM1C51( 9) ;
+                  ZM1C51( 10) ;
                }
                CloseExtendedTableCursors1C51( ) ;
             }
@@ -163,10 +164,15 @@ namespace GeneXus.Programs {
          }
          if ( ( GX_JID == 8 ) || ( GX_JID == 0 ) )
          {
+            Z133SecUserId = A133SecUserId;
          }
          if ( ( GX_JID == 9 ) || ( GX_JID == 0 ) )
          {
             Z141SecUserName = A141SecUserName;
+         }
+         if ( ( GX_JID == 10 ) || ( GX_JID == 0 ) )
+         {
+            Z143SecUserFullName = A143SecUserFullName;
          }
          if ( GX_JID == -6 )
          {
@@ -176,6 +182,8 @@ namespace GeneXus.Programs {
             Z340AprovacaoStatus = A340AprovacaoStatus;
             Z323PropostaId = A323PropostaId;
             Z375AprovadoresId = A375AprovadoresId;
+            Z133SecUserId = A133SecUserId;
+            Z143SecUserFullName = A143SecUserFullName;
             Z328PropostaCratedBy = A328PropostaCratedBy;
             Z141SecUserName = A141SecUserName;
          }
@@ -192,28 +200,32 @@ namespace GeneXus.Programs {
 
       protected void Load1C51( )
       {
-         /* Using cursor BC001C7 */
-         pr_default.execute(5, new Object[] {A336AprovacaoId});
-         if ( (pr_default.getStatus(5) != 101) )
+         /* Using cursor BC001C8 */
+         pr_default.execute(6, new Object[] {A336AprovacaoId});
+         if ( (pr_default.getStatus(6) != 101) )
          {
             RcdFound51 = 1;
-            A328PropostaCratedBy = BC001C7_A328PropostaCratedBy[0];
-            n328PropostaCratedBy = BC001C7_n328PropostaCratedBy[0];
-            A141SecUserName = BC001C7_A141SecUserName[0];
-            n141SecUserName = BC001C7_n141SecUserName[0];
-            A337AprovacaoEm = BC001C7_A337AprovacaoEm[0];
-            n337AprovacaoEm = BC001C7_n337AprovacaoEm[0];
-            A338AprovacaoDecisao = BC001C7_A338AprovacaoDecisao[0];
-            n338AprovacaoDecisao = BC001C7_n338AprovacaoDecisao[0];
-            A340AprovacaoStatus = BC001C7_A340AprovacaoStatus[0];
-            n340AprovacaoStatus = BC001C7_n340AprovacaoStatus[0];
-            A323PropostaId = BC001C7_A323PropostaId[0];
-            n323PropostaId = BC001C7_n323PropostaId[0];
-            A375AprovadoresId = BC001C7_A375AprovadoresId[0];
-            n375AprovadoresId = BC001C7_n375AprovadoresId[0];
+            A328PropostaCratedBy = BC001C8_A328PropostaCratedBy[0];
+            n328PropostaCratedBy = BC001C8_n328PropostaCratedBy[0];
+            A133SecUserId = BC001C8_A133SecUserId[0];
+            n133SecUserId = BC001C8_n133SecUserId[0];
+            A141SecUserName = BC001C8_A141SecUserName[0];
+            n141SecUserName = BC001C8_n141SecUserName[0];
+            A143SecUserFullName = BC001C8_A143SecUserFullName[0];
+            n143SecUserFullName = BC001C8_n143SecUserFullName[0];
+            A337AprovacaoEm = BC001C8_A337AprovacaoEm[0];
+            n337AprovacaoEm = BC001C8_n337AprovacaoEm[0];
+            A338AprovacaoDecisao = BC001C8_A338AprovacaoDecisao[0];
+            n338AprovacaoDecisao = BC001C8_n338AprovacaoDecisao[0];
+            A340AprovacaoStatus = BC001C8_A340AprovacaoStatus[0];
+            n340AprovacaoStatus = BC001C8_n340AprovacaoStatus[0];
+            A323PropostaId = BC001C8_A323PropostaId[0];
+            n323PropostaId = BC001C8_n323PropostaId[0];
+            A375AprovadoresId = BC001C8_A375AprovadoresId[0];
+            n375AprovadoresId = BC001C8_n375AprovadoresId[0];
             ZM1C51( -6) ;
          }
-         pr_default.close(5);
+         pr_default.close(6);
          OnLoadActions1C51( ) ;
       }
 
@@ -255,7 +267,22 @@ namespace GeneXus.Programs {
                AnyError = 1;
             }
          }
+         A133SecUserId = BC001C5_A133SecUserId[0];
+         n133SecUserId = BC001C5_n133SecUserId[0];
          pr_default.close(3);
+         /* Using cursor BC001C7 */
+         pr_default.execute(5, new Object[] {n133SecUserId, A133SecUserId});
+         if ( (pr_default.getStatus(5) == 101) )
+         {
+            if ( ! ( (0==A133SecUserId) ) )
+            {
+               GX_msglist.addItem("Não existe 'User'.", "ForeignKeyNotFound", 1, "SECUSERID");
+               AnyError = 1;
+            }
+         }
+         A143SecUserFullName = BC001C7_A143SecUserFullName[0];
+         n143SecUserFullName = BC001C7_n143SecUserFullName[0];
+         pr_default.close(5);
          if ( (0==A323PropostaId) )
          {
             A323PropostaId = 0;
@@ -299,6 +326,7 @@ namespace GeneXus.Programs {
       protected void CloseExtendedTableCursors1C51( )
       {
          pr_default.close(3);
+         pr_default.close(5);
          pr_default.close(2);
          pr_default.close(4);
       }
@@ -309,9 +337,9 @@ namespace GeneXus.Programs {
 
       protected void GetKey1C51( )
       {
-         /* Using cursor BC001C8 */
-         pr_default.execute(6, new Object[] {A336AprovacaoId});
-         if ( (pr_default.getStatus(6) != 101) )
+         /* Using cursor BC001C9 */
+         pr_default.execute(7, new Object[] {A336AprovacaoId});
+         if ( (pr_default.getStatus(7) != 101) )
          {
             RcdFound51 = 1;
          }
@@ -319,7 +347,7 @@ namespace GeneXus.Programs {
          {
             RcdFound51 = 0;
          }
-         pr_default.close(6);
+         pr_default.close(7);
       }
 
       protected void getByPrimaryKey( )
@@ -434,14 +462,14 @@ namespace GeneXus.Programs {
                   BeforeInsert1C51( ) ;
                   if ( AnyError == 0 )
                   {
-                     /* Using cursor BC001C9 */
-                     pr_default.execute(7, new Object[] {n337AprovacaoEm, A337AprovacaoEm, n338AprovacaoDecisao, A338AprovacaoDecisao, n340AprovacaoStatus, A340AprovacaoStatus, n323PropostaId, A323PropostaId, n375AprovadoresId, A375AprovadoresId});
-                     pr_default.close(7);
-                     /* Retrieving last key number assigned */
                      /* Using cursor BC001C10 */
-                     pr_default.execute(8);
-                     A336AprovacaoId = BC001C10_A336AprovacaoId[0];
+                     pr_default.execute(8, new Object[] {n337AprovacaoEm, A337AprovacaoEm, n338AprovacaoDecisao, A338AprovacaoDecisao, n340AprovacaoStatus, A340AprovacaoStatus, n323PropostaId, A323PropostaId, n375AprovadoresId, A375AprovadoresId});
                      pr_default.close(8);
+                     /* Retrieving last key number assigned */
+                     /* Using cursor BC001C11 */
+                     pr_default.execute(9);
+                     A336AprovacaoId = BC001C11_A336AprovacaoId[0];
+                     pr_default.close(9);
                      pr_default.SmartCacheProvider.SetUpdated("Aprovacao");
                      if ( AnyError == 0 )
                      {
@@ -489,11 +517,11 @@ namespace GeneXus.Programs {
                   BeforeUpdate1C51( ) ;
                   if ( AnyError == 0 )
                   {
-                     /* Using cursor BC001C11 */
-                     pr_default.execute(9, new Object[] {n337AprovacaoEm, A337AprovacaoEm, n338AprovacaoDecisao, A338AprovacaoDecisao, n340AprovacaoStatus, A340AprovacaoStatus, n323PropostaId, A323PropostaId, n375AprovadoresId, A375AprovadoresId, A336AprovacaoId});
-                     pr_default.close(9);
+                     /* Using cursor BC001C12 */
+                     pr_default.execute(10, new Object[] {n337AprovacaoEm, A337AprovacaoEm, n338AprovacaoDecisao, A338AprovacaoDecisao, n340AprovacaoStatus, A340AprovacaoStatus, n323PropostaId, A323PropostaId, n375AprovadoresId, A375AprovadoresId, A336AprovacaoId});
+                     pr_default.close(10);
                      pr_default.SmartCacheProvider.SetUpdated("Aprovacao");
-                     if ( (pr_default.getStatus(9) == 103) )
+                     if ( (pr_default.getStatus(10) == 103) )
                      {
                         GX_msglist.addItem(context.GetMessage( "GXM_lock", new   object[]  {"Aprovacao"}), "RecordIsLocked", 1, "");
                         AnyError = 1;
@@ -545,9 +573,9 @@ namespace GeneXus.Programs {
                if ( AnyError == 0 )
                {
                   /* No cascading delete specified. */
-                  /* Using cursor BC001C12 */
-                  pr_default.execute(10, new Object[] {A336AprovacaoId});
-                  pr_default.close(10);
+                  /* Using cursor BC001C13 */
+                  pr_default.execute(11, new Object[] {A336AprovacaoId});
+                  pr_default.close(11);
                   pr_default.SmartCacheProvider.SetUpdated("Aprovacao");
                   if ( AnyError == 0 )
                   {
@@ -579,16 +607,26 @@ namespace GeneXus.Programs {
          if ( AnyError == 0 )
          {
             /* Delete mode formulas */
-            /* Using cursor BC001C13 */
-            pr_default.execute(11, new Object[] {n323PropostaId, A323PropostaId});
-            A328PropostaCratedBy = BC001C13_A328PropostaCratedBy[0];
-            n328PropostaCratedBy = BC001C13_n328PropostaCratedBy[0];
-            pr_default.close(11);
             /* Using cursor BC001C14 */
-            pr_default.execute(12, new Object[] {n328PropostaCratedBy, A328PropostaCratedBy});
-            A141SecUserName = BC001C14_A141SecUserName[0];
-            n141SecUserName = BC001C14_n141SecUserName[0];
+            pr_default.execute(12, new Object[] {n375AprovadoresId, A375AprovadoresId});
+            A133SecUserId = BC001C14_A133SecUserId[0];
+            n133SecUserId = BC001C14_n133SecUserId[0];
             pr_default.close(12);
+            /* Using cursor BC001C15 */
+            pr_default.execute(13, new Object[] {n133SecUserId, A133SecUserId});
+            A143SecUserFullName = BC001C15_A143SecUserFullName[0];
+            n143SecUserFullName = BC001C15_n143SecUserFullName[0];
+            pr_default.close(13);
+            /* Using cursor BC001C16 */
+            pr_default.execute(14, new Object[] {n323PropostaId, A323PropostaId});
+            A328PropostaCratedBy = BC001C16_A328PropostaCratedBy[0];
+            n328PropostaCratedBy = BC001C16_n328PropostaCratedBy[0];
+            pr_default.close(14);
+            /* Using cursor BC001C17 */
+            pr_default.execute(15, new Object[] {n328PropostaCratedBy, A328PropostaCratedBy});
+            A141SecUserName = BC001C17_A141SecUserName[0];
+            n141SecUserName = BC001C17_n141SecUserName[0];
+            pr_default.close(15);
          }
       }
 
@@ -621,27 +659,31 @@ namespace GeneXus.Programs {
       public void ScanKeyStart1C51( )
       {
          /* Scan By routine */
-         /* Using cursor BC001C15 */
-         pr_default.execute(13, new Object[] {A336AprovacaoId});
+         /* Using cursor BC001C18 */
+         pr_default.execute(16, new Object[] {A336AprovacaoId});
          RcdFound51 = 0;
-         if ( (pr_default.getStatus(13) != 101) )
+         if ( (pr_default.getStatus(16) != 101) )
          {
             RcdFound51 = 1;
-            A328PropostaCratedBy = BC001C15_A328PropostaCratedBy[0];
-            n328PropostaCratedBy = BC001C15_n328PropostaCratedBy[0];
-            A336AprovacaoId = BC001C15_A336AprovacaoId[0];
-            A141SecUserName = BC001C15_A141SecUserName[0];
-            n141SecUserName = BC001C15_n141SecUserName[0];
-            A337AprovacaoEm = BC001C15_A337AprovacaoEm[0];
-            n337AprovacaoEm = BC001C15_n337AprovacaoEm[0];
-            A338AprovacaoDecisao = BC001C15_A338AprovacaoDecisao[0];
-            n338AprovacaoDecisao = BC001C15_n338AprovacaoDecisao[0];
-            A340AprovacaoStatus = BC001C15_A340AprovacaoStatus[0];
-            n340AprovacaoStatus = BC001C15_n340AprovacaoStatus[0];
-            A323PropostaId = BC001C15_A323PropostaId[0];
-            n323PropostaId = BC001C15_n323PropostaId[0];
-            A375AprovadoresId = BC001C15_A375AprovadoresId[0];
-            n375AprovadoresId = BC001C15_n375AprovadoresId[0];
+            A328PropostaCratedBy = BC001C18_A328PropostaCratedBy[0];
+            n328PropostaCratedBy = BC001C18_n328PropostaCratedBy[0];
+            A133SecUserId = BC001C18_A133SecUserId[0];
+            n133SecUserId = BC001C18_n133SecUserId[0];
+            A336AprovacaoId = BC001C18_A336AprovacaoId[0];
+            A141SecUserName = BC001C18_A141SecUserName[0];
+            n141SecUserName = BC001C18_n141SecUserName[0];
+            A143SecUserFullName = BC001C18_A143SecUserFullName[0];
+            n143SecUserFullName = BC001C18_n143SecUserFullName[0];
+            A337AprovacaoEm = BC001C18_A337AprovacaoEm[0];
+            n337AprovacaoEm = BC001C18_n337AprovacaoEm[0];
+            A338AprovacaoDecisao = BC001C18_A338AprovacaoDecisao[0];
+            n338AprovacaoDecisao = BC001C18_n338AprovacaoDecisao[0];
+            A340AprovacaoStatus = BC001C18_A340AprovacaoStatus[0];
+            n340AprovacaoStatus = BC001C18_n340AprovacaoStatus[0];
+            A323PropostaId = BC001C18_A323PropostaId[0];
+            n323PropostaId = BC001C18_n323PropostaId[0];
+            A375AprovadoresId = BC001C18_A375AprovadoresId[0];
+            n375AprovadoresId = BC001C18_n375AprovadoresId[0];
          }
          /* Load Subordinate Levels */
       }
@@ -649,7 +691,7 @@ namespace GeneXus.Programs {
       protected void ScanKeyNext1C51( )
       {
          /* Scan next routine */
-         pr_default.readNext(13);
+         pr_default.readNext(16);
          RcdFound51 = 0;
          ScanKeyLoad1C51( ) ;
       }
@@ -658,31 +700,35 @@ namespace GeneXus.Programs {
       {
          sMode51 = Gx_mode;
          Gx_mode = "DSP";
-         if ( (pr_default.getStatus(13) != 101) )
+         if ( (pr_default.getStatus(16) != 101) )
          {
             RcdFound51 = 1;
-            A328PropostaCratedBy = BC001C15_A328PropostaCratedBy[0];
-            n328PropostaCratedBy = BC001C15_n328PropostaCratedBy[0];
-            A336AprovacaoId = BC001C15_A336AprovacaoId[0];
-            A141SecUserName = BC001C15_A141SecUserName[0];
-            n141SecUserName = BC001C15_n141SecUserName[0];
-            A337AprovacaoEm = BC001C15_A337AprovacaoEm[0];
-            n337AprovacaoEm = BC001C15_n337AprovacaoEm[0];
-            A338AprovacaoDecisao = BC001C15_A338AprovacaoDecisao[0];
-            n338AprovacaoDecisao = BC001C15_n338AprovacaoDecisao[0];
-            A340AprovacaoStatus = BC001C15_A340AprovacaoStatus[0];
-            n340AprovacaoStatus = BC001C15_n340AprovacaoStatus[0];
-            A323PropostaId = BC001C15_A323PropostaId[0];
-            n323PropostaId = BC001C15_n323PropostaId[0];
-            A375AprovadoresId = BC001C15_A375AprovadoresId[0];
-            n375AprovadoresId = BC001C15_n375AprovadoresId[0];
+            A328PropostaCratedBy = BC001C18_A328PropostaCratedBy[0];
+            n328PropostaCratedBy = BC001C18_n328PropostaCratedBy[0];
+            A133SecUserId = BC001C18_A133SecUserId[0];
+            n133SecUserId = BC001C18_n133SecUserId[0];
+            A336AprovacaoId = BC001C18_A336AprovacaoId[0];
+            A141SecUserName = BC001C18_A141SecUserName[0];
+            n141SecUserName = BC001C18_n141SecUserName[0];
+            A143SecUserFullName = BC001C18_A143SecUserFullName[0];
+            n143SecUserFullName = BC001C18_n143SecUserFullName[0];
+            A337AprovacaoEm = BC001C18_A337AprovacaoEm[0];
+            n337AprovacaoEm = BC001C18_n337AprovacaoEm[0];
+            A338AprovacaoDecisao = BC001C18_A338AprovacaoDecisao[0];
+            n338AprovacaoDecisao = BC001C18_n338AprovacaoDecisao[0];
+            A340AprovacaoStatus = BC001C18_A340AprovacaoStatus[0];
+            n340AprovacaoStatus = BC001C18_n340AprovacaoStatus[0];
+            A323PropostaId = BC001C18_A323PropostaId[0];
+            n323PropostaId = BC001C18_n323PropostaId[0];
+            A375AprovadoresId = BC001C18_A375AprovadoresId[0];
+            n375AprovadoresId = BC001C18_n375AprovadoresId[0];
          }
          Gx_mode = sMode51;
       }
 
       protected void ScanKeyEnd1C51( )
       {
-         pr_default.close(13);
+         pr_default.close(16);
       }
 
       protected void AfterConfirm1C51( )
@@ -735,6 +781,8 @@ namespace GeneXus.Programs {
 
       protected void InitializeNonKey1C51( )
       {
+         A133SecUserId = 0;
+         n133SecUserId = false;
          A328PropostaCratedBy = 0;
          n328PropostaCratedBy = false;
          A375AprovadoresId = 0;
@@ -743,6 +791,8 @@ namespace GeneXus.Programs {
          n323PropostaId = false;
          A141SecUserName = "";
          n141SecUserName = false;
+         A143SecUserFullName = "";
+         n143SecUserFullName = false;
          A337AprovacaoEm = (DateTime)(DateTime.MinValue);
          n337AprovacaoEm = false;
          A338AprovacaoDecisao = "";
@@ -792,6 +842,7 @@ namespace GeneXus.Programs {
          obj51.gxTpr_Aprovadoresid = A375AprovadoresId;
          obj51.gxTpr_Propostaid = A323PropostaId;
          obj51.gxTpr_Secusername = A141SecUserName;
+         obj51.gxTpr_Secuserfullname = A143SecUserFullName;
          obj51.gxTpr_Aprovacaoem = A337AprovacaoEm;
          obj51.gxTpr_Aprovacaodecisao = A338AprovacaoDecisao;
          obj51.gxTpr_Aprovacaostatus = A340AprovacaoStatus;
@@ -800,12 +851,14 @@ namespace GeneXus.Programs {
          obj51.gxTpr_Aprovadoresid_Z = Z375AprovadoresId;
          obj51.gxTpr_Propostaid_Z = Z323PropostaId;
          obj51.gxTpr_Secusername_Z = Z141SecUserName;
+         obj51.gxTpr_Secuserfullname_Z = Z143SecUserFullName;
          obj51.gxTpr_Aprovacaoem_Z = Z337AprovacaoEm;
          obj51.gxTpr_Aprovacaodecisao_Z = Z338AprovacaoDecisao;
          obj51.gxTpr_Aprovacaostatus_Z = Z340AprovacaoStatus;
          obj51.gxTpr_Aprovadoresid_N = (short)(Convert.ToInt16(n375AprovadoresId));
          obj51.gxTpr_Propostaid_N = (short)(Convert.ToInt16(n323PropostaId));
          obj51.gxTpr_Secusername_N = (short)(Convert.ToInt16(n141SecUserName));
+         obj51.gxTpr_Secuserfullname_N = (short)(Convert.ToInt16(n143SecUserFullName));
          obj51.gxTpr_Aprovacaoem_N = (short)(Convert.ToInt16(n337AprovacaoEm));
          obj51.gxTpr_Aprovacaodecisao_N = (short)(Convert.ToInt16(n338AprovacaoDecisao));
          obj51.gxTpr_Aprovacaostatus_N = (short)(Convert.ToInt16(n340AprovacaoStatus));
@@ -829,6 +882,8 @@ namespace GeneXus.Programs {
          n323PropostaId = false;
          A141SecUserName = obj51.gxTpr_Secusername;
          n141SecUserName = false;
+         A143SecUserFullName = obj51.gxTpr_Secuserfullname;
+         n143SecUserFullName = false;
          A337AprovacaoEm = obj51.gxTpr_Aprovacaoem;
          n337AprovacaoEm = false;
          A338AprovacaoDecisao = obj51.gxTpr_Aprovacaodecisao;
@@ -840,12 +895,14 @@ namespace GeneXus.Programs {
          Z375AprovadoresId = obj51.gxTpr_Aprovadoresid_Z;
          Z323PropostaId = obj51.gxTpr_Propostaid_Z;
          Z141SecUserName = obj51.gxTpr_Secusername_Z;
+         Z143SecUserFullName = obj51.gxTpr_Secuserfullname_Z;
          Z337AprovacaoEm = obj51.gxTpr_Aprovacaoem_Z;
          Z338AprovacaoDecisao = obj51.gxTpr_Aprovacaodecisao_Z;
          Z340AprovacaoStatus = obj51.gxTpr_Aprovacaostatus_Z;
          n375AprovadoresId = (bool)(Convert.ToBoolean(obj51.gxTpr_Aprovadoresid_N));
          n323PropostaId = (bool)(Convert.ToBoolean(obj51.gxTpr_Propostaid_N));
          n141SecUserName = (bool)(Convert.ToBoolean(obj51.gxTpr_Secusername_N));
+         n143SecUserFullName = (bool)(Convert.ToBoolean(obj51.gxTpr_Secuserfullname_N));
          n337AprovacaoEm = (bool)(Convert.ToBoolean(obj51.gxTpr_Aprovacaoem_N));
          n338AprovacaoDecisao = (bool)(Convert.ToBoolean(obj51.gxTpr_Aprovacaodecisao_N));
          n340AprovacaoStatus = (bool)(Convert.ToBoolean(obj51.gxTpr_Aprovacaostatus_N));
@@ -1251,8 +1308,10 @@ namespace GeneXus.Programs {
       protected override void CloseCursors( )
       {
          pr_default.close(1);
-         pr_default.close(11);
+         pr_default.close(14);
          pr_default.close(12);
+         pr_default.close(15);
+         pr_default.close(13);
       }
 
       public override void initialize( )
@@ -1273,28 +1332,36 @@ namespace GeneXus.Programs {
          A340AprovacaoStatus = "";
          Z141SecUserName = "";
          A141SecUserName = "";
-         BC001C7_A328PropostaCratedBy = new short[1] ;
-         BC001C7_n328PropostaCratedBy = new bool[] {false} ;
-         BC001C7_A336AprovacaoId = new int[1] ;
-         BC001C7_A141SecUserName = new string[] {""} ;
-         BC001C7_n141SecUserName = new bool[] {false} ;
-         BC001C7_A337AprovacaoEm = new DateTime[] {DateTime.MinValue} ;
-         BC001C7_n337AprovacaoEm = new bool[] {false} ;
-         BC001C7_A338AprovacaoDecisao = new string[] {""} ;
-         BC001C7_n338AprovacaoDecisao = new bool[] {false} ;
-         BC001C7_A340AprovacaoStatus = new string[] {""} ;
-         BC001C7_n340AprovacaoStatus = new bool[] {false} ;
-         BC001C7_A323PropostaId = new int[1] ;
-         BC001C7_n323PropostaId = new bool[] {false} ;
-         BC001C7_A375AprovadoresId = new int[1] ;
-         BC001C7_n375AprovadoresId = new bool[] {false} ;
-         BC001C5_A375AprovadoresId = new int[1] ;
-         BC001C5_n375AprovadoresId = new bool[] {false} ;
+         Z143SecUserFullName = "";
+         A143SecUserFullName = "";
+         BC001C8_A328PropostaCratedBy = new short[1] ;
+         BC001C8_n328PropostaCratedBy = new bool[] {false} ;
+         BC001C8_A133SecUserId = new short[1] ;
+         BC001C8_n133SecUserId = new bool[] {false} ;
+         BC001C8_A336AprovacaoId = new int[1] ;
+         BC001C8_A141SecUserName = new string[] {""} ;
+         BC001C8_n141SecUserName = new bool[] {false} ;
+         BC001C8_A143SecUserFullName = new string[] {""} ;
+         BC001C8_n143SecUserFullName = new bool[] {false} ;
+         BC001C8_A337AprovacaoEm = new DateTime[] {DateTime.MinValue} ;
+         BC001C8_n337AprovacaoEm = new bool[] {false} ;
+         BC001C8_A338AprovacaoDecisao = new string[] {""} ;
+         BC001C8_n338AprovacaoDecisao = new bool[] {false} ;
+         BC001C8_A340AprovacaoStatus = new string[] {""} ;
+         BC001C8_n340AprovacaoStatus = new bool[] {false} ;
+         BC001C8_A323PropostaId = new int[1] ;
+         BC001C8_n323PropostaId = new bool[] {false} ;
+         BC001C8_A375AprovadoresId = new int[1] ;
+         BC001C8_n375AprovadoresId = new bool[] {false} ;
+         BC001C5_A133SecUserId = new short[1] ;
+         BC001C5_n133SecUserId = new bool[] {false} ;
+         BC001C7_A143SecUserFullName = new string[] {""} ;
+         BC001C7_n143SecUserFullName = new bool[] {false} ;
          BC001C4_A328PropostaCratedBy = new short[1] ;
          BC001C4_n328PropostaCratedBy = new bool[] {false} ;
          BC001C6_A141SecUserName = new string[] {""} ;
          BC001C6_n141SecUserName = new bool[] {false} ;
-         BC001C8_A336AprovacaoId = new int[1] ;
+         BC001C9_A336AprovacaoId = new int[1] ;
          BC001C3_A336AprovacaoId = new int[1] ;
          BC001C3_A337AprovacaoEm = new DateTime[] {DateTime.MinValue} ;
          BC001C3_n337AprovacaoEm = new bool[] {false} ;
@@ -1318,26 +1385,34 @@ namespace GeneXus.Programs {
          BC001C2_n323PropostaId = new bool[] {false} ;
          BC001C2_A375AprovadoresId = new int[1] ;
          BC001C2_n375AprovadoresId = new bool[] {false} ;
-         BC001C10_A336AprovacaoId = new int[1] ;
-         BC001C13_A328PropostaCratedBy = new short[1] ;
-         BC001C13_n328PropostaCratedBy = new bool[] {false} ;
-         BC001C14_A141SecUserName = new string[] {""} ;
-         BC001C14_n141SecUserName = new bool[] {false} ;
-         BC001C15_A328PropostaCratedBy = new short[1] ;
-         BC001C15_n328PropostaCratedBy = new bool[] {false} ;
-         BC001C15_A336AprovacaoId = new int[1] ;
-         BC001C15_A141SecUserName = new string[] {""} ;
-         BC001C15_n141SecUserName = new bool[] {false} ;
-         BC001C15_A337AprovacaoEm = new DateTime[] {DateTime.MinValue} ;
-         BC001C15_n337AprovacaoEm = new bool[] {false} ;
-         BC001C15_A338AprovacaoDecisao = new string[] {""} ;
-         BC001C15_n338AprovacaoDecisao = new bool[] {false} ;
-         BC001C15_A340AprovacaoStatus = new string[] {""} ;
-         BC001C15_n340AprovacaoStatus = new bool[] {false} ;
-         BC001C15_A323PropostaId = new int[1] ;
-         BC001C15_n323PropostaId = new bool[] {false} ;
-         BC001C15_A375AprovadoresId = new int[1] ;
-         BC001C15_n375AprovadoresId = new bool[] {false} ;
+         BC001C11_A336AprovacaoId = new int[1] ;
+         BC001C14_A133SecUserId = new short[1] ;
+         BC001C14_n133SecUserId = new bool[] {false} ;
+         BC001C15_A143SecUserFullName = new string[] {""} ;
+         BC001C15_n143SecUserFullName = new bool[] {false} ;
+         BC001C16_A328PropostaCratedBy = new short[1] ;
+         BC001C16_n328PropostaCratedBy = new bool[] {false} ;
+         BC001C17_A141SecUserName = new string[] {""} ;
+         BC001C17_n141SecUserName = new bool[] {false} ;
+         BC001C18_A328PropostaCratedBy = new short[1] ;
+         BC001C18_n328PropostaCratedBy = new bool[] {false} ;
+         BC001C18_A133SecUserId = new short[1] ;
+         BC001C18_n133SecUserId = new bool[] {false} ;
+         BC001C18_A336AprovacaoId = new int[1] ;
+         BC001C18_A141SecUserName = new string[] {""} ;
+         BC001C18_n141SecUserName = new bool[] {false} ;
+         BC001C18_A143SecUserFullName = new string[] {""} ;
+         BC001C18_n143SecUserFullName = new bool[] {false} ;
+         BC001C18_A337AprovacaoEm = new DateTime[] {DateTime.MinValue} ;
+         BC001C18_n337AprovacaoEm = new bool[] {false} ;
+         BC001C18_A338AprovacaoDecisao = new string[] {""} ;
+         BC001C18_n338AprovacaoDecisao = new bool[] {false} ;
+         BC001C18_A340AprovacaoStatus = new string[] {""} ;
+         BC001C18_n340AprovacaoStatus = new bool[] {false} ;
+         BC001C18_A323PropostaId = new int[1] ;
+         BC001C18_n323PropostaId = new bool[] {false} ;
+         BC001C18_A375AprovadoresId = new int[1] ;
+         BC001C18_n375AprovadoresId = new bool[] {false} ;
          BackMsgLst = new msglist();
          LclMsgLst = new msglist();
          pr_default = new DataStoreProvider(context, new GeneXus.Programs.aprovacao_bc__default(),
@@ -1354,36 +1429,45 @@ namespace GeneXus.Programs {
                BC001C4_A328PropostaCratedBy, BC001C4_n328PropostaCratedBy
                }
                , new Object[] {
-               BC001C5_A375AprovadoresId
+               BC001C5_A133SecUserId, BC001C5_n133SecUserId
                }
                , new Object[] {
                BC001C6_A141SecUserName, BC001C6_n141SecUserName
                }
                , new Object[] {
-               BC001C7_A328PropostaCratedBy, BC001C7_n328PropostaCratedBy, BC001C7_A336AprovacaoId, BC001C7_A141SecUserName, BC001C7_n141SecUserName, BC001C7_A337AprovacaoEm, BC001C7_n337AprovacaoEm, BC001C7_A338AprovacaoDecisao, BC001C7_n338AprovacaoDecisao, BC001C7_A340AprovacaoStatus,
-               BC001C7_n340AprovacaoStatus, BC001C7_A323PropostaId, BC001C7_n323PropostaId, BC001C7_A375AprovadoresId, BC001C7_n375AprovadoresId
+               BC001C7_A143SecUserFullName, BC001C7_n143SecUserFullName
                }
                , new Object[] {
-               BC001C8_A336AprovacaoId
+               BC001C8_A328PropostaCratedBy, BC001C8_n328PropostaCratedBy, BC001C8_A133SecUserId, BC001C8_n133SecUserId, BC001C8_A336AprovacaoId, BC001C8_A141SecUserName, BC001C8_n141SecUserName, BC001C8_A143SecUserFullName, BC001C8_n143SecUserFullName, BC001C8_A337AprovacaoEm,
+               BC001C8_n337AprovacaoEm, BC001C8_A338AprovacaoDecisao, BC001C8_n338AprovacaoDecisao, BC001C8_A340AprovacaoStatus, BC001C8_n340AprovacaoStatus, BC001C8_A323PropostaId, BC001C8_n323PropostaId, BC001C8_A375AprovadoresId, BC001C8_n375AprovadoresId
                }
                , new Object[] {
-               }
-               , new Object[] {
-               BC001C10_A336AprovacaoId
-               }
-               , new Object[] {
+               BC001C9_A336AprovacaoId
                }
                , new Object[] {
                }
                , new Object[] {
-               BC001C13_A328PropostaCratedBy, BC001C13_n328PropostaCratedBy
+               BC001C11_A336AprovacaoId
                }
                , new Object[] {
-               BC001C14_A141SecUserName, BC001C14_n141SecUserName
                }
                , new Object[] {
-               BC001C15_A328PropostaCratedBy, BC001C15_n328PropostaCratedBy, BC001C15_A336AprovacaoId, BC001C15_A141SecUserName, BC001C15_n141SecUserName, BC001C15_A337AprovacaoEm, BC001C15_n337AprovacaoEm, BC001C15_A338AprovacaoDecisao, BC001C15_n338AprovacaoDecisao, BC001C15_A340AprovacaoStatus,
-               BC001C15_n340AprovacaoStatus, BC001C15_A323PropostaId, BC001C15_n323PropostaId, BC001C15_A375AprovadoresId, BC001C15_n375AprovadoresId
+               }
+               , new Object[] {
+               BC001C14_A133SecUserId, BC001C14_n133SecUserId
+               }
+               , new Object[] {
+               BC001C15_A143SecUserFullName, BC001C15_n143SecUserFullName
+               }
+               , new Object[] {
+               BC001C16_A328PropostaCratedBy, BC001C16_n328PropostaCratedBy
+               }
+               , new Object[] {
+               BC001C17_A141SecUserName, BC001C17_n141SecUserName
+               }
+               , new Object[] {
+               BC001C18_A328PropostaCratedBy, BC001C18_n328PropostaCratedBy, BC001C18_A133SecUserId, BC001C18_n133SecUserId, BC001C18_A336AprovacaoId, BC001C18_A141SecUserName, BC001C18_n141SecUserName, BC001C18_A143SecUserFullName, BC001C18_n143SecUserFullName, BC001C18_A337AprovacaoEm,
+               BC001C18_n337AprovacaoEm, BC001C18_A338AprovacaoDecisao, BC001C18_n338AprovacaoDecisao, BC001C18_A340AprovacaoStatus, BC001C18_n340AprovacaoStatus, BC001C18_A323PropostaId, BC001C18_n323PropostaId, BC001C18_A375AprovadoresId, BC001C18_n375AprovadoresId
                }
             }
          );
@@ -1398,6 +1482,8 @@ namespace GeneXus.Programs {
       private short AnyError ;
       private short Z328PropostaCratedBy ;
       private short A328PropostaCratedBy ;
+      private short Z133SecUserId ;
+      private short A133SecUserId ;
       private short RcdFound51 ;
       private int trnEnded ;
       private int Z336AprovacaoId ;
@@ -1418,7 +1504,9 @@ namespace GeneXus.Programs {
       private DateTime A337AprovacaoEm ;
       private bool returnInSub ;
       private bool n328PropostaCratedBy ;
+      private bool n133SecUserId ;
       private bool n141SecUserName ;
+      private bool n143SecUserFullName ;
       private bool n337AprovacaoEm ;
       private bool n338AprovacaoDecisao ;
       private bool n340AprovacaoStatus ;
@@ -1430,34 +1518,42 @@ namespace GeneXus.Programs {
       private string A340AprovacaoStatus ;
       private string Z141SecUserName ;
       private string A141SecUserName ;
+      private string Z143SecUserFullName ;
+      private string A143SecUserFullName ;
       private IGxSession AV10WebSession ;
       private IGxDataStore dsDefault ;
       private GeneXus.Programs.wwpbaseobjects.SdtWWPContext AV8WWPContext ;
       private GeneXus.Programs.wwpbaseobjects.SdtWWPTransactionContext AV9TrnContext ;
       private GeneXus.Programs.wwpbaseobjects.SdtWWPTransactionContext_Attribute AV13TrnContextAtt ;
       private IDataStoreProvider pr_default ;
-      private short[] BC001C7_A328PropostaCratedBy ;
-      private bool[] BC001C7_n328PropostaCratedBy ;
-      private int[] BC001C7_A336AprovacaoId ;
-      private string[] BC001C7_A141SecUserName ;
-      private bool[] BC001C7_n141SecUserName ;
-      private DateTime[] BC001C7_A337AprovacaoEm ;
-      private bool[] BC001C7_n337AprovacaoEm ;
-      private string[] BC001C7_A338AprovacaoDecisao ;
-      private bool[] BC001C7_n338AprovacaoDecisao ;
-      private string[] BC001C7_A340AprovacaoStatus ;
-      private bool[] BC001C7_n340AprovacaoStatus ;
-      private int[] BC001C7_A323PropostaId ;
-      private bool[] BC001C7_n323PropostaId ;
-      private int[] BC001C7_A375AprovadoresId ;
-      private bool[] BC001C7_n375AprovadoresId ;
-      private int[] BC001C5_A375AprovadoresId ;
-      private bool[] BC001C5_n375AprovadoresId ;
+      private short[] BC001C8_A328PropostaCratedBy ;
+      private bool[] BC001C8_n328PropostaCratedBy ;
+      private short[] BC001C8_A133SecUserId ;
+      private bool[] BC001C8_n133SecUserId ;
+      private int[] BC001C8_A336AprovacaoId ;
+      private string[] BC001C8_A141SecUserName ;
+      private bool[] BC001C8_n141SecUserName ;
+      private string[] BC001C8_A143SecUserFullName ;
+      private bool[] BC001C8_n143SecUserFullName ;
+      private DateTime[] BC001C8_A337AprovacaoEm ;
+      private bool[] BC001C8_n337AprovacaoEm ;
+      private string[] BC001C8_A338AprovacaoDecisao ;
+      private bool[] BC001C8_n338AprovacaoDecisao ;
+      private string[] BC001C8_A340AprovacaoStatus ;
+      private bool[] BC001C8_n340AprovacaoStatus ;
+      private int[] BC001C8_A323PropostaId ;
+      private bool[] BC001C8_n323PropostaId ;
+      private int[] BC001C8_A375AprovadoresId ;
+      private bool[] BC001C8_n375AprovadoresId ;
+      private short[] BC001C5_A133SecUserId ;
+      private bool[] BC001C5_n133SecUserId ;
+      private string[] BC001C7_A143SecUserFullName ;
+      private bool[] BC001C7_n143SecUserFullName ;
       private short[] BC001C4_A328PropostaCratedBy ;
       private bool[] BC001C4_n328PropostaCratedBy ;
       private string[] BC001C6_A141SecUserName ;
       private bool[] BC001C6_n141SecUserName ;
-      private int[] BC001C8_A336AprovacaoId ;
+      private int[] BC001C9_A336AprovacaoId ;
       private int[] BC001C3_A336AprovacaoId ;
       private DateTime[] BC001C3_A337AprovacaoEm ;
       private bool[] BC001C3_n337AprovacaoEm ;
@@ -1480,26 +1576,34 @@ namespace GeneXus.Programs {
       private bool[] BC001C2_n323PropostaId ;
       private int[] BC001C2_A375AprovadoresId ;
       private bool[] BC001C2_n375AprovadoresId ;
-      private int[] BC001C10_A336AprovacaoId ;
-      private short[] BC001C13_A328PropostaCratedBy ;
-      private bool[] BC001C13_n328PropostaCratedBy ;
-      private string[] BC001C14_A141SecUserName ;
-      private bool[] BC001C14_n141SecUserName ;
-      private short[] BC001C15_A328PropostaCratedBy ;
-      private bool[] BC001C15_n328PropostaCratedBy ;
-      private int[] BC001C15_A336AprovacaoId ;
-      private string[] BC001C15_A141SecUserName ;
-      private bool[] BC001C15_n141SecUserName ;
-      private DateTime[] BC001C15_A337AprovacaoEm ;
-      private bool[] BC001C15_n337AprovacaoEm ;
-      private string[] BC001C15_A338AprovacaoDecisao ;
-      private bool[] BC001C15_n338AprovacaoDecisao ;
-      private string[] BC001C15_A340AprovacaoStatus ;
-      private bool[] BC001C15_n340AprovacaoStatus ;
-      private int[] BC001C15_A323PropostaId ;
-      private bool[] BC001C15_n323PropostaId ;
-      private int[] BC001C15_A375AprovadoresId ;
-      private bool[] BC001C15_n375AprovadoresId ;
+      private int[] BC001C11_A336AprovacaoId ;
+      private short[] BC001C14_A133SecUserId ;
+      private bool[] BC001C14_n133SecUserId ;
+      private string[] BC001C15_A143SecUserFullName ;
+      private bool[] BC001C15_n143SecUserFullName ;
+      private short[] BC001C16_A328PropostaCratedBy ;
+      private bool[] BC001C16_n328PropostaCratedBy ;
+      private string[] BC001C17_A141SecUserName ;
+      private bool[] BC001C17_n141SecUserName ;
+      private short[] BC001C18_A328PropostaCratedBy ;
+      private bool[] BC001C18_n328PropostaCratedBy ;
+      private short[] BC001C18_A133SecUserId ;
+      private bool[] BC001C18_n133SecUserId ;
+      private int[] BC001C18_A336AprovacaoId ;
+      private string[] BC001C18_A141SecUserName ;
+      private bool[] BC001C18_n141SecUserName ;
+      private string[] BC001C18_A143SecUserFullName ;
+      private bool[] BC001C18_n143SecUserFullName ;
+      private DateTime[] BC001C18_A337AprovacaoEm ;
+      private bool[] BC001C18_n337AprovacaoEm ;
+      private string[] BC001C18_A338AprovacaoDecisao ;
+      private bool[] BC001C18_n338AprovacaoDecisao ;
+      private string[] BC001C18_A340AprovacaoStatus ;
+      private bool[] BC001C18_n340AprovacaoStatus ;
+      private int[] BC001C18_A323PropostaId ;
+      private bool[] BC001C18_n323PropostaId ;
+      private int[] BC001C18_A375AprovadoresId ;
+      private bool[] BC001C18_n375AprovadoresId ;
       private SdtAprovacao bcAprovacao ;
       private msglist BackMsgLst ;
       private msglist LclMsgLst ;
@@ -1518,13 +1622,16 @@ namespace GeneXus.Programs {
          ,new ForEachCursor(def[4])
          ,new ForEachCursor(def[5])
          ,new ForEachCursor(def[6])
-         ,new UpdateCursor(def[7])
-         ,new ForEachCursor(def[8])
-         ,new UpdateCursor(def[9])
+         ,new ForEachCursor(def[7])
+         ,new UpdateCursor(def[8])
+         ,new ForEachCursor(def[9])
          ,new UpdateCursor(def[10])
-         ,new ForEachCursor(def[11])
+         ,new UpdateCursor(def[11])
          ,new ForEachCursor(def[12])
          ,new ForEachCursor(def[13])
+         ,new ForEachCursor(def[14])
+         ,new ForEachCursor(def[15])
+         ,new ForEachCursor(def[16])
        };
     }
 
@@ -1555,7 +1662,7 @@ namespace GeneXus.Programs {
           };
           Object[] prmBC001C7;
           prmBC001C7 = new Object[] {
-          new ParDef("AprovacaoId",GXType.Int32,9,0)
+          new ParDef("SecUserId",GXType.Int16,4,0){Nullable=true}
           };
           Object[] prmBC001C8;
           prmBC001C8 = new Object[] {
@@ -1563,17 +1670,21 @@ namespace GeneXus.Programs {
           };
           Object[] prmBC001C9;
           prmBC001C9 = new Object[] {
+          new ParDef("AprovacaoId",GXType.Int32,9,0)
+          };
+          Object[] prmBC001C10;
+          prmBC001C10 = new Object[] {
           new ParDef("AprovacaoEm",GXType.DateTime,10,8){Nullable=true} ,
           new ParDef("AprovacaoDecisao",GXType.VarChar,255,0){Nullable=true} ,
           new ParDef("AprovacaoStatus",GXType.VarChar,40,0){Nullable=true} ,
           new ParDef("PropostaId",GXType.Int32,9,0){Nullable=true} ,
           new ParDef("AprovadoresId",GXType.Int32,9,0){Nullable=true}
           };
-          Object[] prmBC001C10;
-          prmBC001C10 = new Object[] {
-          };
           Object[] prmBC001C11;
           prmBC001C11 = new Object[] {
+          };
+          Object[] prmBC001C12;
+          prmBC001C12 = new Object[] {
           new ParDef("AprovacaoEm",GXType.DateTime,10,8){Nullable=true} ,
           new ParDef("AprovacaoDecisao",GXType.VarChar,255,0){Nullable=true} ,
           new ParDef("AprovacaoStatus",GXType.VarChar,40,0){Nullable=true} ,
@@ -1581,37 +1692,48 @@ namespace GeneXus.Programs {
           new ParDef("AprovadoresId",GXType.Int32,9,0){Nullable=true} ,
           new ParDef("AprovacaoId",GXType.Int32,9,0)
           };
-          Object[] prmBC001C12;
-          prmBC001C12 = new Object[] {
-          new ParDef("AprovacaoId",GXType.Int32,9,0)
-          };
           Object[] prmBC001C13;
           prmBC001C13 = new Object[] {
-          new ParDef("PropostaId",GXType.Int32,9,0){Nullable=true}
+          new ParDef("AprovacaoId",GXType.Int32,9,0)
           };
           Object[] prmBC001C14;
           prmBC001C14 = new Object[] {
-          new ParDef("PropostaCratedBy",GXType.Int16,4,0){Nullable=true}
+          new ParDef("AprovadoresId",GXType.Int32,9,0){Nullable=true}
           };
           Object[] prmBC001C15;
           prmBC001C15 = new Object[] {
+          new ParDef("SecUserId",GXType.Int16,4,0){Nullable=true}
+          };
+          Object[] prmBC001C16;
+          prmBC001C16 = new Object[] {
+          new ParDef("PropostaId",GXType.Int32,9,0){Nullable=true}
+          };
+          Object[] prmBC001C17;
+          prmBC001C17 = new Object[] {
+          new ParDef("PropostaCratedBy",GXType.Int16,4,0){Nullable=true}
+          };
+          Object[] prmBC001C18;
+          prmBC001C18 = new Object[] {
           new ParDef("AprovacaoId",GXType.Int32,9,0)
           };
           def= new CursorDef[] {
               new CursorDef("BC001C2", "SELECT AprovacaoId, AprovacaoEm, AprovacaoDecisao, AprovacaoStatus, PropostaId, AprovadoresId FROM Aprovacao WHERE AprovacaoId = :AprovacaoId  FOR UPDATE OF Aprovacao",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C2,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC001C3", "SELECT AprovacaoId, AprovacaoEm, AprovacaoDecisao, AprovacaoStatus, PropostaId, AprovadoresId FROM Aprovacao WHERE AprovacaoId = :AprovacaoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C3,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC001C4", "SELECT PropostaCratedBy FROM Proposta WHERE PropostaId = :PropostaId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C4,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC001C5", "SELECT AprovadoresId FROM Aprovadores WHERE AprovadoresId = :AprovadoresId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C5,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC001C5", "SELECT SecUserId FROM Aprovadores WHERE AprovadoresId = :AprovadoresId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C5,1, GxCacheFrequency.OFF ,true,false )
              ,new CursorDef("BC001C6", "SELECT SecUserName FROM SecUser WHERE SecUserId = :PropostaCratedBy ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C6,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC001C7", "SELECT T2.PropostaCratedBy AS PropostaCratedBy, TM1.AprovacaoId, T3.SecUserName, TM1.AprovacaoEm, TM1.AprovacaoDecisao, TM1.AprovacaoStatus, TM1.PropostaId, TM1.AprovadoresId FROM ((Aprovacao TM1 LEFT JOIN Proposta T2 ON T2.PropostaId = TM1.PropostaId) LEFT JOIN SecUser T3 ON T3.SecUserId = T2.PropostaCratedBy) WHERE TM1.AprovacaoId = :AprovacaoId ORDER BY TM1.AprovacaoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C7,100, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC001C8", "SELECT AprovacaoId FROM Aprovacao WHERE AprovacaoId = :AprovacaoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C8,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC001C9", "SAVEPOINT gxupdate;INSERT INTO Aprovacao(AprovacaoEm, AprovacaoDecisao, AprovacaoStatus, PropostaId, AprovadoresId) VALUES(:AprovacaoEm, :AprovacaoDecisao, :AprovacaoStatus, :PropostaId, :AprovadoresId);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC001C9)
-             ,new CursorDef("BC001C10", "SELECT currval('AprovacaoId') ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C10,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC001C11", "SAVEPOINT gxupdate;UPDATE Aprovacao SET AprovacaoEm=:AprovacaoEm, AprovacaoDecisao=:AprovacaoDecisao, AprovacaoStatus=:AprovacaoStatus, PropostaId=:PropostaId, AprovadoresId=:AprovadoresId  WHERE AprovacaoId = :AprovacaoId;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC001C11)
-             ,new CursorDef("BC001C12", "SAVEPOINT gxupdate;DELETE FROM Aprovacao  WHERE AprovacaoId = :AprovacaoId;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC001C12)
-             ,new CursorDef("BC001C13", "SELECT PropostaCratedBy FROM Proposta WHERE PropostaId = :PropostaId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C13,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC001C14", "SELECT SecUserName FROM SecUser WHERE SecUserId = :PropostaCratedBy ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C14,1, GxCacheFrequency.OFF ,true,false )
-             ,new CursorDef("BC001C15", "SELECT T2.PropostaCratedBy AS PropostaCratedBy, TM1.AprovacaoId, T3.SecUserName, TM1.AprovacaoEm, TM1.AprovacaoDecisao, TM1.AprovacaoStatus, TM1.PropostaId, TM1.AprovadoresId FROM ((Aprovacao TM1 LEFT JOIN Proposta T2 ON T2.PropostaId = TM1.PropostaId) LEFT JOIN SecUser T3 ON T3.SecUserId = T2.PropostaCratedBy) WHERE TM1.AprovacaoId = :AprovacaoId ORDER BY TM1.AprovacaoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C15,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC001C7", "SELECT SecUserFullName FROM SecUser WHERE SecUserId = :SecUserId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C7,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC001C8", "SELECT T4.PropostaCratedBy AS PropostaCratedBy, T2.SecUserId, TM1.AprovacaoId, T5.SecUserName, T3.SecUserFullName, TM1.AprovacaoEm, TM1.AprovacaoDecisao, TM1.AprovacaoStatus, TM1.PropostaId, TM1.AprovadoresId FROM ((((Aprovacao TM1 LEFT JOIN Aprovadores T2 ON T2.AprovadoresId = TM1.AprovadoresId) LEFT JOIN SecUser T3 ON T3.SecUserId = T2.SecUserId) LEFT JOIN Proposta T4 ON T4.PropostaId = TM1.PropostaId) LEFT JOIN SecUser T5 ON T5.SecUserId = T4.PropostaCratedBy) WHERE TM1.AprovacaoId = :AprovacaoId ORDER BY TM1.AprovacaoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C8,100, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC001C9", "SELECT AprovacaoId FROM Aprovacao WHERE AprovacaoId = :AprovacaoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C9,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC001C10", "SAVEPOINT gxupdate;INSERT INTO Aprovacao(AprovacaoEm, AprovacaoDecisao, AprovacaoStatus, PropostaId, AprovadoresId) VALUES(:AprovacaoEm, :AprovacaoDecisao, :AprovacaoStatus, :PropostaId, :AprovadoresId);RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT,prmBC001C10)
+             ,new CursorDef("BC001C11", "SELECT currval('AprovacaoId') ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C11,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC001C12", "SAVEPOINT gxupdate;UPDATE Aprovacao SET AprovacaoEm=:AprovacaoEm, AprovacaoDecisao=:AprovacaoDecisao, AprovacaoStatus=:AprovacaoStatus, PropostaId=:PropostaId, AprovadoresId=:AprovadoresId  WHERE AprovacaoId = :AprovacaoId;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC001C12)
+             ,new CursorDef("BC001C13", "SAVEPOINT gxupdate;DELETE FROM Aprovacao  WHERE AprovacaoId = :AprovacaoId;RELEASE SAVEPOINT gxupdate", GxErrorMask.GX_ROLLBACKSAVEPOINT | GxErrorMask.GX_NOMASK,prmBC001C13)
+             ,new CursorDef("BC001C14", "SELECT SecUserId FROM Aprovadores WHERE AprovadoresId = :AprovadoresId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C14,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC001C15", "SELECT SecUserFullName FROM SecUser WHERE SecUserId = :SecUserId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C15,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC001C16", "SELECT PropostaCratedBy FROM Proposta WHERE PropostaId = :PropostaId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C16,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC001C17", "SELECT SecUserName FROM SecUser WHERE SecUserId = :PropostaCratedBy ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C17,1, GxCacheFrequency.OFF ,true,false )
+             ,new CursorDef("BC001C18", "SELECT T4.PropostaCratedBy AS PropostaCratedBy, T2.SecUserId, TM1.AprovacaoId, T5.SecUserName, T3.SecUserFullName, TM1.AprovacaoEm, TM1.AprovacaoDecisao, TM1.AprovacaoStatus, TM1.PropostaId, TM1.AprovadoresId FROM ((((Aprovacao TM1 LEFT JOIN Aprovadores T2 ON T2.AprovadoresId = TM1.AprovadoresId) LEFT JOIN SecUser T3 ON T3.SecUserId = T2.SecUserId) LEFT JOIN Proposta T4 ON T4.PropostaId = TM1.PropostaId) LEFT JOIN SecUser T5 ON T5.SecUserId = T4.PropostaCratedBy) WHERE TM1.AprovacaoId = :AprovacaoId ORDER BY TM1.AprovacaoId ",true, GxErrorMask.GX_NOMASK, false, this,prmBC001C18,100, GxCacheFrequency.OFF ,true,false )
           };
        }
     }
@@ -1653,59 +1775,80 @@ namespace GeneXus.Programs {
                 ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 return;
              case 3 :
-                ((int[]) buf[0])[0] = rslt.getInt(1);
+                ((short[]) buf[0])[0] = rslt.getShort(1);
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 return;
              case 4 :
                 ((string[]) buf[0])[0] = rslt.getVarchar(1);
                 ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 return;
              case 5 :
-                ((short[]) buf[0])[0] = rslt.getShort(1);
-                ((bool[]) buf[1])[0] = rslt.wasNull(1);
-                ((int[]) buf[2])[0] = rslt.getInt(2);
-                ((string[]) buf[3])[0] = rslt.getVarchar(3);
-                ((bool[]) buf[4])[0] = rslt.wasNull(3);
-                ((DateTime[]) buf[5])[0] = rslt.getGXDateTime(4);
-                ((bool[]) buf[6])[0] = rslt.wasNull(4);
-                ((string[]) buf[7])[0] = rslt.getVarchar(5);
-                ((bool[]) buf[8])[0] = rslt.wasNull(5);
-                ((string[]) buf[9])[0] = rslt.getVarchar(6);
-                ((bool[]) buf[10])[0] = rslt.wasNull(6);
-                ((int[]) buf[11])[0] = rslt.getInt(7);
-                ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((int[]) buf[13])[0] = rslt.getInt(8);
-                ((bool[]) buf[14])[0] = rslt.wasNull(8);
-                return;
-             case 6 :
-                ((int[]) buf[0])[0] = rslt.getInt(1);
-                return;
-             case 8 :
-                ((int[]) buf[0])[0] = rslt.getInt(1);
-                return;
-             case 11 :
-                ((short[]) buf[0])[0] = rslt.getShort(1);
-                ((bool[]) buf[1])[0] = rslt.wasNull(1);
-                return;
-             case 12 :
                 ((string[]) buf[0])[0] = rslt.getVarchar(1);
                 ((bool[]) buf[1])[0] = rslt.wasNull(1);
                 return;
-             case 13 :
+             case 6 :
                 ((short[]) buf[0])[0] = rslt.getShort(1);
                 ((bool[]) buf[1])[0] = rslt.wasNull(1);
-                ((int[]) buf[2])[0] = rslt.getInt(2);
-                ((string[]) buf[3])[0] = rslt.getVarchar(3);
-                ((bool[]) buf[4])[0] = rslt.wasNull(3);
-                ((DateTime[]) buf[5])[0] = rslt.getGXDateTime(4);
+                ((short[]) buf[2])[0] = rslt.getShort(2);
+                ((bool[]) buf[3])[0] = rslt.wasNull(2);
+                ((int[]) buf[4])[0] = rslt.getInt(3);
+                ((string[]) buf[5])[0] = rslt.getVarchar(4);
                 ((bool[]) buf[6])[0] = rslt.wasNull(4);
                 ((string[]) buf[7])[0] = rslt.getVarchar(5);
                 ((bool[]) buf[8])[0] = rslt.wasNull(5);
-                ((string[]) buf[9])[0] = rslt.getVarchar(6);
+                ((DateTime[]) buf[9])[0] = rslt.getGXDateTime(6);
                 ((bool[]) buf[10])[0] = rslt.wasNull(6);
-                ((int[]) buf[11])[0] = rslt.getInt(7);
+                ((string[]) buf[11])[0] = rslt.getVarchar(7);
                 ((bool[]) buf[12])[0] = rslt.wasNull(7);
-                ((int[]) buf[13])[0] = rslt.getInt(8);
+                ((string[]) buf[13])[0] = rslt.getVarchar(8);
                 ((bool[]) buf[14])[0] = rslt.wasNull(8);
+                ((int[]) buf[15])[0] = rslt.getInt(9);
+                ((bool[]) buf[16])[0] = rslt.wasNull(9);
+                ((int[]) buf[17])[0] = rslt.getInt(10);
+                ((bool[]) buf[18])[0] = rslt.wasNull(10);
+                return;
+             case 7 :
+                ((int[]) buf[0])[0] = rslt.getInt(1);
+                return;
+             case 9 :
+                ((int[]) buf[0])[0] = rslt.getInt(1);
+                return;
+             case 12 :
+                ((short[]) buf[0])[0] = rslt.getShort(1);
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
+                return;
+             case 13 :
+                ((string[]) buf[0])[0] = rslt.getVarchar(1);
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
+                return;
+             case 14 :
+                ((short[]) buf[0])[0] = rslt.getShort(1);
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
+                return;
+             case 15 :
+                ((string[]) buf[0])[0] = rslt.getVarchar(1);
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
+                return;
+             case 16 :
+                ((short[]) buf[0])[0] = rslt.getShort(1);
+                ((bool[]) buf[1])[0] = rslt.wasNull(1);
+                ((short[]) buf[2])[0] = rslt.getShort(2);
+                ((bool[]) buf[3])[0] = rslt.wasNull(2);
+                ((int[]) buf[4])[0] = rslt.getInt(3);
+                ((string[]) buf[5])[0] = rslt.getVarchar(4);
+                ((bool[]) buf[6])[0] = rslt.wasNull(4);
+                ((string[]) buf[7])[0] = rslt.getVarchar(5);
+                ((bool[]) buf[8])[0] = rslt.wasNull(5);
+                ((DateTime[]) buf[9])[0] = rslt.getGXDateTime(6);
+                ((bool[]) buf[10])[0] = rslt.wasNull(6);
+                ((string[]) buf[11])[0] = rslt.getVarchar(7);
+                ((bool[]) buf[12])[0] = rslt.wasNull(7);
+                ((string[]) buf[13])[0] = rslt.getVarchar(8);
+                ((bool[]) buf[14])[0] = rslt.wasNull(8);
+                ((int[]) buf[15])[0] = rslt.getInt(9);
+                ((bool[]) buf[16])[0] = rslt.wasNull(9);
+                ((int[]) buf[17])[0] = rslt.getInt(10);
+                ((bool[]) buf[18])[0] = rslt.wasNull(10);
                 return;
        }
     }

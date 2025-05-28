@@ -2,7 +2,7 @@ openapi: 3.0.0
 info:
   title: "APIClientes"
   description: "APIClientes"
-  version: "20250526200927"
+  version: "20250528132828"
 servers:
   - url: http://localhost/Factory2NETPostgreSQL/api
 paths:

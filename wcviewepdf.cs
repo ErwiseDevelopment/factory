@@ -867,7 +867,6 @@ namespace GeneXus.Programs {
          AV6Path = StringUtil.StringReplace( AV6Path, ".\\PublicTempStorage\\", "/PublicTempStorage/");
          AssignAttri(sPrefix, false, "AV6Path", AV6Path);
          GxWebStd.gx_hidden_field( context, sPrefix+"gxhash_vPATH", GetSecureSignedToken( sPrefix, StringUtil.RTrim( context.localUtil.Format( AV6Path, "")), context));
-         new debug(context ).execute(  StringUtil.Format( "&Path %1", AV6Path, "", "", "", "", "", "", "", "")) ;
          lblThehtml_Caption = "<div id=\"the-canvas\"></div>";
          AssignProp(sPrefix, false, lblThehtml_Internalname, "Caption", lblThehtml_Caption, true);
          Uccontrato_Path = AV6Path;
@@ -1091,7 +1090,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918375293", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289141657", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1107,7 +1106,7 @@ namespace GeneXus.Programs {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("wcviewepdf.js", "?202551918375293", false, true);
+         context.AddJavascriptSource("wcviewepdf.js", "?20255289141657", false, true);
          context.AddJavascriptSource("UserControls/UCPdfViewerRender.js", "", false, true);
          context.AddJavascriptSource("Window/InNewWindowRender.js", "", false, true);
          /* End function include_jscripts */

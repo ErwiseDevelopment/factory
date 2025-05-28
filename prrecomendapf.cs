@@ -97,7 +97,6 @@ namespace GeneXus.Programs {
             AV10HTTPClient.AddHeader("Content-Type", "application/json");
             AV10HTTPClient.Execute("POST", A658WebServiceEndPoint);
             AV11Response = AV10HTTPClient.ToString();
-            new debug(context ).execute(  StringUtil.Format( "&Response %1", AV11Response, "", "", "", "", "", "", "", "")) ;
             pr_default.readNext(0);
          }
          pr_default.close(0);
@@ -179,7 +178,7 @@ namespace GeneXus.Programs {
           prmP00CH2 = new Object[] {
           };
           def= new CursorDef[] {
-              new CursorDef("P00CH2", "SELECT WebServiceTipoDmWS, WebServiceEndPoint, WebServiceId FROM WebService WHERE WebServiceTipoDmWS = ( 'Serasa_PROPOSTA_PF') ORDER BY WebServiceId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00CH2,100, GxCacheFrequency.OFF ,true,false )
+              new CursorDef("P00CH2", "SELECT WebServiceTipoDmWS, WebServiceEndPoint, WebServiceId FROM WebService WHERE WebServiceTipoDmWS = ( 'Serasa_PROPOSTA_PF') ORDER BY WebServiceId ",false, GxErrorMask.GX_NOMASK | GxErrorMask.GX_MASKLOOPLOCK, false, this,prmP00CH2,100, GxCacheFrequency.OFF ,false,false )
           };
        }
     }

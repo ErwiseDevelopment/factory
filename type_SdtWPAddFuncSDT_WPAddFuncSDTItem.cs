@@ -31,11 +31,11 @@ namespace GeneXus.Programs
 		public SdtWPAddFuncSDT_WPAddFuncSDTItem( )
 		{
 			/* Constructor for serialization */
-			gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitymodule = "";
-
 			gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitykey = "";
 
 			gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitydescription = "";
+
+			gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitymodule = "";
 
 			gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secparentfunctionalitydescription = "";
 
@@ -70,13 +70,13 @@ namespace GeneXus.Programs
 			AddObjectProperty("SecFunctionalityId", gxTpr_Secfunctionalityid, false);
 
 
-			AddObjectProperty("SecFunctionalityModule", gxTpr_Secfunctionalitymodule, false);
-
-
 			AddObjectProperty("SecFunctionalityKey", gxTpr_Secfunctionalitykey, false);
 
 
 			AddObjectProperty("SecFunctionalityDescription", gxTpr_Secfunctionalitydescription, false);
+
+
+			AddObjectProperty("SecFunctionalityModule", gxTpr_Secfunctionalitymodule, false);
 
 
 			AddObjectProperty("SecFunctionalityType", gxTpr_Secfunctionalitytype, false);
@@ -112,22 +112,6 @@ namespace GeneXus.Programs
 
 
 
-		[SoapElement(ElementName="SecFunctionalityModule")]
-		[XmlElement(ElementName="SecFunctionalityModule")]
-		public string gxTpr_Secfunctionalitymodule
-		{
-			get {
-				return gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitymodule; 
-			}
-			set {
-				gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitymodule = value;
-				SetDirty("Secfunctionalitymodule");
-			}
-		}
-
-
-
-
 		[SoapElement(ElementName="SecFunctionalityKey")]
 		[XmlElement(ElementName="SecFunctionalityKey")]
 		public string gxTpr_Secfunctionalitykey
@@ -154,6 +138,22 @@ namespace GeneXus.Programs
 			set {
 				gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitydescription = value;
 				SetDirty("Secfunctionalitydescription");
+			}
+		}
+
+
+
+
+		[SoapElement(ElementName="SecFunctionalityModule")]
+		[XmlElement(ElementName="SecFunctionalityModule")]
+		public string gxTpr_Secfunctionalitymodule
+		{
+			get {
+				return gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitymodule; 
+			}
+			set {
+				gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitymodule = value;
+				SetDirty("Secfunctionalitymodule");
 			}
 		}
 
@@ -244,9 +244,9 @@ namespace GeneXus.Programs
 
 		public void initialize( )
 		{
-			gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitymodule = "";
 			gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitykey = "";
 			gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitydescription = "";
+			gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitymodule = "";
 
 
 			gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secparentfunctionalitydescription = "";
@@ -263,13 +263,13 @@ namespace GeneXus.Programs
 		protected long gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalityid;
 		 
 
-		protected string gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitymodule;
-		 
-
 		protected string gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitykey;
 		 
 
 		protected string gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitydescription;
+		 
+
+		protected string gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitymodule;
 		 
 
 		protected short gxTv_SdtWPAddFuncSDT_WPAddFuncSDTItem_Secfunctionalitytype;
@@ -315,23 +315,9 @@ namespace GeneXus.Programs
 			}
 		}
 
-		[JsonPropertyName("SecFunctionalityModule")]
-		[JsonPropertyOrder(1)]
-		[DataMember(Name="SecFunctionalityModule", Order=1)]
-		public  string gxTpr_Secfunctionalitymodule
-		{
-			get { 
-				return sdt.gxTpr_Secfunctionalitymodule;
-
-			}
-			set { 
-				 sdt.gxTpr_Secfunctionalitymodule = value;
-			}
-		}
-
 		[JsonPropertyName("SecFunctionalityKey")]
-		[JsonPropertyOrder(2)]
-		[DataMember(Name="SecFunctionalityKey", Order=2)]
+		[JsonPropertyOrder(1)]
+		[DataMember(Name="SecFunctionalityKey", Order=1)]
 		public  string gxTpr_Secfunctionalitykey
 		{
 			get { 
@@ -344,8 +330,8 @@ namespace GeneXus.Programs
 		}
 
 		[JsonPropertyName("SecFunctionalityDescription")]
-		[JsonPropertyOrder(3)]
-		[DataMember(Name="SecFunctionalityDescription", Order=3)]
+		[JsonPropertyOrder(2)]
+		[DataMember(Name="SecFunctionalityDescription", Order=2)]
 		public  string gxTpr_Secfunctionalitydescription
 		{
 			get { 
@@ -354,6 +340,20 @@ namespace GeneXus.Programs
 			}
 			set { 
 				 sdt.gxTpr_Secfunctionalitydescription = value;
+			}
+		}
+
+		[JsonPropertyName("SecFunctionalityModule")]
+		[JsonPropertyOrder(3)]
+		[DataMember(Name="SecFunctionalityModule", Order=3)]
+		public  string gxTpr_Secfunctionalitymodule
+		{
+			get { 
+				return sdt.gxTpr_Secfunctionalitymodule;
+
+			}
+			set { 
+				 sdt.gxTpr_Secfunctionalitymodule = value;
 			}
 		}
 

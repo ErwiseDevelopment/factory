@@ -167,12 +167,6 @@ namespace GeneXus.Programs.wwpbaseobjects {
          {
             context.httpAjaxContext.ajax_rsp_assign_hidden_sdt("vNOTIFICATIONINFO_MPAGE", AV14NotificationInfo);
          }
-         GxWebStd.gx_hidden_field( context, "DDC_MODULES_MPAGE_Icontype", StringUtil.RTrim( Ddc_modules_Icontype));
-         GxWebStd.gx_hidden_field( context, "DDC_MODULES_MPAGE_Icon", StringUtil.RTrim( Ddc_modules_Icon));
-         GxWebStd.gx_hidden_field( context, "DDC_MODULES_MPAGE_Caption", StringUtil.RTrim( Ddc_modules_Caption));
-         GxWebStd.gx_hidden_field( context, "DDC_MODULES_MPAGE_Cls", StringUtil.RTrim( Ddc_modules_Cls));
-         GxWebStd.gx_hidden_field( context, "DDC_MODULES_MPAGE_Componentwidth", StringUtil.LTrim( StringUtil.NToC( (decimal)(Ddc_modules_Componentwidth), 9, 0, ".", "")));
-         GxWebStd.gx_hidden_field( context, "DDC_MODULES_MPAGE_Trigger", StringUtil.RTrim( Ddc_modules_Trigger));
          GxWebStd.gx_hidden_field( context, "DDO_BOOKMARKS_MPAGE_Icontype", StringUtil.RTrim( Ddo_bookmarks_Icontype));
          GxWebStd.gx_hidden_field( context, "DDO_BOOKMARKS_MPAGE_Icon", StringUtil.RTrim( Ddo_bookmarks_Icon));
          GxWebStd.gx_hidden_field( context, "DDO_BOOKMARKS_MPAGE_Tooltip", StringUtil.RTrim( Ddo_bookmarks_Tooltip));
@@ -245,6 +239,22 @@ namespace GeneXus.Programs.wwpbaseobjects {
          {
             disableOutput();
          }
+         if ( ! ( WebComp_Wcwcmodule == null ) )
+         {
+            WebComp_Wcwcmodule.componentjscripts();
+         }
+         if ( ! ( WebComp_Wcwcmodule2 == null ) )
+         {
+            WebComp_Wcwcmodule2.componentjscripts();
+         }
+         if ( ! ( WebComp_Wcwcmodule3 == null ) )
+         {
+            WebComp_Wcwcmodule3.componentjscripts();
+         }
+         if ( ! ( WebComp_Wcwcmodule4 == null ) )
+         {
+            WebComp_Wcwcmodule4.componentjscripts();
+         }
          if ( ! ( WebComp_Wwpaux_wc == null ) )
          {
             WebComp_Wwpaux_wc.componentjscripts();
@@ -252,9 +262,6 @@ namespace GeneXus.Programs.wwpbaseobjects {
          context.AddJavascriptSource("calendar.js", "?"+context.GetBuildNumber( 133260), false, true);
          context.AddJavascriptSource("calendar-setup.js", "?"+context.GetBuildNumber( 133260), false, true);
          context.AddJavascriptSource("calendar-pt.js", "?"+context.GetBuildNumber( 133260), false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -288,7 +295,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/ConfirmPanel/BootstrapConfirmPanelRender.js", "", false, true);
-         context.AddJavascriptSource("wwpbaseobjects/workwithplusmasterpage.js", "?20255261646499", false, true);
+         context.AddJavascriptSource("wwpbaseobjects/workwithplusmasterpage.js", "?20255289151414", false, true);
          context.WriteHtmlTextNl( "</body>") ;
          context.WriteHtmlTextNl( "</html>") ;
          if ( context.isSpaRequest( ) )
@@ -366,7 +373,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "", "start", "top", "", "flex-grow:1;", "div");
             /* Div Control */
-            GxWebStd.gx_div_start( context, divUnnamedtable1_Internalname, 1, 0, "px", 0, "px", "Flex", "start", "top", " "+"data-gx-flex"+" ", "", "div");
+            GxWebStd.gx_div_start( context, divUnnamedtable1_Internalname, 1, 0, "px", 0, "px", "Flex", "start", "top", " "+"data-gx-flex"+" ", "align-items:center;", "div");
             /* Div Control */
             GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "", "start", "top", "", "align-self:center;", "div");
             /* Div Control */
@@ -390,15 +397,110 @@ namespace GeneXus.Programs.wwpbaseobjects {
             GxWebStd.gx_label_ctrl( context, lblShowmenu_Internalname, "<i class=\"fa fa-bars ImageMenuIcon\"></i>", "", "", lblShowmenu_Jsonclick, "'"+""+"'"+",true,"+"'"+"e112a1_client"+"'", "", "TextBlock", 7, "", 1, 1, 0, 1, "HLP_WWPBaseObjects/WorkWithPlusMasterPage.htm");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             /* Div Control */
-            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "hidden-xs", "start", "top", "", "align-self:center;", "div");
-            /* User Defined Control */
-            ucDdc_modules.SetProperty("IconType", Ddc_modules_Icontype);
-            ucDdc_modules.SetProperty("Icon", Ddc_modules_Icon);
-            ucDdc_modules.SetProperty("Caption", Ddc_modules_Caption);
-            ucDdc_modules.SetProperty("Cls", Ddc_modules_Cls);
-            ucDdc_modules.SetProperty("ComponentWidth", Ddc_modules_Componentwidth);
-            ucDdc_modules.SetProperty("Trigger", Ddc_modules_Trigger);
-            ucDdc_modules.Render(context, "dvelop.gxbootstrap.ddcomponent", Ddc_modules_Internalname, "DDC_MODULES_MPAGEContainer");
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "", "start", "top", "", "flex-grow:1;", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, divTablemodules_Internalname, 1, 0, "px", 0, "px", "Flex", "start", "top", " "+"data-gx-flex"+" ", "", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "", "start", "top", "", "", "div");
+            if ( ! isFullAjaxMode( ) )
+            {
+               /* WebComponent */
+               GxWebStd.gx_hidden_field( context, "MPW0022"+"", StringUtil.RTrim( WebComp_Wcwcmodule_Component));
+               context.WriteHtmlText( "<div") ;
+               GxWebStd.ClassAttribute( context, "gxwebcomponent");
+               context.WriteHtmlText( " id=\""+"gxHTMLWrpMPW0022"+""+"\""+"") ;
+               context.WriteHtmlText( ">") ;
+               if ( StringUtil.Len( WebComp_Wcwcmodule_Component) != 0 )
+               {
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldWcwcmodule), StringUtil.Lower( WebComp_Wcwcmodule_Component)) != 0 )
+                  {
+                     context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0022"+"");
+                  }
+                  WebComp_Wcwcmodule.componentdraw();
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldWcwcmodule), StringUtil.Lower( WebComp_Wcwcmodule_Component)) != 0 )
+                  {
+                     context.httpAjaxContext.ajax_rspEndCmp();
+                  }
+               }
+               context.WriteHtmlText( "</div>") ;
+            }
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "", "start", "top", "", "", "div");
+            if ( ! isFullAjaxMode( ) )
+            {
+               /* WebComponent */
+               GxWebStd.gx_hidden_field( context, "MPW0024"+"", StringUtil.RTrim( WebComp_Wcwcmodule2_Component));
+               context.WriteHtmlText( "<div") ;
+               GxWebStd.ClassAttribute( context, "gxwebcomponent");
+               context.WriteHtmlText( " id=\""+"gxHTMLWrpMPW0024"+""+"\""+"") ;
+               context.WriteHtmlText( ">") ;
+               if ( StringUtil.Len( WebComp_Wcwcmodule2_Component) != 0 )
+               {
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldWcwcmodule2), StringUtil.Lower( WebComp_Wcwcmodule2_Component)) != 0 )
+                  {
+                     context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0024"+"");
+                  }
+                  WebComp_Wcwcmodule2.componentdraw();
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldWcwcmodule2), StringUtil.Lower( WebComp_Wcwcmodule2_Component)) != 0 )
+                  {
+                     context.httpAjaxContext.ajax_rspEndCmp();
+                  }
+               }
+               context.WriteHtmlText( "</div>") ;
+            }
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "", "start", "top", "", "", "div");
+            if ( ! isFullAjaxMode( ) )
+            {
+               /* WebComponent */
+               GxWebStd.gx_hidden_field( context, "MPW0026"+"", StringUtil.RTrim( WebComp_Wcwcmodule3_Component));
+               context.WriteHtmlText( "<div") ;
+               GxWebStd.ClassAttribute( context, "gxwebcomponent");
+               context.WriteHtmlText( " id=\""+"gxHTMLWrpMPW0026"+""+"\""+"") ;
+               context.WriteHtmlText( ">") ;
+               if ( StringUtil.Len( WebComp_Wcwcmodule3_Component) != 0 )
+               {
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldWcwcmodule3), StringUtil.Lower( WebComp_Wcwcmodule3_Component)) != 0 )
+                  {
+                     context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0026"+"");
+                  }
+                  WebComp_Wcwcmodule3.componentdraw();
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldWcwcmodule3), StringUtil.Lower( WebComp_Wcwcmodule3_Component)) != 0 )
+                  {
+                     context.httpAjaxContext.ajax_rspEndCmp();
+                  }
+               }
+               context.WriteHtmlText( "</div>") ;
+            }
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            /* Div Control */
+            GxWebStd.gx_div_start( context, "", 1, 0, "px", 0, "px", "", "start", "top", "", "", "div");
+            if ( ! isFullAjaxMode( ) )
+            {
+               /* WebComponent */
+               GxWebStd.gx_hidden_field( context, "MPW0028"+"", StringUtil.RTrim( WebComp_Wcwcmodule4_Component));
+               context.WriteHtmlText( "<div") ;
+               GxWebStd.ClassAttribute( context, "gxwebcomponent");
+               context.WriteHtmlText( " id=\""+"gxHTMLWrpMPW0028"+""+"\""+"") ;
+               context.WriteHtmlText( ">") ;
+               if ( StringUtil.Len( WebComp_Wcwcmodule4_Component) != 0 )
+               {
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldWcwcmodule4), StringUtil.Lower( WebComp_Wcwcmodule4_Component)) != 0 )
+                  {
+                     context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0028"+"");
+                  }
+                  WebComp_Wcwcmodule4.componentdraw();
+                  if ( StringUtil.StrCmp(StringUtil.Lower( OldWcwcmodule4), StringUtil.Lower( WebComp_Wcwcmodule4_Component)) != 0 )
+                  {
+                     context.httpAjaxContext.ajax_rspEndCmp();
+                  }
+               }
+               context.WriteHtmlText( "</div>") ;
+            }
+            GxWebStd.gx_div_end( context, "start", "top", "div");
+            GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
             GxWebStd.gx_div_end( context, "start", "top", "div");
@@ -588,21 +690,21 @@ namespace GeneXus.Programs.wwpbaseobjects {
             /* Div Control */
             GxWebStd.gx_div_start( context, divHtml_bottomauxiliarcontrols_Internalname, 1, 0, "px", 0, "px", "Section", "start", "top", "", "", "div");
             /* Single line edit */
-            TempTags = "  onfocus=\"gx.evt.onfocus(this, 62,'',true,'',0)\"";
+            TempTags = "  onfocus=\"gx.evt.onfocus(this, 70,'',true,'',0)\"";
             context.WriteHtmlText( "<div id=\""+edtavPickerdummyvariable_Internalname+"_dp_container\" class=\"dp_container\" style=\"white-space:nowrap;display:inline;\">") ;
-            GxWebStd.gx_single_line_edit( context, edtavPickerdummyvariable_Internalname, context.localUtil.Format(AV36PickerDummyVariable, "99/99/99"), context.localUtil.Format( AV36PickerDummyVariable, "99/99/99"), TempTags+" onchange=\""+"gx.date.valid_date(this, 8,'DMY',0,24,'por',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 8,'DMY',0,24,'por',false,0);"+";gx.evt.onblur(this,62);\"", "'"+""+"'"+",true,"+"'"+"E_MPAGE."+"'", "", "", "", "", edtavPickerdummyvariable_Jsonclick, 0, "Invisible", "", "", "", "", 1, 1, 0, "text", "", 8, "chr", 1, "row", 8, 0, 0, 0, 0, -1, 0, true, "", "end", false, "", "HLP_WWPBaseObjects/WorkWithPlusMasterPage.htm");
+            GxWebStd.gx_single_line_edit( context, edtavPickerdummyvariable_Internalname, context.localUtil.Format(AV36PickerDummyVariable, "99/99/99"), context.localUtil.Format( AV36PickerDummyVariable, "99/99/99"), TempTags+" onchange=\""+"gx.date.valid_date(this, 8,'DMY',0,24,'por',false,0);"+";gx.evt.onchange(this, event)\" "+" onblur=\""+"gx.date.valid_date(this, 8,'DMY',0,24,'por',false,0);"+";gx.evt.onblur(this,70);\"", "'"+""+"'"+",true,"+"'"+"E_MPAGE."+"'", "", "", "", "", edtavPickerdummyvariable_Jsonclick, 0, "Invisible", "", "", "", "", 1, 1, 0, "text", "", 8, "chr", 1, "row", 8, 0, 0, 0, 0, -1, 0, true, "", "end", false, "", "HLP_WWPBaseObjects/WorkWithPlusMasterPage.htm");
             GxWebStd.gx_bitmap( context, edtavPickerdummyvariable_Internalname+"_dp_trigger", context.GetImagePath( "61b9b5d3-dff6-4d59-9b00-da61bc2cbe93", "", context.GetTheme( )), "", "", "", "", ((1==0)||(1==0) ? 0 : 1), 0, "Date selector", "Date selector", 0, 1, 0, "", 0, "", 0, 0, 0, "", "", "cursor: pointer;", "", "", "", "", "", "", "", "", 1, false, false, "", "HLP_WWPBaseObjects/WorkWithPlusMasterPage.htm");
             context.WriteHtmlTextNl( "</div>") ;
-            wb_table1_63_2A2( true) ;
+            wb_table1_71_2A2( true) ;
          }
          else
          {
-            wb_table1_63_2A2( false) ;
+            wb_table1_71_2A2( false) ;
          }
          return  ;
       }
 
-      protected void wb_table1_63_2A2e( bool wbgen )
+      protected void wb_table1_71_2A2e( bool wbgen )
       {
          if ( wbgen )
          {
@@ -611,16 +713,16 @@ namespace GeneXus.Programs.wwpbaseobjects {
             if ( ! isFullAjaxMode( ) )
             {
                /* WebComponent */
-               GxWebStd.gx_hidden_field( context, "MPW0069"+"", StringUtil.RTrim( WebComp_Wwpaux_wc_Component));
+               GxWebStd.gx_hidden_field( context, "MPW0077"+"", StringUtil.RTrim( WebComp_Wwpaux_wc_Component));
                context.WriteHtmlText( "<div") ;
                GxWebStd.ClassAttribute( context, "gxwebcomponent");
-               context.WriteHtmlText( " id=\""+"gxHTMLWrpMPW0069"+""+"\""+"") ;
+               context.WriteHtmlText( " id=\""+"gxHTMLWrpMPW0077"+""+"\""+"") ;
                context.WriteHtmlText( ">") ;
                if ( StringUtil.Len( WebComp_Wwpaux_wc_Component) != 0 )
                {
                   if ( StringUtil.StrCmp(StringUtil.Lower( OldWwpaux_wc), StringUtil.Lower( WebComp_Wwpaux_wc_Component)) != 0 )
                   {
-                     context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0069"+"");
+                     context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0077"+"");
                   }
                   WebComp_Wwpaux_wc.componentdraw();
                   if ( StringUtil.StrCmp(StringUtil.Lower( OldWwpaux_wc), StringUtil.Lower( WebComp_Wwpaux_wc_Component)) != 0 )
@@ -701,100 +803,93 @@ namespace GeneXus.Programs.wwpbaseobjects {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                         }
-                        else if ( StringUtil.StrCmp(sEvt, "DDC_MODULES_MPAGE.ONLOADCOMPONENT_MPAGE") == 0 )
-                        {
-                           context.wbHandled = 1;
-                           dynload_actions( ) ;
-                           /* Execute user event: Ddc_modules.Onloadcomponent */
-                           E122A2 ();
-                        }
                         else if ( StringUtil.StrCmp(sEvt, "DDO_BOOKMARKS_MPAGE.ONOPTIONCLICKED_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                            /* Execute user event: Ddo_bookmarks.Onoptionclicked */
-                           E132A2 ();
+                           E122A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "DDC_NOTIFICATIONSWC_MPAGE.ONLOADCOMPONENT_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                            /* Execute user event: Ddc_notificationswc.Onloadcomponent */
-                           E142A2 ();
+                           E132A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "DDC_ADMINAG_MPAGE.ONLOADCOMPONENT_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                            /* Execute user event: Ddc_adminag.Onloadcomponent */
-                           E152A2 ();
+                           E142A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "BOOKMARK_MODAL_MPAGE.CLOSE_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                            /* Execute user event: Bookmark_modal.Close */
-                           E162A2 ();
+                           E152A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "BOOKMARK_MODAL_MPAGE.ONLOADCOMPONENT_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                            /* Execute user event: Bookmark_modal.Onloadcomponent */
-                           E172A2 ();
+                           E162A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "START_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                            /* Execute user event: Start */
-                           E182A2 ();
+                           E172A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "DOACTIONSEARCH_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                            /* Execute user event: 'DoActionSearch' */
-                           E192A2 ();
+                           E182A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "ONMESSAGE_GX1_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                            /* Execute user event: Onmessage_gx1 */
-                           E202A2 ();
+                           E192A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "REFRESH_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                            /* Execute user event: Refresh */
-                           E212A2 ();
+                           E202A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "GLOBALEVENTS_MPAGE.MASTER_REFRESHHEADER_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
-                           E222A2 ();
+                           E212A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "GLOBALEVENTS_MPAGE.MASTER_CHANGEIMAGE_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
-                           E232A2 ();
+                           E222A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "GLOBALEVENTS_MPAGE.MASTER_REFRESHNOTIFICATIONS_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
-                           E242A2 ();
+                           E232A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "LOAD_MPAGE") == 0 )
                         {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                            /* Execute user event: Load */
-                           E252A2 ();
+                           E242A2 ();
                         }
                         else if ( StringUtil.StrCmp(sEvt, "ENTER_MPAGE") == 0 )
                         {
@@ -819,7 +914,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
                            context.wbHandled = 1;
                            dynload_actions( ) ;
                            /* Execute user event: Onmessage_gx1 */
-                           E202A2 ();
+                           E192A2 ();
                            dynload_actions( ) ;
                         }
                      }
@@ -832,9 +927,73 @@ namespace GeneXus.Programs.wwpbaseobjects {
                      sEvtType = StringUtil.Right( sEvt, (short)(StringUtil.Len( sEvt)-2));
                      sEvt = StringUtil.Right( sEvt, (short)(StringUtil.Len( sEvt)-6));
                      nCmpId = (short)(Math.Round(NumberUtil.Val( sEvtType, "."), 18, MidpointRounding.ToEven));
-                     if ( nCmpId == 69 )
+                     if ( nCmpId == 22 )
                      {
-                        OldWwpaux_wc = cgiGet( "MPW0069");
+                        OldWcwcmodule = cgiGet( "MPW0022");
+                        if ( ( StringUtil.Len( OldWcwcmodule) == 0 ) || ( StringUtil.StrCmp(OldWcwcmodule, WebComp_Wcwcmodule_Component) != 0 ) )
+                        {
+                           WebComp_Wcwcmodule = getWebComponent(GetType(), "GeneXus.Programs", OldWcwcmodule, new Object[] {context} );
+                           WebComp_Wcwcmodule.ComponentInit();
+                           WebComp_Wcwcmodule.Name = "OldWcwcmodule";
+                           WebComp_Wcwcmodule_Component = OldWcwcmodule;
+                        }
+                        if ( StringUtil.Len( WebComp_Wcwcmodule_Component) != 0 )
+                        {
+                           WebComp_Wcwcmodule.componentprocess("MPW0022", "", sEvt);
+                        }
+                        WebComp_Wcwcmodule_Component = OldWcwcmodule;
+                     }
+                     else if ( nCmpId == 24 )
+                     {
+                        OldWcwcmodule2 = cgiGet( "MPW0024");
+                        if ( ( StringUtil.Len( OldWcwcmodule2) == 0 ) || ( StringUtil.StrCmp(OldWcwcmodule2, WebComp_Wcwcmodule2_Component) != 0 ) )
+                        {
+                           WebComp_Wcwcmodule2 = getWebComponent(GetType(), "GeneXus.Programs", OldWcwcmodule2, new Object[] {context} );
+                           WebComp_Wcwcmodule2.ComponentInit();
+                           WebComp_Wcwcmodule2.Name = "OldWcwcmodule2";
+                           WebComp_Wcwcmodule2_Component = OldWcwcmodule2;
+                        }
+                        if ( StringUtil.Len( WebComp_Wcwcmodule2_Component) != 0 )
+                        {
+                           WebComp_Wcwcmodule2.componentprocess("MPW0024", "", sEvt);
+                        }
+                        WebComp_Wcwcmodule2_Component = OldWcwcmodule2;
+                     }
+                     else if ( nCmpId == 26 )
+                     {
+                        OldWcwcmodule3 = cgiGet( "MPW0026");
+                        if ( ( StringUtil.Len( OldWcwcmodule3) == 0 ) || ( StringUtil.StrCmp(OldWcwcmodule3, WebComp_Wcwcmodule3_Component) != 0 ) )
+                        {
+                           WebComp_Wcwcmodule3 = getWebComponent(GetType(), "GeneXus.Programs", OldWcwcmodule3, new Object[] {context} );
+                           WebComp_Wcwcmodule3.ComponentInit();
+                           WebComp_Wcwcmodule3.Name = "OldWcwcmodule3";
+                           WebComp_Wcwcmodule3_Component = OldWcwcmodule3;
+                        }
+                        if ( StringUtil.Len( WebComp_Wcwcmodule3_Component) != 0 )
+                        {
+                           WebComp_Wcwcmodule3.componentprocess("MPW0026", "", sEvt);
+                        }
+                        WebComp_Wcwcmodule3_Component = OldWcwcmodule3;
+                     }
+                     else if ( nCmpId == 28 )
+                     {
+                        OldWcwcmodule4 = cgiGet( "MPW0028");
+                        if ( ( StringUtil.Len( OldWcwcmodule4) == 0 ) || ( StringUtil.StrCmp(OldWcwcmodule4, WebComp_Wcwcmodule4_Component) != 0 ) )
+                        {
+                           WebComp_Wcwcmodule4 = getWebComponent(GetType(), "GeneXus.Programs", OldWcwcmodule4, new Object[] {context} );
+                           WebComp_Wcwcmodule4.ComponentInit();
+                           WebComp_Wcwcmodule4.Name = "OldWcwcmodule4";
+                           WebComp_Wcwcmodule4_Component = OldWcwcmodule4;
+                        }
+                        if ( StringUtil.Len( WebComp_Wcwcmodule4_Component) != 0 )
+                        {
+                           WebComp_Wcwcmodule4.componentprocess("MPW0028", "", sEvt);
+                        }
+                        WebComp_Wcwcmodule4_Component = OldWcwcmodule4;
+                     }
+                     else if ( nCmpId == 77 )
+                     {
+                        OldWwpaux_wc = cgiGet( "MPW0077");
                         if ( ( StringUtil.Len( OldWwpaux_wc) == 0 ) || ( StringUtil.StrCmp(OldWwpaux_wc, WebComp_Wwpaux_wc_Component) != 0 ) )
                         {
                            WebComp_Wwpaux_wc = getWebComponent(GetType(), "GeneXus.Programs", OldWwpaux_wc, new Object[] {context} );
@@ -844,7 +1003,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
                         }
                         if ( StringUtil.Len( WebComp_Wwpaux_wc_Component) != 0 )
                         {
-                           WebComp_Wwpaux_wc.componentprocess("MPW0069", "", sEvt);
+                           WebComp_Wwpaux_wc.componentprocess("MPW0077", "", sEvt);
                         }
                         WebComp_Wwpaux_wc_Component = OldWwpaux_wc;
                      }
@@ -947,7 +1106,47 @@ namespace GeneXus.Programs.wwpbaseobjects {
          if ( ShowMPWhenPopUp( ) || ! context.isPopUpObject( ) )
          {
             /* Execute user event: Refresh */
-            E212A2 ();
+            E202A2 ();
+            if ( ! context.WillRedirect( ) && ( context.nUserReturn != 1 ) )
+            {
+               if ( 1 != 0 )
+               {
+                  if ( StringUtil.Len( WebComp_Wcwcmodule_Component) != 0 )
+                  {
+                     WebComp_Wcwcmodule.componentstart();
+                  }
+               }
+            }
+            if ( ! context.WillRedirect( ) && ( context.nUserReturn != 1 ) )
+            {
+               if ( 1 != 0 )
+               {
+                  if ( StringUtil.Len( WebComp_Wcwcmodule2_Component) != 0 )
+                  {
+                     WebComp_Wcwcmodule2.componentstart();
+                  }
+               }
+            }
+            if ( ! context.WillRedirect( ) && ( context.nUserReturn != 1 ) )
+            {
+               if ( 1 != 0 )
+               {
+                  if ( StringUtil.Len( WebComp_Wcwcmodule3_Component) != 0 )
+                  {
+                     WebComp_Wcwcmodule3.componentstart();
+                  }
+               }
+            }
+            if ( ! context.WillRedirect( ) && ( context.nUserReturn != 1 ) )
+            {
+               if ( 1 != 0 )
+               {
+                  if ( StringUtil.Len( WebComp_Wcwcmodule4_Component) != 0 )
+                  {
+                     WebComp_Wcwcmodule4.componentstart();
+                  }
+               }
+            }
             if ( ! context.WillRedirect( ) && ( context.nUserReturn != 1 ) )
             {
                if ( 1 != 0 )
@@ -965,7 +1164,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          if ( ! context.WillRedirect( ) && ( context.nUserReturn != 1 ) )
          {
             /* Execute user event: Load */
-            E252A2 ();
+            E242A2 ();
             WB2A0( ) ;
             if ( context.isSpaRequest( ) )
             {
@@ -990,7 +1189,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          /* Execute Start event if defined. */
          context.wbGlbDoneStart = 0;
          /* Execute user event: Start */
-         E182A2 ();
+         E172A2 ();
          context.wbGlbDoneStart = 1;
          /* After Start, stand alone formulas. */
          if ( StringUtil.StrCmp(context.GetRequestMethod( ), "POST") == 0 )
@@ -1001,12 +1200,6 @@ namespace GeneXus.Programs.wwpbaseobjects {
             ajax_req_read_hidden_sdt(cgiGet( "vDVELOP_MENU_USERDATA_MPAGE"), AV37DVelop_Menu_UserData);
             ajax_req_read_hidden_sdt(cgiGet( "vNOTIFICATIONINFO_MPAGE"), AV14NotificationInfo);
             /* Read saved values. */
-            Ddc_modules_Icontype = cgiGet( "DDC_MODULES_MPAGE_Icontype");
-            Ddc_modules_Icon = cgiGet( "DDC_MODULES_MPAGE_Icon");
-            Ddc_modules_Caption = cgiGet( "DDC_MODULES_MPAGE_Caption");
-            Ddc_modules_Cls = cgiGet( "DDC_MODULES_MPAGE_Cls");
-            Ddc_modules_Componentwidth = (int)(Math.Round(context.localUtil.CToN( cgiGet( "DDC_MODULES_MPAGE_Componentwidth"), ",", "."), 18, MidpointRounding.ToEven));
-            Ddc_modules_Trigger = cgiGet( "DDC_MODULES_MPAGE_Trigger");
             Ddo_bookmarks_Icontype = cgiGet( "DDO_BOOKMARKS_MPAGE_Icontype");
             Ddo_bookmarks_Icon = cgiGet( "DDO_BOOKMARKS_MPAGE_Icon");
             Ddo_bookmarks_Tooltip = cgiGet( "DDO_BOOKMARKS_MPAGE_Tooltip");
@@ -1089,11 +1282,11 @@ namespace GeneXus.Programs.wwpbaseobjects {
       protected void GXStart( )
       {
          /* Execute user event: Start */
-         E182A2 ();
+         E172A2 ();
          if (returnInSub) return;
       }
 
-      protected void E182A2( )
+      protected void E172A2( )
       {
          /* Start Routine */
          returnInSub = false;
@@ -1118,7 +1311,6 @@ namespace GeneXus.Programs.wwpbaseobjects {
          (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Headerrawhtml = (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Headerrawhtml+"<meta charset=\"UTF-8\">";
          divLayoutmaintable_Class = "MainContainer";
          AssignProp("", true, divLayoutmaintable_Internalname, "Class", divLayoutmaintable_Class, true);
-         this.executeUsercontrolMethod("", true, "DDC_MODULES_MPAGEContainer", "Update", "", new Object[] {(string)"Vendas",(string)"fa-solid fa-money-bills ImageMenuIcon"});
          AV39String = AV27WebSession.Get("DmSistema");
          AV38DmSistema = AV39String;
          if ( StringUtil.StrCmp(AV38DmSistema, "Vendas") == 0 )
@@ -1129,7 +1321,6 @@ namespace GeneXus.Programs.wwpbaseobjects {
             AV47InDVelop_Menu.FromJSonString(AV26DVelop_Menu.ToJSonString(false), null);
             AV26DVelop_Menu = new GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item>( context, "Item", "Factory2");
             new pfuncmenu(context ).execute(  AV47InDVelop_Menu, ref  AV26DVelop_Menu) ;
-            this.executeUsercontrolMethod("", true, "DDC_MODULES_MPAGEContainer", "Update", "", new Object[] {(string)"Comercial",(string)"fa-solid fa-money-bills ImageMenuIcon"});
          }
          else if ( StringUtil.StrCmp(AV38DmSistema, "Financeiro") == 0 )
          {
@@ -1139,7 +1330,6 @@ namespace GeneXus.Programs.wwpbaseobjects {
             AV47InDVelop_Menu.FromJSonString(AV26DVelop_Menu.ToJSonString(false), null);
             AV26DVelop_Menu = new GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item>( context, "Item", "Factory2");
             new pfuncmenu(context ).execute(  AV47InDVelop_Menu, ref  AV26DVelop_Menu) ;
-            this.executeUsercontrolMethod("", true, "DDC_MODULES_MPAGEContainer", "Update", "", new Object[] {(string)"Financeiro",(string)"fa-solid fa-dollar-sign ImageMenuIcon"});
          }
          else if ( StringUtil.StrCmp(AV38DmSistema, "Contratos") == 0 )
          {
@@ -1149,7 +1339,6 @@ namespace GeneXus.Programs.wwpbaseobjects {
             AV47InDVelop_Menu.FromJSonString(AV26DVelop_Menu.ToJSonString(false), null);
             AV26DVelop_Menu = new GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item>( context, "Item", "Factory2");
             new pfuncmenu(context ).execute(  AV47InDVelop_Menu, ref  AV26DVelop_Menu) ;
-            this.executeUsercontrolMethod("", true, "DDC_MODULES_MPAGEContainer", "Update", "", new Object[] {(string)"Contratos",(string)"fa-solid fa-file-signature ImageMenuIcon"});
          }
          else if ( StringUtil.StrCmp(AV38DmSistema, "Seguranca") == 0 )
          {
@@ -1159,7 +1348,6 @@ namespace GeneXus.Programs.wwpbaseobjects {
             AV47InDVelop_Menu.FromJSonString(AV26DVelop_Menu.ToJSonString(false), null);
             AV26DVelop_Menu = new GXBaseCollection<GeneXus.Programs.wwpbaseobjects.SdtDVelop_Menu_Item>( context, "Item", "Factory2");
             new pfuncmenu(context ).execute(  AV47InDVelop_Menu, ref  AV26DVelop_Menu) ;
-            this.executeUsercontrolMethod("", true, "DDC_MODULES_MPAGEContainer", "Update", "", new Object[] {(string)"Segurança",(string)"fa-solid fa-shield-halved ImageMenuIcon"});
          }
          AV49IsNotAccess = true;
          AV51GXV1 = 1;
@@ -1184,6 +1372,78 @@ namespace GeneXus.Programs.wwpbaseobjects {
          AV7BookmarksDataItem.gxTpr_Eventkey = "Bookmark";
          AV7BookmarksDataItem.gxTpr_Isdivider = false;
          AV6BookmarksData.Add(AV7BookmarksDataItem, 0);
+         /* Object Property */
+         if ( true )
+         {
+            bDynCreated_Wcwcmodule = true;
+         }
+         if ( StringUtil.StrCmp(StringUtil.Lower( WebComp_Wcwcmodule_Component), StringUtil.Lower( "WcModule")) != 0 )
+         {
+            WebComp_Wcwcmodule = getWebComponent(GetType(), "GeneXus.Programs", "wcmodule", new Object[] {context} );
+            WebComp_Wcwcmodule.ComponentInit();
+            WebComp_Wcwcmodule.Name = "WcModule";
+            WebComp_Wcwcmodule_Component = "WcModule";
+         }
+         if ( StringUtil.Len( WebComp_Wcwcmodule_Component) != 0 )
+         {
+            WebComp_Wcwcmodule.setjustcreated();
+            WebComp_Wcwcmodule.componentprepare(new Object[] {(string)"MPW0022",(string)"",(string)"Comercial",(string)"fa-solid fa-money-bills",(string)formatLink("vendas") ,(string)"Vendas"});
+            WebComp_Wcwcmodule.componentbind(new Object[] {(string)"",(string)"",(string)""+""+"",(string)""});
+         }
+         /* Object Property */
+         if ( true )
+         {
+            bDynCreated_Wcwcmodule2 = true;
+         }
+         if ( StringUtil.StrCmp(StringUtil.Lower( WebComp_Wcwcmodule2_Component), StringUtil.Lower( "WcModule")) != 0 )
+         {
+            WebComp_Wcwcmodule2 = getWebComponent(GetType(), "GeneXus.Programs", "wcmodule", new Object[] {context} );
+            WebComp_Wcwcmodule2.ComponentInit();
+            WebComp_Wcwcmodule2.Name = "WcModule";
+            WebComp_Wcwcmodule2_Component = "WcModule";
+         }
+         if ( StringUtil.Len( WebComp_Wcwcmodule2_Component) != 0 )
+         {
+            WebComp_Wcwcmodule2.setjustcreated();
+            WebComp_Wcwcmodule2.componentprepare(new Object[] {(string)"MPW0024",(string)"",(string)"Financeiro",(string)"fa-solid fa-dollar-sign",(string)formatLink("financeiro") ,(string)"Financeiro"});
+            WebComp_Wcwcmodule2.componentbind(new Object[] {(string)"",(string)"",(string)""+""+"",(string)""});
+         }
+         /* Object Property */
+         if ( true )
+         {
+            bDynCreated_Wcwcmodule3 = true;
+         }
+         if ( StringUtil.StrCmp(StringUtil.Lower( WebComp_Wcwcmodule3_Component), StringUtil.Lower( "WcModule")) != 0 )
+         {
+            WebComp_Wcwcmodule3 = getWebComponent(GetType(), "GeneXus.Programs", "wcmodule", new Object[] {context} );
+            WebComp_Wcwcmodule3.ComponentInit();
+            WebComp_Wcwcmodule3.Name = "WcModule";
+            WebComp_Wcwcmodule3_Component = "WcModule";
+         }
+         if ( StringUtil.Len( WebComp_Wcwcmodule3_Component) != 0 )
+         {
+            WebComp_Wcwcmodule3.setjustcreated();
+            WebComp_Wcwcmodule3.componentprepare(new Object[] {(string)"MPW0026",(string)"",(string)"Contratos",(string)"fa-solid fa-file-signature",(string)formatLink("contratos") ,(string)"Contratos"});
+            WebComp_Wcwcmodule3.componentbind(new Object[] {(string)"",(string)"",(string)""+""+"",(string)""});
+         }
+         /* Object Property */
+         if ( true )
+         {
+            bDynCreated_Wcwcmodule4 = true;
+         }
+         if ( StringUtil.StrCmp(StringUtil.Lower( WebComp_Wcwcmodule4_Component), StringUtil.Lower( "WcModule")) != 0 )
+         {
+            WebComp_Wcwcmodule4 = getWebComponent(GetType(), "GeneXus.Programs", "wcmodule", new Object[] {context} );
+            WebComp_Wcwcmodule4.ComponentInit();
+            WebComp_Wcwcmodule4.Name = "WcModule";
+            WebComp_Wcwcmodule4_Component = "WcModule";
+         }
+         if ( StringUtil.Len( WebComp_Wcwcmodule4_Component) != 0 )
+         {
+            WebComp_Wcwcmodule4.setjustcreated();
+            WebComp_Wcwcmodule4.componentprepare(new Object[] {(string)"MPW0028",(string)"",(string)"Segurança",(string)"fa-solid fa-shield-halved",(string)formatLink("seguranca") ,(string)"Seguranca"});
+            WebComp_Wcwcmodule4.componentbind(new Object[] {(string)"",(string)"",(string)""+""+"",(string)""});
+         }
          Ddo_bookmarks_Tooltip = "Marcadores";
          ucDdo_bookmarks.SendProperty(context, "", true, Ddo_bookmarks_Internalname, "Tooltip", Ddo_bookmarks_Tooltip);
          Ddo_bookmarks_Titlecontrolalign = "Left";
@@ -1227,7 +1487,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          ucTimer.SendProperty(context, "", true, Timer_Internalname, "TickInterval", StringUtil.LTrimStr( (decimal)(Timer_Tickinterval), 9, 0));
       }
 
-      protected void E132A2( )
+      protected void E122A2( )
       {
          /* Ddo_bookmarks_Onoptionclicked Routine */
          returnInSub = false;
@@ -1253,7 +1513,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          }
       }
 
-      protected void E172A2( )
+      protected void E162A2( )
       {
          /* Bookmark_modal_Onloadcomponent Routine */
          returnInSub = false;
@@ -1272,26 +1532,26 @@ namespace GeneXus.Programs.wwpbaseobjects {
          if ( StringUtil.Len( WebComp_Wwpaux_wc_Component) != 0 )
          {
             WebComp_Wwpaux_wc.setjustcreated();
-            WebComp_Wwpaux_wc.componentprepare(new Object[] {(string)"MPW0069",(string)"",AV30Httprequest.BaseURL+AV30Httprequest.ScriptName+(String.IsNullOrEmpty(StringUtil.RTrim( StringUtil.Trim( AV30Httprequest.QueryString))) ? "" : "?"+AV30Httprequest.QueryString),(string)AV12ProgramDescription});
+            WebComp_Wwpaux_wc.componentprepare(new Object[] {(string)"MPW0077",(string)"",AV30Httprequest.BaseURL+AV30Httprequest.ScriptName+(String.IsNullOrEmpty(StringUtil.RTrim( StringUtil.Trim( AV30Httprequest.QueryString))) ? "" : "?"+AV30Httprequest.QueryString),(string)AV12ProgramDescription});
             WebComp_Wwpaux_wc.componentbind(new Object[] {(string)""+""+""+""+""+""+""+""+""+"",(string)"",(string)""+""+""+"",(string)""});
          }
          if ( isFullAjaxMode( ) || isAjaxCallMode( ) && bDynCreated_Wwpaux_wc )
          {
-            context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0069"+"");
+            context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0077"+"");
             WebComp_Wwpaux_wc.componentdraw();
             context.httpAjaxContext.ajax_rspEndCmp();
          }
          /*  Sending Event outputs  */
       }
 
-      protected void E162A2( )
+      protected void E152A2( )
       {
          /* Bookmark_modal_Close Routine */
          returnInSub = false;
          context.DoAjaxRefresh();
       }
 
-      protected void E142A2( )
+      protected void E132A2( )
       {
          /* Ddc_notificationswc_Onloadcomponent Routine */
          returnInSub = false;
@@ -1310,19 +1570,19 @@ namespace GeneXus.Programs.wwpbaseobjects {
          if ( StringUtil.Len( WebComp_Wwpaux_wc_Component) != 0 )
          {
             WebComp_Wwpaux_wc.setjustcreated();
-            WebComp_Wwpaux_wc.componentprepare(new Object[] {(string)"MPW0069",(string)""});
+            WebComp_Wwpaux_wc.componentprepare(new Object[] {(string)"MPW0077",(string)""});
             WebComp_Wwpaux_wc.componentbind(new Object[] {});
          }
          if ( isFullAjaxMode( ) || isAjaxCallMode( ) && bDynCreated_Wwpaux_wc )
          {
-            context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0069"+"");
+            context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0077"+"");
             WebComp_Wwpaux_wc.componentdraw();
             context.httpAjaxContext.ajax_rspEndCmp();
          }
          /*  Sending Event outputs  */
       }
 
-      protected void E152A2( )
+      protected void E142A2( )
       {
          /* Ddc_adminag_Onloadcomponent Routine */
          returnInSub = false;
@@ -1341,43 +1601,12 @@ namespace GeneXus.Programs.wwpbaseobjects {
          if ( StringUtil.Len( WebComp_Wwpaux_wc_Component) != 0 )
          {
             WebComp_Wwpaux_wc.setjustcreated();
-            WebComp_Wwpaux_wc.componentprepare(new Object[] {(string)"MPW0069",(string)""});
+            WebComp_Wwpaux_wc.componentprepare(new Object[] {(string)"MPW0077",(string)""});
             WebComp_Wwpaux_wc.componentbind(new Object[] {});
          }
          if ( isFullAjaxMode( ) || isAjaxCallMode( ) && bDynCreated_Wwpaux_wc )
          {
-            context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0069"+"");
-            WebComp_Wwpaux_wc.componentdraw();
-            context.httpAjaxContext.ajax_rspEndCmp();
-         }
-         /*  Sending Event outputs  */
-      }
-
-      protected void E122A2( )
-      {
-         /* Ddc_modules_Onloadcomponent Routine */
-         returnInSub = false;
-         /* Object Property */
-         if ( true )
-         {
-            bDynCreated_Wwpaux_wc = true;
-         }
-         if ( StringUtil.StrCmp(StringUtil.Lower( WebComp_Wwpaux_wc_Component), StringUtil.Lower( "WWPBaseObjects.WWP_WCModules")) != 0 )
-         {
-            WebComp_Wwpaux_wc = getWebComponent(GetType(), "GeneXus.Programs", "wwpbaseobjects.wwp_wcmodules", new Object[] {context} );
-            WebComp_Wwpaux_wc.ComponentInit();
-            WebComp_Wwpaux_wc.Name = "WWPBaseObjects.WWP_WCModules";
-            WebComp_Wwpaux_wc_Component = "WWPBaseObjects.WWP_WCModules";
-         }
-         if ( StringUtil.Len( WebComp_Wwpaux_wc_Component) != 0 )
-         {
-            WebComp_Wwpaux_wc.setjustcreated();
-            WebComp_Wwpaux_wc.componentprepare(new Object[] {(string)"MPW0069",(string)""});
-            WebComp_Wwpaux_wc.componentbind(new Object[] {});
-         }
-         if ( isFullAjaxMode( ) || isAjaxCallMode( ) && bDynCreated_Wwpaux_wc )
-         {
-            context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0069"+"");
+            context.httpAjaxContext.ajax_rspStartCmp("gxHTMLWrpMPW0077"+"");
             WebComp_Wwpaux_wc.componentdraw();
             context.httpAjaxContext.ajax_rspEndCmp();
          }
@@ -1391,7 +1620,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          this.executeUsercontrolMethod("", true, "BOOKMARK_MODAL_MPAGEContainer", "Confirm", "", new Object[] {});
       }
 
-      protected void E192A2( )
+      protected void E182A2( )
       {
          /* 'DoActionSearch' Routine */
          returnInSub = false;
@@ -1405,7 +1634,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          context.wjLocDisableFrm = 1;
       }
 
-      protected void E202A2( )
+      protected void E192A2( )
       {
          /* Onmessage_gx1 Routine */
          returnInSub = false;
@@ -1414,7 +1643,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          if (returnInSub) return;
       }
 
-      protected void E212A2( )
+      protected void E202A2( )
       {
          /* Refresh Routine */
          returnInSub = false;
@@ -1456,14 +1685,14 @@ namespace GeneXus.Programs.wwpbaseobjects {
          context.httpAjaxContext.ajax_rsp_assign_sdt_attri("", true, "AV6BookmarksData", AV6BookmarksData);
       }
 
-      protected void E222A2( )
+      protected void E212A2( )
       {
          /* General\GlobalEvents_Master_refreshheader Routine */
          returnInSub = false;
          context.DoAjaxRefresh();
       }
 
-      protected void E232A2( )
+      protected void E222A2( )
       {
          /* General\GlobalEvents_Master_changeimage Routine */
          returnInSub = false;
@@ -1472,7 +1701,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          AssignProp("", true, imgImageheader_Internalname, "SrcSet", context.GetImageSrcSet( imgImageheader_Bitmap), true);
       }
 
-      protected void E242A2( )
+      protected void E232A2( )
       {
          /* General\GlobalEvents_Master_refreshnotifications Routine */
          returnInSub = false;
@@ -1589,13 +1818,13 @@ namespace GeneXus.Programs.wwpbaseobjects {
       {
       }
 
-      protected void E252A2( )
+      protected void E242A2( )
       {
          /* Load Routine */
          returnInSub = false;
       }
 
-      protected void wb_table1_63_2A2( bool wbgen )
+      protected void wb_table1_71_2A2( bool wbgen )
       {
          if ( wbgen )
          {
@@ -1618,11 +1847,11 @@ namespace GeneXus.Programs.wwpbaseobjects {
             context.WriteHtmlText( "</tbody>") ;
             /* End of table */
             context.WriteHtmlText( "</table>") ;
-            wb_table1_63_2A2e( true) ;
+            wb_table1_71_2A2e( true) ;
          }
          else
          {
-            wb_table1_63_2A2e( false) ;
+            wb_table1_71_2A2e( false) ;
          }
       }
 
@@ -1669,6 +1898,34 @@ namespace GeneXus.Programs.wwpbaseobjects {
          AddStyleSheetFile("DVelop/Bootstrap/Shared/DVelopBootstrap.css", "");
          AddStyleSheetFile("calendar-system.css", "");
          AddThemeStyleSheetFile("", context.GetTheme( )+".css", "?"+GetCacheInvalidationToken( ));
+         if ( ! ( WebComp_Wcwcmodule == null ) )
+         {
+            if ( StringUtil.Len( WebComp_Wcwcmodule_Component) != 0 )
+            {
+               WebComp_Wcwcmodule.componentthemes();
+            }
+         }
+         if ( ! ( WebComp_Wcwcmodule2 == null ) )
+         {
+            if ( StringUtil.Len( WebComp_Wcwcmodule2_Component) != 0 )
+            {
+               WebComp_Wcwcmodule2.componentthemes();
+            }
+         }
+         if ( ! ( WebComp_Wcwcmodule3 == null ) )
+         {
+            if ( StringUtil.Len( WebComp_Wcwcmodule3_Component) != 0 )
+            {
+               WebComp_Wcwcmodule3.componentthemes();
+            }
+         }
+         if ( ! ( WebComp_Wcwcmodule4 == null ) )
+         {
+            if ( StringUtil.Len( WebComp_Wcwcmodule4_Component) != 0 )
+            {
+               WebComp_Wcwcmodule4.componentthemes();
+            }
+         }
          if ( ! ( WebComp_Wwpaux_wc == null ) )
          {
             if ( StringUtil.Len( WebComp_Wwpaux_wc_Component) != 0 )
@@ -1684,7 +1941,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          idxLst = 1;
          while ( idxLst <= (getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?202552616465457", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)(getDataAreaObject() == null ? Form : getDataAreaObject().GetForm()).Jscriptsrc.Item(idxLst))), "?20255289152248", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1699,10 +1956,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
 
       protected void include_jscripts( )
       {
-         context.AddJavascriptSource("wwpbaseobjects/workwithplusmasterpage.js", "?202552616465458", false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
-         context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
+         context.AddJavascriptSource("wwpbaseobjects/workwithplusmasterpage.js", "?20255289152249", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);
@@ -1749,7 +2003,7 @@ namespace GeneXus.Programs.wwpbaseobjects {
          imgImageheader_Internalname = "IMAGEHEADER_MPAGE";
          divTablelogologin_Internalname = "TABLELOGOLOGIN_MPAGE";
          lblShowmenu_Internalname = "SHOWMENU_MPAGE";
-         Ddc_modules_Internalname = "DDC_MODULES_MPAGE";
+         divTablemodules_Internalname = "TABLEMODULES_MPAGE";
          divUnnamedtable1_Internalname = "UNNAMEDTABLE1_MPAGE";
          Ddo_bookmarks_Internalname = "DDO_BOOKMARKS_MPAGE";
          Ddc_notificationswc_Internalname = "DDC_NOTIFICATIONSWC_MPAGE";
@@ -1836,12 +2090,6 @@ namespace GeneXus.Programs.wwpbaseobjects {
          Ddo_bookmarks_Tooltip = "";
          Ddo_bookmarks_Icon = "far fa-star";
          Ddo_bookmarks_Icontype = "FontIcon";
-         Ddc_modules_Trigger = "Hover";
-         Ddc_modules_Componentwidth = 742;
-         Ddc_modules_Cls = "ModulesMenuButton";
-         Ddc_modules_Caption = "Inventory";
-         Ddc_modules_Icon = "fas fa-th ImageMenuIcon";
-         Ddc_modules_Icontype = "FontIcon";
          Contentholder.setDataArea(getDataAreaObject());
          if ( context.isSpaRequest( ) )
          {
@@ -1858,22 +2106,20 @@ namespace GeneXus.Programs.wwpbaseobjects {
       {
          setEventMetadata("REFRESH_MPAGE","""{"handler":"Refresh","iparms":[{"ctrl":"FORM_MPAGE","prop":"Caption"},{"av":"AV26DVelop_Menu","fld":"vDVELOP_MENU_MPAGE","type":""},{"av":"AV30Httprequest.BaseURL","ctrl":"vHTTPREQUEST_MPAGE","prop":"Baseurl"},{"av":"AV12ProgramDescription","fld":"vPROGRAMDESCRIPTION_MPAGE","hsh":true,"type":"svchar"},{"av":"AV18SearchAux","fld":"vSEARCHAUX_MPAGE","hsh":true,"type":"svchar"},{"av":"AV35Breadcrumb","fld":"vBREADCRUMB_MPAGE","hsh":true,"type":"svchar"},{"av":"AV11IndexToAddItems","fld":"vINDEXTOADDITEMS_MPAGE","pic":"ZZZ9","hsh":true,"type":"int"}]""");
          setEventMetadata("REFRESH_MPAGE",""","oparms":[{"av":"AV44WWpContext","fld":"vWWPCONTEXT_MPAGE","type":""},{"av":"lblTextblocktitle_Caption","ctrl":"TEXTBLOCKTITLE_MPAGE","prop":"Caption"},{"av":"AV35Breadcrumb","fld":"vBREADCRUMB_MPAGE","hsh":true,"type":"svchar"},{"av":"AV6BookmarksData","fld":"vBOOKMARKSDATA_MPAGE","type":""},{"av":"AV12ProgramDescription","fld":"vPROGRAMDESCRIPTION_MPAGE","hsh":true,"type":"svchar"},{"av":"AV11IndexToAddItems","fld":"vINDEXTOADDITEMS_MPAGE","pic":"ZZZ9","hsh":true,"type":"int"}]}""");
-         setEventMetadata("DDO_BOOKMARKS_MPAGE.ONOPTIONCLICKED_MPAGE","""{"handler":"E132A2","iparms":[{"av":"Ddo_bookmarks_Activeeventkey","ctrl":"DDO_BOOKMARKS_MPAGE","prop":"ActiveEventKey"}]}""");
-         setEventMetadata("BOOKMARK_MODAL_MPAGE.ONLOADCOMPONENT_MPAGE","""{"handler":"E172A2","iparms":[{"av":"AV30Httprequest.BaseURL","ctrl":"vHTTPREQUEST_MPAGE","prop":"Baseurl"},{"av":"AV12ProgramDescription","fld":"vPROGRAMDESCRIPTION_MPAGE","hsh":true,"type":"svchar"}]""");
+         setEventMetadata("DDO_BOOKMARKS_MPAGE.ONOPTIONCLICKED_MPAGE","""{"handler":"E122A2","iparms":[{"av":"Ddo_bookmarks_Activeeventkey","ctrl":"DDO_BOOKMARKS_MPAGE","prop":"ActiveEventKey"}]}""");
+         setEventMetadata("BOOKMARK_MODAL_MPAGE.ONLOADCOMPONENT_MPAGE","""{"handler":"E162A2","iparms":[{"av":"AV30Httprequest.BaseURL","ctrl":"vHTTPREQUEST_MPAGE","prop":"Baseurl"},{"av":"AV12ProgramDescription","fld":"vPROGRAMDESCRIPTION_MPAGE","hsh":true,"type":"svchar"}]""");
          setEventMetadata("BOOKMARK_MODAL_MPAGE.ONLOADCOMPONENT_MPAGE",""","oparms":[{"ctrl":"WWPAUX_WC_MPAGE"}]}""");
-         setEventMetadata("BOOKMARK_MODAL_MPAGE.CLOSE_MPAGE","""{"handler":"E162A2","iparms":[]}""");
-         setEventMetadata("DDC_NOTIFICATIONSWC_MPAGE.ONLOADCOMPONENT_MPAGE","""{"handler":"E142A2","iparms":[]""");
+         setEventMetadata("BOOKMARK_MODAL_MPAGE.CLOSE_MPAGE","""{"handler":"E152A2","iparms":[]}""");
+         setEventMetadata("DDC_NOTIFICATIONSWC_MPAGE.ONLOADCOMPONENT_MPAGE","""{"handler":"E132A2","iparms":[]""");
          setEventMetadata("DDC_NOTIFICATIONSWC_MPAGE.ONLOADCOMPONENT_MPAGE",""","oparms":[{"ctrl":"WWPAUX_WC_MPAGE"}]}""");
-         setEventMetadata("DDC_ADMINAG_MPAGE.ONLOADCOMPONENT_MPAGE","""{"handler":"E152A2","iparms":[]""");
+         setEventMetadata("DDC_ADMINAG_MPAGE.ONLOADCOMPONENT_MPAGE","""{"handler":"E142A2","iparms":[]""");
          setEventMetadata("DDC_ADMINAG_MPAGE.ONLOADCOMPONENT_MPAGE",""","oparms":[{"ctrl":"WWPAUX_WC_MPAGE"}]}""");
          setEventMetadata("DOSHOWMENU_MPAGE","""{"handler":"E112A1","iparms":[]}""");
-         setEventMetadata("DDC_MODULES_MPAGE.ONLOADCOMPONENT_MPAGE","""{"handler":"E122A2","iparms":[]""");
-         setEventMetadata("DDC_MODULES_MPAGE.ONLOADCOMPONENT_MPAGE",""","oparms":[{"ctrl":"WWPAUX_WC_MPAGE"}]}""");
-         setEventMetadata("DOACTIONSEARCH_MPAGE","""{"handler":"E192A2","iparms":[{"av":"AV18SearchAux","fld":"vSEARCHAUX_MPAGE","hsh":true,"type":"svchar"}]}""");
-         setEventMetadata("GLOBALEVENTS_MPAGE.MASTER_REFRESHHEADER_MPAGE","""{"handler":"E222A2","iparms":[]}""");
-         setEventMetadata("GLOBALEVENTS_MPAGE.MASTER_CHANGEIMAGE_MPAGE","""{"handler":"E232A2","iparms":[{"av":"AV43Source","fld":"vSOURCE_MPAGE","type":"svchar"}]}""");
-         setEventMetadata("GLOBALEVENTS_MPAGE.MASTER_REFRESHNOTIFICATIONS_MPAGE","""{"handler":"E242A2","iparms":[{"av":"A388UserNotificationUserId","fld":"USERNOTIFICATIONUSERID_MPAGE","pic":"ZZZ9","type":"int"},{"av":"AV44WWpContext","fld":"vWWPCONTEXT_MPAGE","type":""},{"av":"A389UserNotificationStatus","fld":"USERNOTIFICATIONSTATUS_MPAGE","type":"svchar"},{"av":"A384NotificationType","fld":"NOTIFICATIONTYPE_MPAGE","type":"svchar"},{"av":"A387UserNotificationId","fld":"USERNOTIFICATIONID_MPAGE","pic":"ZZZZZZZZ9","type":"int"},{"av":"Ddc_notificationswc_Icon","ctrl":"DDC_NOTIFICATIONSWC_MPAGE","prop":"Icon"}]}""");
-         setEventMetadata("ONMESSAGE_GX1_MPAGE","""{"handler":"E202A2","iparms":[{"av":"AV14NotificationInfo","fld":"vNOTIFICATIONINFO_MPAGE","type":""},{"av":"A388UserNotificationUserId","fld":"USERNOTIFICATIONUSERID_MPAGE","pic":"ZZZ9","type":"int"},{"av":"AV44WWpContext","fld":"vWWPCONTEXT_MPAGE","type":""},{"av":"A389UserNotificationStatus","fld":"USERNOTIFICATIONSTATUS_MPAGE","type":"svchar"},{"av":"A384NotificationType","fld":"NOTIFICATIONTYPE_MPAGE","type":"svchar"},{"av":"A387UserNotificationId","fld":"USERNOTIFICATIONID_MPAGE","pic":"ZZZZZZZZ9","type":"int"},{"av":"Ddc_notificationswc_Icon","ctrl":"DDC_NOTIFICATIONSWC_MPAGE","prop":"Icon"}]}""");
+         setEventMetadata("DOACTIONSEARCH_MPAGE","""{"handler":"E182A2","iparms":[{"av":"AV18SearchAux","fld":"vSEARCHAUX_MPAGE","hsh":true,"type":"svchar"}]}""");
+         setEventMetadata("GLOBALEVENTS_MPAGE.MASTER_REFRESHHEADER_MPAGE","""{"handler":"E212A2","iparms":[]}""");
+         setEventMetadata("GLOBALEVENTS_MPAGE.MASTER_CHANGEIMAGE_MPAGE","""{"handler":"E222A2","iparms":[{"av":"AV43Source","fld":"vSOURCE_MPAGE","type":"svchar"}]}""");
+         setEventMetadata("GLOBALEVENTS_MPAGE.MASTER_REFRESHNOTIFICATIONS_MPAGE","""{"handler":"E232A2","iparms":[{"av":"A388UserNotificationUserId","fld":"USERNOTIFICATIONUSERID_MPAGE","pic":"ZZZ9","type":"int"},{"av":"AV44WWpContext","fld":"vWWPCONTEXT_MPAGE","type":""},{"av":"A389UserNotificationStatus","fld":"USERNOTIFICATIONSTATUS_MPAGE","type":"svchar"},{"av":"A384NotificationType","fld":"NOTIFICATIONTYPE_MPAGE","type":"svchar"},{"av":"A387UserNotificationId","fld":"USERNOTIFICATIONID_MPAGE","pic":"ZZZZZZZZ9","type":"int"},{"av":"Ddc_notificationswc_Icon","ctrl":"DDC_NOTIFICATIONSWC_MPAGE","prop":"Icon"}]}""");
+         setEventMetadata("ONMESSAGE_GX1_MPAGE","""{"handler":"E192A2","iparms":[{"av":"AV14NotificationInfo","fld":"vNOTIFICATIONINFO_MPAGE","type":""},{"av":"A388UserNotificationUserId","fld":"USERNOTIFICATIONUSERID_MPAGE","pic":"ZZZ9","type":"int"},{"av":"AV44WWpContext","fld":"vWWPCONTEXT_MPAGE","type":""},{"av":"A389UserNotificationStatus","fld":"USERNOTIFICATIONSTATUS_MPAGE","type":"svchar"},{"av":"A384NotificationType","fld":"NOTIFICATIONTYPE_MPAGE","type":"svchar"},{"av":"A387UserNotificationId","fld":"USERNOTIFICATIONID_MPAGE","pic":"ZZZZZZZZ9","type":"int"},{"av":"Ddc_notificationswc_Icon","ctrl":"DDC_NOTIFICATIONSWC_MPAGE","prop":"Icon"}]}""");
          return  ;
       }
 
@@ -1909,7 +2155,14 @@ namespace GeneXus.Programs.wwpbaseobjects {
          StyleString = "";
          sImgUrl = "";
          lblShowmenu_Jsonclick = "";
-         ucDdc_modules = new GXUserControl();
+         WebComp_Wcwcmodule_Component = "";
+         OldWcwcmodule = "";
+         WebComp_Wcwcmodule2_Component = "";
+         OldWcwcmodule2 = "";
+         WebComp_Wcwcmodule3_Component = "";
+         OldWcwcmodule3 = "";
+         WebComp_Wcwcmodule4_Component = "";
+         OldWcwcmodule4 = "";
          ucDdo_bookmarks = new GXUserControl();
          Ddo_bookmarks_Caption = "";
          ucDdc_notificationswc = new GXUserControl();
@@ -1975,6 +2228,10 @@ namespace GeneXus.Programs.wwpbaseobjects {
                }
             }
          );
+         WebComp_Wcwcmodule = new GeneXus.Http.GXNullWebComponent();
+         WebComp_Wcwcmodule2 = new GeneXus.Http.GXNullWebComponent();
+         WebComp_Wcwcmodule3 = new GeneXus.Http.GXNullWebComponent();
+         WebComp_Wcwcmodule4 = new GeneXus.Http.GXNullWebComponent();
          WebComp_Wwpaux_wc = new GeneXus.Http.GXNullWebComponent();
          /* GeneXus formulas. */
       }
@@ -1995,7 +2252,6 @@ namespace GeneXus.Programs.wwpbaseobjects {
       private short nGotPars ;
       private short nGXWrapped ;
       private int A387UserNotificationId ;
-      private int Ddc_modules_Componentwidth ;
       private int Ddc_adminag_Componentwidth ;
       private int Ucmenu_Searchminchars ;
       private int Ucmenu_Scrollwidth ;
@@ -2011,11 +2267,6 @@ namespace GeneXus.Programs.wwpbaseobjects {
       private string Ddo_bookmarks_Activeeventkey ;
       private string Ddc_notificationswc_Icon ;
       private string GXKey ;
-      private string Ddc_modules_Icontype ;
-      private string Ddc_modules_Icon ;
-      private string Ddc_modules_Caption ;
-      private string Ddc_modules_Cls ;
-      private string Ddc_modules_Trigger ;
       private string Ddo_bookmarks_Icontype ;
       private string Ddo_bookmarks_Icon ;
       private string Ddo_bookmarks_Tooltip ;
@@ -2058,7 +2309,15 @@ namespace GeneXus.Programs.wwpbaseobjects {
       private string imgImageheader_Internalname ;
       private string lblShowmenu_Internalname ;
       private string lblShowmenu_Jsonclick ;
-      private string Ddc_modules_Internalname ;
+      private string divTablemodules_Internalname ;
+      private string WebComp_Wcwcmodule_Component ;
+      private string OldWcwcmodule ;
+      private string WebComp_Wcwcmodule2_Component ;
+      private string OldWcwcmodule2 ;
+      private string WebComp_Wcwcmodule3_Component ;
+      private string OldWcwcmodule3 ;
+      private string WebComp_Wcwcmodule4_Component ;
+      private string OldWcwcmodule4 ;
       private string divTableuserrole_Internalname ;
       private string Ddo_bookmarks_Caption ;
       private string Ddo_bookmarks_Internalname ;
@@ -2117,6 +2376,10 @@ namespace GeneXus.Programs.wwpbaseobjects {
       private bool gxdyncontrolsrefreshing ;
       private bool returnInSub ;
       private bool AV49IsNotAccess ;
+      private bool bDynCreated_Wcwcmodule ;
+      private bool bDynCreated_Wcwcmodule2 ;
+      private bool bDynCreated_Wcwcmodule3 ;
+      private bool bDynCreated_Wcwcmodule4 ;
       private bool bDynCreated_Wwpaux_wc ;
       private bool GXt_boolean4 ;
       private bool n381NotificationId ;
@@ -2137,8 +2400,11 @@ namespace GeneXus.Programs.wwpbaseobjects {
       private string AV13FontIcon ;
       private string imgImageheader_Bitmap ;
       private IGxSession AV27WebSession ;
+      private GXWebComponent WebComp_Wcwcmodule ;
+      private GXWebComponent WebComp_Wcwcmodule2 ;
+      private GXWebComponent WebComp_Wcwcmodule3 ;
+      private GXWebComponent WebComp_Wcwcmodule4 ;
       private GXWebComponent WebComp_Wwpaux_wc ;
-      private GXUserControl ucDdc_modules ;
       private GXUserControl ucDdo_bookmarks ;
       private GXUserControl ucDdc_notificationswc ;
       private GXUserControl ucDdc_adminag ;

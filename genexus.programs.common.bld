@@ -51,7 +51,6 @@ type_SdtArquivo.cs
 type_SdtSecUserCliente.cs
 type_SdtContratoParticipante.cs
 type_SdtParticipante.cs
-type_SdtCliente.cs
 type_SdtAssinaturaParticipanteNotificacao.cs
 type_SdtEmpresa.cs
 type_SdtTipoPagamento.cs
@@ -61,10 +60,8 @@ type_SdtTitulo.cs
 type_SdtConfiguracoes.cs
 type_SdtLimiteAprovacao.cs
 type_SdtFilaProcessamento.cs
-type_SdtProposta.cs
 type_SdtTags.cs
 type_SdtProcedimentosMedicos.cs
-type_SdtAprovadores.cs
 type_SdtBCNotification.cs
 type_SdtUserNotification.cs
 type_SdtEmailQueue.cs
@@ -74,7 +71,6 @@ type_SdtBanco.cs
 type_SdtPropostaDocumentos.cs
 type_SdtCategoriaTitulo.cs
 type_SdtConta.cs
-type_SdtPropostaC.cs
 type_SdtNacionalidade.cs
 type_SdtProfissao.cs
 type_SdtConfiguracoesTestemunhas.cs
@@ -89,14 +85,12 @@ type_SdtClienteReponsavel.cs
 type_SdtTituloProposta.cs
 type_SdtAssinaturaParticipanteToken.cs
 type_SdtSecUserLog.cs
-type_SdtPropostaContrato.cs
 type_SdtPropostaContratoAssinatura.cs
 type_SdtUsuario.cs
 type_SdtClienteDocumento.cs
 type_SdtLogEmail.cs
 type_SdtReembolsoParcelas.cs
 type_SdtWebService.cs
-type_SdtPropostaContratoAdm.cs
 type_SdtSerasa.cs
 type_SdtSerasaCheques.cs
 type_SdtSerasaAcoes.cs
@@ -112,7 +106,6 @@ type_SdtCredito.cs
 type_SdtTaxas.cs
 type_SdtClienteNotas.cs
 type_SdtNotaFiscalParcelamento.cs
-type_SdtPropostaNota.cs
 type_SdtNotificacaoAgendadaProcessamento.cs
 type_SdtNotificacaoAgendadaProcessamentoItem.cs
 type_SdtNotificacaoAgendada.cs
@@ -124,7 +117,14 @@ type_SdtContrato.cs
 type_SdtAssinaturaParticipante.cs
 type_SdtAssinatura.cs
 type_SdtReembolsoAssinaturas.cs
+type_SdtCliente.cs
+type_SdtAprovadores.cs
 type_SdtAprovacao.cs
+type_SdtPropostaContratoAdm.cs
+type_SdtPropostaNota.cs
+type_SdtPropostaC.cs
+type_SdtPropostaContrato.cs
+type_SdtProposta.cs
 type_SdtPDFTools.cs
 type_SdtCarimboPdfModifier.cs
 type_SdtPdfConcatenator.cs

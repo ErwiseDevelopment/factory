@@ -668,7 +668,6 @@ namespace GeneXus.Programs.costumer {
          GXt_SdtWWPContext1 = AV31WWPContext;
          new GeneXus.Programs.wwpbaseobjects.loadwwpcontext(context ).execute( out  GXt_SdtWWPContext1) ;
          AV31WWPContext = GXt_SdtWWPContext1;
-         new debug(context ).execute(  StringUtil.Format( "&WWPContext %1", AV31WWPContext.ToJSonString(false, true), "", "", "", "", "", "", "", "")) ;
          /* Using cursor H00902 */
          pr_default.execute(0, new Object[] {AV31WWPContext.gxTpr_Ownerid});
          while ( (pr_default.getStatus(0) != 101) )
@@ -685,7 +684,6 @@ namespace GeneXus.Programs.costumer {
             pr_default.readNext(0);
          }
          pr_default.close(0);
-         new debug(context ).execute(  StringUtil.Format( "&CreditoValor %1", StringUtil.LTrimStr( AV32CreditoValor, 18, 2), "", "", "", "", "", "", "", "")) ;
          AV33UtilizadoValor = (decimal)(100);
          AV34AvailableValor = (decimal)(AV32CreditoValor-AV33UtilizadoValor);
          Uccredito_Available_amount = context.localUtil.Format( AV34AvailableValor, "ZZZ,ZZZ,ZZZ,ZZ9.99");
@@ -768,7 +766,7 @@ namespace GeneXus.Programs.costumer {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918554498", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289154114", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -785,7 +783,7 @@ namespace GeneXus.Programs.costumer {
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 133260), false, true);
-         context.AddJavascriptSource("costumer/home.js", "?202551918554499", false, true);
+         context.AddJavascriptSource("costumer/home.js", "?20255289154115", false, true);
          context.AddJavascriptSource("UserControls/UCCardLimCredRender.js", "", false, true);
          context.AddJavascriptSource("UserControls/UcVisaoGeralVendasRender.js", "", false, true);
          /* End function include_jscripts */

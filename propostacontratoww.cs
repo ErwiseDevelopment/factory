@@ -2661,7 +2661,6 @@ namespace GeneXus.Programs {
          /* Grid_Load Routine */
          returnInSub = false;
          AV89Aprovados = (short)(A40000GXC1);
-         new debug(context ).execute(  StringUtil.Format( "&Aprovados %1", StringUtil.LTrimStr( (decimal)(AV89Aprovados), 4, 0), "", "", "", "", "", "", "", "")) ;
          AV93Reembolso = "<i class=\"fas fa-rotate-left\"></i>";
          AssignAttri("", false, edtavReembolso_Internalname, AV93Reembolso);
          if ( String.IsNullOrEmpty(StringUtil.RTrim( context.GetCookie( "GX_SESSION_ID"))) )
@@ -3961,7 +3960,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918571755", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202552810272965", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -3978,7 +3977,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 133260), false, true);
-         context.AddJavascriptSource("propostacontratoww.js", "?202551918571755", false, true);
+         context.AddJavascriptSource("propostacontratoww.js", "?202552810272966", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Panel/BootstrapPanelRender.js", "", false, true);

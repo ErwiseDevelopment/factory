@@ -73,12 +73,14 @@ namespace GeneXus.Programs {
          state.Add("gxTpr_Aprovadoresid_Z");
          state.Add("gxTpr_Propostaid_Z");
          state.Add("gxTpr_Secusername_Z");
+         state.Add("gxTpr_Secuserfullname_Z");
          state.Add("gxTpr_Aprovacaoem_Z_Nullable");
          state.Add("gxTpr_Aprovacaodecisao_Z");
          state.Add("gxTpr_Aprovacaostatus_Z");
          state.Add("gxTpr_Aprovadoresid_N");
          state.Add("gxTpr_Propostaid_N");
          state.Add("gxTpr_Secusername_N");
+         state.Add("gxTpr_Secuserfullname_N");
          state.Add("gxTpr_Aprovacaoem_N");
          state.Add("gxTpr_Aprovacaodecisao_N");
          state.Add("gxTpr_Aprovacaostatus_N");
@@ -93,6 +95,7 @@ namespace GeneXus.Programs {
          gxTv_SdtAprovacao_Aprovadoresid = sdt.gxTv_SdtAprovacao_Aprovadoresid ;
          gxTv_SdtAprovacao_Propostaid = sdt.gxTv_SdtAprovacao_Propostaid ;
          gxTv_SdtAprovacao_Secusername = sdt.gxTv_SdtAprovacao_Secusername ;
+         gxTv_SdtAprovacao_Secuserfullname = sdt.gxTv_SdtAprovacao_Secuserfullname ;
          gxTv_SdtAprovacao_Aprovacaoem = sdt.gxTv_SdtAprovacao_Aprovacaoem ;
          gxTv_SdtAprovacao_Aprovacaodecisao = sdt.gxTv_SdtAprovacao_Aprovacaodecisao ;
          gxTv_SdtAprovacao_Aprovacaostatus = sdt.gxTv_SdtAprovacao_Aprovacaostatus ;
@@ -102,12 +105,14 @@ namespace GeneXus.Programs {
          gxTv_SdtAprovacao_Aprovadoresid_Z = sdt.gxTv_SdtAprovacao_Aprovadoresid_Z ;
          gxTv_SdtAprovacao_Propostaid_Z = sdt.gxTv_SdtAprovacao_Propostaid_Z ;
          gxTv_SdtAprovacao_Secusername_Z = sdt.gxTv_SdtAprovacao_Secusername_Z ;
+         gxTv_SdtAprovacao_Secuserfullname_Z = sdt.gxTv_SdtAprovacao_Secuserfullname_Z ;
          gxTv_SdtAprovacao_Aprovacaoem_Z = sdt.gxTv_SdtAprovacao_Aprovacaoem_Z ;
          gxTv_SdtAprovacao_Aprovacaodecisao_Z = sdt.gxTv_SdtAprovacao_Aprovacaodecisao_Z ;
          gxTv_SdtAprovacao_Aprovacaostatus_Z = sdt.gxTv_SdtAprovacao_Aprovacaostatus_Z ;
          gxTv_SdtAprovacao_Aprovadoresid_N = sdt.gxTv_SdtAprovacao_Aprovadoresid_N ;
          gxTv_SdtAprovacao_Propostaid_N = sdt.gxTv_SdtAprovacao_Propostaid_N ;
          gxTv_SdtAprovacao_Secusername_N = sdt.gxTv_SdtAprovacao_Secusername_N ;
+         gxTv_SdtAprovacao_Secuserfullname_N = sdt.gxTv_SdtAprovacao_Secuserfullname_N ;
          gxTv_SdtAprovacao_Aprovacaoem_N = sdt.gxTv_SdtAprovacao_Aprovacaoem_N ;
          gxTv_SdtAprovacao_Aprovacaodecisao_N = sdt.gxTv_SdtAprovacao_Aprovacaodecisao_N ;
          gxTv_SdtAprovacao_Aprovacaostatus_N = sdt.gxTv_SdtAprovacao_Aprovacaostatus_N ;
@@ -136,6 +141,8 @@ namespace GeneXus.Programs {
          AddObjectProperty("PropostaId_N", gxTv_SdtAprovacao_Propostaid_N, false, includeNonInitialized);
          AddObjectProperty("SecUserName", gxTv_SdtAprovacao_Secusername, false, includeNonInitialized);
          AddObjectProperty("SecUserName_N", gxTv_SdtAprovacao_Secusername_N, false, includeNonInitialized);
+         AddObjectProperty("SecUserFullName", gxTv_SdtAprovacao_Secuserfullname, false, includeNonInitialized);
+         AddObjectProperty("SecUserFullName_N", gxTv_SdtAprovacao_Secuserfullname_N, false, includeNonInitialized);
          datetime_STZ = gxTv_SdtAprovacao_Aprovacaoem;
          sDateCnv = "";
          sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( datetime_STZ)), 10, 0));
@@ -169,6 +176,7 @@ namespace GeneXus.Programs {
             AddObjectProperty("AprovadoresId_Z", gxTv_SdtAprovacao_Aprovadoresid_Z, false, includeNonInitialized);
             AddObjectProperty("PropostaId_Z", gxTv_SdtAprovacao_Propostaid_Z, false, includeNonInitialized);
             AddObjectProperty("SecUserName_Z", gxTv_SdtAprovacao_Secusername_Z, false, includeNonInitialized);
+            AddObjectProperty("SecUserFullName_Z", gxTv_SdtAprovacao_Secuserfullname_Z, false, includeNonInitialized);
             datetime_STZ = gxTv_SdtAprovacao_Aprovacaoem_Z;
             sDateCnv = "";
             sNumToPad = StringUtil.Trim( StringUtil.Str( (decimal)(DateTimeUtil.Year( datetime_STZ)), 10, 0));
@@ -194,6 +202,7 @@ namespace GeneXus.Programs {
             AddObjectProperty("AprovadoresId_N", gxTv_SdtAprovacao_Aprovadoresid_N, false, includeNonInitialized);
             AddObjectProperty("PropostaId_N", gxTv_SdtAprovacao_Propostaid_N, false, includeNonInitialized);
             AddObjectProperty("SecUserName_N", gxTv_SdtAprovacao_Secusername_N, false, includeNonInitialized);
+            AddObjectProperty("SecUserFullName_N", gxTv_SdtAprovacao_Secuserfullname_N, false, includeNonInitialized);
             AddObjectProperty("AprovacaoEm_N", gxTv_SdtAprovacao_Aprovacaoem_N, false, includeNonInitialized);
             AddObjectProperty("AprovacaoDecisao_N", gxTv_SdtAprovacao_Aprovacaodecisao_N, false, includeNonInitialized);
             AddObjectProperty("AprovacaoStatus_N", gxTv_SdtAprovacao_Aprovacaostatus_N, false, includeNonInitialized);
@@ -225,6 +234,12 @@ namespace GeneXus.Programs {
             gxTv_SdtAprovacao_Secusername_N = (short)(sdt.gxTv_SdtAprovacao_Secusername_N);
             sdtIsNull = 0;
             gxTv_SdtAprovacao_Secusername = sdt.gxTv_SdtAprovacao_Secusername ;
+         }
+         if ( sdt.IsDirty("SecUserFullName") )
+         {
+            gxTv_SdtAprovacao_Secuserfullname_N = (short)(sdt.gxTv_SdtAprovacao_Secuserfullname_N);
+            sdtIsNull = 0;
+            gxTv_SdtAprovacao_Secuserfullname = sdt.gxTv_SdtAprovacao_Secuserfullname ;
          }
          if ( sdt.IsDirty("AprovacaoEm") )
          {
@@ -264,6 +279,7 @@ namespace GeneXus.Programs {
                this.gxTv_SdtAprovacao_Aprovadoresid_Z_SetNull( );
                this.gxTv_SdtAprovacao_Propostaid_Z_SetNull( );
                this.gxTv_SdtAprovacao_Secusername_Z_SetNull( );
+               this.gxTv_SdtAprovacao_Secuserfullname_Z_SetNull( );
                this.gxTv_SdtAprovacao_Aprovacaoem_Z_SetNull( );
                this.gxTv_SdtAprovacao_Aprovacaodecisao_Z_SetNull( );
                this.gxTv_SdtAprovacao_Aprovacaostatus_Z_SetNull( );
@@ -362,6 +378,36 @@ namespace GeneXus.Programs {
       public bool gxTv_SdtAprovacao_Secusername_IsNull( )
       {
          return (gxTv_SdtAprovacao_Secusername_N==1) ;
+      }
+
+      [  SoapElement( ElementName = "SecUserFullName" )]
+      [  XmlElement( ElementName = "SecUserFullName"   )]
+      public string gxTpr_Secuserfullname
+      {
+         get {
+            return gxTv_SdtAprovacao_Secuserfullname ;
+         }
+
+         set {
+            gxTv_SdtAprovacao_Secuserfullname_N = 0;
+            sdtIsNull = 0;
+            gxTv_SdtAprovacao_Secuserfullname = value;
+            SetDirty("Secuserfullname");
+         }
+
+      }
+
+      public void gxTv_SdtAprovacao_Secuserfullname_SetNull( )
+      {
+         gxTv_SdtAprovacao_Secuserfullname_N = 1;
+         gxTv_SdtAprovacao_Secuserfullname = "";
+         SetDirty("Secuserfullname");
+         return  ;
+      }
+
+      public bool gxTv_SdtAprovacao_Secuserfullname_IsNull( )
+      {
+         return (gxTv_SdtAprovacao_Secuserfullname_N==1) ;
       }
 
       [  SoapElement( ElementName = "AprovacaoEm" )]
@@ -642,6 +688,34 @@ namespace GeneXus.Programs {
          return false ;
       }
 
+      [  SoapElement( ElementName = "SecUserFullName_Z" )]
+      [  XmlElement( ElementName = "SecUserFullName_Z"   )]
+      public string gxTpr_Secuserfullname_Z
+      {
+         get {
+            return gxTv_SdtAprovacao_Secuserfullname_Z ;
+         }
+
+         set {
+            sdtIsNull = 0;
+            gxTv_SdtAprovacao_Secuserfullname_Z = value;
+            SetDirty("Secuserfullname_Z");
+         }
+
+      }
+
+      public void gxTv_SdtAprovacao_Secuserfullname_Z_SetNull( )
+      {
+         gxTv_SdtAprovacao_Secuserfullname_Z = "";
+         SetDirty("Secuserfullname_Z");
+         return  ;
+      }
+
+      public bool gxTv_SdtAprovacao_Secuserfullname_Z_IsNull( )
+      {
+         return false ;
+      }
+
       [  SoapElement( ElementName = "AprovacaoEm_Z" )]
       [  XmlElement( ElementName = "AprovacaoEm_Z"  , IsNullable=true )]
       public string gxTpr_Aprovacaoem_Z_Nullable
@@ -829,6 +903,34 @@ namespace GeneXus.Programs {
          return false ;
       }
 
+      [  SoapElement( ElementName = "SecUserFullName_N" )]
+      [  XmlElement( ElementName = "SecUserFullName_N"   )]
+      public short gxTpr_Secuserfullname_N
+      {
+         get {
+            return gxTv_SdtAprovacao_Secuserfullname_N ;
+         }
+
+         set {
+            sdtIsNull = 0;
+            gxTv_SdtAprovacao_Secuserfullname_N = value;
+            SetDirty("Secuserfullname_N");
+         }
+
+      }
+
+      public void gxTv_SdtAprovacao_Secuserfullname_N_SetNull( )
+      {
+         gxTv_SdtAprovacao_Secuserfullname_N = 0;
+         SetDirty("Secuserfullname_N");
+         return  ;
+      }
+
+      public bool gxTv_SdtAprovacao_Secuserfullname_N_IsNull( )
+      {
+         return false ;
+      }
+
       [  SoapElement( ElementName = "AprovacaoEm_N" )]
       [  XmlElement( ElementName = "AprovacaoEm_N"   )]
       public short gxTpr_Aprovacaoem_N
@@ -931,11 +1033,13 @@ namespace GeneXus.Programs {
       {
          sdtIsNull = 1;
          gxTv_SdtAprovacao_Secusername = "";
+         gxTv_SdtAprovacao_Secuserfullname = "";
          gxTv_SdtAprovacao_Aprovacaoem = (DateTime)(DateTime.MinValue);
          gxTv_SdtAprovacao_Aprovacaodecisao = "";
          gxTv_SdtAprovacao_Aprovacaostatus = "";
          gxTv_SdtAprovacao_Mode = "";
          gxTv_SdtAprovacao_Secusername_Z = "";
+         gxTv_SdtAprovacao_Secuserfullname_Z = "";
          gxTv_SdtAprovacao_Aprovacaoem_Z = (DateTime)(DateTime.MinValue);
          gxTv_SdtAprovacao_Aprovacaodecisao_Z = "";
          gxTv_SdtAprovacao_Aprovacaostatus_Z = "";
@@ -961,6 +1065,7 @@ namespace GeneXus.Programs {
       private short gxTv_SdtAprovacao_Aprovadoresid_N ;
       private short gxTv_SdtAprovacao_Propostaid_N ;
       private short gxTv_SdtAprovacao_Secusername_N ;
+      private short gxTv_SdtAprovacao_Secuserfullname_N ;
       private short gxTv_SdtAprovacao_Aprovacaoem_N ;
       private short gxTv_SdtAprovacao_Aprovacaodecisao_N ;
       private short gxTv_SdtAprovacao_Aprovacaostatus_N ;
@@ -977,9 +1082,11 @@ namespace GeneXus.Programs {
       private DateTime gxTv_SdtAprovacao_Aprovacaoem_Z ;
       private DateTime datetime_STZ ;
       private string gxTv_SdtAprovacao_Secusername ;
+      private string gxTv_SdtAprovacao_Secuserfullname ;
       private string gxTv_SdtAprovacao_Aprovacaodecisao ;
       private string gxTv_SdtAprovacao_Aprovacaostatus ;
       private string gxTv_SdtAprovacao_Secusername_Z ;
+      private string gxTv_SdtAprovacao_Secuserfullname_Z ;
       private string gxTv_SdtAprovacao_Aprovacaodecisao_Z ;
       private string gxTv_SdtAprovacao_Aprovacaostatus_Z ;
    }
@@ -1052,7 +1159,21 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "AprovacaoEm" , Order = 4 )]
+      [DataMember( Name = "SecUserFullName" , Order = 4 )]
+      [GxSeudo()]
+      public string gxTpr_Secuserfullname
+      {
+         get {
+            return sdt.gxTpr_Secuserfullname ;
+         }
+
+         set {
+            sdt.gxTpr_Secuserfullname = value;
+         }
+
+      }
+
+      [DataMember( Name = "AprovacaoEm" , Order = 5 )]
       [GxSeudo()]
       public string gxTpr_Aprovacaoem
       {
@@ -1066,7 +1187,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "AprovacaoDecisao" , Order = 5 )]
+      [DataMember( Name = "AprovacaoDecisao" , Order = 6 )]
       [GxSeudo()]
       public string gxTpr_Aprovacaodecisao
       {
@@ -1080,7 +1201,7 @@ namespace GeneXus.Programs {
 
       }
 
-      [DataMember( Name = "AprovacaoStatus" , Order = 6 )]
+      [DataMember( Name = "AprovacaoStatus" , Order = 7 )]
       [GxSeudo()]
       public string gxTpr_Aprovacaostatus
       {
@@ -1115,7 +1236,7 @@ namespace GeneXus.Programs {
          }
       }
 
-      [DataMember( Name = "gx_md5_hash" , Order = 7 )]
+      [DataMember( Name = "gx_md5_hash" , Order = 8 )]
       public string Hash
       {
          get {

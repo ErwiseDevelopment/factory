@@ -1,0 +1,1603 @@
+warn: Microsoft.AspNetCore.DataProtection.Repositories.EphemeralXmlRepository[50]
+      Using an in-memory repository. Keys will not be persisted to storage.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[59]
+      Neither user profile nor HKLM registry available. Using an ephemeral key repository. Protected data will be unavailable when application exits.
+warn: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[16]
+      The WebRootPath was not found: E:\Kbs\Factory2\NETPostgreSQL002\web\wwwroot. Static files may be unavailable.
+info: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[58]
+      Creating key {71cffcbd-cf35-4f30-8d1e-0297f9bd4f32} with creation date 2025-05-28 12:40:09Z, activation date 2025-05-28 12:40:09Z, and expiration date 2025-08-26 12:40:09Z.
+warn: Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager[35]
+      No XML encryptor configured. Key {71cffcbd-cf35-4f30-8d1e-0297f9bd4f32} may be persisted to storage in unencrypted form.
+Hosting environment: Production
+Content root path: E:\Kbs\Factory2\NETPostgreSQL002\web
+Now listening on: http://127.0.0.1:31592
+Application started. Press Ctrl+C to shut down.
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/login - - -
+warn: Microsoft.AspNetCore.Session.SessionMiddleware[7]
+      Error unprotecting the session cookie.
+      System.Security.Cryptography.CryptographicException: The key {f040b410-5235-4b33-ad86-2dc52c6af7a1} was not found in the key ring. For more information go to https://aka.ms/aspnet/dataprotectionwarning
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.UnprotectCore(Byte[] protectedData, Boolean allowOperationsOnRevokedKeys, UnprotectStatus& status)
+         at Microsoft.AspNetCore.DataProtection.KeyManagement.KeyRingBasedDataProtector.Unprotect(Byte[] protectedData)
+         at Microsoft.AspNetCore.Session.CookieProtection.Unprotect(IDataProtector protector, String protectedText, ILogger logger)
+info: Microsoft.AspNetCore.Session.DistributedSession[3]
+      Session started; Key:679cc9cc-494b-78a4-98d9-d1a877c02481, Id:2c38b608-031f-0813-8ae5-92484ae66812
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/login - 200 - text/html 2179.5857ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVMessage/DVMessage.css?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/fontawesome_vlatest/css/all.min.css?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/bootstrap/css/bootstrap.min.css?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/DVMessage/DVMessage.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\DVMessage\DVMessage.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVMessage/DVMessage.css?2025528937221 - 200 - text/css 47.1626ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/DVelopBootstrap.css?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/Shared/fontawesome_vlatest/css/all.min.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\Shared\fontawesome_vlatest\css\all.min.css'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/bootstrap/css/bootstrap.min.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\bootstrap\css\bootstrap.min.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/fontawesome_vlatest/css/all.min.css?2025528937221 - 200 - text/css 51.8762ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/bootstrap/css/bootstrap.min.css?2025528937221 - 200 - text/css 38.7644ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar-system.css?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/daterangepicker.css?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/calendar-system.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\calendar-system.css'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Shared/daterangepicker/daterangepicker.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Shared\daterangepicker\daterangepicker.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar-system.css?2025528937221 - 200 - text/css 57.7381ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/daterangepicker.css?2025528937221 - 200 - text/css 29.8534ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/DSLogin.css?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/Shared/DVelopBootstrap.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\Shared\DVelopBootstrap.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/DVelopBootstrap.css?2025528937221 - 200 - text/css 72.0333ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/jquery.js?133260 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Portuguese/DSLogin.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Portuguese\DSLogin.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/DSLogin.css?2025528937221 - 200 - text/css 43.5813ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/bootstrap/js/bootstrap.min.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxgral.js?133260 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/gxgral.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\gxgral.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxgral.js?133260 - 200 665085 text/javascript 17.6306ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/gxcfg.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\gxcfg.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - 200 894 text/javascript 4.6603ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/ImagemLogin.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/ImagemLogin.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\ImagemLogin.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/ImagemLogin.png - 200 754992 image/png 7.7074ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/LogoLogin.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/LogoLogin.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\LogoLogin.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/LogoLogin.png - 200 13419 image/png 21.9289ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/AnyStyles.ImagesTokens.css - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/bootstrap/js/bootstrap.min.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\bootstrap\js\bootstrap.min.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/bootstrap/js/bootstrap.min.js?2025528937221 - 200 39685 text/javascript 94.2270ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxgral.js?133260 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Portuguese/AnyStyles.ImagesTokens.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Portuguese\AnyStyles.ImagesTokens.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/AnyStyles.ImagesTokens.css - 200 - text/css 29.9241ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/gxgral.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\gxgral.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxgral.js?133260 - 200 665085 text/javascript 16.4115ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/DSLogin_Tokens.css - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Portuguese/DSLogin_Tokens.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Portuguese\DSLogin_Tokens.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/DSLogin_Tokens.css - 200 - text/css 1.0335ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/gxcfg.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\gxcfg.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - 200 894 text/javascript 1.1129ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/calendar.png - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/messages.por.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/calendar.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\calendar.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/calendar.png - 200 629 image/png 11.8286ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/bootstrap/js/bootstrap.min.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/bootstrap/js/bootstrap.min.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\bootstrap\js\bootstrap.min.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/bootstrap/js/bootstrap.min.js?2025528937221 - 200 39685 text/javascript 1.2988ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/jquery.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\jquery.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/login.js?202551918522453 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/jquery.js?133260 - 200 89666 text/javascript 163.3331ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar.js?133260 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/messages.por.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\messages.por.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/messages.por.js?2025528937221 - 200 95722 text/javascript 54.2977ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar-setup.js?133260 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/login.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\login.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/login.js?202551918522453 - 200 6312 text/javascript 61.3386ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar-pt.js?133260 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/calendar-pt.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\calendar-pt.js'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/calendar-setup.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\calendar-setup.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar-pt.js?133260 - 200 994 text/javascript 18.0349ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar-setup.js?133260 - 200 3066 text/javascript 31.6660ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVMessage/pnotify.custom.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/WorkWithPlusCommon.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/calendar.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\calendar.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar.js?133260 - 200 26338 text/javascript 63.6994ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVMessage/DVMessageRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/DVMessage/pnotify.custom.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\DVMessage\pnotify.custom.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVMessage/pnotify.custom.js?2025528937221 - 200 31442 text/javascript 74.0409ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Tooltip/BootstrapTooltipRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Shared/WorkWithPlusCommon.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Shared\WorkWithPlusCommon.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/WorkWithPlusCommon.js?2025528937221 - 200 24755 text/javascript 94.5426ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Mask/jquery.mask.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/DVMessage/DVMessageRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\DVMessage\DVMessageRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVMessage/DVMessageRender.js?2025528937221 - 200 7611 text/javascript 85.8797ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/WorkWithPlusUtilities/BootstrapSelect.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/Tooltip/BootstrapTooltipRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\Tooltip\BootstrapTooltipRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Tooltip/BootstrapTooltipRender.js?2025528937221 - 200 5904 text/javascript 46.5738ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/WorkWithPlusUtilities/WorkWithPlusUtilitiesRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Mask/jquery.mask.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Mask\jquery.mask.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Mask/jquery.mask.js?2025528937221 - 200 7444 text/javascript 64.9499ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/locales.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/WorkWithPlusUtilities/BootstrapSelect.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\WorkWithPlusUtilities\BootstrapSelect.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/WorkWithPlusUtilities/BootstrapSelect.js?2025528937221 - 200 52902 text/javascript 83.5756ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/wwp-daterangepicker.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/WorkWithPlusUtilities/WorkWithPlusUtilitiesRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\WorkWithPlusUtilities\WorkWithPlusUtilitiesRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/WorkWithPlusUtilities/WorkWithPlusUtilitiesRender.js?2025528937221 - 200 29810 text/javascript 69.4690ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/moment.min.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Shared/daterangepicker/locales.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Shared\daterangepicker\locales.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/locales.js?2025528937221 - 200 3806 text/javascript 73.3608ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/daterangepicker.min.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Shared/daterangepicker/wwp-daterangepicker.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Shared\daterangepicker\wwp-daterangepicker.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/wwp-daterangepicker.js?2025528937221 - 200 5777 text/javascript 62.8193ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DatePicker/DatePickerRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/DatePicker/DatePickerRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\DatePicker\DatePickerRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DatePicker/DatePickerRender.js?2025528937221 - 200 3134 text/javascript 51.3675ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpageempty.js?202551918522023 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Shared/daterangepicker/daterangepicker.min.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Shared\daterangepicker\daterangepicker.min.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/daterangepicker.min.js?2025528937221 - 200 62675 text/javascript 76.0096ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Shared/daterangepicker/moment.min.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Shared\daterangepicker\moment.min.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/moment.min.js?2025528937221 - 200 59101 text/javascript 115.3788ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wwpbaseobjects/workwithplusmasterpageempty.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wwpbaseobjects\workwithplusmasterpageempty.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpageempty.js?202551918522023 - 200 10215 text/javascript 45.7057ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/jquery.js?133260 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/messages.por.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/login.js?202551918522453 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/login.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\login.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/login.js?202551918522453 - 200 6312 text/javascript 6.7846ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/jquery.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\jquery.js'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/messages.por.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\messages.por.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/jquery.js?133260 - 200 89666 text/javascript 10.0261ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/messages.por.js?2025528937221 - 200 95722 text/javascript 10.0566ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar-pt.js?133260 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/calendar-pt.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\calendar-pt.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar-pt.js?133260 - 200 994 text/javascript 1.2201ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar.js?133260 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar-setup.js?133260 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVMessage/pnotify.custom.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/calendar-setup.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\calendar-setup.js'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/calendar.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\calendar.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar-setup.js?133260 - 200 3066 text/javascript 1.0462ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/calendar.js?133260 - 200 26338 text/javascript 1.1825ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/DVMessage/pnotify.custom.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\DVMessage\pnotify.custom.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVMessage/pnotify.custom.js?2025528937221 - 200 31442 text/javascript 1.5535ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/WorkWithPlusCommon.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVMessage/DVMessageRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Tooltip/BootstrapTooltipRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Shared/WorkWithPlusCommon.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Shared\WorkWithPlusCommon.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/WorkWithPlusCommon.js?2025528937221 - 200 24755 text/javascript 1.7439ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/DVMessage/DVMessageRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\DVMessage\DVMessageRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVMessage/DVMessageRender.js?2025528937221 - 200 7611 text/javascript 1.3636ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/Tooltip/BootstrapTooltipRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\Tooltip\BootstrapTooltipRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Tooltip/BootstrapTooltipRender.js?2025528937221 - 200 5904 text/javascript 1.2761ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Mask/jquery.mask.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/WorkWithPlusUtilities/BootstrapSelect.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/WorkWithPlusUtilities/WorkWithPlusUtilitiesRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Mask/jquery.mask.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Mask\jquery.mask.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Mask/jquery.mask.js?2025528937221 - 200 7444 text/javascript 1.2243ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/WorkWithPlusUtilities/BootstrapSelect.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\WorkWithPlusUtilities\BootstrapSelect.js'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/WorkWithPlusUtilities/WorkWithPlusUtilitiesRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\WorkWithPlusUtilities\WorkWithPlusUtilitiesRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/WorkWithPlusUtilities/WorkWithPlusUtilitiesRender.js?2025528937221 - 200 29810 text/javascript 0.7765ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/WorkWithPlusUtilities/BootstrapSelect.js?2025528937221 - 200 52902 text/javascript 1.0282ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/locales.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/wwp-daterangepicker.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Shared/daterangepicker/locales.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Shared\daterangepicker\locales.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/locales.js?2025528937221 - 200 3806 text/javascript 1.2310ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DatePicker/DatePickerRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Shared/daterangepicker/wwp-daterangepicker.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Shared\daterangepicker\wwp-daterangepicker.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/wwp-daterangepicker.js?2025528937221 - 200 5777 text/javascript 1.0842ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/DatePicker/DatePickerRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\DatePicker\DatePickerRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DatePicker/DatePickerRender.js?2025528937221 - 200 3134 text/javascript 1.0222ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/daterangepicker.min.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/moment.min.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpageempty.js?202551918522023 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wwpbaseobjects/workwithplusmasterpageempty.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wwpbaseobjects\workwithplusmasterpageempty.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpageempty.js?202551918522023 - 200 10215 text/javascript 0.9577ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Shared/daterangepicker/daterangepicker.min.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Shared\daterangepicker\daterangepicker.min.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/daterangepicker.min.js?2025528937221 - 200 62675 text/javascript 1.2762ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Shared/daterangepicker/moment.min.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Shared\daterangepicker\moment.min.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Shared/daterangepicker/moment.min.js?2025528937221 - 200 59101 text/javascript 1.4064ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/login?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436016233 - application/json 161
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/login?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436016233 - 200 - application/json 796.4232ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/index?Yg184jAPh1I47-31EQZ0PA - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/index?Yg184jAPh1I47-31EQZ0PA - 200 - application/json 189.9427ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/vendas - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/vendas - 200 - text/html 3642.9878ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WorkWithPlusDS.css?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVPaginationBar/DVPaginationBar.css?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/DVelopBootstrap.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Portuguese/WorkWithPlusDS.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Portuguese\WorkWithPlusDS.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WorkWithPlusDS.css?2025528937221 - 200 - text/css 49.8463ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WorkWithPlusDS.css?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Portuguese/WorkWithPlusDS.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Portuguese\WorkWithPlusDS.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WorkWithPlusDS.css?2025528937221 - 200 - text/css 0.9803ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Imagemheader.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Imagemheader.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - 200 25223 image/png 1.4800ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/DVPaginationBar/DVPaginationBar.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\DVPaginationBar\DVPaginationBar.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVPaginationBar/DVPaginationBar.css?2025528937221 - 200 - text/css 43.6417ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/ActionNewDynamicFilter.png - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/fontawesome_vlatest/webfonts/fa-solid-900.woff2 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/ActionNewDynamicFilter.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\ActionNewDynamicFilter.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/ActionNewDynamicFilter.png - 200 380 image/png 10.0685ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/ActionRemoveDynamicFilter.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/ActionRemoveDynamicFilter.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\ActionRemoveDynamicFilter.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/ActionRemoveDynamicFilter.png - 200 363 image/png 13.3773ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WWPBaseObjects.WorkWithPlusBaseDS.css - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/Shared/fontawesome_vlatest/webfonts/fa-solid-900.woff2'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\Shared\fontawesome_vlatest\webfonts\fa-solid-900.woff2'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/fontawesome_vlatest/webfonts/fa-solid-900.woff2 - 200 154228 font/woff2 49.8263ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WorkWithPlus.DynamicForms.WWP_DynamicForm_DS.css - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Portuguese/WWPBaseObjects.WorkWithPlusBaseDS.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Portuguese\WWPBaseObjects.WorkWithPlusBaseDS.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WWPBaseObjects.WorkWithPlusBaseDS.css - 200 - text/css 44.0721ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WorkWithPlusDS_Tokens.css - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Portuguese/WorkWithPlus.DynamicForms.WWP_DynamicForm_DS.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Portuguese\WorkWithPlus.DynamicForms.WWP_DynamicForm_DS.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WorkWithPlus.DynamicForms.WWP_DynamicForm_DS.css - 200 - text/css 16.8881ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WWPBaseObjects.WorkWithPlusBaseDS_Tokens.css - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/Shared/DVelopBootstrap.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\Shared\DVelopBootstrap.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/DVelopBootstrap.js?2025528937221 - 200 163482 text/javascript 134.8457ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WorkWithPlus.DynamicForms.WWP_DynamicForm_DS_Tokens.css - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Portuguese/WorkWithPlus.DynamicForms.WWP_DynamicForm_DS_Tokens.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Portuguese\WorkWithPlus.DynamicForms.WWP_DynamicForm_DS_Tokens.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WorkWithPlus.DynamicForms.WWP_DynamicForm_DS_Tokens.css - 200 - text/css 0.7815ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/DVelopBootstrap.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/Shared/DVelopBootstrap.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\Shared\DVelopBootstrap.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/DVelopBootstrap.js?2025528937221 - 200 163482 text/javascript 2.8591ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Panel/BootstrapPanelRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Portuguese/WorkWithPlusDS_Tokens.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Portuguese\WorkWithPlusDS_Tokens.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WorkWithPlusDS_Tokens.css - 200 - text/css 30.3801ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Portuguese/WWPBaseObjects.WorkWithPlusBaseDS_Tokens.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Portuguese\WWPBaseObjects.WorkWithPlusBaseDS_Tokens.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/Portuguese/WWPBaseObjects.WorkWithPlusBaseDS_Tokens.css - 200 - text/css 25.7186ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/Panel/BootstrapPanelRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\Panel\BootstrapPanelRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Panel/BootstrapPanelRender.js?2025528937221 - 200 685 text/javascript 25.5695ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\DropDownOptions\BootstrapDropDownOptionsRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js?2025528937221 - 200 29124 text/javascript 56.3662ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVPaginationBar/DVPaginationBarRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/DVPaginationBar/DVPaginationBarRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\DVPaginationBar\DVPaginationBarRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DVPaginationBar/DVPaginationBarRender.js?2025528937221 - 200 13900 text/javascript 71.0851ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/GridEmpowerer/GridEmpowererRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/GridEmpowerer/GridEmpowererRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\GridEmpowerer\GridEmpowererRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/GridEmpowerer/GridEmpowererRender.js?2025528937221 - 200 58313 text/javascript 62.7596ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DateRangePicker/DateRangePickerRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/DateRangePicker/DateRangePickerRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\DateRangePicker\DateRangePickerRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/DateRangePicker/DateRangePickerRender.js?2025528937221 - 200 3180 text/javascript 47.0048ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/vendas.js?202551918555629 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/vendas.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\vendas.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/vendas.js?202551918555629 - 200 1574 text/javascript 32.6408ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcreembolsoflowlog.js?202551918515241 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Panel/BootstrapPanelRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\DropDownOptions\BootstrapDropDownOptionsRender.js'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/Panel/BootstrapPanelRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\Panel\BootstrapPanelRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js?2025528937221 - 200 29124 text/javascript 0.8216ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Panel/BootstrapPanelRender.js?2025528937221 - 200 685 text/javascript 0.8216ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wcreembolsoflowlog.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wcreembolsoflowlog.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcreembolsoflowlog.js?202551918515241 - 200 137706 text/javascript 64.5567ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcmodule.js?20255289141783 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wcmodule.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wcmodule.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcmodule.js?20255289141783 - 200 2634 text/javascript 19.9067ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/slimscroll/jquery.slimscroll.min.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/Shared/slimscroll/jquery.slimscroll.min.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\Shared\slimscroll\jquery.slimscroll.min.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/slimscroll/jquery.slimscroll.min.js?2025528937221 - 200 4736 text/javascript 61.5585ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/SidebarMenu/BootstrapSidebarMenuRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/SidebarMenu/BootstrapSidebarMenuRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\SidebarMenu\BootstrapSidebarMenuRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/SidebarMenu/BootstrapSidebarMenuRender.js?2025528937221 - 200 19643 text/javascript 65.6295ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Chronometer/ChronometerRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Chronometer/ChronometerRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Chronometer\ChronometerRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Chronometer/ChronometerRender.js?2025528937221 - 200 682 text/javascript 30.2989ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/ConfirmPanel/BootstrapConfirmPanelRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/ConfirmPanel/BootstrapConfirmPanelRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\ConfirmPanel\BootstrapConfirmPanelRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/ConfirmPanel/BootstrapConfirmPanelRender.js?2025528937221 - 200 644 text/javascript 26.7530ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpage.js?20255289151414 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wwpbaseobjects/workwithplusmasterpage.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wwpbaseobjects\workwithplusmasterpage.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpage.js?20255289151414 - 200 28037 text/javascript 47.0827ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/asc.gif - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/desc.gif - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/asc.gif'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\asc.gif'
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/desc.gif'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\desc.gif'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/asc.gif - 200 67 image/gif 10.4917ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/desc.gif - 200 65 image/gif 8.9021ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/fontawesome_vlatest/webfonts/fa-regular-400.woff2 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Bootstrap/Shared/fontawesome_vlatest/webfonts/fa-regular-400.woff2'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Bootstrap\Shared\fontawesome_vlatest\webfonts\fa-regular-400.woff2'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Bootstrap/Shared/fontawesome_vlatest/webfonts/fa-regular-400.woff2 - 200 23940 font/woff2 23.1188ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/vendas?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436025396 - application/json 474
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/vendas?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436025396 - 200 - application/json 75.9223ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/financeiro - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/financeiro - 200 - text/html 639.9339ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wccardvalue.js?20255221643587 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wccardvalue.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wccardvalue.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wccardvalue.js?20255221643587 - 200 4336 text/javascript 53.9603ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxdec.js?133260 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/gxdec.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\gxdec.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxdec.js?133260 - 200 19301 text/javascript 95.9820ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/financeiro.js?202551918524977 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/financeiro.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\financeiro.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/financeiro.js?202551918524977 - 200 8943 text/javascript 26.0363ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/financeiro?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436027885 - application/json 480
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/financeiro?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436027885 - 200 - application/json 27.7195ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/contratos - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/contratos - 200 - text/html 1375.8929ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/QueryViewerCommon.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/QueryViewer/QueryViewerCommon.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\QueryViewer\QueryViewerCommon.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/QueryViewerCommon.js?2025528937221 - 200 168045 text/javascript 97.8167ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/QueryViewerRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/QueryViewer/QueryViewerRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\QueryViewer\QueryViewerRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/QueryViewerRender.js?2025528937221 - 200 10787 text/javascript 27.2695ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcassinaturas.js?202551918442751 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wcassinaturas.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wcassinaturas.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcassinaturas.js?202551918442751 - 200 27171 text/javascript 26.7072ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/contratos.js?202551918554375 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/contratos.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\contratos.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/contratos.js?202551918554375 - 200 16812 text/javascript 44.9731ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/QueryViewer.css - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/QueryViewer/QueryViewer.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\QueryViewer\QueryViewer.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/QueryViewer.css - 200 - text/css 39.9708ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/css/highcharts.css - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/QueryViewer/highcharts/css/highcharts.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\QueryViewer\highcharts\css\highcharts.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/css/highcharts.css - 200 - text/css 30.3533ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/highcharts.js - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/QueryViewer/highcharts/highcharts.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\QueryViewer\highcharts\highcharts.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/highcharts.js - 200 290112 text/javascript 211.0141ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/highcharts-3d.js - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/QueryViewer/highcharts/highcharts-3d.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\QueryViewer\highcharts\highcharts-3d.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/highcharts-3d.js - 200 48881 text/javascript 57.5260ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/highcharts-more.js - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/QueryViewer/highcharts/highcharts-more.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\QueryViewer\highcharts\highcharts-more.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/highcharts-more.js - 200 97315 text/javascript 78.5675ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/modules/funnel.js - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/indicator.gif - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/QueryViewer/indicator.gif'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\QueryViewer\indicator.gif'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/indicator.gif - 200 8581 image/gif 8.3805ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/QueryViewer/highcharts/modules/funnel.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\QueryViewer\highcharts\modules\funnel.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/modules/funnel.js - 200 5523 text/javascript 52.2038ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/modules/solid-gauge.js - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/QueryViewer/highcharts/modules/solid-gauge.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\QueryViewer\highcharts\modules\solid-gauge.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/QueryViewer/highcharts/modules/solid-gauge.js - 200 4653 text/javascript 38.8657ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?recordsetcachekey,1748436030188 - application/x-www-form-urlencoded 149
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?recordsetcachekey,1748436030188 - 200 - text/plain;+charset=utf-8 581.1170ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/contratos?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436030779 - application/json 479
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?metadata,1748436030780 - application/x-www-form-urlencoded 621
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/contratos?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436030779 - 200 - application/json 30.5965ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/seguranca - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?metadata,1748436030780 - 200 - text/xml;+charset=utf-8 282.3616ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?data,1748436031068 - application/x-www-form-urlencoded 593
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?data,1748436031068 - 200 - text/xml;+charset=utf-8 167.3417ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/seguranca - 200 - text/html 2532.2677ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuserlogww.js?202551918495022 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/secuserlogww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\secuserlogww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuserlogww.js?202551918495022 - 200 142775 text/javascript 74.5247ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/seguranca.js?20255221661671 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/seguranca.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\seguranca.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/seguranca.js?20255221661671 - 200 6656 text/javascript 40.0332ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/seguranca?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436037781 - application/json 479
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/seguranca?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436037781 - 200 - application/json 22.2890ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/contratos - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/contratos - 200 - text/html 52.6216ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?recordsetcachekey,1748436037943 - application/x-www-form-urlencoded 149
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?recordsetcachekey,1748436037943 - 200 - text/plain;+charset=utf-8 1.5754ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?metadata,1748436037987 - application/x-www-form-urlencoded 621
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?metadata,1748436037987 - 200 - text/xml;+charset=utf-8 10.1767ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?data,1748436038001 - application/x-www-form-urlencoded 593
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/agxpl_get.aspx?data,1748436038001 - 200 - text/xml;+charset=utf-8 6.2332ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/contratos?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436039378 - application/json 470
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/contratos?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436039378 - 200 - application/json 36.1121ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/vendas - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/vendas - 200 - text/html 120.1417ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/clienteww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/clienteww - 200 - text/html 3003.6068ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/clienteww.js?202551918545895 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/clienteww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\clienteww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/clienteww.js?202551918545895 - 200 191631 text/javascript 91.3320ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/clienteww.js?202551918545895 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/clienteww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\clienteww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/clienteww.js?202551918545895 - 200 191631 text/javascript 1.2823ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/rest/ClienteWWGetFilterData - application/json 82
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/rest/ClienteWWGetFilterData - 200 - application/json;+charset=utf-8 695.5247ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - 200 - text/html 3076.8068ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/GridTitlesCategories/GridTitlesCategoriesRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/GridTitlesCategories/GridTitlesCategoriesRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\GridTitlesCategories\GridTitlesCategoriesRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/GridTitlesCategories/GridTitlesCategoriesRender.js?2025528937221 - 200 5543 text/javascript 35.6210ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww.js?20255261647929 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/GridTitlesCategories/GridTitlesCategoriesRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/GridTitlesCategories/GridTitlesCategoriesRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\GridTitlesCategories\GridTitlesCategoriesRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/GridTitlesCategories/GridTitlesCategoriesRender.js?2025528937221 - 200 5543 text/javascript 0.6232ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/propostaww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\propostaww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww.js?20255261647929 - 200 159713 text/javascript 172.6270ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww.js?20255261647929 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/propostaww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\propostaww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww.js?20255261647929 - 200 159713 text/javascript 0.9370ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436386890 - application/json 2966
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436386890 - 200 - application/json 73.7279ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovacaoww?gbY1yrEybq7vyumDbzXQMXBLnzN6v7ob86OP_ufspTM,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/ClosePrompt.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/ClosePrompt.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\ClosePrompt.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/ClosePrompt.png - 200 316 image/png 14.0465ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resize.gif - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/resize.gif'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\resize.gif'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resize.gif - 200 77 image/gif 29.9801ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovacaoww?gbY1yrEybq7vyumDbzXQMXBLnzN6v7ob86OP_ufspTM,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - 200 - text/html 620.1454ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovacaoww.js?20255261791219 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /gxcfg.js was not modified
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - 304 - text/javascript 0.8843ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcmodule.js?20255289141783 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /wcmodule.js was not modified
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcmodule.js?20255289141783 - 304 - text/javascript 0.3146ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpage.js?20255289151414 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /wwpbaseobjects/workwithplusmasterpage.js was not modified
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpage.js?20255289151414 - 304 - text/javascript 0.3609ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/aprovacaoww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\aprovacaoww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovacaoww.js?20255261791219 - 200 30101 text/javascript 92.5142ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 59285.5046ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436447078 - application/json 2631
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436447078 - 200 - application/json 17.3572ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 432511.1585ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA - 200 - text/html 5312.0538ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/HistoryManager.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/shared/HistoryManager/HistoryManager.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\shared\HistoryManager\HistoryManager.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/HistoryManager.js?2025528937221 - 200 4476 text/javascript 60.3662ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/HistoryManager.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/shared/HistoryManager/HistoryManager.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\shared\HistoryManager\HistoryManager.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/HistoryManager.js?2025528937221 - 200 4476 text/javascript 0.5751ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA - 200 - text/html 118.4420ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/rsh/json2005.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/shared/HistoryManager/rsh/json2005.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\shared\HistoryManager\rsh\json2005.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/rsh/json2005.js?2025528937221 - 200 8846 text/javascript 28.0291ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/rsh/json2005.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/shared/HistoryManager/rsh/json2005.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\shared\HistoryManager\rsh\json2005.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/rsh/json2005.js?2025528937221 - 200 8846 text/javascript 0.9718ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/rsh/rsh.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/HistoryManagerCreate.js?2025528937221 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /gxcfg.js was not modified
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - 304 - text/javascript 1.0385ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Tab/TabRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/shared/HistoryManager/HistoryManagerCreate.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\shared\HistoryManager\HistoryManagerCreate.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/HistoryManagerCreate.js?2025528937221 - 200 350 text/javascript 33.8867ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Window/InNewWindowRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/shared/HistoryManager/rsh/rsh.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\shared\HistoryManager\rsh\rsh.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/shared/HistoryManager/rsh/rsh.js?2025528937221 - 200 8839 text/javascript 50.1254ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Imagemheader.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Imagemheader.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - 200 25223 image/png 1.8877ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Tab/TabRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Tab\TabRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Tab/TabRender.js?2025528937221 - 200 3705 text/javascript 49.0658ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Window/InNewWindowRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Window\InNewWindowRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Window/InNewWindowRender.js?2025528937221 - 200 1714 text/javascript 41.3914ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta.js?202552621584530 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/serasaww.js?202551918505924 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/serasaww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\serasaww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/serasaww.js?202551918505924 - 200 96435 text/javascript 59.5063ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wpalterarproposta.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wpalterarproposta.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta.js?202552621584530 - 200 103689 text/javascript 112.1333ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/581b2cac-a024-4c40-b0eb-92c9a9b74fac.tmp - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/PublicTempStorage/581b2cac-a024-4c40-b0eb-92c9a9b74fac.tmp'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\PublicTempStorage\581b2cac-a024-4c40-b0eb-92c9a9b74fac.tmp'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/581b2cac-a024-4c40-b0eb-92c9a9b74fac.tmp - 401 0 image/jpeg 3.2613ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA,gx-no-cache=1748436458249 - application/json 241
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA,gx-no-cache=1748436458249 - 200 - application/json 1217.3851ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - 200 - text/html 88.5848ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA - 200 - text/html 94.1425ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/e02db540-1e29-485c-b2c8-edf780bc0200.tmp - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/PublicTempStorage/e02db540-1e29-485c-b2c8-edf780bc0200.tmp'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\PublicTempStorage\e02db540-1e29-485c-b2c8-edf780bc0200.tmp'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/e02db540-1e29-485c-b2c8-edf780bc0200.tmp - 401 0 image/jpeg 0.7928ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA,gx-no-cache=1748436468205 - application/json 241
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA,gx-no-cache=1748436468205 - 200 - application/json 37.6303ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA,gx-no-cache=1748436470308 - application/json 869
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzAQdJtdZe0koMNAClqU8IlA,gx-no-cache=1748436470308 - 200 - application/json 150.2561ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - 200 - text/html 98.5272ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 17601.1623ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - 200 - text/html 97.7849ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Imagemheader.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Imagemheader.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - 200 25223 image/png 0.7259ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzA6KwiOGoenC85eahhp0Lms - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzA6KwiOGoenC85eahhp0Lms - 200 - text/html 120.8407ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/0efa577b-a88f-4f11-a262-985c23b02902.tmp - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/PublicTempStorage/0efa577b-a88f-4f11-a262-985c23b02902.tmp'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\PublicTempStorage\0efa577b-a88f-4f11-a262-985c23b02902.tmp'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/0efa577b-a88f-4f11-a262-985c23b02902.tmp - 401 0 image/jpeg 4.2661ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzA6KwiOGoenC85eahhp0Lms,gx-no-cache=1748436478065 - application/json 237
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzA6KwiOGoenC85eahhp0Lms,gx-no-cache=1748436478065 - 200 - application/json 31.4707ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzA6KwiOGoenC85eahhp0Lms,gx-no-cache=1748436479659 - application/json 869
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzA6KwiOGoenC85eahhp0Lms,gx-no-cache=1748436479659 - 200 - application/json 72.9302ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - 200 - text/html 83.6418ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436483100 - application/json 179
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436483100 - 200 - application/json 1.7202ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta - 200 - text/html 1623.2153ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/wizardstepsbulletwc.js?202551918381044 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wwpbaseobjects/wizardstepsbulletwc.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wwpbaseobjects\wizardstepsbulletwc.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/wizardstepsbulletwc.js?202551918381044 - 200 11133 text/javascript 50.2418ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/UserControls/WWP_IconButtonRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/UserControls/WWP_IconButtonRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\UserControls\WWP_IconButtonRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/UserControls/WWP_IconButtonRender.js?2025528937221 - 200 955 text/javascript 69.7887ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostaclinica.js?202551918375450 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wpropostaclinica.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wpropostaclinica.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostaclinica.js?202551918375450 - 200 22122 text/javascript 37.9900ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta.js?202551918565866 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wproposta.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wproposta.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta.js?202551918565866 - 200 2582 text/javascript 34.2860ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436486589 - application/json 2001
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436486589 - 200 - application/json 17.7392ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?Q4pMnyum8WNykZclxa5exSSumaQXvtyweex6KT4C3jfoCJbthGFJEK6efkNA-RsR - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?Q4pMnyum8WNykZclxa5exSSumaQXvtyweex6KT4C3jfoCJbthGFJEK6efkNA-RsR - 200 - text/html 3328.6193ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostanovocliente.js?202551918482498 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wpropostanovocliente.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wpropostanovocliente.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostanovocliente.js?202551918482498 - 200 69057 text/javascript 41.2898ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/WizardStepChecked.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/WizardStepChecked.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\WizardStepChecked.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/WizardStepChecked.png - 200 382 image/png 7.2014ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,Q4pMnyum8WNykZclxa5exSSumaQXvtyweex6KT4C3jfoCJbthGFJEK6efkNA-RsR,gx-no-cache=1748436498765 - application/json 592
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,Q4pMnyum8WNykZclxa5exSSumaQXvtyweex6KT4C3jfoCJbthGFJEK6efkNA-RsR,gx-no-cache=1748436498765 - 200 - application/json 21.0561ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,Q4pMnyum8WNykZclxa5exSSumaQXvtyweex6KT4C3jfoCJbthGFJEK6efkNA-RsR,gx-no-cache=1748436499595 - application/json 197
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,Q4pMnyum8WNykZclxa5exSSumaQXvtyweex6KT4C3jfoCJbthGFJEK6efkNA-RsR,gx-no-cache=1748436499595 - 200 - application/json 3.2648ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,Q4pMnyum8WNykZclxa5exSSumaQXvtyweex6KT4C3jfoCJbthGFJEK6efkNA-RsR,gx-no-cache=1748436503707 - application/json 1225
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,Q4pMnyum8WNykZclxa5exSSumaQXvtyweex6KT4C3jfoCJbthGFJEK6efkNA-RsR,gx-no-cache=1748436503707 - 200 - application/json 142.3731ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?ycKetVpVfU_sAp-QllRWD3XgSYQ8oHmdD9ZqCFHSeC391d1sNMrciElooLI7oLli - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?ycKetVpVfU_sAp-QllRWD3XgSYQ8oHmdD9ZqCFHSeC391d1sNMrciElooLI7oLli - 200 - text/html 1236.0510ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostaconta.js?202551918433237 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wpropostaconta.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wpropostaconta.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostaconta.js?202551918433237 - 200 22340 text/javascript 54.6699ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Imagemheader.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Imagemheader.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - 200 25223 image/png 0.4642ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,ycKetVpVfU_sAp-QllRWD3XgSYQ8oHmdD9ZqCFHSeC391d1sNMrciElooLI7oLli,gx-no-cache=1748436510804 - application/json 1787
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,ycKetVpVfU_sAp-QllRWD3XgSYQ8oHmdD9ZqCFHSeC391d1sNMrciElooLI7oLli,gx-no-cache=1748436510804 - 200 - application/json 71.9409ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?4ryjthe45dJxTpUS0AiVHNM-W3RwsrWndcPjAInKtKH5xL0pXl7Qubcmc7LvyHCU - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?4ryjthe45dJxTpUS0AiVHNM-W3RwsrWndcPjAInKtKH5xL0pXl7Qubcmc7LvyHCU - 200 - text/html 940.9471ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostaproposta.js?20255191846441 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wpropostaproposta.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wpropostaproposta.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostaproposta.js?20255191846441 - 200 30399 text/javascript 54.6119ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/prompt.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/prompt.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\prompt.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/Resources/prompt.png - 200 684 image/png 6.6592ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,4ryjthe45dJxTpUS0AiVHNM-W3RwsrWndcPjAInKtKH5xL0pXl7Qubcmc7LvyHCU,gx-no-cache=1748436523709 - application/json 192
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,4ryjthe45dJxTpUS0AiVHNM-W3RwsrWndcPjAInKtKH5xL0pXl7Qubcmc7LvyHCU,gx-no-cache=1748436523709 - 200 - application/json 8.9226ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,4ryjthe45dJxTpUS0AiVHNM-W3RwsrWndcPjAInKtKH5xL0pXl7Qubcmc7LvyHCU,gx-no-cache=1748436530656 - application/json 224
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,4ryjthe45dJxTpUS0AiVHNM-W3RwsrWndcPjAInKtKH5xL0pXl7Qubcmc7LvyHCU,gx-no-cache=1748436530656 - 200 - application/json 40.8192ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,4ryjthe45dJxTpUS0AiVHNM-W3RwsrWndcPjAInKtKH5xL0pXl7Qubcmc7LvyHCU,gx-no-cache=1748436560532 - application/json 192
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,4ryjthe45dJxTpUS0AiVHNM-W3RwsrWndcPjAInKtKH5xL0pXl7Qubcmc7LvyHCU,gx-no-cache=1748436560532 - 200 - application/json 6.3094ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,4ryjthe45dJxTpUS0AiVHNM-W3RwsrWndcPjAInKtKH5xL0pXl7Qubcmc7LvyHCU,gx-no-cache=1748436562965 - application/json 1204
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,4ryjthe45dJxTpUS0AiVHNM-W3RwsrWndcPjAInKtKH5xL0pXl7Qubcmc7LvyHCU,gx-no-cache=1748436562965 - 200 - application/json 7.6683ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?3KwZsiZy23EAR7CnZcdMoxoocxpZMrKZr54ula9XkXCkF3QlmimO9ycYP4WMMX3F - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?3KwZsiZy23EAR7CnZcdMoxoocxpZMrKZr54ula9XkXCkF3QlmimO9ycYP4WMMX3F - 200 - text/html 1093.3233ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostadocumentos.js?20255261449176 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wpropostadocumentos.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wpropostadocumentos.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostadocumentos.js?20255261449176 - 200 23629 text/javascript 54.4373ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/documentosww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/documentosww - 200 - text/html 1617.0086ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /gxcfg.js was not modified
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - 304 - text/javascript 0.4222ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Imagemheader.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Imagemheader.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - 200 25223 image/png 0.7297ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/documentosww.js?202551918561919 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcmodule.js?20255289141783 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /wcmodule.js was not modified
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcmodule.js?20255289141783 - 304 - text/javascript 0.2602ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/documentosww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\documentosww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/documentosww.js?202551918561919 - 200 85530 text/javascript 46.8208ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpage.js?20255289151414 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /wwpbaseobjects/workwithplusmasterpage.js was not modified
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpage.js?20255289151414 - 304 - text/javascript 0.4806ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/documentos?1q3pikfM2d9o3Kv254tq-1t1Qfj_yzxETQv2_44Ly_M - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/documentos?1q3pikfM2d9o3Kv254tq-1t1Qfj_yzxETQv2_44Ly_M - 200 - text/html 699.9693ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/documentos.js?202551918472020 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/documentos.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\documentos.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/documentos.js?202551918472020 - 200 9358 text/javascript 39.1292ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,3KwZsiZy23EAR7CnZcdMoxoocxpZMrKZr54ula9XkXCkF3QlmimO9ycYP4WMMX3F,gx-no-cache=1748436592356 - application/json 676
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,3KwZsiZy23EAR7CnZcdMoxoocxpZMrKZr54ula9XkXCkF3QlmimO9ycYP4WMMX3F,gx-no-cache=1748436592356 - 200 - application/json 36.8341ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/popupnovodocumento?Wz-gHFuz-UtuKbxi0C1ZpY0HbvLofI4Bw_srAjogbTE,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/popupnovodocumento?Wz-gHFuz-UtuKbxi0C1ZpY0HbvLofI4Bw_srAjogbTE,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - 200 - text/html 1097.2141ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/FileUpload/fileupload.min.css?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/FileUpload/fileupload.min.css'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\FileUpload\fileupload.min.css'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/FileUpload/fileupload.min.css?2025528937221 - 200 - text/css 43.4578ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/FileUpload/fileupload.min.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/FileUpload/fileupload.min.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\FileUpload\fileupload.min.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/FileUpload/fileupload.min.js?2025528937221 - 200 89136 text/javascript 161.0946ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/popupnovodocumento.js?20255232045886 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/popupnovodocumento.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\popupnovodocumento.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/popupnovodocumento.js?20255232045886 - 200 3749 text/javascript 28.7997ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Popover/WWPPopoverRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/DVelop/Popover/WWPPopoverRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\DVelop\Popover\WWPPopoverRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/DVelop/Popover/WWPPopoverRender.js?2025528937221 - 200 9096 text/javascript 47.2594ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpagecliente.js?202551918541549 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wwpbaseobjects/workwithplusmasterpagecliente.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wwpbaseobjects\workwithplusmasterpagecliente.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpagecliente.js?202551918541549 - 200 25356 text/javascript 27.0585ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/bootstrap/fonts/glyphicons-halflings-regular.woff2 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/bootstrap/fonts/glyphicons-halflings-regular.woff2'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\bootstrap\fonts\glyphicons-halflings-regular.woff2'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/bootstrap/fonts/glyphicons-halflings-regular.woff2 - 200 18028 font/woff2 16.7511ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/FileUpload/img/loading.gif - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/FileUpload/img/loading.gif'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\FileUpload\img\loading.gif'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/FileUpload/img/loading.gif - 200 3897 image/gif 14.1116ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/popupnovodocumento/gxobject - multipart/form-data;+boundary=----WebKitFormBoundaryQxjMaHl59MCMEgBq 82141
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/popupnovodocumento/gxobject - 200 - text/plain 70.2730ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/popupnovodocumento?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,Wz-gHFuz-UtuKbxi0C1ZpY0HbvLofI4Bw_srAjogbTE,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B,gx-no-cache=1748436598643 - application/json 580
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/popupnovodocumento?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,Wz-gHFuz-UtuKbxi0C1ZpY0HbvLofI4Bw_srAjogbTE,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B,gx-no-cache=1748436598643 - 200 - application/json 33.8254ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,3KwZsiZy23EAR7CnZcdMoxoocxpZMrKZr54ula9XkXCkF3QlmimO9ycYP4WMMX3F,gx-no-cache=1748436598758 - application/json 383
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,3KwZsiZy23EAR7CnZcdMoxoocxpZMrKZr54ula9XkXCkF3QlmimO9ycYP4WMMX3F,gx-no-cache=1748436598758 - 200 - application/json 7.8371ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostadocumentos?c01d04b1610243d2a2af23e7952e8b18e792b9241b610b20a963f71a768c91218d096115d4ab99574f1305afbf6311fdb09a16b9aab09a6362581ca4c390d21b168794ca7bb7ec2efbe1dbebeaf7c4c63b0b676c1fdf6069662969019c61de97e515191f320f14e70608657adf308cdbb53a06ceca7c8abda539c13aa116f091c9ec15a735e1957e37256a6fb115016a53ded623c528f41fbf3f1f58afc855b0102634e52d5cd4fd59a2c63ec59620b67330acd19d02cf3c5c34ff9d61a0ffdee5112b7dbf236d1eb1284f5a26b1bb2e0e839d2c1bee733ba20ce6e4dbd852ac23dfe03c35bb33d1a494eb4c1ebb9575d28a559fe701704231f70b4baa3467a0b692c49f3467d3e8f6d5991b37373dbf43287c869256ae1724ae8ba8d5d506e294b676d6a4947f7f71b7032fe36ead83,gx-no-cache=1748436599104 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostadocumentos?c01d04b1610243d2a2af23e7952e8b18e792b9241b610b20a963f71a768c91218d096115d4ab99574f1305afbf6311fdb09a16b9aab09a6362581ca4c390d21b168794ca7bb7ec2efbe1dbebeaf7c4c63b0b676c1fdf6069662969019c61de97e515191f320f14e70608657adf308cdbb53a06ceca7c8abda539c13aa116f091c9ec15a735e1957e37256a6fb115016a53ded623c528f41fbf3f1f58afc855b0102634e52d5cd4fd59a2c63ec59620b67330acd19d02cf3c5c34ff9d61a0ffdee5112b7dbf236d1eb1284f5a26b1bb2e0e839d2c1bee733ba20ce6e4dbd852ac23dfe03c35bb33d1a494eb4c1ebb9575d28a559fe701704231f70b4baa3467a0b692c49f3467d3e8f6d5991b37373dbf43287c869256ae1724ae8ba8d5d506e294b676d6a4947f7f71b7032fe36ead83,gx-no-cache=1748436599104 - 200 - application/json 16.1494ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,3KwZsiZy23EAR7CnZcdMoxoocxpZMrKZr54ula9XkXCkF3QlmimO9ycYP4WMMX3F,gx-no-cache=1748436599857 - application/json 2210
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,3KwZsiZy23EAR7CnZcdMoxoocxpZMrKZr54ula9XkXCkF3QlmimO9ycYP4WMMX3F,gx-no-cache=1748436599857 - 200 - application/json 10.6100ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?8LzPzeALZ-X-1S6FVwdYszaeBTDXRbty8i0wN8SFz6buKIoRaxSlXduy26qXnzUh - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?8LzPzeALZ-X-1S6FVwdYszaeBTDXRbty8i0wN8SFz6buKIoRaxSlXduy26qXnzUh - 200 - text/html 1207.0513ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostaresumo.js?20255191847568 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wpropostaresumo.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wpropostaresumo.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostaresumo.js?20255191847568 - 200 72912 text/javascript 30.7002ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,8LzPzeALZ-X-1S6FVwdYszaeBTDXRbty8i0wN8SFz6buKIoRaxSlXduy26qXnzUh,gx-no-cache=1748436603877 - application/json 10595
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,8LzPzeALZ-X-1S6FVwdYszaeBTDXRbty8i0wN8SFz6buKIoRaxSlXduy26qXnzUh,gx-no-cache=1748436603877 - 200 - application/json 2557.5818ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?6cnqLwGAiCY114TaG1gwKAIhzYiCpn0Nax1kL1F3vhrsK8QWrEli0WqVkHlvD3F7 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wproposta?6cnqLwGAiCY114TaG1gwKAIhzYiCpn0Nax1kL1F3vhrsK8QWrEli0WqVkHlvD3F7 - 200 - text/html 965.3122ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/UserControls/UCPropostaComprovanteRender.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/UserControls/UCPropostaComprovanteRender.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\UserControls\UCPropostaComprovanteRender.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/UserControls/UCPropostaComprovanteRender.js?2025528937221 - 200 3189 text/javascript 52.4743ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostaproposta_criada.js?20255289142657 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wpropostaproposta_criada.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wpropostaproposta_criada.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpropostaproposta_criada.js?20255289142657 - 200 3327 text/javascript 108.8765ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - 200 - text/html 66.5370ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs - 200 - text/html 99.1758ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/71ee53f2-fef3-4d67-9527-a4ac452aeb35.tmp - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/PublicTempStorage/71ee53f2-fef3-4d67-9527-a4ac452aeb35.tmp'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\PublicTempStorage\71ee53f2-fef3-4d67-9527-a4ac452aeb35.tmp'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/71ee53f2-fef3-4d67-9527-a4ac452aeb35.tmp - 401 0 image/jpeg 0.7785ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs,gx-no-cache=1748436631172 - application/json 245
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs,gx-no-cache=1748436631172 - 200 - application/json 64.8051ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs,gx-no-cache=1748436633383 - application/json 869
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs,gx-no-cache=1748436633383 - 200 - application/json 97.6822ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - 200 - text/html 77.4034ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436640653 - application/json 2964
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436640653 - 200 - application/json 9.5620ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovacaoww?ZTHBmY_SHjobbqgYpkKopdFAJa2gNaolqEsUZSR_0Rw,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovacaoww?ZTHBmY_SHjobbqgYpkKopdFAJa2gNaolqEsUZSR_0Rw,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - 200 - text/html 69.4333ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 1210.4187ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436642094 - application/json 2630
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436642094 - 200 - application/json 16.9895ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436653561 - application/json 469
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436653561 - 200 - application/json 28.6517ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/seguranca - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/seguranca - 200 - text/html 87.1878ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 183722.3802ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes - 200 - text/html 1865.7609ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/limiteaprovacaoww.js?202551918463242 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes - 200 - text/html 68.3010ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/limiteaprovacaoww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\limiteaprovacaoww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/limiteaprovacaoww.js?202551918463242 - 200 95469 text/javascript 49.6407ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /gxcfg.js was not modified
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - 304 - text/javascript 0.3617ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Imagemheader.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Imagemheader.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - 200 25223 image/png 0.4980ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes.js?202551918581443 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/limiteaprovacaoww.js?202551918463242 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/limiteaprovacaoww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\limiteaprovacaoww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/limiteaprovacaoww.js?202551918463242 - 200 95469 text/javascript 2.0398ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wpconfiguracoeslimiteaprovacoes.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wpconfiguracoeslimiteaprovacoes.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes.js?202551918581443 - 200 2188 text/javascript 41.9042ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes - 200 - text/html 83.8645ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoesaprovadores - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 5087.7289ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoesaprovadores - 200 - text/html 2308.5233ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoesaprovadores - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovadoresww.js?202551918471026 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoesaprovadores - 200 - text/html 88.8110ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/aprovadoresww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\aprovadoresww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovadoresww.js?202551918471026 - 200 90832 text/javascript 63.0772ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoesaprovadores.js?202551918581494 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Imagemheader.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Imagemheader.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - 200 25223 image/png 0.5312ms
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/wpconfiguracoesaprovadores.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\wpconfiguracoesaprovadores.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoesaprovadores.js?202551918581494 - 200 2168 text/javascript 21.5791ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovadoresww.js?202551918471026 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/aprovadoresww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\aprovadoresww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovadoresww.js?202551918471026 - 200 90832 text/javascript 1.1140ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes - 200 - text/html 63.9258ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436669318 - application/json 481
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpconfiguracoeslimiteaprovacoes?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436669318 - 200 - application/json 33.2511ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/financeiro - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/financeiro - 200 - text/html 75.7372ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/financeiro?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436670701 - application/json 475
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/financeiro?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436670701 - 200 - application/json 57.8221ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/vendas - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/vendas - 200 - text/html 90.8658ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - 200 - text/html 92.8511ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs - 200 - text/html 88.3298ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/440f630a-6331-468b-8091-5b9e85d4fd2c.tmp - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/PublicTempStorage/440f630a-6331-468b-8091-5b9e85d4fd2c.tmp'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\PublicTempStorage\440f630a-6331-468b-8091-5b9e85d4fd2c.tmp'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/440f630a-6331-468b-8091-5b9e85d4fd2c.tmp - 401 0 image/jpeg 0.7123ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs,gx-no-cache=1748436678820 - application/json 241
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs,gx-no-cache=1748436678820 - 200 - application/json 92.0597ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 18554.0129ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs - 200 - text/html 93.2256ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Imagemheader.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Imagemheader.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - 200 25223 image/png 0.6538ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/c94c1079-d2e0-4f90-9a92-e5a0123ca966.tmp - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/PublicTempStorage/c94c1079-d2e0-4f90-9a92-e5a0123ca966.tmp'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\PublicTempStorage\c94c1079-d2e0-4f90-9a92-e5a0123ca966.tmp'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/c94c1079-d2e0-4f90-9a92-e5a0123ca966.tmp - 401 0 image/jpeg 0.6365ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - 200 - text/html 74.8711ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436688380 - application/json 2965
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436688380 - 200 - application/json 6.9865ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovacaoww?_NiZT8X2FuciLEvhNaFdVabcjwBRQth5e-XnzPikOTU,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovacaoww?_NiZT8X2FuciLEvhNaFdVabcjwBRQth5e-XnzPikOTU,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - 200 - text/html 74.4081ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 1904.2820ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436690501 - application/json 2630
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436690501 - 200 - application/json 13.9284ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436692709 - application/json 2966
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436692709 - 200 - application/json 3.1360ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovacaoww?ZTHBmY_SHjobbqgYpkKopdFAJa2gNaolqEsUZSR_0Rw,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/aprovacaoww?ZTHBmY_SHjobbqgYpkKopdFAJa2gNaolqEsUZSR_0Rw,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - 200 - text/html 62.3739ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 8413.5809ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436701313 - application/json 2631
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436701313 - 200 - application/json 16.4759ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436701800 - application/json 472
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/propostaww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436701800 - 200 - application/json 15.4762ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/seguranca - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/seguranca - 200 - text/html 91.3423ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoesempresa - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 22643.8366ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuserww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuserww - 200 - text/html 2714.0218ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/Imagemheader.png'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\Resources\Imagemheader.png'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/resources/Imagemheader.png - 200 25223 image/png 0.5295ms
+ConnectionClosedPrematurely
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 3.7545ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuserww.js?202551918534611 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/secuserww.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\secuserww.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuserww.js?202551918534611 - 200 111938 text/javascript 54.0760ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpconfiguracoesempresa - 200 - text/html 5274.5795ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/secuserww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436726772 - application/json 473
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/secuserww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436726772 - 200 - application/json 31.8805ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/vendas - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/vendas - 200 - text/html 410.7739ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/propostaww - 200 - text/html 106.1097ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wpalterarproposta?bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs - 200 - text/html 82.1080ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/5051ab67-46d1-427b-ae68-bbc37dcea535.tmp - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/PublicTempStorage/5051ab67-46d1-427b-ae68-bbc37dcea535.tmp'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\PublicTempStorage\5051ab67-46d1-427b-ae68-bbc37dcea535.tmp'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/PublicTempStorage/5051ab67-46d1-427b-ae68-bbc37dcea535.tmp - 401 0 image/jpeg 0.5609ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs,gx-no-cache=1748436943217 - application/json 470
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/wpalterarproposta?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,bET4Ybhdl0GBcKUqJ1cKzOPWYbWAAp3rTJsmIIVOGVs,gx-no-cache=1748436943217 - 200 - application/json 28.1011ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/seguranca - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/seguranca - 200 - text/html 66.6015ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuserww - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuserww - 200 - text/html 100.8228ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/secuserww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436946730 - application/json 1550
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/secuserww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436946730 - 200 - application/json 7.1638ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuser?UVfcSmj0zHudBtTXQjw7B5Le9pSZAApnl3uNDD4Y79U,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuser?UVfcSmj0zHudBtTXQjw7B5Le9pSZAApnl3uNDD4Y79U,gxPopupLevel%3D0%3BgxTabId%3Dd674e3c4-dc63-40bc-8173-2fa00432fd60%3B - 200 - text/html 98.3562ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuser.js?202551918432530 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[2]
+      Sending file. Request path: '/secuser.js'. Physical path: 'E:\Kbs\Factory2\NETPostgreSQL002\web\secuser.js'
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/secuser.js?202551918432530 - 200 16687 text/javascript 52.5922ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /gxcfg.js was not modified
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxcfg.js?2025528937221 - 304 - text/javascript 0.2821ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcmodule.js?20255289141783 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /wcmodule.js was not modified
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wcmodule.js?20255289141783 - 304 - text/javascript 0.5130ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpage.js?20255289151414 - - -
+info: Microsoft.AspNetCore.StaticFiles.StaticFileMiddleware[6]
+      The file /wwpbaseobjects/workwithplusmasterpage.js was not modified
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/wwpbaseobjects/workwithplusmasterpage.js?20255289151414 - 304 - text/javascript 0.2753ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - - -
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 GET http://localhost/Factory2NETPostgreSQL/gxwebsocket?d7611339-b26e-4cfa-9629-79b864a43442 - 101 - - 2974.5460ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/secuserww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436949988 - application/json 1220
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://localhost/Factory2NETPostgreSQL/secuserww?c01d04b1610243d2a2af23e7952e8b183cd611b830bfaea9f485010a796aa127,gx-no-cache=1748436949988 - 200 - application/json 10.6234ms
+info: Microsoft.AspNetCore.Hosting.Diagnostics[1]
+      Request starting HTTP/1.1 POST http://127.0.0.1:31592/FACTORY2NETPOSTGRESQL/iisintegration - - 0
+info: Microsoft.AspNetCore.Hosting.Diagnostics[2]
+      Request finished HTTP/1.1 POST http://127.0.0.1:31592/FACTORY2NETPOSTGRESQL/iisintegration - 202 0 - 0.1280ms

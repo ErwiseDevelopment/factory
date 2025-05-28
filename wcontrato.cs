@@ -1452,7 +1452,6 @@ namespace GeneXus.Programs {
                   AV26LayoutContrato.Load(AV6LayoutContratoId);
                   AV27HTML = AV26LayoutContrato.gxTpr_Layoutcontratocorpo;
                   new prtrocataghtml(context ).execute(  0,  AV23Contrato.gxTpr_Contratoid, ref  AV27HTML) ;
-                  new debug(context ).execute(  StringUtil.Format( "&HTML %1", AV27HTML, "", "", "", "", "", "", "", "")) ;
                   AV23Contrato.gxTpr_Contratocorpo = AV27HTML;
                   AV23Contrato.Save();
                   if ( AV23Contrato.Success() )
@@ -1582,7 +1581,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255232026550", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289151323", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1599,7 +1598,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 133260), false, true);
-         context.AddJavascriptSource("wcontrato.js", "?20255232026550", false, true);
+         context.AddJavascriptSource("wcontrato.js", "?20255289151324", false, true);
          context.AddJavascriptSource("CKEditor/ckeditor/ckeditor.js", "", false, true);
          context.AddJavascriptSource("CKEditor/CKEditorRender.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);

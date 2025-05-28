@@ -1369,11 +1369,9 @@ namespace GeneXus.Programs {
          GxWebStd.gx_hidden_field( context, "gxhash_vJUROSPORDIA", GetSecureSignedToken( "", context.localUtil.Format( AV28JurosPorDia, "ZZZZZ9.99"), context));
          if ( ! (Convert.ToDecimal(0)==AV27ContratoIOFMinimo) )
          {
-            new debug(context ).execute(  StringUtil.Format( "&ContratoIOFMinimo %1", StringUtil.LTrimStr( AV27ContratoIOFMinimo, 16, 4), "", "", "", "", "", "", "", "")) ;
             AV39IOFValor = (decimal)(AV5PropostaValor*(AV27ContratoIOFMinimo/ (decimal)(100)));
             AssignAttri("", false, "AV39IOFValor", StringUtil.LTrimStr( AV39IOFValor, 18, 2));
             GxWebStd.gx_hidden_field( context, "gxhash_vIOFVALOR", GetSecureSignedToken( "", context.localUtil.Format( AV39IOFValor, "ZZZ,ZZZ,ZZZ,ZZ9.99"), context));
-            new debug(context ).execute(  StringUtil.Format( "&IOFValor %1", StringUtil.LTrimStr( AV39IOFValor, 18, 2), "", "", "", "", "", "", "", "")) ;
          }
          edtavTipopagamentoid_Visible = 0;
          AssignProp("", false, edtavTipopagamentoid_Internalname, "Visible", StringUtil.LTrimStr( (decimal)(edtavTipopagamentoid_Visible), 5, 0), true);
@@ -1599,7 +1597,7 @@ namespace GeneXus.Programs {
          idxLst = 1;
          while ( idxLst <= Form.Jscriptsrc.Count )
          {
-            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?202551918575686", true, true);
+            context.AddJavascriptSource(StringUtil.RTrim( ((string)Form.Jscriptsrc.Item(idxLst))), "?20255289153842", true, true);
             idxLst = (int)(idxLst+1);
          }
          if ( ! outputEnabled )
@@ -1616,7 +1614,7 @@ namespace GeneXus.Programs {
       {
          context.AddJavascriptSource("messages.por.js", "?"+GetCacheInvalidationToken( ), false, true);
          context.AddJavascriptSource("gxdec.js", "?"+context.GetBuildNumber( 133260), false, true);
-         context.AddJavascriptSource("efetivarreembolso.js", "?202551918575686", false, true);
+         context.AddJavascriptSource("efetivarreembolso.js", "?20255289153843", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/Shared/DVelopBootstrap.js", "", false, true);
          context.AddJavascriptSource("DVelop/Shared/WorkWithPlusCommon.js", "", false, true);
          context.AddJavascriptSource("DVelop/Bootstrap/DropDownOptions/BootstrapDropDownOptionsRender.js", "", false, true);

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizador de PDF em Base64</title>
+</head>
+<body>
+    
+    <iframe id="pdfViewer" width="100%" height="500px" frameborder="0"></iframe>
+
+    <script>
+        
+        const prefixoPdf = "data:application/pdf;base64,";
+        
+        
+        
+        const pdfBase64 = "{{{gxTpr_BaseString}}}{{{BaseString}}}"
+
+        
+        function carregarPdf(base64String) {
+        
+            const dataUrl = prefixoPdf + base64String;
+            
+        
+            document.getElementById("pdfViewer").src = dataUrl;
+        }
+        
+        
+        function carregarPdfExemplo() {
+            carregarPdf(pdfBase64);
+        }
+        
+        function carregarPdfExterno(novoPdfBase64) {
+            carregarPdf(novoPdfBase64);
+        }
+    </script>
+</body>
+</html>

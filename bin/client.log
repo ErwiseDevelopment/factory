@@ -1,0 +1,418 @@
+2025-06-10 19:51:19,615 [1] DEBUG GeneXus.Configuration.Config - GxClasses version:1.33.2
+2025-06-10 19:51:19,623 [1] DEBUG GeneXus.Configuration.Config - DOMConfigurator log4net configured with E:\Kbs\Factory21\NETPostgreSQL002\web\log.console.config
+2025-06-10 19:51:19,670 [1] DEBUG GeneXus.Application.GxContext - GxContext.Ctr Default handle:1
+2025-06-10 19:51:19,676 [1] DEBUG GeneXus.Data.ADO.GxConnectionManager - GxConnectionManager.NewConnection   handle: 1, datasource:Default
+2025-06-10 19:51:20,153 [1] DEBUG GeneXus.Cache.CacheFactory - Loading Default CACHE_PROVIDER InMemoryCache
+2025-06-10 19:51:20,154 [1] DEBUG GeneXus.Cache.InProcessCache - Start InProcessCache.Ctr, initialize default scavenging process with 'GeneXus.Cache.SingletonCacheStorage'
+2025-06-10 19:51:20,156 [1] DEBUG GeneXus.Cache.LruScavenging - Start LruScavenging.Init, initialize cacheStorage to 'GeneXus.Cache.SingletonCacheStorage'
+2025-06-10 19:51:20,158 [9] DEBUG GeneXus.Cache.InProcessCache - Start MonitorForExpirations loop 
+2025-06-10 19:51:20,159 [1] DEBUG GeneXus.Data.ADO.GxConnection - Setting IsolationLevel : Read UnCommited  256
+2025-06-10 19:51:20,442 [1] DEBUG GeneXus.Metadata.ClassLoader - CreateInstance, Args 'GeneXus.Application.GxContext' 
+2025-06-10 19:51:20,793 [1] DEBUG GeneXus.Data.ADO.GxConnectionManager - RemoveConnection   handle 1,datasource:Default
+2025-06-10 23:33:40,630 [1] DEBUG GeneXus.Configuration.Config - GxClasses version:1.33.2
+2025-06-10 23:33:40,673 [1] DEBUG GeneXus.Configuration.Config - DOMConfigurator log4net configured with E:\Kbs\Factory21\NETPostgreSQL002\web\log.config
+2025-06-10 23:33:40,834 [1] DEBUG GxClasses.Web.IGXRouting - addServicesPathUrl key:api/ value:apiclientes
+2025-06-10 23:33:43,041 [1] DEBUG GeneXus.Notifications.WebSocket.GXWebSocketFactory - ASP.NET Websocket instance created ok
+2025-06-10 23:33:43,042 [1] DEBUG GeneXus.Notifications.WebSocket.GXWebSocketFactory - ASP.NET Websocket instance created ok
+2025-06-10 23:33:43,132 [1] INFO  GeneXus.Application.Startup - MaxFileUploadSize:528000000
+2025-06-10 23:33:43,443 [7] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 71a14476-918b-12f2-2056-53908bc7afde
+2025-06-10 23:33:43,450 [7] DEBUG GeneXus.Http.GxWebSession - Set KeyGXNEWSESSION=True
+2025-06-10 23:33:43,450 [7] DEBUG GeneXus.Http.GxWebSession - SetObject SessionId : 71a14476-918b-12f2-2056-53908bc7afde
+2025-06-10 23:33:43,452 [7] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - ObjectUrl:teste
+2025-06-10 23:33:43,454 [7] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - GetHandler url:teste
+2025-06-10 23:33:43,851 [7] DEBUG GeneXus.Application.GxContext - GxContext.Ctr Default handle:1
+2025-06-10 23:33:43,858 [7] DEBUG GeneXus.Data.ADO.GxConnectionManager - GxConnectionManager.NewConnection   handle: 1, datasource:Default
+2025-06-10 23:33:44,392 [7] DEBUG GeneXus.Cache.CacheFactory - Loading Default CACHE_PROVIDER InMemoryCache
+2025-06-10 23:33:44,392 [7] DEBUG GeneXus.Cache.InProcessCache - Start InProcessCache.Ctr, initialize default scavenging process with 'GeneXus.Cache.SingletonCacheStorage'
+2025-06-10 23:33:44,393 [7] DEBUG GeneXus.Cache.LruScavenging - Start LruScavenging.Init, initialize cacheStorage to 'GeneXus.Cache.SingletonCacheStorage'
+2025-06-10 23:33:44,394 [7] DEBUG GeneXus.Data.ADO.GxConnection - Setting IsolationLevel : Read UnCommited  256
+2025-06-10 23:33:44,394 [12] DEBUG GeneXus.Cache.InProcessCache - Start MonitorForExpirations loop 
+2025-06-10 23:33:44,438 [7] DEBUG GeneXus.Http.GXHttpHandler - HttpHeaders: Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.7Connection:keep-aliveHost:localhostUser-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36Accept-Encoding:gzip, deflate, br, zstdAccept-Language:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7Cookie:GxTZOffset=America/Sao_Paulo; DVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL=13Upgrade-Insecure-Requests:1sec-ch-ua:"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"sec-ch-ua-mobile:?0sec-ch-ua-platform:"Windows"DNT:1Sec-Fetch-Site:noneSec-Fetch-Mode:navigateSec-Fetch-User:?1Sec-Fetch-Dest:documentMS-ASPNETCORE-TOKEN:cb8a2e8e-fee5-4c5a-b944-5b70d5aeeed8X-Original-Proto:httpX-Original-For:127.0.0.1:58059HttpCookies: GxTZOffset:America/Sao_PauloDVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL:13
+2025-06-10 23:33:44,960 [7] DEBUG GeneXus.Application.GxContext - Searching if file exists (service-worker.js). Found: False
+2025-06-10 23:33:46,642 [7] DEBUG GeneXus.Application.GxContext - AbsoluteUri dynamicport:http://localhost/Factory21NETPostgreSQL/teste
+2025-06-10 23:33:46,661 [7] DEBUG GeneXus.Data.ADO.GxConnectionManager - RemoveConnection   handle 1,datasource:Default
+2025-06-11 09:16:05,681 [3] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 76c8c4b0-5230-1957-baeb-44f5db535c48
+2025-06-11 09:16:05,682 [3] DEBUG GeneXus.Http.GxWebSession - Set KeyGXNEWSESSION=True
+2025-06-11 09:16:05,682 [3] DEBUG GeneXus.Http.GxWebSession - SetObject SessionId : 76c8c4b0-5230-1957-baeb-44f5db535c48
+2025-06-11 09:16:05,682 [3] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - ObjectUrl:teste
+2025-06-11 09:16:05,682 [3] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - GetHandler url:teste
+2025-06-11 09:16:05,682 [3] DEBUG GeneXus.Application.GxContext - GxContext.Ctr Default handle:2
+2025-06-11 09:16:05,683 [3] DEBUG GeneXus.Data.ADO.GxConnectionManager - GxConnectionManager.NewConnection   handle: 2, datasource:Default
+2025-06-11 09:16:05,684 [3] DEBUG GeneXus.Data.ADO.GxConnection - Setting IsolationLevel : Read UnCommited  256
+2025-06-11 09:16:05,686 [3] DEBUG GeneXus.Http.GXHttpHandler - HttpHeaders: Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.7Connection:keep-aliveHost:localhostUser-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36Accept-Encoding:gzip, deflate, br, zstdAccept-Language:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7Cookie:DVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL=20; DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL=7; DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL=8; GxTZOffset=America/Sao_Paulo; DVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL=13Upgrade-Insecure-Requests:1sec-ch-ua:"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"sec-ch-ua-mobile:?0sec-ch-ua-platform:"Windows"Sec-Fetch-Site:noneSec-Fetch-Mode:navigateSec-Fetch-User:?1Sec-Fetch-Dest:documentMS-ASPNETCORE-TOKEN:cb8a2e8e-fee5-4c5a-b944-5b70d5aeeed8X-Original-Proto:httpX-Original-For:127.0.0.1:59410HttpCookies: DVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL:20DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL:7DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL:8GxTZOffset:America/Sao_PauloDVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL:13
+2025-06-11 09:16:05,689 [3] DEBUG GeneXus.Application.GxContext - Searching if file exists (service-worker.js). Found: False
+2025-06-11 09:16:05,702 [3] DEBUG GeneXus.Application.GxContext - AbsoluteUri dynamicport:http://localhost/Factory21NETPostgreSQL/teste
+2025-06-11 09:16:05,703 [3] DEBUG GeneXus.Data.ADO.GxConnectionManager - RemoveConnection   handle 2,datasource:Default
+2025-06-11 09:17:30,288 [2] DEBUG GeneXus.Application.GXFileWatcher - DeleteTemporaryFiles handle: 1
+2025-06-11 09:22:33,422 [14] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 76c8c4b0-5230-1957-baeb-44f5db535c48
+2025-06-11 09:22:33,422 [14] DEBUG GeneXus.Http.GxWebSession - Set KeyGXNEWSESSION=False
+2025-06-11 09:22:33,422 [14] DEBUG GeneXus.Http.GxWebSession - SetObject SessionId : 76c8c4b0-5230-1957-baeb-44f5db535c48
+2025-06-11 09:22:33,422 [14] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - ObjectUrl:teste
+2025-06-11 09:22:33,422 [14] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - GetHandler url:teste
+2025-06-11 09:22:33,423 [14] DEBUG GeneXus.Application.GxContext - GxContext.Ctr Default handle:3
+2025-06-11 09:22:33,423 [14] DEBUG GeneXus.Data.ADO.GxConnectionManager - GxConnectionManager.NewConnection   handle: 3, datasource:Default
+2025-06-11 09:22:33,423 [14] DEBUG GeneXus.Data.ADO.GxConnection - Setting IsolationLevel : Read UnCommited  256
+2025-06-11 09:22:33,423 [14] DEBUG GeneXus.Http.GXHttpHandler - HttpHeaders: Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.7Connection:keep-aliveHost:localhostUser-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36Accept-Encoding:gzip, deflate, br, zstdAccept-Language:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7Cookie:GX_CLIENT_ID=f6afff47-18c5-4c20-a6aa-078bee2825b6; GX_SESSION_ID=FaK8pILEOL5FAewxReg4yej1UEddQrETCCUuaRNfJd4253D; DVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL=20; DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL=7; DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL=8; GxTZOffset=America/Sao_Paulo; DVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL=13; .AspNetCore.Session.factory21netpostgresql=CfDJ8NhqR2Bhn5AhOtB2RyZwf7PbmJECn0lLrvstuLMHwNgxIu4jyD1hDbPTgduGFt0jCCJaaoDsrgoOyQlKWABeMJwPKpj2BVfIAlXCv3HDMziQPdFoBtv3qwgPrBcBuk2BXINzQqPwE2FgAdkZ1KTJMIDaOAEIn9Nie2BOFwpKbMYmLqpkJUpgrade-Insecure-Requests:1sec-ch-ua:"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"sec-ch-ua-mobile:?0sec-ch-ua-platform:"Windows"Sec-Fetch-Site:noneSec-Fetch-Mode:navigateSec-Fetch-User:?1Sec-Fetch-Dest:documentMS-ASPNETCORE-TOKEN:cb8a2e8e-fee5-4c5a-b944-5b70d5aeeed8X-Original-Proto:httpX-Original-For:127.0.0.1:59711HttpCookies: GX_CLIENT_ID:f6afff47-18c5-4c20-a6aa-078bee2825b6GX_SESSION_ID:FaK8pILEOL5FAewxReg4yej1UEddQrETCCUuaRNfJd43DDVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL:20DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL:7DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL:8GxTZOffset:America/Sao_PauloDVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL:13.AspNetCore.Session.factory21netpostgresql:CfDJ8NhqR+hn5AhOtB2RyZwf7PbmJECn0lLrvstuLMHwNgxIu4jyD1hDbPTgduGFt0jCCJaaoDsrgoOyQlKWABeMJwPKpj+VfIAlXCv3HDMziQPdFoBtv3qwgPrBcBuk+XINzQqPwE/gAdkZ1KTJMIDaOAEIn9Nie+OFwpKbMYmLqpkJ
+2025-06-11 09:22:33,429 [14] DEBUG GeneXus.Application.GxContext - Searching if file exists (service-worker.js). Found: False
+2025-06-11 09:22:33,444 [14] DEBUG GeneXus.Application.GxContext - AbsoluteUri dynamicport:http://localhost/Factory21NETPostgreSQL/teste
+2025-06-11 09:22:33,455 [14] DEBUG GeneXus.Data.ADO.GxConnectionManager - RemoveConnection   handle 3,datasource:Default
+2025-06-11 09:23:20,669 [2] DEBUG GeneXus.Application.GXFileWatcher - DeleteTemporaryFiles handle: 2
+2025-06-11 09:57:27,719 [1] DEBUG GeneXus.Configuration.Config - GxClasses version:1.33.2
+2025-06-11 09:57:27,762 [1] DEBUG GeneXus.Configuration.Config - DOMConfigurator log4net configured with E:\Kbs\Factory21\NETPostgreSQL002\web\log.config
+2025-06-11 09:57:27,886 [1] DEBUG GxClasses.Web.IGXRouting - addServicesPathUrl key:api/ value:apiclientes
+2025-06-11 09:57:28,684 [1] DEBUG GeneXus.Notifications.WebSocket.GXWebSocketFactory - ASP.NET Websocket instance created ok
+2025-06-11 09:57:28,685 [1] DEBUG GeneXus.Notifications.WebSocket.GXWebSocketFactory - ASP.NET Websocket instance created ok
+2025-06-11 09:57:28,746 [1] INFO  GeneXus.Application.Startup - MaxFileUploadSize:528000000
+2025-06-11 09:57:29,004 [9] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 67972e78-09f3-3ab3-465b-9c8accab2245
+2025-06-11 09:57:29,008 [9] DEBUG GeneXus.Http.GxWebSession - Set KeyGXNEWSESSION=True
+2025-06-11 09:57:29,008 [9] DEBUG GeneXus.Http.GxWebSession - SetObject SessionId : 67972e78-09f3-3ab3-465b-9c8accab2245
+2025-06-11 09:57:29,010 [9] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - ObjectUrl:login
+2025-06-11 09:57:29,011 [9] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - GetHandler url:login
+2025-06-11 09:57:29,750 [9] DEBUG GeneXus.Application.GxContext - GxContext.Ctr Default handle:1
+2025-06-11 09:57:29,757 [9] DEBUG GeneXus.Data.ADO.GxConnectionManager - GxConnectionManager.NewConnection   handle: 1, datasource:Default
+2025-06-11 09:57:29,854 [9] DEBUG GeneXus.Cache.CacheFactory - Loading Default CACHE_PROVIDER InMemoryCache
+2025-06-11 09:57:29,856 [9] DEBUG GeneXus.Cache.InProcessCache - Start InProcessCache.Ctr, initialize default scavenging process with 'GeneXus.Cache.SingletonCacheStorage'
+2025-06-11 09:57:29,856 [9] DEBUG GeneXus.Cache.LruScavenging - Start LruScavenging.Init, initialize cacheStorage to 'GeneXus.Cache.SingletonCacheStorage'
+2025-06-11 09:57:29,859 [12] DEBUG GeneXus.Cache.InProcessCache - Start MonitorForExpirations loop 
+2025-06-11 09:57:29,859 [9] DEBUG GeneXus.Data.ADO.GxConnection - Setting IsolationLevel : Read UnCommited  256
+2025-06-11 09:57:29,918 [9] DEBUG GeneXus.Http.GXHttpHandler - HttpHeaders: Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.7Connection:keep-aliveHost:localhostUser-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36Accept-Encoding:gzip, deflate, br, zstdAccept-Language:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7Cookie:GX_CLIENT_ID=f6afff47-18c5-4c20-a6aa-078bee2825b6; GX_SESSION_ID=FaK8pILEOL5FAewxReg4yej1UEddQrETCCUuaRNfJd4253D; DVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL=20; DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL=7; DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL=8; GxTZOffset=America/Sao_Paulo; DVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL=13; .AspNetCore.Session.factory21netpostgresql=CfDJ8NhqR2Bhn5AhOtB2RyZwf7PbmJECn0lLrvstuLMHwNgxIu4jyD1hDbPTgduGFt0jCCJaaoDsrgoOyQlKWABeMJwPKpj2BVfIAlXCv3HDMziQPdFoBtv3qwgPrBcBuk2BXINzQqPwE2FgAdkZ1KTJMIDaOAEIn9Nie2BOFwpKbMYmLqpkJUpgrade-Insecure-Requests:1sec-ch-ua:"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"sec-ch-ua-mobile:?0sec-ch-ua-platform:"Windows"Sec-Fetch-Site:noneSec-Fetch-Mode:navigateSec-Fetch-User:?1Sec-Fetch-Dest:documentMS-ASPNETCORE-TOKEN:63842a19-8ef2-4e44-9dd2-d25ae819c60cX-Original-Proto:httpX-Original-For:127.0.0.1:60969HttpCookies: GX_CLIENT_ID:f6afff47-18c5-4c20-a6aa-078bee2825b6GX_SESSION_ID:FaK8pILEOL5FAewxReg4yej1UEddQrETCCUuaRNfJd43DDVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL:20DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL:7DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL:8GxTZOffset:America/Sao_PauloDVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL:13.AspNetCore.Session.factory21netpostgresql:CfDJ8NhqR+hn5AhOtB2RyZwf7PbmJECn0lLrvstuLMHwNgxIu4jyD1hDbPTgduGFt0jCCJaaoDsrgoOyQlKWABeMJwPKpj+VfIAlXCv3HDMziQPdFoBtv3qwgPrBcBuk+XINzQqPwE/gAdkZ1KTJMIDaOAEIn9Nie+OFwpKbMYmLqpkJ
+2025-06-11 09:57:31,461 [9] DEBUG GeneXus.Metadata.ClassLoader - CreateInstance, Args 'GeneXus.Application.GxContext' 
+2025-06-11 09:57:31,469 [9] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.secuser_bc__default
+2025-06-11 09:57:31,478 [9] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 67972e78-09f3-3ab3-465b-9c8accab2245
+2025-06-11 09:57:31,478 [9] DEBUG GeneXus.Http.GxWebSession - Get key: WWPCONTEXT is Empty
+2025-06-11 09:57:31,484 [9] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 67972e78-09f3-3ab3-465b-9c8accab2245
+2025-06-11 09:57:31,484 [9] DEBUG GeneXus.Http.GxWebSession - Get key: TRNCONTEXT is Empty
+2025-06-11 09:57:33,346 [9] DEBUG GeneXus.Metadata.ClassLoader - CreateInstance, Args 'GeneXus.Application.GxContext' 
+2025-06-11 09:57:33,352 [9] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.configuracoes_bc__default
+2025-06-11 09:57:33,366 [9] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.login__default
+2025-06-11 09:57:33,368 [9] DEBUG GeneXus.Metadata.ClassLoader - GetInstance 'GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty', assembly 'wwpbaseobjects.workwithplusmasterpageempty'
+2025-06-11 09:57:33,724 [9] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty__default
+2025-06-11 09:57:33,732 [9] DEBUG GeneXus.Application.GxContext - imageFiles found
+2025-06-11 09:57:33,744 [9] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 67972e78-09f3-3ab3-465b-9c8accab2245
+2025-06-11 09:57:33,744 [9] DEBUG GeneXus.Http.GxWebSession - Get key: DESIGNSYSTEMSETTINGS is Empty
+2025-06-11 09:57:33,772 [9] DEBUG GeneXus.Http.GxWebSession - Set KeyDESIGNSYSTEMSETTINGS={"BaseColor":"SeaGreen","BackgroundStyle":"Light","FontSize":"","MenuColor":"Dark"}
+2025-06-11 09:57:33,773 [9] DEBUG GeneXus.Http.GxWebSession - SetObject SessionId : 67972e78-09f3-3ab3-465b-9c8accab2245
+2025-06-11 09:57:33,776 [9] DEBUG GeneXus.Data.ADO.GxCommand - GxCommand.FetchSize: 100, handle '1'
+2025-06-11 09:57:33,779 [9] DEBUG GeneXus.Data.NTier.DataStoreProvider - gxObject:GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty__default, handle '1' cursorName:H00062
+2025-06-11 09:57:33,780 [9] DEBUG GeneXus.Data.ADO.GxCommand - ExecuteReader: Parameters 
+2025-06-11 09:57:33,781 [9] DEBUG GeneXus.Data.GxPostgreSql - ExecuteReader: client cursor=False, handle '1', hashcode 65429669
+2025-06-11 09:57:33,783 [9] DEBUG GeneXus.Data.ADO.GxConnection - Start GxConnection.Open, autoCommit=False handle:1 datastore:Default
+2025-06-11 09:57:33,784 [9] DEBUG GeneXus.Data.GxPostgreSql - Setting connectionString property Server=10.100.0.124;Port=5432;;User ID=CQLA2;Password=xxxxx;database=CQLA2;
+2025-06-11 09:57:34,051 [9] ERROR GeneXus.Data.PostgresqlConnectionWrapper - Return GxConnection.Open Error 
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "CQLA2"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|34_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at GeneXus.Data.PostgresqlConnectionWrapper.Open()
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "CQLA2"
+    File: auth.c
+    Line: 321
+    Routine: auth_failed
+2025-06-11 09:57:34,482 [9] DEBUG GeneXus.Data.GxPostgreSql - ProcessError: dbmsErrorCode=16389, emsg '28p01: password authentication failed for user "cqla2"'
+2025-06-11 09:57:34,482 [9] ERROR GeneXus.Data.ADO.GxConnection - GxConnection.Open Error 
+Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.28p01: password authentication failed for user "cqla2"
+2025-06-11 09:57:34,483 [9] ERROR GeneXus.Data.ADO.GxCommand - Return GxCommand.ExecuteReader Error 
+Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.28p01: password authentication failed for user "cqla2"
+2025-06-11 09:57:34,483 [9] ERROR GeneXus.Data.ADO.GxCommand - Inner Error
+Type:Npgsql.PostgresException.DBMS Error Code:16389.28p01: password authentication failed for user "cqla2"
+2025-06-11 09:57:34,483 [9] DEBUG GeneXus.Data.GxPostgreSql - ProcessError: dbmsErrorCode=16389, emsg '28p01: password authentication failed for user "cqla2"'
+2025-06-11 09:57:34,484 [9] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close Id  connection State 'Closed' handle:1 datastore:Default
+2025-06-11 09:57:34,485 [9] DEBUG GeneXus.Data.ADO.GxConnection - UncommitedChanges before Close:False
+2025-06-11 09:57:34,486 [9] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close connection is closed 
+2025-06-11 09:57:34,487 [9] ERROR GeneXus.Data.ADO.GxCommand - 28p01: password authentication failed for user "cqla2"
+2025-06-11 09:57:34,487 [9] ERROR GeneXus.Data.ADO.GxCommand - GxCommand.FetchData Error 
+2025-06-11 09:57:34,488 [9] DEBUG GeneXus.Data.ADO.GxConnectionManager - RemoveConnection   handle 1,datasource:Default
+2025-06-11 09:57:34,488 [9] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close Id  connection State 'Closed' handle:1 datastore:Default
+2025-06-11 09:57:34,488 [9] DEBUG GeneXus.Data.ADO.GxConnection - UncommitedChanges before Close:False
+2025-06-11 09:57:34,488 [9] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close connection is closed 
+2025-06-11 09:57:34,505 [9] ERROR GeneXus.HttpHandlerFactory.HandlerFactory - Handler Factory failed creating /login
+System.Exception: GXApplication exception
+ ---> Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.28p01: password authentication failed for user "cqla2"
+   --- End of inner exception stack trace ---
+   at GeneXus.Http.GXHttpHandler.ProcessRequest(HttpContext httpContext)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+2025-06-11 09:57:34,515 [9] ERROR GeneXus.Application.CustomExceptionHandlerMiddleware - Internal error
+System.Exception: GXApplication exception
+ ---> Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.28p01: password authentication failed for user "cqla2"
+   --- End of inner exception stack trace ---
+   at GeneXus.Http.GXHttpHandler.ProcessRequest(HttpContext httpContext)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-11 09:59:46,402 [17] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 67972e78-09f3-3ab3-465b-9c8accab2245
+2025-06-11 09:59:46,403 [17] DEBUG GeneXus.Http.GxWebSession - Set KeyGXNEWSESSION=False
+2025-06-11 09:59:46,403 [17] DEBUG GeneXus.Http.GxWebSession - SetObject SessionId : 67972e78-09f3-3ab3-465b-9c8accab2245
+2025-06-11 09:59:46,403 [17] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - ObjectUrl:login
+2025-06-11 09:59:46,403 [17] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - GetHandler url:login
+2025-06-11 09:59:46,403 [17] DEBUG GeneXus.Application.GxContext - GxContext.Ctr Default handle:2
+2025-06-11 09:59:46,403 [17] DEBUG GeneXus.Data.ADO.GxConnectionManager - GxConnectionManager.NewConnection   handle: 2, datasource:Default
+2025-06-11 09:59:46,404 [17] DEBUG GeneXus.Data.ADO.GxConnection - Setting IsolationLevel : Read UnCommited  256
+2025-06-11 09:59:46,405 [17] DEBUG GeneXus.Http.GXHttpHandler - HttpHeaders: Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.7Connection:keep-aliveHost:localhostUser-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36Accept-Encoding:gzip, deflate, br, zstdAccept-Language:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7Cache-Control:max-age=0Cookie:GX_CLIENT_ID=f6afff47-18c5-4c20-a6aa-078bee2825b6; GX_SESSION_ID=FaK8pILEOL5FAewxReg4yej1UEddQrETCCUuaRNfJd4253D; DVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL=20; DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL=7; DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL=8; GxTZOffset=America/Sao_Paulo; DVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL=13; .AspNetCore.Session.factory21netpostgresql=CfDJ8CnmbvOtuIxFuiQHCrXlpAnwOYYuRa2FRfF2FPFQI7AIKzDtlUy7VO3uQYBtPmY5PiuXR4wZT1AYx2Baa6E0XHaZuHQ4n2FNwWNcIVVBcuVcU9ZzIB8AkeD3yuJTRrx37L9jSOs0U8i2Bepz3N6dNEmUUI73dEjMCz1cWPlx4H5tppAtvUpgrade-Insecure-Requests:1sec-ch-ua:"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"sec-ch-ua-mobile:?0sec-ch-ua-platform:"Windows"Sec-Fetch-Site:cross-siteSec-Fetch-Mode:navigateSec-Fetch-User:?1Sec-Fetch-Dest:documentMS-ASPNETCORE-TOKEN:63842a19-8ef2-4e44-9dd2-d25ae819c60cX-Original-Proto:httpX-Original-For:127.0.0.1:61092HttpCookies: GX_CLIENT_ID:f6afff47-18c5-4c20-a6aa-078bee2825b6GX_SESSION_ID:FaK8pILEOL5FAewxReg4yej1UEddQrETCCUuaRNfJd43DDVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL:20DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL:7DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL:8GxTZOffset:America/Sao_PauloDVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL:13.AspNetCore.Session.factory21netpostgresql:CfDJ8CnmbvOtuIxFuiQHCrXlpAnwOYYuRa/RfF/PFQI7AIKzDtlUy7VO3uQYBtPmY5PiuXR4wZT1AYx+aa6E0XHaZuHQ4n/NwWNcIVVBcuVcU9ZzIB8AkeD3yuJTRrx37L9jSOs0U8i+epz3N6dNEmUUI73dEjMCz1cWPlx4H5tppAtv
+2025-06-11 09:59:46,405 [17] DEBUG GeneXus.Metadata.ClassLoader - CreateInstance, Args 'GeneXus.Application.GxContext' 
+2025-06-11 09:59:46,406 [17] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '2', dataStoreHelper:GeneXus.Programs.secuser_bc__default
+2025-06-11 09:59:46,406 [17] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 67972e78-09f3-3ab3-465b-9c8accab2245
+2025-06-11 09:59:46,406 [17] DEBUG GeneXus.Http.GxWebSession - Get key: WWPCONTEXT is Empty
+2025-06-11 09:59:46,406 [17] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 67972e78-09f3-3ab3-465b-9c8accab2245
+2025-06-11 09:59:46,407 [17] DEBUG GeneXus.Http.GxWebSession - Get key: TRNCONTEXT is Empty
+2025-06-11 09:59:46,407 [17] DEBUG GeneXus.Metadata.ClassLoader - CreateInstance, Args 'GeneXus.Application.GxContext' 
+2025-06-11 09:59:46,407 [17] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '2', dataStoreHelper:GeneXus.Programs.configuracoes_bc__default
+2025-06-11 09:59:46,408 [17] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '2', dataStoreHelper:GeneXus.Programs.login__default
+2025-06-11 09:59:46,408 [17] DEBUG GeneXus.Metadata.ClassLoader - GetInstance 'GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty', assembly 'wwpbaseobjects.workwithplusmasterpageempty'
+2025-06-11 09:59:46,408 [17] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '2', dataStoreHelper:GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty__default
+2025-06-11 09:59:46,409 [17] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 67972e78-09f3-3ab3-465b-9c8accab2245
+2025-06-11 09:59:46,409 [17] DEBUG GeneXus.Http.GxWebSession - Get key: DESIGNSYSTEMSETTINGS={"BaseColor":"SeaGreen","BackgroundStyle":"Light","FontSize":"","MenuColor":"Dark"}
+2025-06-11 09:59:46,818 [17] DEBUG GeneXus.Data.ADO.GxCommand - GxCommand.FetchSize: 100, handle '2'
+2025-06-11 09:59:46,818 [17] DEBUG GeneXus.Data.NTier.DataStoreProvider - gxObject:GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty__default, handle '2' cursorName:H00062
+2025-06-11 09:59:46,818 [17] DEBUG GeneXus.Data.ADO.GxCommand - ExecuteReader: Parameters 
+2025-06-11 09:59:46,818 [17] DEBUG GeneXus.Data.GxPostgreSql - ExecuteReader: client cursor=False, handle '2', hashcode 48498898
+2025-06-11 09:59:46,818 [17] DEBUG GeneXus.Data.ADO.GxConnection - Start GxConnection.Open, autoCommit=False handle:2 datastore:Default
+2025-06-11 09:59:46,818 [17] DEBUG GeneXus.Data.GxPostgreSql - Setting connectionString property Server=10.100.0.124;Port=5432;;User ID=CQLA2;Password=xxxxx;database=CQLA2;
+2025-06-11 09:59:46,843 [17] ERROR GeneXus.Data.PostgresqlConnectionWrapper - Return GxConnection.Open Error 
+Npgsql.PostgresException (0x80004005): 28P01: password authentication failed for user "CQLA2"
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.AuthenticateSASL(List`1 mechanisms, String username, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.Authenticate(String username, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|34_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at GeneXus.Data.PostgresqlConnectionWrapper.Open()
+  Exception data:
+    Severity: FATAL
+    SqlState: 28P01
+    MessageText: password authentication failed for user "CQLA2"
+    File: auth.c
+    Line: 321
+    Routine: auth_failed
+2025-06-11 09:59:46,846 [17] DEBUG GeneXus.Data.GxPostgreSql - ProcessError: dbmsErrorCode=16389, emsg '28p01: password authentication failed for user "cqla2"'
+2025-06-11 09:59:46,846 [17] ERROR GeneXus.Data.ADO.GxConnection - GxConnection.Open Error 
+Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.28p01: password authentication failed for user "cqla2"
+2025-06-11 09:59:46,846 [17] ERROR GeneXus.Data.ADO.GxCommand - Return GxCommand.ExecuteReader Error 
+Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.28p01: password authentication failed for user "cqla2"
+2025-06-11 09:59:46,846 [17] ERROR GeneXus.Data.ADO.GxCommand - Inner Error
+Type:Npgsql.PostgresException.DBMS Error Code:16389.28p01: password authentication failed for user "cqla2"
+2025-06-11 09:59:46,847 [17] DEBUG GeneXus.Data.GxPostgreSql - ProcessError: dbmsErrorCode=16389, emsg '28p01: password authentication failed for user "cqla2"'
+2025-06-11 09:59:46,847 [17] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close Id  connection State 'Closed' handle:2 datastore:Default
+2025-06-11 09:59:46,847 [17] DEBUG GeneXus.Data.ADO.GxConnection - UncommitedChanges before Close:False
+2025-06-11 09:59:46,847 [17] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close connection is closed 
+2025-06-11 09:59:46,847 [17] ERROR GeneXus.Data.ADO.GxCommand - 28p01: password authentication failed for user "cqla2"
+2025-06-11 09:59:46,847 [17] ERROR GeneXus.Data.ADO.GxCommand - GxCommand.FetchData Error 
+2025-06-11 09:59:46,847 [17] DEBUG GeneXus.Data.ADO.GxConnectionManager - RemoveConnection   handle 2,datasource:Default
+2025-06-11 09:59:46,847 [17] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close Id  connection State 'Closed' handle:2 datastore:Default
+2025-06-11 09:59:46,847 [17] DEBUG GeneXus.Data.ADO.GxConnection - UncommitedChanges before Close:False
+2025-06-11 09:59:46,847 [17] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close connection is closed 
+2025-06-11 09:59:46,847 [17] ERROR GeneXus.HttpHandlerFactory.HandlerFactory - Handler Factory failed creating /login
+System.Exception: GXApplication exception
+ ---> Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.28p01: password authentication failed for user "cqla2"
+   --- End of inner exception stack trace ---
+   at GeneXus.Http.GXHttpHandler.ProcessRequest(HttpContext httpContext)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+2025-06-11 09:59:46,848 [17] ERROR GeneXus.Application.CustomExceptionHandlerMiddleware - Internal error
+System.Exception: GXApplication exception
+ ---> Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.28p01: password authentication failed for user "cqla2"
+   --- End of inner exception stack trace ---
+   at GeneXus.Http.GXHttpHandler.ProcessRequest(HttpContext httpContext)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-11 10:06:39,492 [1] DEBUG GeneXus.Configuration.Config - GxClasses version:1.33.2
+2025-06-11 10:06:39,517 [1] DEBUG GeneXus.Configuration.Config - DOMConfigurator log4net configured with E:\Kbs\Factory21\NETPostgreSQL002\web\log.config
+2025-06-11 10:06:39,576 [1] DEBUG GxClasses.Web.IGXRouting - addServicesPathUrl key:api/ value:apiclientes
+2025-06-11 10:06:39,840 [1] DEBUG GeneXus.Notifications.WebSocket.GXWebSocketFactory - ASP.NET Websocket instance created ok
+2025-06-11 10:06:39,841 [1] DEBUG GeneXus.Notifications.WebSocket.GXWebSocketFactory - ASP.NET Websocket instance created ok
+2025-06-11 10:06:39,889 [1] INFO  GeneXus.Application.Startup - MaxFileUploadSize:528000000
+2025-06-11 10:06:40,186 [9] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 6ed2e905-9903-4b82-8767-ff9225ec4149
+2025-06-11 10:06:40,187 [9] DEBUG GeneXus.Http.GxWebSession - Set KeyGXNEWSESSION=True
+2025-06-11 10:06:40,188 [9] DEBUG GeneXus.Http.GxWebSession - SetObject SessionId : 6ed2e905-9903-4b82-8767-ff9225ec4149
+2025-06-11 10:06:40,189 [9] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - ObjectUrl:login
+2025-06-11 10:06:40,190 [9] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - GetHandler url:login
+2025-06-11 10:06:40,195 [9] DEBUG GeneXus.Application.GxContext - GxContext.Ctr Default handle:1
+2025-06-11 10:06:40,198 [9] DEBUG GeneXus.Data.ADO.GxConnectionManager - GxConnectionManager.NewConnection   handle: 1, datasource:Default
+2025-06-11 10:06:40,216 [9] DEBUG GeneXus.Cache.CacheFactory - Loading Default CACHE_PROVIDER InMemoryCache
+2025-06-11 10:06:40,216 [9] DEBUG GeneXus.Cache.InProcessCache - Start InProcessCache.Ctr, initialize default scavenging process with 'GeneXus.Cache.SingletonCacheStorage'
+2025-06-11 10:06:40,217 [9] DEBUG GeneXus.Cache.LruScavenging - Start LruScavenging.Init, initialize cacheStorage to 'GeneXus.Cache.SingletonCacheStorage'
+2025-06-11 10:06:40,218 [12] DEBUG GeneXus.Cache.InProcessCache - Start MonitorForExpirations loop 
+2025-06-11 10:06:40,218 [9] DEBUG GeneXus.Data.ADO.GxConnection - Setting IsolationLevel : Read UnCommited  256
+2025-06-11 10:06:40,253 [9] DEBUG GeneXus.Http.GXHttpHandler - HttpHeaders: Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.7Connection:keep-aliveHost:localhostUser-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36Accept-Encoding:gzip, deflate, br, zstdAccept-Language:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7Cookie:GX_CLIENT_ID=f6afff47-18c5-4c20-a6aa-078bee2825b6; GX_SESSION_ID=FaK8pILEOL5FAewxReg4yej1UEddQrETCCUuaRNfJd4253D; DVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL=20; DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL=7; DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL=8; GxTZOffset=America/Sao_Paulo; DVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL=13; .AspNetCore.Session.factory21netpostgresql=CfDJ8CnmbvOtuIxFuiQHCrXlpAnwOYYuRa2FRfF2FPFQI7AIKzDtlUy7VO3uQYBtPmY5PiuXR4wZT1AYx2Baa6E0XHaZuHQ4n2FNwWNcIVVBcuVcU9ZzIB8AkeD3yuJTRrx37L9jSOs0U8i2Bepz3N6dNEmUUI73dEjMCz1cWPlx4H5tppAtvUpgrade-Insecure-Requests:1sec-ch-ua:"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"sec-ch-ua-mobile:?0sec-ch-ua-platform:"Windows"Sec-Fetch-Site:noneSec-Fetch-Mode:navigateSec-Fetch-User:?1Sec-Fetch-Dest:documentMS-ASPNETCORE-TOKEN:cb5c93fa-1bf3-401d-84d1-273cbf345861X-Original-Proto:httpX-Original-For:127.0.0.1:61425HttpCookies: GX_CLIENT_ID:f6afff47-18c5-4c20-a6aa-078bee2825b6GX_SESSION_ID:FaK8pILEOL5FAewxReg4yej1UEddQrETCCUuaRNfJd43DDVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL:20DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL:7DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL:8GxTZOffset:America/Sao_PauloDVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL:13.AspNetCore.Session.factory21netpostgresql:CfDJ8CnmbvOtuIxFuiQHCrXlpAnwOYYuRa/RfF/PFQI7AIKzDtlUy7VO3uQYBtPmY5PiuXR4wZT1AYx+aa6E0XHaZuHQ4n/NwWNcIVVBcuVcU9ZzIB8AkeD3yuJTRrx37L9jSOs0U8i+epz3N6dNEmUUI73dEjMCz1cWPlx4H5tppAtv
+2025-06-11 10:06:40,265 [9] DEBUG GeneXus.Metadata.ClassLoader - CreateInstance, Args 'GeneXus.Application.GxContext' 
+2025-06-11 10:06:40,273 [9] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.secuser_bc__default
+2025-06-11 10:06:40,279 [9] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 6ed2e905-9903-4b82-8767-ff9225ec4149
+2025-06-11 10:06:40,279 [9] DEBUG GeneXus.Http.GxWebSession - Get key: WWPCONTEXT is Empty
+2025-06-11 10:06:40,281 [9] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 6ed2e905-9903-4b82-8767-ff9225ec4149
+2025-06-11 10:06:40,281 [9] DEBUG GeneXus.Http.GxWebSession - Get key: TRNCONTEXT is Empty
+2025-06-11 10:06:40,288 [9] DEBUG GeneXus.Metadata.ClassLoader - CreateInstance, Args 'GeneXus.Application.GxContext' 
+2025-06-11 10:06:40,292 [9] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.configuracoes_bc__default
+2025-06-11 10:06:40,300 [9] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.login__default
+2025-06-11 10:06:40,302 [9] DEBUG GeneXus.Metadata.ClassLoader - GetInstance 'GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty', assembly 'wwpbaseobjects.workwithplusmasterpageempty'
+2025-06-11 10:06:40,305 [9] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty__default
+2025-06-11 10:06:40,310 [9] DEBUG GeneXus.Application.GxContext - imageFiles found
+2025-06-11 10:06:40,319 [9] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 6ed2e905-9903-4b82-8767-ff9225ec4149
+2025-06-11 10:06:40,319 [9] DEBUG GeneXus.Http.GxWebSession - Get key: DESIGNSYSTEMSETTINGS is Empty
+2025-06-11 10:06:40,338 [9] DEBUG GeneXus.Http.GxWebSession - Set KeyDESIGNSYSTEMSETTINGS={"BaseColor":"SeaGreen","BackgroundStyle":"Light","FontSize":"","MenuColor":"Dark"}
+2025-06-11 10:06:40,338 [9] DEBUG GeneXus.Http.GxWebSession - SetObject SessionId : 6ed2e905-9903-4b82-8767-ff9225ec4149
+2025-06-11 10:06:40,341 [9] DEBUG GeneXus.Data.ADO.GxCommand - GxCommand.FetchSize: 100, handle '1'
+2025-06-11 10:06:40,343 [9] DEBUG GeneXus.Data.NTier.DataStoreProvider - gxObject:GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty__default, handle '1' cursorName:H00062
+2025-06-11 10:06:40,344 [9] DEBUG GeneXus.Data.ADO.GxCommand - ExecuteReader: Parameters 
+2025-06-11 10:06:40,345 [9] DEBUG GeneXus.Data.GxPostgreSql - ExecuteReader: client cursor=False, handle '1', hashcode 65429669
+2025-06-11 10:06:40,346 [9] DEBUG GeneXus.Data.ADO.GxConnection - Start GxConnection.Open, autoCommit=False handle:1 datastore:Default
+2025-06-11 10:06:40,348 [9] DEBUG GeneXus.Data.GxPostgreSql - Setting connectionString property Server=10.100.0.124;Port=5432;;User ID=cqla;Password=xxxxx;database=CQLA2;
+2025-06-11 10:06:40,431 [9] ERROR GeneXus.Data.PostgresqlConnectionWrapper - Return GxConnection.Open Error 
+Npgsql.PostgresException (0x80004005): 3D000: database "CQLA2" does not exist
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|34_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at GeneXus.Data.PostgresqlConnectionWrapper.Open()
+  Exception data:
+    Severity: FATAL
+    SqlState: 3D000
+    MessageText: database "CQLA2" does not exist
+    File: postinit.c
+    Line: 1032
+    Routine: InitPostgres
+2025-06-11 10:06:40,441 [9] DEBUG GeneXus.Data.GxPostgreSql - ProcessError: dbmsErrorCode=16389, emsg '3d000: database "cqla2" does not exist'
+2025-06-11 10:06:40,441 [9] ERROR GeneXus.Data.ADO.GxConnection - GxConnection.Open Error 
+Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.3d000: database "cqla2" does not exist
+2025-06-11 10:06:40,441 [9] ERROR GeneXus.Data.ADO.GxCommand - Return GxCommand.ExecuteReader Error 
+Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.3d000: database "cqla2" does not exist
+2025-06-11 10:06:40,442 [9] ERROR GeneXus.Data.ADO.GxCommand - Inner Error
+Type:Npgsql.PostgresException.DBMS Error Code:16389.3d000: database "cqla2" does not exist
+2025-06-11 10:06:40,442 [9] DEBUG GeneXus.Data.GxPostgreSql - ProcessError: dbmsErrorCode=16389, emsg '3d000: database "cqla2" does not exist'
+2025-06-11 10:06:40,443 [9] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close Id  connection State 'Closed' handle:1 datastore:Default
+2025-06-11 10:06:40,443 [9] DEBUG GeneXus.Data.ADO.GxConnection - UncommitedChanges before Close:False
+2025-06-11 10:06:40,444 [9] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close connection is closed 
+2025-06-11 10:06:40,444 [9] ERROR GeneXus.Data.ADO.GxCommand - 3d000: database "cqla2" does not exist
+2025-06-11 10:06:40,444 [9] ERROR GeneXus.Data.ADO.GxCommand - GxCommand.FetchData Error 
+2025-06-11 10:06:40,445 [9] DEBUG GeneXus.Data.ADO.GxConnectionManager - RemoveConnection   handle 1,datasource:Default
+2025-06-11 10:06:40,445 [9] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close Id  connection State 'Closed' handle:1 datastore:Default
+2025-06-11 10:06:40,445 [9] DEBUG GeneXus.Data.ADO.GxConnection - UncommitedChanges before Close:False
+2025-06-11 10:06:40,445 [9] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close connection is closed 
+2025-06-11 10:06:40,446 [9] ERROR GeneXus.HttpHandlerFactory.HandlerFactory - Handler Factory failed creating /login
+System.Exception: GXApplication exception
+ ---> Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.3d000: database "cqla2" does not exist
+   --- End of inner exception stack trace ---
+   at GeneXus.Http.GXHttpHandler.ProcessRequest(HttpContext httpContext)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+2025-06-11 10:06:40,450 [9] ERROR GeneXus.Application.CustomExceptionHandlerMiddleware - Internal error
+System.Exception: GXApplication exception
+ ---> Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.3d000: database "cqla2" does not exist
+   --- End of inner exception stack trace ---
+   at GeneXus.Http.GXHttpHandler.ProcessRequest(HttpContext httpContext)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+2025-06-11 10:11:42,836 [1] DEBUG GeneXus.Configuration.Config - GxClasses version:1.33.2
+2025-06-11 10:11:42,863 [1] DEBUG GeneXus.Configuration.Config - DOMConfigurator log4net configured with E:\Kbs\Factory21\NETPostgreSQL002\web\log.config
+2025-06-11 10:11:42,942 [1] DEBUG GxClasses.Web.IGXRouting - addServicesPathUrl key:api/ value:apiclientes
+2025-06-11 10:11:48,191 [1] DEBUG GeneXus.Notifications.WebSocket.GXWebSocketFactory - ASP.NET Websocket instance created ok
+2025-06-11 10:11:48,191 [1] DEBUG GeneXus.Notifications.WebSocket.GXWebSocketFactory - ASP.NET Websocket instance created ok
+2025-06-11 10:11:48,258 [1] INFO  GeneXus.Application.Startup - MaxFileUploadSize:528000000
+2025-06-11 10:11:48,646 [7] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 538d3aeb-bf05-4668-7889-4c472344d19c
+2025-06-11 10:11:48,652 [7] DEBUG GeneXus.Http.GxWebSession - Set KeyGXNEWSESSION=True
+2025-06-11 10:11:48,652 [7] DEBUG GeneXus.Http.GxWebSession - SetObject SessionId : 538d3aeb-bf05-4668-7889-4c472344d19c
+2025-06-11 10:11:48,656 [7] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - ObjectUrl:login
+2025-06-11 10:11:48,658 [7] DEBUG GeneXus.HttpHandlerFactory.HandlerFactory - GetHandler url:login
+2025-06-11 10:11:48,694 [7] DEBUG GeneXus.Application.GxContext - GxContext.Ctr Default handle:1
+2025-06-11 10:11:48,700 [7] DEBUG GeneXus.Data.ADO.GxConnectionManager - GxConnectionManager.NewConnection   handle: 1, datasource:Default
+2025-06-11 10:11:48,828 [7] DEBUG GeneXus.Cache.CacheFactory - Loading Default CACHE_PROVIDER InMemoryCache
+2025-06-11 10:11:48,829 [7] DEBUG GeneXus.Cache.InProcessCache - Start InProcessCache.Ctr, initialize default scavenging process with 'GeneXus.Cache.SingletonCacheStorage'
+2025-06-11 10:11:48,829 [7] DEBUG GeneXus.Cache.LruScavenging - Start LruScavenging.Init, initialize cacheStorage to 'GeneXus.Cache.SingletonCacheStorage'
+2025-06-11 10:11:48,830 [12] DEBUG GeneXus.Cache.InProcessCache - Start MonitorForExpirations loop 
+2025-06-11 10:11:48,830 [7] DEBUG GeneXus.Data.ADO.GxConnection - Setting IsolationLevel : Read UnCommited  256
+2025-06-11 10:11:48,866 [7] DEBUG GeneXus.Http.GXHttpHandler - HttpHeaders: Accept:text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,/;q=0.8,application/signed-exchange;v=b3;q=0.7Connection:keep-aliveHost:localhostUser-Agent:Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36Accept-Encoding:gzip, deflate, br, zstdAccept-Language:pt-BR,pt;q=0.9,en-US;q=0.8,en;q=0.7Cookie:GX_CLIENT_ID=f6afff47-18c5-4c20-a6aa-078bee2825b6; GX_SESSION_ID=FaK8pILEOL5FAewxReg4yej1UEddQrETCCUuaRNfJd4253D; DVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL=20; DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL=7; DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL=8; GxTZOffset=America/Sao_Paulo; DVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL=E; DVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL=13; .AspNetCore.Session.factory21netpostgresql=CfDJ8LPHjbqSjZFHuxxHyrW7eZ6bUffvDRtkFEqb08HCxMjOtatvgF68DEmlXQ9Xcr6EhkSlUkZT4og7eBMNPxBpsZE7dPHFptSTy8RNPr61xXJ7XQ8IxbTURng21Ev2F36REWxOUcpc2uTn0CE9n52BNF9g2edgPN92F8GFbLyfc9g2F2sLUpgrade-Insecure-Requests:1sec-ch-ua:"Google Chrome";v="137", "Chromium";v="137", "Not/A)Brand";v="24"sec-ch-ua-mobile:?0sec-ch-ua-platform:"Windows"Sec-Fetch-Site:noneSec-Fetch-Mode:navigateSec-Fetch-User:?1Sec-Fetch-Dest:documentMS-ASPNETCORE-TOKEN:bad309f9-de4b-4fc0-b877-08796f8a2cedX-Original-Proto:httpX-Original-For:127.0.0.1:61669HttpCookies: GX_CLIENT_ID:f6afff47-18c5-4c20-a6aa-078bee2825b6GX_SESSION_ID:FaK8pILEOL5FAewxReg4yej1UEddQrETCCUuaRNfJd43DDVelopBootstrap_SidebarMenu_State_localhost_KnowledgeBaseNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_KnowledgeBaseNETPostgreSQL:20DVelopBootstrap_SidebarMenu_State_localhost_Factory4NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory4NETPostgreSQL:7DVelopBootstrap_SidebarMenu_State_localhost_FactoryNETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_FactoryNETPostgreSQL:8GxTZOffset:America/Sao_PauloDVelopBootstrap_SidebarMenu_State_localhost_Factory2NETPostgreSQL:EDVelopBootstrap_SidebarMenuSelected_localhost_Factory2NETPostgreSQL:13.AspNetCore.Session.factory21netpostgresql:CfDJ8LPHjbqSjZFHuxxHyrW7eZ6bUffvDRtkFEqb08HCxMjOtatvgF68DEmlXQ9Xcr6EhkSlUkZT4og7eBMNPxBpsZE7dPHFptSTy8RNPr61xXJ7XQ8IxbTURng21Ev/36REWxOUcpc2uTn0CE9n5+NF9g2edgPN9/8GFbLyfc9g/2sL
+2025-06-11 10:11:49,054 [7] DEBUG GeneXus.Metadata.ClassLoader - CreateInstance, Args 'GeneXus.Application.GxContext' 
+2025-06-11 10:11:49,082 [7] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.secuser_bc__default
+2025-06-11 10:11:49,104 [7] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 538d3aeb-bf05-4668-7889-4c472344d19c
+2025-06-11 10:11:49,104 [7] DEBUG GeneXus.Http.GxWebSession - Get key: WWPCONTEXT is Empty
+2025-06-11 10:11:49,110 [7] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 538d3aeb-bf05-4668-7889-4c472344d19c
+2025-06-11 10:11:49,110 [7] DEBUG GeneXus.Http.GxWebSession - Get key: TRNCONTEXT is Empty
+2025-06-11 10:11:49,133 [7] DEBUG GeneXus.Metadata.ClassLoader - CreateInstance, Args 'GeneXus.Application.GxContext' 
+2025-06-11 10:11:49,139 [7] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.configuracoes_bc__default
+2025-06-11 10:11:49,150 [7] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.login__default
+2025-06-11 10:11:49,153 [7] DEBUG GeneXus.Metadata.ClassLoader - GetInstance 'GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty', assembly 'wwpbaseobjects.workwithplusmasterpageempty'
+2025-06-11 10:11:49,172 [7] DEBUG GeneXus.Data.NTier.DataStoreProvider - Start DataStoreProvider.Ctr, Parameters: handle '1', dataStoreHelper:GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty__default
+2025-06-11 10:11:49,180 [7] DEBUG GeneXus.Application.GxContext - imageFiles found
+2025-06-11 10:11:49,211 [7] DEBUG GeneXus.Http.GxWebSession - GetObject SessionId : 538d3aeb-bf05-4668-7889-4c472344d19c
+2025-06-11 10:11:49,211 [7] DEBUG GeneXus.Http.GxWebSession - Get key: DESIGNSYSTEMSETTINGS is Empty
+2025-06-11 10:11:49,241 [7] DEBUG GeneXus.Http.GxWebSession - Set KeyDESIGNSYSTEMSETTINGS={"BaseColor":"SeaGreen","BackgroundStyle":"Light","FontSize":"","MenuColor":"Dark"}
+2025-06-11 10:11:49,241 [7] DEBUG GeneXus.Http.GxWebSession - SetObject SessionId : 538d3aeb-bf05-4668-7889-4c472344d19c
+2025-06-11 10:11:49,245 [7] DEBUG GeneXus.Data.ADO.GxCommand - GxCommand.FetchSize: 100, handle '1'
+2025-06-11 10:11:49,248 [7] DEBUG GeneXus.Data.NTier.DataStoreProvider - gxObject:GeneXus.Programs.wwpbaseobjects.workwithplusmasterpageempty__default, handle '1' cursorName:H00062
+2025-06-11 10:11:49,250 [7] DEBUG GeneXus.Data.ADO.GxCommand - ExecuteReader: Parameters 
+2025-06-11 10:11:49,251 [7] DEBUG GeneXus.Data.GxPostgreSql - ExecuteReader: client cursor=False, handle '1', hashcode 37920736
+2025-06-11 10:11:49,254 [7] DEBUG GeneXus.Data.ADO.GxConnection - Start GxConnection.Open, autoCommit=False handle:1 datastore:Default
+2025-06-11 10:11:49,256 [7] DEBUG GeneXus.Data.GxPostgreSql - Setting connectionString property Server=10.100.0.124;Port=5432;;User ID=cqla;Password=xxxxx;database=CQLA;
+2025-06-11 10:11:49,477 [7] ERROR GeneXus.Data.PostgresqlConnectionWrapper - Return GxConnection.Open Error 
+Npgsql.PostgresException (0x80004005): 3D000: database "CQLA" does not exist
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.Internal.NpgsqlConnector.<Open>g__OpenCore|213_1(NpgsqlConnector conn, SslMode sslMode, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken, Boolean isFirstAttempt)
+   at Npgsql.Internal.NpgsqlConnector.Open(NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.OpenNewConnector(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.PoolingDataSource.<Get>g__RentAsync|34_0(NpgsqlConnection conn, NpgsqlTimeout timeout, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.<Open>g__OpenAsync|42_0(Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlConnection.Open()
+   at GeneXus.Data.PostgresqlConnectionWrapper.Open()
+  Exception data:
+    Severity: FATAL
+    SqlState: 3D000
+    MessageText: database "CQLA" does not exist
+    File: postinit.c
+    Line: 1032
+    Routine: InitPostgres
+2025-06-11 10:11:49,531 [7] DEBUG GeneXus.Data.GxPostgreSql - ProcessError: dbmsErrorCode=16389, emsg '3d000: database "cqla" does not exist'
+2025-06-11 10:11:49,531 [7] ERROR GeneXus.Data.ADO.GxConnection - GxConnection.Open Error 
+Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.3d000: database "cqla" does not exist
+2025-06-11 10:11:49,532 [7] ERROR GeneXus.Data.ADO.GxCommand - Return GxCommand.ExecuteReader Error 
+Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.3d000: database "cqla" does not exist
+2025-06-11 10:11:49,532 [7] ERROR GeneXus.Data.ADO.GxCommand - Inner Error
+Type:Npgsql.PostgresException.DBMS Error Code:16389.3d000: database "cqla" does not exist
+2025-06-11 10:11:49,533 [7] DEBUG GeneXus.Data.GxPostgreSql - ProcessError: dbmsErrorCode=16389, emsg '3d000: database "cqla" does not exist'
+2025-06-11 10:11:49,535 [7] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close Id  connection State 'Closed' handle:1 datastore:Default
+2025-06-11 10:11:49,535 [7] DEBUG GeneXus.Data.ADO.GxConnection - UncommitedChanges before Close:False
+2025-06-11 10:11:49,536 [7] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close connection is closed 
+2025-06-11 10:11:49,537 [7] ERROR GeneXus.Data.ADO.GxCommand - 3d000: database "cqla" does not exist
+2025-06-11 10:11:49,537 [7] ERROR GeneXus.Data.ADO.GxCommand - GxCommand.FetchData Error 
+2025-06-11 10:11:49,538 [7] DEBUG GeneXus.Data.ADO.GxConnectionManager - RemoveConnection   handle 1,datasource:Default
+2025-06-11 10:11:49,538 [7] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close Id  connection State 'Closed' handle:1 datastore:Default
+2025-06-11 10:11:49,538 [7] DEBUG GeneXus.Data.ADO.GxConnection - UncommitedChanges before Close:False
+2025-06-11 10:11:49,538 [7] DEBUG GeneXus.Data.ADO.GxConnection - GxConnection.Close connection is closed 
+2025-06-11 10:11:49,553 [7] ERROR GeneXus.HttpHandlerFactory.HandlerFactory - Handler Factory failed creating /login
+System.Exception: GXApplication exception
+ ---> Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.3d000: database "cqla" does not exist
+   --- End of inner exception stack trace ---
+   at GeneXus.Http.GXHttpHandler.ProcessRequest(HttpContext httpContext)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+2025-06-11 10:11:49,560 [7] ERROR GeneXus.Application.CustomExceptionHandlerMiddleware - Internal error
+System.Exception: GXApplication exception
+ ---> Type:GeneXus.Data.GxADODataException.DBMS Error Code:16389.3d000: database "cqla" does not exist
+   --- End of inner exception stack trace ---
+   at GeneXus.Http.GXHttpHandler.ProcessRequest(HttpContext httpContext)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+   at GeneXus.HttpHandlerFactory.HandlerFactory.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Builder.RouterMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)

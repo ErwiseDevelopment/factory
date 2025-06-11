@@ -1,0 +1,34 @@
+
+<style>
+    input[type="color"] {
+        margin-top: 10px;
+        cursor: pointer; /* Adiciona o cursor pointer ao color picker */
+        border: none; /* Remove a borda padrão do color picker */
+        padding: 0; /* Remove o padding padrão do color picker */
+        width: 35px;
+        height: 35px;
+    }
+    /* Remove o efeito de foco padrão do color picker */
+    input[type="color"]:focus {
+        outline: none;
+    }
+</style>
+</head>
+<body>
+ 
+    <input type="color" id="color-picker">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const colorPicker = document.getElementById('color-picker');
+
+            colorPicker.addEventListener('input', (event) => {
+                const selectedColor = event.target.value;
+                console.log(selectedColor);
+				
+            });
+            
+        });
+    </script>
+</body>
+

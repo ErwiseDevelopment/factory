@@ -1,0 +1,105 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\Kbs\\Factory21\\NETPostgreSQL002\\web\\GxDeps.csproj": {}
+  },
+  "projects": {
+    "E:\\Kbs\\Factory21\\NETPostgreSQL002\\web\\GxDeps.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Kbs\\Factory21\\NETPostgreSQL002\\web\\GxDeps.csproj",
+        "projectName": "GxDeps",
+        "projectPath": "E:\\Kbs\\Factory21\\NETPostgreSQL002\\web\\GxDeps.csproj",
+        "packagesPath": "C:\\Users\\rapha\\.nuget\\packages\\",
+        "outputPath": "E:\\Kbs\\Factory21\\NETPostgreSQL002\\web\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "E:\\Kbs\\Factory21\\NETPostgreSQL002\\NuGet.Config",
+          "C:\\Users\\rapha\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/genexuslabs/13fb82d9-57a8-49ef-95bb-0ec8324e470c/_packaging/dotnet-prereleases/nuget/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "noWarn": [
+            "NU1701"
+          ],
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "GeneXus.Classes.Core": {
+              "target": "Package",
+              "version": "[1.33.2, 1.33.2]"
+            },
+            "GeneXus.Classes.Web.Core": {
+              "target": "Package",
+              "version": "[1.33.2, 1.33.2]"
+            },
+            "GeneXus.DataInitialization.Core": {
+              "target": "Package",
+              "version": "[1.33.2, 1.33.2]"
+            },
+            "GeneXus.Maps.Core": {
+              "target": "Package",
+              "version": "[1.33.2, 1.33.2]"
+            },
+            "GeneXus.NetCoreStartup": {
+              "target": "Package",
+              "version": "[1.33.2, 1.33.2]"
+            },
+            "GeneXus.Reorganization.Core": {
+              "target": "Package",
+              "version": "[1.33.2, 1.33.2]"
+            },
+            "MySqlConnector": {
+              "target": "Package",
+              "version": "[2.2.3, )"
+            },
+            "Npgsql": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

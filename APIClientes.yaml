@@ -1,0 +1,296 @@
+openapi: 3.0.0
+info:
+  title: "APIClientes"
+  description: "APIClientes"
+  version: "20250610223234"
+servers:
+  - url: http://localhost:8082/Factory21NETPostgreSQL/api
+paths:
+  /customers:
+    post:
+      tags:
+        - APIClientes  
+      operationId: "APIClientes.customers__post"
+      summary: "customers__post"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/customers__postInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SdClientePFPJRetorno"  
+
+        404:
+          description: "Not found"
+
+
+    put:
+      tags:
+        - APIClientes  
+      operationId: "APIClientes.customers__put"
+      summary: "customers__put"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/customers__putInput"
+      
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SdClientePFPJ"  
+
+        404:
+          description: "Not found"
+
+components:
+  schemas:
+    customers__postInput:  
+      properties:
+        SdClientePFPJ:
+          description: "Sd Cliente PFPJ"
+          $ref: "#/components/schemas/SdClientePFPJ"
+
+    customers__putInput:  
+      properties:
+        id:
+          type: "integer"
+          format: "int64"
+        SdClientePFPJ:
+          description: "Sd Cliente PFPJ"
+          $ref: "#/components/schemas/SdClientePFPJ"
+  
+    SdClientePFPJ:
+      properties:
+        document:
+          description: "document"
+          type: "string"
+        company_name:
+          description: "company_name"
+          type: "string"
+        trade_name:
+          description: "trade_name"
+          type: "string"
+        birth_date:
+          description: "birth_date"
+          type: "string"
+        person_type:
+          description: "person_type"
+          type: "string"
+        status:
+          description: "status"
+          type: "string"
+        health_insurance:
+          description: "health_insurance"
+          type: "string"
+        created_at:
+          description: "created_at"
+          type: "string"
+          format: "date-time"
+        updated_at:
+          description: "updated_at"
+          type: "string"
+          format: "date-time"
+        nationality:
+          description: "nationality"
+          type: "string"
+        marital_status:
+          description: "marital_status"
+          type: "string"
+        identity_document:
+          description: "identity_document"
+          type: "string"
+
+        address:
+          $ref: "#/components/schemas/SdClientePFPJ.address"
+
+        contact:
+          $ref: "#/components/schemas/SdClientePFPJ.contact"
+
+        responsible:
+          $ref: "#/components/schemas/SdClientePFPJ.responsible"
+
+
+    SdClientePFPJ.address:
+      properties:
+        type:
+          description: "type"
+          type: "string"
+        zip_code:
+          description: "zip_code"
+          type: "string"
+        street:
+          description: "street"
+          type: "string"
+        neighborhood:
+          description: "neighborhood"
+          type: "string"
+        city:
+          description: "city"
+          type: "string"
+        municipality_code:
+          description: "municipality_code"
+          type: "string"
+        number:
+          description: "number"
+          type: "string"
+        complement:
+          description: "complement"
+          type: "string"
+
+
+      x-gx-level: "SdClientePFPJ"
+
+
+    SdClientePFPJ.contact:
+      properties:
+        email:
+          description: "email"
+          type: "string"
+
+        phone:
+          $ref: "#/components/schemas/SdClientePFPJ.contact.phone"
+
+        secondary_phone:
+          $ref: "#/components/schemas/SdClientePFPJ.contact.secondary_phone"
+
+      x-gx-level: "SdClientePFPJ"
+
+    SdClientePFPJ.contact.phone:
+      properties:
+        ddi:
+          description: "ddi"
+          type: "string"
+        ddd:
+          description: "ddd"
+          type: "string"
+        number:
+          description: "number"
+          type: "string"
+
+
+      x-gx-level: "SdClientePFPJ.contact"
+
+
+    SdClientePFPJ.contact.secondary_phone:
+      properties:
+        ddi:
+          description: "ddi"
+          type: "string"
+        ddd:
+          description: "ddd"
+          type: "string"
+        number:
+          description: "number"
+          type: "string"
+
+
+      x-gx-level: "SdClientePFPJ.contact"
+
+
+    SdClientePFPJ.responsible:
+      properties:
+        name:
+          description: "name"
+          type: "string"
+        nationality:
+          description: "nationality"
+          type: "string"
+        marital_status:
+          description: "marital_status"
+          type: "string"
+        profession:
+          description: "profession"
+          type: "string"
+        identity_document:
+          description: "identity_document"
+          type: "string"
+        cpf:
+          description: "cpf"
+          type: "string"
+
+        address:
+          $ref: "#/components/schemas/SdClientePFPJ.responsible.address"
+
+        contact:
+          $ref: "#/components/schemas/SdClientePFPJ.responsible.contact"
+
+      x-gx-level: "SdClientePFPJ"
+
+    SdClientePFPJ.responsible.address:
+      properties:
+        zip_code:
+          description: "zip_code"
+          type: "string"
+        street:
+          description: "street"
+          type: "string"
+        neighborhood:
+          description: "neighborhood"
+          type: "string"
+        city:
+          description: "city"
+          type: "string"
+        municipality:
+          description: "municipality"
+          type: "string"
+        number:
+          description: "number"
+          type: "string"
+        complement:
+          description: "complement"
+          type: "string"
+
+
+      x-gx-level: "SdClientePFPJ.responsible"
+
+
+    SdClientePFPJ.responsible.contact:
+      properties:
+        ddi:
+          description: "ddi"
+          type: "string"
+        ddd:
+          description: "ddd"
+          type: "string"
+        number:
+          description: "number"
+          type: "string"
+        email:
+          description: "email"
+          type: "string"
+
+
+      x-gx-level: "SdClientePFPJ.responsible"
+
+    SdClientePFPJRetorno:
+      properties:
+        id:
+          description: "id"
+          type: "integer"
+          format: "int64"
+        document:
+          description: "document"
+          type: "string"
+        created_at:
+          description: "created_at"
+          type: "string"
+          format: "date-time"
+        message:
+          description: "message"
+          type: "string"
+
+
+
+ 

@@ -1,0 +1,4 @@
+{
+
+"GxObject":{"ObjectType":"BusinessComponent","Name":"TipoPagamento","idConnectivitySupport":"idInherit","Structure":{"Levels":[{"Name":"Tipopagamento","ParentLevel":"","LevelName":"TipoPagamento","Description":"Tipo Pagamento","Attributes":[{"Name":"TipoPagamentoId","Caption":"Tipo Pagamento Id","default":"0","AutoNumber":"true","IsKey":"true","ReadOnly":"false","AttributeType":"int","Description":"Tipo Pagamento Id","Length":"9","Decimals":"0","Signed":"false","AllowDBNulls":"false","Domain":"Id","InternalName":"TipoPagamentoId","InputPicture":"ZZZZZZZZ9","Type":"xs:int"},{"Name":"TipoPagamentoNome","Caption":"Tipo Pagamento Nome","default":"","IsKey":"false","ReadOnly":"false","AttributeType":"svchar","Description":"Tipo Pagamento Nome","Length":"60","Decimals":"0","Signed":"false","AllowDBNulls":"false","InternalName":"TipoPagamentoNome","DescriptionAtt":"true","InputPicture":"","Type":"xs:string"}]}]},"Relations":{"ManyToOne":{"references":[]}}}
+}

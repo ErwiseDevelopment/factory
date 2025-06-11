@@ -1,0 +1,5195 @@
+openapi: 3.0.0
+info:
+  title: "Factory21"
+  version: "20250610223234"
+servers:
+  - url: http://localhost:8082/Factory21NETPostgreSQL/rest
+paths:
+  /AgenciaWWGetFilterData:
+    post:
+      tags:
+        - AgenciaWWGetFilterData
+      operationId: "AgenciaWWGetFilterData"
+      summary: "Agencia WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AgenciaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AgenciaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /AprovacaoLoadDVCombo:
+    post:
+      tags:
+        - AprovacaoLoadDVCombo
+      operationId: "AprovacaoLoadDVCombo"
+      summary: "Aprovacao Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AprovacaoLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AprovacaoLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /AprovacaoWWGetFilterData:
+    post:
+      tags:
+        - AprovacaoWWGetFilterData
+      operationId: "AprovacaoWWGetFilterData"
+      summary: "Aprovacao WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AprovacaoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AprovacaoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /AprovadoresLoadDVCombo:
+    post:
+      tags:
+        - AprovadoresLoadDVCombo
+      operationId: "AprovadoresLoadDVCombo"
+      summary: "Aprovadores Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AprovadoresLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AprovadoresLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /AprovadoresWWGetFilterData:
+    post:
+      tags:
+        - AprovadoresWWGetFilterData
+      operationId: "AprovadoresWWGetFilterData"
+      summary: "Aprovadores WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AprovadoresWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AprovadoresWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /AssinaturaLoadDVCombo:
+    post:
+      tags:
+        - AssinaturaLoadDVCombo
+      operationId: "AssinaturaLoadDVCombo"
+      summary: "Assinatura Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssinaturaLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AssinaturaLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /AssinaturaWWGetFilterData:
+    post:
+      tags:
+        - AssinaturaWWGetFilterData
+      operationId: "AssinaturaWWGetFilterData"
+      summary: "Assinatura WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/AssinaturaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/AssinaturaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /BancoWWGetFilterData:
+    post:
+      tags:
+        - BancoWWGetFilterData
+      operationId: "BancoWWGetFilterData"
+      summary: "Banco WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BancoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BancoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /BoletoLoadDVCombo:
+    post:
+      tags:
+        - BoletoLoadDVCombo
+      operationId: "BoletoLoadDVCombo"
+      summary: "Boleto Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BoletoLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BoletoLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /BoletoWWGetFilterData:
+    post:
+      tags:
+        - BoletoWWGetFilterData
+      operationId: "BoletoWWGetFilterData"
+      summary: "Boleto WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/BoletoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/BoletoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /CarteiraDeCobrancaWWGetFilterData:
+    post:
+      tags:
+        - CarteiraDeCobrancaWWGetFilterData
+      operationId: "CarteiraDeCobrancaWWGetFilterData"
+      summary: "Carteira De Cobranca WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CarteiraDeCobrancaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CarteiraDeCobrancaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /CategoriaTituloWWGetFilterData:
+    post:
+      tags:
+        - CategoriaTituloWWGetFilterData
+      operationId: "CategoriaTituloWWGetFilterData"
+      summary: "Categoria Titulo WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CategoriaTituloWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/CategoriaTituloWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ChavePIXWWGetFilterData:
+    post:
+      tags:
+        - ChavePIXWWGetFilterData
+      operationId: "ChavePIXWWGetFilterData"
+      summary: "Chave PIXWWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ChavePIXWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ChavePIXWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ClienteDocumentoWWGetFilterData:
+    post:
+      tags:
+        - ClienteDocumentoWWGetFilterData
+      operationId: "ClienteDocumentoWWGetFilterData"
+      summary: "Cliente Documento WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClienteDocumentoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ClienteDocumentoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ClienteLoadDVCombo:
+    post:
+      tags:
+        - ClienteLoadDVCombo
+      operationId: "ClienteLoadDVCombo"
+      summary: "Cliente Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClienteLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ClienteLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /ClienteRepresentantesWWGetFilterData:
+    post:
+      tags:
+        - ClienteRepresentantesWWGetFilterData
+      operationId: "ClienteRepresentantesWWGetFilterData"
+      summary: "Cliente Representantes WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClienteRepresentantesWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ClienteRepresentantesWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ClienteWWGetFilterData:
+    post:
+      tags:
+        - ClienteWWGetFilterData
+      operationId: "ClienteWWGetFilterData"
+      summary: "Cliente WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ClienteWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ClienteWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ConfiguracaoNotificacoesWWGetFilterData:
+    post:
+      tags:
+        - ConfiguracaoNotificacoesWWGetFilterData
+      operationId: "ConfiguracaoNotificacoesWWGetFilterData"
+      summary: "Configuracao Notificacoes WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConfiguracaoNotificacoesWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConfiguracaoNotificacoesWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ConfiguracoesTestemunhasWWGetFilterData:
+    post:
+      tags:
+        - ConfiguracoesTestemunhasWWGetFilterData
+      operationId: "ConfiguracoesTestemunhasWWGetFilterData"
+      summary: "Configuracoes Testemunhas WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConfiguracoesTestemunhasWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConfiguracoesTestemunhasWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ContaBancariaWWGetFilterData:
+    post:
+      tags:
+        - ContaBancariaWWGetFilterData
+      operationId: "ContaBancariaWWGetFilterData"
+      summary: "Conta Bancaria WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContaBancariaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContaBancariaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ContaWWGetFilterData:
+    post:
+      tags:
+        - ContaWWGetFilterData
+      operationId: "ContaWWGetFilterData"
+      summary: "Conta WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ContratoWWGetFilterData:
+    post:
+      tags:
+        - ContratoWWGetFilterData
+      operationId: "ContratoWWGetFilterData"
+      summary: "Contrato WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ContratoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ContratoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ConvenioCategoriaWWGetFilterData:
+    post:
+      tags:
+        - ConvenioCategoriaWWGetFilterData
+      operationId: "ConvenioCategoriaWWGetFilterData"
+      summary: "Convenio Categoria WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConvenioCategoriaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConvenioCategoriaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ConvenioWWGetFilterData:
+    post:
+      tags:
+        - ConvenioWWGetFilterData
+      operationId: "ConvenioWWGetFilterData"
+      summary: "Convenio WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ConvenioWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ConvenioWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /Costumer/invoicesGetFilterData:
+    post:
+      tags:
+        - Costumer
+      operationId: "Costumer.invoicesGetFilterData"
+      summary: "invoices Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Costumer.invoicesGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Costumer.invoicesGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /Costumer/WpClientesGetFilterData:
+    post:
+      tags:
+        - Costumer
+      operationId: "Costumer.WpClientesGetFilterData"
+      summary: "Wp Clientes Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Costumer.WpClientesGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Costumer.WpClientesGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /DocumentosWWGetFilterData:
+    post:
+      tags:
+        - DocumentosWWGetFilterData
+      operationId: "DocumentosWWGetFilterData"
+      summary: "Documentos WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/DocumentosWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/DocumentosWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /EmpresaWWGetFilterData:
+    post:
+      tags:
+        - EmpresaWWGetFilterData
+      operationId: "EmpresaWWGetFilterData"
+      summary: "Empresa WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EmpresaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EmpresaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /EspecialidadeWWGetFilterData:
+    post:
+      tags:
+        - EspecialidadeWWGetFilterData
+      operationId: "EspecialidadeWWGetFilterData"
+      summary: "Especialidade WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/EspecialidadeWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/EspecialidadeWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /FinanciamentoLoadDVCombo:
+    post:
+      tags:
+        - FinanciamentoLoadDVCombo
+      operationId: "FinanciamentoLoadDVCombo"
+      summary: "Financiamento Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FinanciamentoLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FinanciamentoLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /FinanciamentoWWGetFilterData:
+    post:
+      tags:
+        - FinanciamentoWWGetFilterData
+      operationId: "FinanciamentoWWGetFilterData"
+      summary: "Financiamento WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FinanciamentoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/FinanciamentoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /General/Services/DirectionsServiceRequest:
+    post:
+      tags:
+        - General.Services
+      operationId: "General.Services.DirectionsServiceRequest"
+      summary: "Directions Service Request"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/General.Services.DirectionsServiceRequestInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/General.Services.DirectionsServiceRequestOutput"
+        404:
+          description: "Not found"
+  /General/Services/GxAfterEventReplicator:
+    post:
+      tags:
+        - General.Services
+      operationId: "General.Services.GxAfterEventReplicator"
+      summary: "Gx After Event Replicator"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/General.Services.GxAfterEventReplicatorInput"
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /General/Services/GxBeforeEventReplicator:
+    post:
+      tags:
+        - General.Services
+      operationId: "General.Services.GxBeforeEventReplicator"
+      summary: "Gx Before Event Replicator"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/General.Services.GxBeforeEventReplicatorInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/General.Services.GxBeforeEventReplicatorOutput"
+        404:
+          description: "Not found"
+  /General/Services/GxOnPendingEventFailed:
+    post:
+      tags:
+        - General.Services
+      operationId: "General.Services.GxOnPendingEventFailed"
+      summary: "Gx On Pending Event Failed"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/General.Services.GxOnPendingEventFailedInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/General.Services.GxOnPendingEventFailedOutput"
+        404:
+          description: "Not found"
+  /General/Services/NotificationsRegistrationHandler:
+    post:
+      tags:
+        - General.Services
+      operationId: "General.Services.NotificationsRegistrationHandler"
+      summary: "Notifications Registration Handler"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/General.Services.NotificationsRegistrationHandlerInput"
+      responses:
+        200:
+          description: "Successful operation"
+        404:
+          description: "Not found"
+  /LayoutContratoWWGetFilterData:
+    post:
+      tags:
+        - LayoutContratoWWGetFilterData
+      operationId: "LayoutContratoWWGetFilterData"
+      summary: "Layout Contrato WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/LayoutContratoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/LayoutContratoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /NotaFiscalItemListaItensWWGetFilterData:
+    post:
+      tags:
+        - NotaFiscalItemListaItensWWGetFilterData
+      operationId: "NotaFiscalItemListaItensWWGetFilterData"
+      summary: "Nota Fiscal Item Lista Itens WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NotaFiscalItemListaItensWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotaFiscalItemListaItensWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /NotaFiscalItemLoadDVCombo:
+    post:
+      tags:
+        - NotaFiscalItemLoadDVCombo
+      operationId: "NotaFiscalItemLoadDVCombo"
+      summary: "Nota Fiscal Item Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NotaFiscalItemLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotaFiscalItemLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /NotaFiscalItemWWGetFilterData:
+    post:
+      tags:
+        - NotaFiscalItemWWGetFilterData
+      operationId: "NotaFiscalItemWWGetFilterData"
+      summary: "Nota Fiscal Item WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NotaFiscalItemWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotaFiscalItemWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /NotaFiscalParcelamentoLoadDVCombo:
+    post:
+      tags:
+        - NotaFiscalParcelamentoLoadDVCombo
+      operationId: "NotaFiscalParcelamentoLoadDVCombo"
+      summary: "Nota Fiscal Parcelamento Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NotaFiscalParcelamentoLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotaFiscalParcelamentoLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /NotaFiscalParcelamentoWWGetFilterData:
+    post:
+      tags:
+        - NotaFiscalParcelamentoWWGetFilterData
+      operationId: "NotaFiscalParcelamentoWWGetFilterData"
+      summary: "Nota Fiscal Parcelamento WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NotaFiscalParcelamentoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotaFiscalParcelamentoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /NotificacaoAgendadaWWGetFilterData:
+    post:
+      tags:
+        - NotificacaoAgendadaWWGetFilterData
+      operationId: "NotificacaoAgendadaWWGetFilterData"
+      summary: "Notificacao Agendada WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/NotificacaoAgendadaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/NotificacaoAgendadaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /OperacoesListaGetFilterData:
+    post:
+      tags:
+        - OperacoesListaGetFilterData
+      operationId: "OperacoesListaGetFilterData"
+      summary: "Operacoes Lista Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OperacoesListaGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OperacoesListaGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /OperacoesTitulosWWGetFilterData:
+    post:
+      tags:
+        - OperacoesTitulosWWGetFilterData
+      operationId: "OperacoesTitulosWWGetFilterData"
+      summary: "Operacoes Titulos WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/OperacoesTitulosWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/OperacoesTitulosWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ParticipanteWWGetFilterData:
+    post:
+      tags:
+        - ParticipanteWWGetFilterData
+      operationId: "ParticipanteWWGetFilterData"
+      summary: "Participante WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ParticipanteWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ParticipanteWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /PopUpSacadoGetFilterData:
+    post:
+      tags:
+        - PopUpSacadoGetFilterData
+      operationId: "PopUpSacadoGetFilterData"
+      summary: "Pop Up Sacado Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PopUpSacadoGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PopUpSacadoGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ProfissaoWWGetFilterData:
+    post:
+      tags:
+        - ProfissaoWWGetFilterData
+      operationId: "ProfissaoWWGetFilterData"
+      summary: "Profissao WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProfissaoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProfissaoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /PropostaCLoadDVCombo:
+    post:
+      tags:
+        - PropostaCLoadDVCombo
+      operationId: "PropostaCLoadDVCombo"
+      summary: "Proposta CLoad DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PropostaCLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PropostaCLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /PropostaContratoAdmLoadDVCombo:
+    post:
+      tags:
+        - PropostaContratoAdmLoadDVCombo
+      operationId: "PropostaContratoAdmLoadDVCombo"
+      summary: "Proposta Contrato Adm Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PropostaContratoAdmLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PropostaContratoAdmLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /PropostaContratoAdmWWGetFilterData:
+    post:
+      tags:
+        - PropostaContratoAdmWWGetFilterData
+      operationId: "PropostaContratoAdmWWGetFilterData"
+      summary: "Proposta Contrato Adm WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PropostaContratoAdmWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PropostaContratoAdmWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /PropostaContratoLoadDVCombo:
+    post:
+      tags:
+        - PropostaContratoLoadDVCombo
+      operationId: "PropostaContratoLoadDVCombo"
+      summary: "Proposta Contrato Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PropostaContratoLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PropostaContratoLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /PropostaContratoWWGetFilterData:
+    post:
+      tags:
+        - PropostaContratoWWGetFilterData
+      operationId: "PropostaContratoWWGetFilterData"
+      summary: "Proposta Contrato WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PropostaContratoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PropostaContratoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /PropostaCWWGetFilterData:
+    post:
+      tags:
+        - PropostaCWWGetFilterData
+      operationId: "PropostaCWWGetFilterData"
+      summary: "Proposta CWWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PropostaCWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PropostaCWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /PropostaLoadDVCombo:
+    post:
+      tags:
+        - PropostaLoadDVCombo
+      operationId: "PropostaLoadDVCombo"
+      summary: "Proposta Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PropostaLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PropostaLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /PropostaNotaLoadDVCombo:
+    post:
+      tags:
+        - PropostaNotaLoadDVCombo
+      operationId: "PropostaNotaLoadDVCombo"
+      summary: "Proposta Nota Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PropostaNotaLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PropostaNotaLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /PropostaNotaWWGetFilterData:
+    post:
+      tags:
+        - PropostaNotaWWGetFilterData
+      operationId: "PropostaNotaWWGetFilterData"
+      summary: "Proposta Nota WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PropostaNotaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PropostaNotaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /PropostaWWGetFilterData:
+    post:
+      tags:
+        - PropostaWWGetFilterData
+      operationId: "PropostaWWGetFilterData"
+      summary: "Proposta WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/PropostaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PropostaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ReembolsoAssinaturasLoadDVCombo:
+    post:
+      tags:
+        - ReembolsoAssinaturasLoadDVCombo
+      operationId: "ReembolsoAssinaturasLoadDVCombo"
+      summary: "Reembolso Assinaturas Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReembolsoAssinaturasLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReembolsoAssinaturasLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /ReembolsoAssinaturasWWGetFilterData:
+    post:
+      tags:
+        - ReembolsoAssinaturasWWGetFilterData
+      operationId: "ReembolsoAssinaturasWWGetFilterData"
+      summary: "Reembolso Assinaturas WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReembolsoAssinaturasWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReembolsoAssinaturasWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ReembolsoFlowLogLoadDVCombo:
+    post:
+      tags:
+        - ReembolsoFlowLogLoadDVCombo
+      operationId: "ReembolsoFlowLogLoadDVCombo"
+      summary: "Reembolso Flow Log Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReembolsoFlowLogLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReembolsoFlowLogLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /ReembolsoFlowLogWWGetFilterData:
+    post:
+      tags:
+        - ReembolsoFlowLogWWGetFilterData
+      operationId: "ReembolsoFlowLogWWGetFilterData"
+      summary: "Reembolso Flow Log WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReembolsoFlowLogWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReembolsoFlowLogWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ReembolsoLoadDVCombo:
+    post:
+      tags:
+        - ReembolsoLoadDVCombo
+      operationId: "ReembolsoLoadDVCombo"
+      summary: "Reembolso Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReembolsoLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReembolsoLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /ReembolsoWWGetFilterData:
+    post:
+      tags:
+        - ReembolsoWWGetFilterData
+      operationId: "ReembolsoWWGetFilterData"
+      summary: "Reembolso WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ReembolsoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ReembolsoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /RepresentanteLoadDVCombo:
+    post:
+      tags:
+        - RepresentanteLoadDVCombo
+      operationId: "RepresentanteLoadDVCombo"
+      summary: "Representante Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RepresentanteLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RepresentanteLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /RepresentanteWWGetFilterData:
+    post:
+      tags:
+        - RepresentanteWWGetFilterData
+      operationId: "RepresentanteWWGetFilterData"
+      summary: "Representante WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RepresentanteWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/RepresentanteWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /SecUserClienteWWGetFilterData:
+    post:
+      tags:
+        - SecUserClienteWWGetFilterData
+      operationId: "SecUserClienteWWGetFilterData"
+      summary: "Sec User Cliente WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SecUserClienteWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SecUserClienteWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /SecUserLogLoadDVCombo:
+    post:
+      tags:
+        - SecUserLogLoadDVCombo
+      operationId: "SecUserLogLoadDVCombo"
+      summary: "Sec User Log Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SecUserLogLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SecUserLogLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /SecUserLogWWGetFilterData:
+    post:
+      tags:
+        - SecUserLogWWGetFilterData
+      operationId: "SecUserLogWWGetFilterData"
+      summary: "Sec User Log WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SecUserLogWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SecUserLogWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /SecUserWWGetFilterData:
+    post:
+      tags:
+        - SecUserWWGetFilterData
+      operationId: "SecUserWWGetFilterData"
+      summary: "Sec User WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SecUserWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SecUserWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /SelecionarTitulosGetFilterData:
+    post:
+      tags:
+        - SelecionarTitulosGetFilterData
+      operationId: "SelecionarTitulosGetFilterData"
+      summary: "Selecionar Titulos Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SelecionarTitulosGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SelecionarTitulosGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /SerasaAcoesLoadDVCombo:
+    post:
+      tags:
+        - SerasaAcoesLoadDVCombo
+      operationId: "SerasaAcoesLoadDVCombo"
+      summary: "Serasa Acoes Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SerasaAcoesLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SerasaAcoesLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /SerasaAcoesWWGetFilterData:
+    post:
+      tags:
+        - SerasaAcoesWWGetFilterData
+      operationId: "SerasaAcoesWWGetFilterData"
+      summary: "Serasa Acoes WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SerasaAcoesWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SerasaAcoesWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /SerasaChequesLoadDVCombo:
+    post:
+      tags:
+        - SerasaChequesLoadDVCombo
+      operationId: "SerasaChequesLoadDVCombo"
+      summary: "Serasa Cheques Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SerasaChequesLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SerasaChequesLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /SerasaEnderecosLoadDVCombo:
+    post:
+      tags:
+        - SerasaEnderecosLoadDVCombo
+      operationId: "SerasaEnderecosLoadDVCombo"
+      summary: "Serasa Enderecos Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SerasaEnderecosLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SerasaEnderecosLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /SerasaEnderecosWWGetFilterData:
+    post:
+      tags:
+        - SerasaEnderecosWWGetFilterData
+      operationId: "SerasaEnderecosWWGetFilterData"
+      summary: "Serasa Enderecos WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SerasaEnderecosWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SerasaEnderecosWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /SerasaLoadDVCombo:
+    post:
+      tags:
+        - SerasaLoadDVCombo
+      operationId: "SerasaLoadDVCombo"
+      summary: "Serasa Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SerasaLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SerasaLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /SerasaOcorrenciasLoadDVCombo:
+    post:
+      tags:
+        - SerasaOcorrenciasLoadDVCombo
+      operationId: "SerasaOcorrenciasLoadDVCombo"
+      summary: "Serasa Ocorrencias Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SerasaOcorrenciasLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SerasaOcorrenciasLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /SerasaOcorrenciasWWGetFilterData:
+    post:
+      tags:
+        - SerasaOcorrenciasWWGetFilterData
+      operationId: "SerasaOcorrenciasWWGetFilterData"
+      summary: "Serasa Ocorrencias WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SerasaOcorrenciasWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SerasaOcorrenciasWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /SerasaProtestosLoadDVCombo:
+    post:
+      tags:
+        - SerasaProtestosLoadDVCombo
+      operationId: "SerasaProtestosLoadDVCombo"
+      summary: "Serasa Protestos Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SerasaProtestosLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SerasaProtestosLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /SerasaProtestosWWGetFilterData:
+    post:
+      tags:
+        - SerasaProtestosWWGetFilterData
+      operationId: "SerasaProtestosWWGetFilterData"
+      summary: "Serasa Protestos WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SerasaProtestosWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SerasaProtestosWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /SerasaWWGetFilterData:
+    post:
+      tags:
+        - SerasaWWGetFilterData
+      operationId: "SerasaWWGetFilterData"
+      summary: "Serasa WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/SerasaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/SerasaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /ServidorSMTPWWGetFilterData:
+    post:
+      tags:
+        - ServidorSMTPWWGetFilterData
+      operationId: "ServidorSMTPWWGetFilterData"
+      summary: "Servidor SMTPWWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ServidorSMTPWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ServidorSMTPWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /TagsWWGetFilterData:
+    post:
+      tags:
+        - TagsWWGetFilterData
+      operationId: "TagsWWGetFilterData"
+      summary: "Tags WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TagsWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TagsWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /TipoClienteWWGetFilterData:
+    post:
+      tags:
+        - TipoClienteWWGetFilterData
+      operationId: "TipoClienteWWGetFilterData"
+      summary: "Tipo Cliente WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TipoClienteWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TipoClienteWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /TipoPagamentoWWGetFilterData:
+    post:
+      tags:
+        - TipoPagamentoWWGetFilterData
+      operationId: "TipoPagamentoWWGetFilterData"
+      summary: "Tipo Pagamento WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TipoPagamentoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TipoPagamentoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /TituloMovimentoLoadDVCombo:
+    post:
+      tags:
+        - TituloMovimentoLoadDVCombo
+      operationId: "TituloMovimentoLoadDVCombo"
+      summary: "Titulo Movimento Load DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TituloMovimentoLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TituloMovimentoLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /TituloMovimentoWWGetFilterData:
+    post:
+      tags:
+        - TituloMovimentoWWGetFilterData
+      operationId: "TituloMovimentoWWGetFilterData"
+      summary: "Titulo Movimento WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TituloMovimentoWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TituloMovimentoWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /TituloPropostaWWGetFilterData:
+    post:
+      tags:
+        - TituloPropostaWWGetFilterData
+      operationId: "TituloPropostaWWGetFilterData"
+      summary: "Titulo Proposta WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TituloPropostaWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TituloPropostaWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /TituloWWGetFilterData:
+    post:
+      tags:
+        - TituloWWGetFilterData
+      operationId: "TituloWWGetFilterData"
+      summary: "Titulo WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TituloWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/TituloWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /UsuarioWWGetFilterData:
+    post:
+      tags:
+        - UsuarioWWGetFilterData
+      operationId: "UsuarioWWGetFilterData"
+      summary: "Usuario WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/UsuarioWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/UsuarioWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WcAssinantesGetFilterData:
+    post:
+      tags:
+        - WcAssinantesGetFilterData
+      operationId: "WcAssinantesGetFilterData"
+      summary: "Wc Assinantes Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WcAssinantesGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WcAssinantesGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WcAssinaturasGetFilterData:
+    post:
+      tags:
+        - WcAssinaturasGetFilterData
+      operationId: "WcAssinaturasGetFilterData"
+      summary: "Wc Assinaturas Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WcAssinaturasGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WcAssinaturasGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WcBoletosGetFilterData:
+    post:
+      tags:
+        - WcBoletosGetFilterData
+      operationId: "WcBoletosGetFilterData"
+      summary: "Wc Boletos Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WcBoletosGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WcBoletosGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WcListaAssinantesGetFilterData:
+    post:
+      tags:
+        - WcListaAssinantesGetFilterData
+      operationId: "WcListaAssinantesGetFilterData"
+      summary: "Wc Lista Assinantes Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WcListaAssinantesGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WcListaAssinantesGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WcPropostaDocumentoGetFilterData:
+    post:
+      tags:
+        - WcPropostaDocumentoGetFilterData
+      operationId: "WcPropostaDocumentoGetFilterData"
+      summary: "Wc Proposta Documento Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WcPropostaDocumentoGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WcPropostaDocumentoGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WcReembolsoFlowLogGetFilterData:
+    post:
+      tags:
+        - WcReembolsoFlowLogGetFilterData
+      operationId: "WcReembolsoFlowLogGetFilterData"
+      summary: "Wc Reembolso Flow Log Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WcReembolsoFlowLogGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WcReembolsoFlowLogGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WCTitulosPropostaGetFilterData:
+    post:
+      tags:
+        - WCTitulosPropostaGetFilterData
+      operationId: "WCTitulosPropostaGetFilterData"
+      summary: "WCTitulos Proposta Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WCTitulosPropostaGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WCTitulosPropostaGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WcUsersSignatureGetFilterData:
+    post:
+      tags:
+        - WcUsersSignatureGetFilterData
+      operationId: "WcUsersSignatureGetFilterData"
+      summary: "Wc Users Signature Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WcUsersSignatureGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WcUsersSignatureGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WebServiceWWGetFilterData:
+    post:
+      tags:
+        - WebServiceWWGetFilterData
+      operationId: "WebServiceWWGetFilterData"
+      summary: "Web Service WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WebServiceWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WebServiceWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WInvoicesGetFilterData:
+    post:
+      tags:
+        - WInvoicesGetFilterData
+      operationId: "WInvoicesGetFilterData"
+      summary: "WInvoices Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WInvoicesGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WInvoicesGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WorkflowConvenioWWGetFilterData:
+    post:
+      tags:
+        - WorkflowConvenioWWGetFilterData
+      operationId: "WorkflowConvenioWWGetFilterData"
+      summary: "Workflow Convenio WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WorkflowConvenioWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WorkflowConvenioWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WorkWithPlus/DynamicForms/WWP_DF_DynamicComboBox_WCLoadDVCombo:
+    post:
+      tags:
+        - WorkWithPlus.DynamicForms
+      operationId: "WorkWithPlus.DynamicForms.WWP_DF_DynamicComboBox_WCLoadDVCombo"
+      summary: "WWP_Dynamic Form_Dynamic Combo Box_WCLoad DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_DF_DynamicComboBox_WCLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_DF_DynamicComboBox_WCLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /WorkWithPlus/DynamicForms/WWP_DF_DynamicSuggest_WCLoadDVCombo:
+    post:
+      tags:
+        - WorkWithPlus.DynamicForms
+      operationId: "WorkWithPlus.DynamicForms.WWP_DF_DynamicSuggest_WCLoadDVCombo"
+      summary: "WWP_Dynamic Form_Dynamic Suggest_WCLoad DVCombo"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_DF_DynamicSuggest_WCLoadDVComboInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_DF_DynamicSuggest_WCLoadDVComboOutput"
+        404:
+          description: "Not found"
+  /WorkWithPlus/DynamicForms/WWP_DF_GetAvailableVariables:
+    post:
+      tags:
+        - WorkWithPlus.DynamicForms
+      operationId: "WorkWithPlus.DynamicForms.WWP_DF_GetAvailableVariables"
+      summary: "WWP_Dynamic Form_Get Available Variables"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_DF_GetAvailableVariablesInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_DF_GetAvailableVariablesOutput"
+        404:
+          description: "Not found"
+  /WorkWithPlus/DynamicForms/WWP_DF_LoadFormInstance:
+    post:
+      tags:
+        - WorkWithPlus.DynamicForms
+      operationId: "WorkWithPlus.DynamicForms.WWP_DF_LoadFormInstance"
+      summary: "WWP_Dynamic Form_Load Form Instance"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_DF_LoadFormInstanceInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_DF_LoadFormInstanceOutput"
+        404:
+          description: "Not found"
+  /WorkWithPlus/DynamicForms/WWP_FormWWGetFilterData:
+    post:
+      tags:
+        - WorkWithPlus.DynamicForms
+      operationId: "WorkWithPlus.DynamicForms.WWP_FormWWGetFilterData"
+      summary: "WWP_Form WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_FormWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_FormWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WorkWithPlus/WWP_ParameterWWGetFilterData:
+    post:
+      tags:
+        - WorkWithPlus
+      operationId: "WorkWithPlus.WWP_ParameterWWGetFilterData"
+      summary: "WWPParameter WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WorkWithPlus.WWP_ParameterWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WorkWithPlus.WWP_ParameterWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WPAddFuncGetFilterData:
+    post:
+      tags:
+        - WPAddFuncGetFilterData
+      operationId: "WPAddFuncGetFilterData"
+      summary: "WPAdd Func Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WPAddFuncGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WPAddFuncGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WpContratosTGetFilterData:
+    post:
+      tags:
+        - WpContratosTGetFilterData
+      operationId: "WpContratosTGetFilterData"
+      summary: "Wp Contratos TGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WpContratosTGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WpContratosTGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WpDemonstrativoPagamentoGetFilterData:
+    post:
+      tags:
+        - WpDemonstrativoPagamentoGetFilterData
+      operationId: "WpDemonstrativoPagamentoGetFilterData"
+      summary: "Wp Demonstrativo Pagamento Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WpDemonstrativoPagamentoGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WpDemonstrativoPagamentoGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WpFuncionalidadesGetFilterData:
+    post:
+      tags:
+        - WpFuncionalidadesGetFilterData
+      operationId: "WpFuncionalidadesGetFilterData"
+      summary: "Wp Funcionalidades Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WpFuncionalidadesGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WpFuncionalidadesGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WpListaTitulosClienteGetFilterData:
+    post:
+      tags:
+        - WpListaTitulosClienteGetFilterData
+      operationId: "WpListaTitulosClienteGetFilterData"
+      summary: "Wp Lista Titulos Cliente Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WpListaTitulosClienteGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WpListaTitulosClienteGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WpPerfilUsuarioGetFilterData:
+    post:
+      tags:
+        - WpPerfilUsuarioGetFilterData
+      operationId: "WpPerfilUsuarioGetFilterData"
+      summary: "Wp Perfil Usuario Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WpPerfilUsuarioGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WpPerfilUsuarioGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WpPropostasAssinaturasGetFilterData:
+    post:
+      tags:
+        - WpPropostasAssinaturasGetFilterData
+      operationId: "WpPropostasAssinaturasGetFilterData"
+      summary: "Wp Propostas Assinaturas Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WpPropostasAssinaturasGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WpPropostasAssinaturasGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WPRegistrarTituloGetFilterData:
+    post:
+      tags:
+        - WPRegistrarTituloGetFilterData
+      operationId: "WPRegistrarTituloGetFilterData"
+      summary: "WPRegistrar Titulo Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WPRegistrarTituloGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WPRegistrarTituloGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WpRepresentantesGetFilterData:
+    post:
+      tags:
+        - WpRepresentantesGetFilterData
+      operationId: "WpRepresentantesGetFilterData"
+      summary: "Wp Representantes Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WpRepresentantesGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WpRepresentantesGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WpSecRoleGetFilterData:
+    post:
+      tags:
+        - WpSecRoleGetFilterData
+      operationId: "WpSecRoleGetFilterData"
+      summary: "Wp Sec Role Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WpSecRoleGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WpSecRoleGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WpSelectuserGetFilterData:
+    post:
+      tags:
+        - WpSelectuserGetFilterData
+      operationId: "WpSelectuserGetFilterData"
+      summary: "Wp Selectuser Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WpSelectuserGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WpSelectuserGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WpTituloCLienteGetFilterData:
+    post:
+      tags:
+        - WpTituloCLienteGetFilterData
+      operationId: "WpTituloCLienteGetFilterData"
+      summary: "Wp Titulo CLiente Get Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WpTituloCLienteGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WpTituloCLienteGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WWPBaseObjects/SecFunctionalityFilterParentWWGetFilterData:
+    post:
+      tags:
+        - WWPBaseObjects
+      operationId: "WWPBaseObjects.SecFunctionalityFilterParentWWGetFilterData"
+      summary: "Sec Functionality Filter Parent WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WWPBaseObjects.SecFunctionalityFilterParentWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WWPBaseObjects.SecFunctionalityFilterParentWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WWPBaseObjects/SecFunctionalitySecFunctionalityRoleWCGetFilterData:
+    post:
+      tags:
+        - WWPBaseObjects
+      operationId: "WWPBaseObjects.SecFunctionalitySecFunctionalityRoleWCGetFilterData"
+      summary: "Sec Functionality Sec Functionality Role WCGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WWPBaseObjects.SecFunctionalitySecFunctionalityRoleWCGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WWPBaseObjects.SecFunctionalitySecFunctionalityRoleWCGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WWPBaseObjects/SecFunctionalityWWGetFilterData:
+    post:
+      tags:
+        - WWPBaseObjects
+      operationId: "WWPBaseObjects.SecFunctionalityWWGetFilterData"
+      summary: "Sec Functionality WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WWPBaseObjects.SecFunctionalityWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WWPBaseObjects.SecFunctionalityWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WWPBaseObjects/SecRoleSecFunctionalityRoleWCGetFilterData:
+    post:
+      tags:
+        - WWPBaseObjects
+      operationId: "WWPBaseObjects.SecRoleSecFunctionalityRoleWCGetFilterData"
+      summary: "Sec Role Sec Functionality Role WCGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WWPBaseObjects.SecRoleSecFunctionalityRoleWCGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WWPBaseObjects.SecRoleSecFunctionalityRoleWCGetFilterDataOutput"
+        404:
+          description: "Not found"
+  /WWPBaseObjects/SecRoleWWGetFilterData:
+    post:
+      tags:
+        - WWPBaseObjects
+      operationId: "WWPBaseObjects.SecRoleWWGetFilterData"
+      summary: "Sec Role WWGet Filter Data"
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/WWPBaseObjects.SecRoleWWGetFilterDataInput"
+      responses:
+        200:
+          description: "Successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/WWPBaseObjects.SecRoleWWGetFilterDataOutput"
+        404:
+          description: "Not found"
+components:
+  schemas:
+    AgenciaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    AprovacaoLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    AprovacaoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    AprovadoresLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        Combo_Data:
+          description: "DVB_SDTCombo Data"
+          type: array
+          items:
+            $ref: "#/components/schemas/WWPBaseObjects.DVB_SDTComboData_Item"
+    AprovadoresWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    AssinaturaLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    AssinaturaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    BancoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    BoletoLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    BoletoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    CarteiraDeCobrancaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    CategoriaTituloWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ChavePIXWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ClienteDocumentoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ClienteLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    ClienteRepresentantesWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ClienteWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ConfiguracaoNotificacoesWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ConfiguracoesTestemunhasWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ContaBancariaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ContaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ContratoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ConvenioCategoriaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ConvenioWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    Costumer.invoicesGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    Costumer.WpClientesGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    DocumentosWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    EmpresaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    EspecialidadeWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    FinanciamentoLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    FinanciamentoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    General.Services.DirectionsServiceRequestOutput:
+      properties:
+        Routes:
+          description: "Route"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Route"
+        errorMessages:
+          description: "Messages"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Messages_Message"
+    General.Services.GxBeforeEventReplicatorOutput:
+      properties:
+        GxPendingEvents:
+          description: "Synchronization Event List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventList_SynchronizationEventListItem"
+        EventResults:
+          description: "Synchronization Event Result List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventResultList_SynchronizationEventResultListItem"
+    General.Services.GxOnPendingEventFailedOutput:
+      properties:
+        Continue:
+          type: "boolean"
+    LayoutContratoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    NotaFiscalItemListaItensWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    NotaFiscalItemLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    NotaFiscalItemWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    NotaFiscalParcelamentoLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    NotaFiscalParcelamentoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    NotificacaoAgendadaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    OperacoesListaGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    OperacoesTitulosWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ParticipanteWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    PopUpSacadoGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ProfissaoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    PropostaCLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    PropostaContratoAdmLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    PropostaContratoAdmWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    PropostaContratoLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    PropostaContratoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    PropostaCWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    PropostaLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    PropostaNotaLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    PropostaNotaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    PropostaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ReembolsoAssinaturasLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    ReembolsoAssinaturasWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ReembolsoFlowLogLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    ReembolsoFlowLogWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ReembolsoLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    ReembolsoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    RepresentanteLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    RepresentanteWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    SecUserClienteWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    SecUserLogLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    SecUserLogWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    SecUserWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    SelecionarTitulosGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    SerasaAcoesLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    SerasaAcoesWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    SerasaChequesLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    SerasaEnderecosLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    SerasaEnderecosWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    SerasaLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    SerasaOcorrenciasLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    SerasaOcorrenciasWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    SerasaProtestosLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    SerasaProtestosWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    SerasaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    ServidorSMTPWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    TagsWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    TipoClienteWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    TipoPagamentoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    TituloMovimentoLoadDVComboOutput:
+      properties:
+        SelectedValue:
+          type: "string"
+        SelectedText:
+          type: "string"
+        Combo_DataJson:
+          type: "string"
+    TituloMovimentoWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    TituloPropostaWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    TituloWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    UsuarioWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WcAssinantesGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WcAssinaturasGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WcBoletosGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WcListaAssinantesGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WcPropostaDocumentoGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WcReembolsoFlowLogGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WCTitulosPropostaGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WcUsersSignatureGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WebServiceWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WInvoicesGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WorkflowConvenioWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WorkWithPlus.DynamicForms.WWP_DF_DynamicComboBox_WCLoadDVComboOutput:
+      properties:
+        Combo_DataJson:
+          type: "string"
+    WorkWithPlus.DynamicForms.WWP_DF_DynamicSuggest_WCLoadDVComboOutput:
+      properties:
+        Combo_DataJson:
+          type: "string"
+    WorkWithPlus.DynamicForms.WWP_DF_GetAvailableVariablesOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+    WorkWithPlus.DynamicForms.WWP_DF_LoadFormInstanceOutput:
+      properties:
+        WWPFormInstance:
+          description: "WWPForm Instance"
+          $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_FormInstance"
+    WorkWithPlus.DynamicForms.WWP_FormWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WorkWithPlus.WWP_ParameterWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WPAddFuncGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WpContratosTGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WpDemonstrativoPagamentoGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WpFuncionalidadesGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WpListaTitulosClienteGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WpPerfilUsuarioGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WpPropostasAssinaturasGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WPRegistrarTituloGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WpRepresentantesGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WpSecRoleGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WpSelectuserGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WpTituloCLienteGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WWPBaseObjects.SecFunctionalityFilterParentWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WWPBaseObjects.SecFunctionalitySecFunctionalityRoleWCGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WWPBaseObjects.SecFunctionalityWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WWPBaseObjects.SecRoleSecFunctionalityRoleWCGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    WWPBaseObjects.SecRoleWWGetFilterDataOutput:
+      properties:
+        OptionsJson:
+          type: "string"
+        OptionsDescJson:
+          type: "string"
+        OptionIndexesJson:
+          type: "string"
+    AgenciaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    AprovacaoLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        AprovacaoId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    AprovacaoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    AprovadoresLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        AprovadoresId:
+          type: "integer"
+          format: "int64"
+    AprovadoresWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    AssinaturaLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        AssinaturaId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    AssinaturaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    BancoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    BoletoLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        BoletosId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    BoletoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    CarteiraDeCobrancaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    CategoriaTituloWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ChavePIXWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ClienteDocumentoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ClienteLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        ClienteId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    ClienteRepresentantesWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ClienteWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ConfiguracaoNotificacoesWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ConfiguracoesTestemunhasWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ContaBancariaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ContaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ContratoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ConvenioCategoriaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ConvenioWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    Costumer.invoicesGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    Costumer.WpClientesGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    DocumentosWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    EmpresaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    EspecialidadeWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    FinanciamentoLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        FinanciamentoId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    FinanciamentoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    General.Services.DirectionsServiceRequestInput:  
+      properties:
+        DirectionsServiceProvider:
+          type: "string"
+        DirectionsRequestParameters:
+          description: "Directions Request Parameters"
+          $ref: "#/components/schemas/GeneXus.Common.DirectionsRequestParameters"
+    General.Services.GxAfterEventReplicatorInput:  
+      properties:
+        EventResults:
+          description: "Synchronization Event Result List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventResultList_SynchronizationEventResultListItem"
+        GxSynchroInfo:
+          description: "Synchronization Info"
+          $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationInfo"
+    General.Services.GxBeforeEventReplicatorInput:  
+      properties:
+        GxPendingEvents:
+          description: "Synchronization Event List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventList_SynchronizationEventListItem"
+        GxSyncroInfo:
+          description: "Synchronization Info"
+          $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationInfo"
+        EventResults:
+          description: "Synchronization Event Result List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventResultList_SynchronizationEventResultListItem"
+    General.Services.GxOnPendingEventFailedInput:  
+      properties:
+        PendingEvent:
+          description: "Synchronization Event List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventList_SynchronizationEventListItem"
+        BCName:
+          type: "string"
+        BCJson:
+          type: "string"
+        EventResult:
+          description: "Synchronization Event Result List"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventResultList_SynchronizationEventResultListItem"
+        GxSyncroInfo:
+          description: "Synchronization Info"
+          $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationInfo"
+    General.Services.NotificationsRegistrationHandlerInput:  
+      properties:
+        DeviceType:
+          type: "integer"
+          format: "int32"
+        DeviceId:
+          type: "string"
+        DeviceToken:
+          type: "string"
+        DeviceName:
+          type: "string"
+    LayoutContratoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    NotaFiscalItemListaItensWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    NotaFiscalItemLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        NotaFiscalItemId:
+          type: "string"
+          format: "uuid"
+        SearchTxtParms:
+          type: "string"
+    NotaFiscalItemWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    NotaFiscalParcelamentoLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        NotaFiscalParcelamentoID:
+          type: "string"
+          format: "uuid"
+        SearchTxtParms:
+          type: "string"
+    NotaFiscalParcelamentoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    NotificacaoAgendadaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    OperacoesListaGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    OperacoesTitulosWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ParticipanteWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    PopUpSacadoGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ProfissaoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    PropostaCLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        PropostaId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    PropostaContratoAdmLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        PropostaId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    PropostaContratoAdmWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    PropostaContratoLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        PropostaId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    PropostaContratoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    PropostaCWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    PropostaLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        PropostaId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    PropostaNotaLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        PropostaId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    PropostaNotaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    PropostaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ReembolsoAssinaturasLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        ReembolsoAssinaturasId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    ReembolsoAssinaturasWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ReembolsoFlowLogLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        ReembolsoFlowLogId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    ReembolsoFlowLogWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ReembolsoLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        ReembolsoId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    ReembolsoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    RepresentanteLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        RepresentanteId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    RepresentanteWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    SecUserClienteWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    SecUserLogLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        SecUserLogId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    SecUserLogWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    SecUserWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    SelecionarTitulosGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    SerasaAcoesLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        SerasaAcoesId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    SerasaAcoesWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    SerasaChequesLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        SerasaChequesId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    SerasaEnderecosLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        SerasaEnderecosId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    SerasaEnderecosWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    SerasaLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        SerasaId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    SerasaOcorrenciasLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        SerasaOcorrenciasId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    SerasaOcorrenciasWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    SerasaProtestosLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        SerasaProtestosId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    SerasaProtestosWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    SerasaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    ServidorSMTPWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    TagsWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    TipoClienteWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    TipoPagamentoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    TituloMovimentoLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        TrnMode:
+          type: "string"
+        IsDynamicCall:
+          type: "boolean"
+        TituloMovimentoId:
+          type: "integer"
+          format: "int64"
+        SearchTxtParms:
+          type: "string"
+    TituloMovimentoWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    TituloPropostaWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    TituloWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    UsuarioWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WcAssinantesGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WcAssinaturasGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WcBoletosGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WcListaAssinantesGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WcPropostaDocumentoGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WcReembolsoFlowLogGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WCTitulosPropostaGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WcUsersSignatureGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WebServiceWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WInvoicesGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WorkflowConvenioWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WorkWithPlus.DynamicForms.WWP_DF_DynamicComboBox_WCLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        Cond_SessionId:
+          type: "integer"
+          format: "int32"
+        Cond_WWPFormElementId:
+          type: "integer"
+          format: "int32"
+        SearchTxtParms:
+          type: "string"
+    WorkWithPlus.DynamicForms.WWP_DF_DynamicSuggest_WCLoadDVComboInput:  
+      properties:
+        ComboName:
+          type: "string"
+        Cond_SessionId:
+          type: "integer"
+          format: "int32"
+        Cond_WWPFormElementId:
+          type: "integer"
+          format: "int32"
+        SearchTxtParms:
+          type: "string"
+    WorkWithPlus.DynamicForms.WWP_DF_GetAvailableVariablesInput:  
+      properties:
+        SessionId:
+          type: "integer"
+          format: "int32"
+        IncludeCurrentElement:
+          type: "boolean"
+        CurrentElementId:
+          type: "integer"
+          format: "int32"
+        MaxOptions:
+          type: "integer"
+          format: "int32"
+        SearchTxt:
+          type: "string"
+    WorkWithPlus.DynamicForms.WWP_DF_LoadFormInstanceInput:  
+      properties:
+        SessionId:
+          type: "integer"
+          format: "int64"
+    WorkWithPlus.DynamicForms.WWP_FormWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WorkWithPlus.WWP_ParameterWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WPAddFuncGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WpContratosTGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WpDemonstrativoPagamentoGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WpFuncionalidadesGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WpListaTitulosClienteGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WpPerfilUsuarioGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WpPropostasAssinaturasGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WPRegistrarTituloGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WpRepresentantesGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WpSecRoleGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WpSelectuserGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WpTituloCLienteGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WWPBaseObjects.SecFunctionalityFilterParentWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WWPBaseObjects.SecFunctionalitySecFunctionalityRoleWCGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WWPBaseObjects.SecFunctionalityWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WWPBaseObjects.SecRoleSecFunctionalityRoleWCGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    WWPBaseObjects.SecRoleWWGetFilterDataInput:  
+      properties:
+        DDOName:
+          type: "string"
+        SearchTxtParms:
+          type: "string"
+        SearchTxtTo:
+          type: "string"
+    GeneXus.Common.DirectionsRequestParameters:
+      properties:
+        sourceLocation:
+          description: "Source Location"
+          type: "string"
+        destinationLocation:
+          description: "Destination Location"
+          type: "string"
+        waypoints:
+          description: "Intermediate waypoints"
+          type: array
+          items:
+            type: "string"
+        optimizeWaypoints:
+          description: "optimize Waypoints"
+          type: "boolean"
+        transportType:
+          description: "transport Type"
+          type: "string"
+        requestAlternateRoutes:
+          description: "request Alternate Routes"
+          type: "boolean"
+        additionalParameters:
+          description: "Configuration Property"
+          type: array
+          items:
+            $ref: "#/components/schemas/GeneXus.Common.Notifications.ConfigurationProperty"
+    GeneXus.Common.Messages_Message:
+      properties:
+        Id:
+          description: "Id"
+          type: "string"
+        Type:
+          description: "Type"
+          type: "integer"
+          format: "int32"
+        Description:
+          description: "Description"
+          type: "string"
+    GeneXus.Common.Notifications.ConfigurationProperty:
+      properties:
+        PropertyName:
+          description: "Property Name"
+          type: "string"
+        PropertyValue:
+          description: "Property Value"
+          type: "string"
+    GeneXus.Common.Route:
+      properties:
+        name:
+          description: "The expected travel time in seconds"
+          type: "string"
+        advisoryNotices:
+          description: "A collection of advisory notice strings for the route"
+          type: array
+          items:
+            type: "string"
+        distance:
+          description: "The route distance in meters"
+          type: "number"
+          format: "double"
+        expectedTravelTime:
+          description: "The expected travel time in seconds"
+          type: "number"
+          format: "double"
+        transportType:
+          description: "The overall route transport type"
+          type: "string"
+        geoline:
+          description: "The route geometry"
+          type: "string"
+    GeneXus.SD.Synchronization.SynchronizationEventList_SynchronizationEventListItem:
+      properties:
+        EventId:
+          description: "Pending Event Id"
+          type: "string"
+          format: "uuid"
+        EventTimestamp:
+          description: "Pending Event Timestamp"
+          type: "string"
+          format: "date-time"
+        EventBC:
+          description: "Pending Event BC"
+          type: "string"
+        EventAction:
+          description: "Pending Event Action"
+          type: "integer"
+          format: "int32"
+        EventData:
+          description: "Pending Event Data"
+          type: "string"
+        EventStatus:
+          description: "Pending Event Status"
+          type: "integer"
+          format: "int32"
+        EventErrors:
+          description: "Pending Event Extras"
+          type: "string"
+    GeneXus.SD.Synchronization.SynchronizationEventResultList_SynchronizationEventResultListItem:
+      properties:
+        EventId:
+          description: "Pending Event Id"
+          type: "string"
+          format: "uuid"
+        EventTimestamp:
+          description: "Pending Event Timestamp"
+          type: "string"
+          format: "date-time"
+        EventStatus:
+          description: "Pending Event Status"
+          type: "integer"
+          format: "int32"
+        EventErrors:
+          description: "Pending Event Errors"
+          type: "string"
+        Mappings:
+          type: array
+          items:
+            description: MappingsItem
+            $ref: "#/components/schemas/GeneXus.SD.Synchronization.SynchronizationEventResultList.Mappings_MappingsItem"
+    GeneXus.SD.Synchronization.SynchronizationEventResultList.Mappings_MappingsItem:
+      properties:
+        Table:
+          description: "Table"
+          type: "string"
+        Updates:
+          description: "Updates"
+          type: "string"
+        Conditions:
+          description: "Conditions"
+          type: "string"
+      x-gx-level: "SynchronizationEventResultList"
+    GeneXus.SD.Synchronization.SynchronizationInfo:
+      properties:
+        GxAppVersion:
+          description: "Application Version"
+          type: "string"
+        Synchronizer:
+          description: "Synchronizer"
+          type: "string"
+    SdClientePFPJ:
+      properties:
+        document:
+          description: "document"
+          type: "string"
+        company_name:
+          description: "company_name"
+          type: "string"
+        trade_name:
+          description: "trade_name"
+          type: "string"
+        birth_date:
+          description: "birth_date"
+          type: "string"
+        person_type:
+          description: "person_type"
+          type: "string"
+        status:
+          description: "status"
+          type: "string"
+        health_insurance:
+          description: "health_insurance"
+          type: "string"
+        created_at:
+          description: "created_at"
+          type: "string"
+          format: "date-time"
+        updated_at:
+          description: "updated_at"
+          type: "string"
+          format: "date-time"
+        nationality:
+          description: "nationality"
+          type: "string"
+        marital_status:
+          description: "marital_status"
+          type: "string"
+        identity_document:
+          description: "identity_document"
+          type: "string"
+        address:
+          $ref: "#/components/schemas/SdClientePFPJ.address"
+        contact:
+          $ref: "#/components/schemas/SdClientePFPJ.contact"
+        responsible:
+          $ref: "#/components/schemas/SdClientePFPJ.responsible"
+    SdClientePFPJ.address:
+      properties:
+        type:
+          description: "type"
+          type: "string"
+        zip_code:
+          description: "zip_code"
+          type: "string"
+        street:
+          description: "street"
+          type: "string"
+        neighborhood:
+          description: "neighborhood"
+          type: "string"
+        city:
+          description: "city"
+          type: "string"
+        municipality_code:
+          description: "municipality_code"
+          type: "string"
+        number:
+          description: "number"
+          type: "string"
+        complement:
+          description: "complement"
+          type: "string"
+      x-gx-level: "SdClientePFPJ"
+    SdClientePFPJ.contact:
+      properties:
+        email:
+          description: "email"
+          type: "string"
+        phone:
+          $ref: "#/components/schemas/SdClientePFPJ.contact.phone"
+        secondary_phone:
+          $ref: "#/components/schemas/SdClientePFPJ.contact.secondary_phone"
+      x-gx-level: "SdClientePFPJ"
+    SdClientePFPJ.contact.phone:
+      properties:
+        ddi:
+          description: "ddi"
+          type: "string"
+        ddd:
+          description: "ddd"
+          type: "string"
+        number:
+          description: "number"
+          type: "string"
+      x-gx-level: "SdClientePFPJ.contact"
+    SdClientePFPJ.contact.secondary_phone:
+      properties:
+        ddi:
+          description: "ddi"
+          type: "string"
+        ddd:
+          description: "ddd"
+          type: "string"
+        number:
+          description: "number"
+          type: "string"
+      x-gx-level: "SdClientePFPJ.contact"
+    SdClientePFPJ.responsible:
+      properties:
+        name:
+          description: "name"
+          type: "string"
+        nationality:
+          description: "nationality"
+          type: "string"
+        marital_status:
+          description: "marital_status"
+          type: "string"
+        profession:
+          description: "profession"
+          type: "string"
+        identity_document:
+          description: "identity_document"
+          type: "string"
+        cpf:
+          description: "cpf"
+          type: "string"
+        address:
+          $ref: "#/components/schemas/SdClientePFPJ.responsible.address"
+        contact:
+          $ref: "#/components/schemas/SdClientePFPJ.responsible.contact"
+      x-gx-level: "SdClientePFPJ"
+    SdClientePFPJ.responsible.address:
+      properties:
+        zip_code:
+          description: "zip_code"
+          type: "string"
+        street:
+          description: "street"
+          type: "string"
+        neighborhood:
+          description: "neighborhood"
+          type: "string"
+        city:
+          description: "city"
+          type: "string"
+        municipality:
+          description: "municipality"
+          type: "string"
+        number:
+          description: "number"
+          type: "string"
+        complement:
+          description: "complement"
+          type: "string"
+      x-gx-level: "SdClientePFPJ.responsible"
+    SdClientePFPJ.responsible.contact:
+      properties:
+        ddi:
+          description: "ddi"
+          type: "string"
+        ddd:
+          description: "ddd"
+          type: "string"
+        number:
+          description: "number"
+          type: "string"
+        email:
+          description: "email"
+          type: "string"
+      x-gx-level: "SdClientePFPJ.responsible"
+    SdClientePFPJRetorno:
+      properties:
+        id:
+          description: "id"
+          type: "integer"
+          format: "int64"
+        document:
+          description: "document"
+          type: "string"
+        created_at:
+          description: "created_at"
+          type: "string"
+          format: "date-time"
+        message:
+          description: "message"
+          type: "string"
+    WorkWithPlus.DynamicForms.WWP_FormInstance:
+      properties:
+        WWPFormInstanceId:
+          description: "Instance Id"
+          type: "integer"
+          format: "int64"
+        WWPFormInstanceDate:
+          description: "Instance Date"
+          type: "string"
+          format: "date"
+        WWPFormId:
+          description: "WWPForm Id"
+          type: "integer"
+          format: "int32"
+        WWPFormVersionNumber:
+          description: "WWPForm Version Number"
+          type: "integer"
+          format: "int32"
+        WWPFormTitle:
+          description: "WWPForm Title"
+          type: "string"
+        WWPFormResume:
+          description: "WWPForm Resume"
+          type: "integer"
+          format: "int32"
+        WWPFormValidations:
+          description: "WWPForm Validations"
+          type: "string"
+        WWPFormInstanceRecordKey:
+          description: "WWPForm Instance Record Key"
+          type: "string"
+        Element:
+          $ref: "#/components/schemas/WorkWithPlus.DynamicForms.WWP_FormInstance.Element"
+    WorkWithPlus.DynamicForms.WWP_FormInstance.Element:
+      properties:
+        WWPFormElementId:
+          description: "WWPForm Element Id"
+          type: "integer"
+          format: "int32"
+        WWPFormInstanceElementId:
+          description: "WWPForm Instance Element Id"
+          type: "integer"
+          format: "int32"
+        WWPFormElementTitle:
+          description: "WWPForm Element Title"
+          type: "string"
+        WWPFormElementReferenceId:
+          description: "WWPForm Element Reference Id"
+          type: "string"
+        WWPFormElementDataType:
+          description: "WWPForm Element Data Type"
+          type: "integer"
+          format: "int32"
+        WWPFormElementParentId:
+          description: "WWPForm Element Parent Id"
+          type: "integer"
+          format: "int32"
+        WWPFormElementParentType:
+          description: "WWPForm Element Parent Type"
+          type: "integer"
+          format: "int32"
+        WWPFormElementType:
+          description: "WWPForm Element Type"
+          type: "integer"
+          format: "int32"
+        WWPFormElementMetadata:
+          description: "WWPForm Element Metadata"
+          type: "string"
+        WWPFormElementCaption:
+          description: "WWPForm Element Caption"
+          type: "integer"
+          format: "int32"
+        WWPFormInstanceElemChar:
+          description: "WWPForm Instance Elem Char"
+          type: "string"
+        WWPFormInstanceElemDate:
+          description: "WWPForm Instance Elem Date"
+          type: "string"
+          format: "date"
+        WWPFormInstanceElemDateTime:
+          description: "WWPForm Instance Elem Date Time"
+          type: "string"
+          format: "date-time"
+        WWPFormInstanceElemNumeric:
+          description: "WWPForm Instance Elem Numeric"
+          type: "number"
+          format: "double"
+        WWPFormInstanceElemBlob:
+          description: "WWPForm Instance Elem Blob"
+          type: "string"
+        WWPFormInstanceElemBlobFileName:
+          description: "WWPForm Instance Elem Blob File Name"
+          type: "string"
+        WWPFormInstanceElemBlobFileType:
+          description: "WWPForm Instance Elem Blob File Type"
+          type: "string"
+        WWPFormInstanceElemBoolean:
+          description: "WWPForm Instance Elem Boolean"
+          type: "boolean"
+      x-gx-level: "WWP_FormInstance"
+    WWPBaseObjects.DVB_SDTComboData_Item:
+      properties:
+        ID:
+          description: "ID"
+          type: "string"
+        T:
+          description: "Title"
+          type: "string"
+        Children:
+          description: "DVB_SDTCombo Data"
+          type: array
+          items:
+            $ref: "#/components/schemas/WWPBaseObjects.DVB_SDTComboData_Item"

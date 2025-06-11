@@ -1,0 +1,39 @@
+{
+	"Name": "FourDigits",
+	"Target": "",
+	"IsControlType": false,
+	"Template": "<script>function generateFourDigitCode() {	console.log(\'teste\');    variable = Math.floor(1000 + Math.random() * 9000);	console.log(variable);    return variable;}</script>", 
+	"Events": [
+	],
+	"Properties": [
+	],
+	"Methods": {
+		"Public": [
+			{
+				"Name": "Aleatorio",
+				"Source": "  		console.log(\'entrou\');		let codigo = 0;     	Codigo = generateFourDigitCode();		console.log(Codigo);	",
+				"Return": "",
+				"Parameters": [
+					 {
+						"Name": "Codigo",
+						"Type": "Codigo"
+					} 
+				]
+			} 
+		],
+		"Private": [
+		]
+	},
+	"Scripts": {
+		"AfterShow": [
+		],
+		"BeforeShow": [
+		]
+	},
+	"Dependencies": [
+	],
+	"Imports": [
+	],
+	"Styles": [
+	]
+}

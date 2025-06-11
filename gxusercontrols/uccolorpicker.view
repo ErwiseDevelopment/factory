@@ -1,0 +1,4 @@
+<script type="text/javascript">
+	att = document.getElementById("{{gxTpr_GxControl}}{{GxControl}}");
+	att.setAttribute("type", "color");
+</script>

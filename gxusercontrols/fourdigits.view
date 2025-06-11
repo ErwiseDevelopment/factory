@@ -1,0 +1,10 @@
+<script>
+
+function generateFourDigitCode() {
+	console.log('teste');
+    variable = Math.floor(1000 + Math.random() * 9000);
+	console.log(variable);
+    return variable;
+}
+
+</script>
